@@ -1,0 +1,25 @@
+# Blender MTL File: 'teapot_001.blend'
+# Material Count: 2
+
+newmtl MAT_CupPorcelain
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.685957 0.639949 0.561304
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump Tea_Cup_And_Saucer\\Tea_Cup_And_Saucer\\Textures Cup And Saucer 2K\\CupAndSaucer_Normal.png
+map_Ns Tea_Cup_And_Saucer\\Tea_Cup_And_Saucer\\Textures Cup And Saucer 2K\\CupAndSaucer_Roughness.png
+refl Tea_Cup_And_Saucer\\Tea_Cup_And_Saucer\\Textures Cup And Saucer 2K\\CupAndSaucer_Metallic.png
+
+newmtl MAT_Gold
+Ns 225.000000
+Ka 0.905941 0.905941 0.905941
+Kd 0.447978 0.244432 0.052427
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
