@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc010_sh020.ma
-//Last modified: Sat, Mar 06, 2021 07:04:30 PM
+//Last modified: Sat, Mar 06, 2021 07:06:41 PM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/milk_jug.ma";
@@ -32,7 +32,7 @@ fileInfo "product" "Maya 2019";
 fileInfo "version" "2019";
 fileInfo "cutIdentifier" "202004141915-92acaa8c08";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19042)\n";
-
+fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2C10C754-45C3-2F74-9A01-BAA617812E18";
 	setAttr ".v" no;
@@ -242,8 +242,6 @@ createNode transform -n "fluids";
 createNode transform -n "FLUID_beam" -p "fluids";
 	rename -uid "0A2DCA02-431B-60B6-57E4-148E3FF102DC";
 	setAttr -av ".v";
-	setAttr ".t" -type "double3" 0 -342.98732988922472 0 ;
-	setAttr -av ".ty";
 createNode mesh -n "FLUID_beamShape" -p "FLUID_beam";
 	rename -uid "DBF622C2-4DEE-6587-7FAC-FAA6B86B6059";
 	setAttr -k off ".v";

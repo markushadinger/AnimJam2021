@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: camera_rig.ma
-//Last modified: Sat, Mar 06, 2021 06:50:48 PM
+//Last modified: Sat, Mar 06, 2021 07:09:34 PM
 //Codeset: 1252
 requires maya "2019";
 requires "stereoCamera" "10.0";
@@ -140,19 +140,19 @@ createNode mesh -n "fov_helperShape" -p "fov_helper";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "1A7212A2-4FB5-F6C2-07FA-B1A4CE65E198";
+	rename -uid "ADD27FA6-4204-5B3A-8117-14B5FD9F9353";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2CDE2FB1-44B9-26DC-1848-31BBD8238CBC";
+	rename -uid "05E0425C-4275-F50D-30D4-7FA96DDB77F9";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "F31A0947-4E5A-593D-23B1-D7AAE4E0713B";
+	rename -uid "A6C4DBD4-4BAC-F550-35EA-22B294935204";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7D95699E-4982-A617-B610-D392DDEFE855";
+	rename -uid "14272F62-49DC-9470-A7E4-7486A83206D5";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "26B1699E-4BBF-2FE3-800C-51B501340557";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "706CCA17-42D4-B50F-1C9C-2C84955823C2";
+	rename -uid "EA9E8753-4D34-D1C7-FFB1-9F84B4AF0892";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "7B666ED9-4F4D-2109-A162-C1BAB386601D";
 	setAttr ".g" yes;
@@ -214,6 +214,10 @@ createNode script -n "sceneConfigurationScriptNode";
 createNode polyCube -n "polyCube1";
 	rename -uid "0517E704-41D6-1FC0-AB2D-A58ADEA3A37C";
 	setAttr ".cuv" 4;
+createNode objectSet -n "export_cam";
+	rename -uid "C1A41F90-4522-CCC6-2760-1A8FF0C647FD";
+	setAttr ".ihi" 0;
+	setAttr -s 2 ".dsm";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -240,6 +244,8 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "cam_ctrl.ortho_scale" "render_camShape.ow";
 connectAttr "render_camShape.ow" "fov_helper.tx";
 connectAttr "polyCube1.out" "fov_helperShape.i";
@@ -249,6 +255,8 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "|render_cam|cam_ctrl|render_cam.iog" "export_cam.dsm" -na;
+connectAttr "fov_helper.iog" "export_cam.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "fov_helperShape.iog" ":initialShadingGroup.dsm" -na;
 // End of camera_rig.ma
