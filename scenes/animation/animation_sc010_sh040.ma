@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc010_sh040.ma
-//Last modified: Sat, Mar 06, 2021 09:32:32 PM
+//Last modified: Sat, Mar 06, 2021 10:03:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/milk_jug.ma";
@@ -43,17 +43,17 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19042)\n";
 createNode transform -s -n "persp";
 	rename -uid "2C10C754-45C3-2F74-9A01-BAA617812E18";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.333344929789972 26.135836702351483 29.302883441310545 ;
+	setAttr ".t" -type "double3" 13.510158836006726 14.186801018527667 7.417627236502021 ;
 	setAttr ".r" -type "double3" -31.538352734524768 -700.59999999981221 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "13AE64E3-40CE-21C3-25B9-41907BB39095";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 38.554165416579167;
+	setAttr ".coi" 20.34436706268523;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.0020918417050777016 5.7651759455555602 -0.0011219200163861132 ;
+	setAttr ".tp" -type "double3" 7.7507156178169883 3.5452894350241793 -8.9371982353848693 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "FBB0123C-4FC0-9CF5-2D30-0BA9F181953C";
@@ -5743,7 +5743,7 @@ createNode mesh -n "polySurfaceShape1" -p "milk";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "teapotRNfosterParent1";
-	rename -uid "A0DEE0D4-4AD9-D3E6-AFC4-F9A296AFAB50";
+	rename -uid "E1E1B072-45A6-1251-B96A-23874A7EEC00";
 createNode mesh -n "teapot_geoShapeOrig1" -p "teapotRNfosterParent1";
 	rename -uid "8F30900A-4957-FE1F-6FCF-7FAA0C8AE272";
 	setAttr -k off ".v";
@@ -13927,7 +13927,7 @@ createNode mesh -n "teapot_geoShapeOrig1" -p "teapotRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "milk_jugRNfosterParent1";
-	rename -uid "6A60CAA2-45E6-0F14-6349-67BE5C2E7196";
+	rename -uid "8368AE82-462B-CBD7-EFB1-A59C68F717A2";
 createNode mesh -n "milk_jug_geoShapeOrig1" -p "milk_jugRNfosterParent1";
 	rename -uid "52E7640F-45B2-650B-1607-2990EE59FB3E";
 	setAttr -k off ".v";
@@ -16095,7 +16095,7 @@ createNode mesh -n "milk_jug_geoShapeOrig1" -p "milk_jugRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "cup_rig_01RNfosterParent1";
-	rename -uid "DB3FF299-4009-F21E-0E65-FDBD450E9C0F";
+	rename -uid "61C04DE8-4DD1-E653-3435-1A98F062C427";
 createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	rename -uid "AB7CF9CB-4DE7-2FE5-A1F7-B9AABF2BA002";
 	setAttr -k off ".v";
@@ -32238,22 +32238,22 @@ createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "BBF2ABDA-421C-3F60-8F84-3CAB794ED0B0";
+	rename -uid "EA4E21A5-4316-A9A4-FAAD-FC9BA48D7647";
 	setAttr -s 44 ".lnk";
 	setAttr -s 44 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "BED60935-4685-10EF-F1FF-77AF0D750140";
+	rename -uid "184B532A-46E7-E342-32E7-75B84E2963DA";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "7236B2CC-4546-AFD4-BE90-73A1C643EE30";
+	rename -uid "EA97D5F5-459F-C795-C6DB-E1AF14C493AE";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "05BE3AF6-430F-1284-F337-8D8D5E41CAF3";
+	rename -uid "016FC688-447D-EEB4-502A-959EF24DB3FF";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FA05B9A1-4E71-B3C9-56AB-0FB22F4826F7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B9B3E686-4032-5F6D-CF9D-A9AA94123B81";
+	rename -uid "522FE200-46C6-A820-E8FB-56B41561DB39";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E2DB08F1-452F-FB4D-A71D-7FA2920DCAF0";
 	setAttr ".g" yes;
@@ -32299,17 +32299,14 @@ createNode reference -n "teapotRN";
 		2 "teapot:groupParts2" "groupId" " 460"
 		2 "teapot:ffd1GroupParts" "inputComponents" " -type \"componentList\" 1 \"vtx[0:3240]\""
 		
-		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[0]" 
-		"teapot:MAT_CupPorcelain.dagSetMembers" "-na"
-		3 "teapot:groupId1.message" "teapot:MAT_CupPorcelain.groupNodes" "-na"
-		3 "teapot:groupParts1.outputGeometry" "teapot:groupParts2.inputGeometry" 
-		""
-		3 "teapot:groupId2.groupId" "teapot:groupParts2.groupId" ""
 		3 "teapot:groupParts2.outputGeometry" "teapot:groupParts4.inputGeometry" 
 		""
 		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShapeOrig.worldMesh" 
 		"teapot:groupParts1.inputGeometry" ""
 		3 "teapot:groupId1.groupId" "teapot:groupParts1.groupId" ""
+		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[1]" 
+		"teapot:MAT_Gold.dagSetMembers" "-na"
+		3 "teapot:groupId2.message" "teapot:MAT_Gold.groupNodes" "-na"
 		3 "teapot:MAT_CupPorcelain.memberWireframeColor" "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "teapot:MAT_Gold.memberWireframeColor" "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[1].objectGrpColor" 
@@ -32320,9 +32317,12 @@ createNode reference -n "teapotRN";
 		""
 		3 "teapot:polyNormalPerVertex1.output" "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.inMesh" 
 		""
-		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[1]" 
-		"teapot:MAT_Gold.dagSetMembers" "-na"
-		3 "teapot:groupId2.message" "teapot:MAT_Gold.groupNodes" "-na"
+		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[0]" 
+		"teapot:MAT_CupPorcelain.dagSetMembers" "-na"
+		3 "teapot:groupId1.message" "teapot:MAT_CupPorcelain.groupNodes" "-na"
+		3 "teapot:groupParts1.outputGeometry" "teapot:groupParts2.inputGeometry" 
+		""
+		3 "teapot:groupId2.groupId" "teapot:groupParts2.groupId" ""
 		5 4 "teapotRN" "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[4].objectGroupId" 
 		"teapotRN.placeHolderList[1]" ""
 		5 0 "teapotRN" "teapot:MAT_Gold.memberWireframeColor" "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[4].objectGrpColor" 
@@ -32412,6 +32412,20 @@ createNode reference -n "milk_jugRN";
 		2 "milk_jug:lambert4" "transparency" " -type \"float3\" 0 0 0"
 		2 "milk_jug:groupParts1" "groupId" " 465"
 		2 "milk_jug:groupParts2" "groupId" " 466"
+		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShapeOrig.worldMesh" 
+		"milk_jug:groupParts1.inputGeometry" ""
+		3 "milk_jug:groupId1.groupId" "milk_jug:groupParts1.groupId" ""
+		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[0]" 
+		"milk_jug:null_1.dagSetMembers" "-na"
+		3 "milk_jug:groupId1.message" "milk_jug:null_1.groupNodes" "-na"
+		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[1]" 
+		"milk_jug:gold1.dagSetMembers" "-na"
+		3 "milk_jug:groupId2.message" "milk_jug:gold1.groupNodes" "-na"
+		3 "milk_jug:groupParts1.outputGeometry" "milk_jug:groupParts2.inputGeometry" 
+		""
+		3 "milk_jug:groupId2.groupId" "milk_jug:groupParts2.groupId" ""
+		3 "milk_jug:groupParts2.outputGeometry" "milk_jug:groupParts4.inputGeometry" 
+		""
 		3 "milk_jug:null_1.memberWireframeColor" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "milk_jug:gold1.memberWireframeColor" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[1].objectGrpColor" 
@@ -32422,20 +32436,6 @@ createNode reference -n "milk_jugRN";
 		""
 		3 "milk_jug:ffd1.outputGeometry[0]" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.inMesh" 
 		""
-		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[0]" 
-		"milk_jug:null_1.dagSetMembers" "-na"
-		3 "milk_jug:groupId1.message" "milk_jug:null_1.groupNodes" "-na"
-		3 "milk_jug:groupParts2.outputGeometry" "milk_jug:groupParts4.inputGeometry" 
-		""
-		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShapeOrig.worldMesh" 
-		"milk_jug:groupParts1.inputGeometry" ""
-		3 "milk_jug:groupId1.groupId" "milk_jug:groupParts1.groupId" ""
-		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[1]" 
-		"milk_jug:gold1.dagSetMembers" "-na"
-		3 "milk_jug:groupId2.message" "milk_jug:gold1.groupNodes" "-na"
-		3 "milk_jug:groupParts1.outputGeometry" "milk_jug:groupParts2.inputGeometry" 
-		""
-		3 "milk_jug:groupId2.groupId" "milk_jug:groupParts2.groupId" ""
 		5 4 "milk_jugRN" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[4].objectGroupId" 
 		"milk_jugRN.placeHolderList[1]" ""
 		5 0 "milk_jugRN" "milk_jug:gold1.memberWireframeColor" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[4].objectGrpColor" 
@@ -32530,6 +32530,11 @@ createNode reference -n "cup_rig_01RN";
 		2 "|cup_rig_01:cup_rig|cup_rig_01:ffd|cup_rig_01:ffd1Lattice|cup_rig_01:ffd1LatticeShapeOrig" 
 		"intermediateObject" " 1"
 		2 "cup_rig_01:groupParts1" "groupId" " 596"
+		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShapeOrig.worldMesh" 
+		"cup_rig_01:groupParts1.inputGeometry" ""
+		3 "cup_rig_01:groupId1.groupId" "cup_rig_01:groupParts1.groupId" ""
+		3 "cup_rig_01:groupParts1.outputGeometry" "cup_rig_01:groupParts3.inputGeometry" 
+		""
 		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[0]" 
 		"cup_rig_01:None.dagSetMembers" "-na"
 		3 "cup_rig_01:groupId1.message" "cup_rig_01:None.groupNodes" "-na"
@@ -32538,11 +32543,6 @@ createNode reference -n "cup_rig_01RN";
 		3 "cup_rig_01:groupId1.groupId" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "cup_rig_01:ffd1.outputGeometry[0]" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.inMesh" 
-		""
-		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShapeOrig.worldMesh" 
-		"cup_rig_01:groupParts1.inputGeometry" ""
-		3 "cup_rig_01:groupId1.groupId" "cup_rig_01:groupParts1.groupId" ""
-		3 "cup_rig_01:groupParts1.outputGeometry" "cup_rig_01:groupParts3.inputGeometry" 
 		""
 		5 4 "cup_rig_01RN" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[3].objectGroupId" 
 		"cup_rig_01RN.placeHolderList[1]" ""
@@ -40158,7 +40158,7 @@ select -ne :defaultShaderList1;
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 13 ".u";
+	setAttr -s 25 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 13 ".r";
 select -ne :lightList1;
