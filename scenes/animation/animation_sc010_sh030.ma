@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc010_sh030.ma
-//Last modified: Sat, Mar 06, 2021 06:55:55 PM
+//Last modified: Sat, Mar 06, 2021 07:11:51 PM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/milk_jug.ma";
@@ -35,17 +35,17 @@ fileInfo "product" "Maya 2019";
 fileInfo "version" "2019";
 fileInfo "cutIdentifier" "202004141915-92acaa8c08";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
-fileInfo "license" "student";
+
 createNode transform -s -n "persp";
 	rename -uid "2C10C754-45C3-2F74-9A01-BAA617812E18";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 15.491697422365162 144.60977878419521 114.39843281942666 ;
-	setAttr ".r" -type "double3" -50.138352729594679 -712.19999999980723 -4.0128206082583113e-16 ;
+	setAttr ".t" -type "double3" -19.823537084548839 48.161698180835444 47.125420643137936 ;
+	setAttr ".r" -type "double3" -34.538352729595815 -759.39999999979614 -4.1159783792739835e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "13AE64E3-40CE-21C3-25B9-41907BB39095";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 177.99278550058449;
+	setAttr ".coi" 51.272006452209894;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -766,7 +766,7 @@ createNode transform -n "tmObject1" -p "tmSet1";
 	setAttr ".type" -type "string" "tmObject";
 	setAttr ".data" -type "string" "tmCustomCharacterSet";
 createNode fosterParent -n "teapotRNfosterParent1";
-	rename -uid "BC3AA056-4E25-6C5C-B2A8-13B6435D7502";
+	rename -uid "49E3967E-4872-D1F3-1D83-7EABB9DE2EE2";
 createNode mesh -n "teapot_geoShapeOrig1" -p "teapotRNfosterParent1";
 	rename -uid "8F30900A-4957-FE1F-6FCF-7FAA0C8AE272";
 	setAttr -k off ".v";
@@ -8950,7 +8950,7 @@ createNode mesh -n "teapot_geoShapeOrig1" -p "teapotRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "milk_jugRNfosterParent1";
-	rename -uid "CD4280C9-4120-BB29-2045-C3AACB46170B";
+	rename -uid "38449A21-4C67-D7A0-4B50-D1B94C3F2F6C";
 createNode mesh -n "milk_jug_geoShapeOrig1" -p "milk_jugRNfosterParent1";
 	rename -uid "52E7640F-45B2-650B-1607-2990EE59FB3E";
 	setAttr -k off ".v";
@@ -11118,7 +11118,7 @@ createNode mesh -n "milk_jug_geoShapeOrig1" -p "milk_jugRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "cup_rig_01RNfosterParent1";
-	rename -uid "1CB0C7AA-4F29-C87C-5A2F-E695A0C1B7AF";
+	rename -uid "BA4CB435-4D4A-BF19-A013-5A82FB8ACB71";
 createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	rename -uid "AB7CF9CB-4DE7-2FE5-A1F7-B9AABF2BA002";
 	setAttr -k off ".v";
@@ -27262,8 +27262,8 @@ createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "9C333C43-4E32-EAAA-4558-91A0E9FA790C";
-	setAttr -s 195 ".lnk";
-	setAttr -s 195 ".slnk";
+	setAttr -s 199 ".lnk";
+	setAttr -s 199 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
 	rename -uid "B2C78D2A-4A34-C61D-369C-6CB8E8F7B868";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
@@ -27426,21 +27426,19 @@ createNode reference -n "milk_jugRN";
 		" -type \"string\" \"map1\""
 		2 "|milk_jug:milk_jug|milk_jug:ffd|milk_jug:ffd1Lattice|milk_jug:ffd1LatticeShapeOrig" 
 		"intermediateObject" " 1"
-		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "translate" " -type \"double3\" 7.78983191316157075 0 -8.03389172700145338"
+		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "translate" " -type \"double3\" 7.78983191316157075 48.25200750394338911 -8.03389172700145338"
 		
 		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "translateY" " -av"
-		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "rotate" " -type \"double3\" 0 -48.72303971948375079 0"
+		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "rotate" " -type \"double3\" -22.03700175334853739 -45.39129463955489996 -4.77506446975617571"
 		
 		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "rotateY" " -av"
 		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "rotateX" " -av"
 		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "rotateZ" " -av"
-		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "scale" " -type \"double3\" 1 0.86012067590310193 1"
+		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "scale" " -type \"double3\" 1 1 1"
 		
 		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "scaleY" " -av"
-		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "amplitude" " -av -k 1 -1.8"
-		
-		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "direction" " -av -k 1 -5.80000000000000071"
-		
+		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "amplitude" " -av -k 1 0"
+		2 "|milk_jug:milk_jug|milk_jug:milk_jug_ctrl" "direction" " -av -k 1 0"
 		2 "milk_jug:groupParts1" "groupId" " 465"
 		2 "milk_jug:groupParts2" "groupId" " 466"
 		3 "milk_jug:groupParts2.outputGeometry" "milk_jug:groupParts4.inputGeometry" 
@@ -27664,11 +27662,11 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Model Panel5\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Model Panel5\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"render_cam\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 0\n            -selectionHiliteDisplay 0\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n"
 		+ "            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
 		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 0\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 1\n"
-		+ "            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"render_cam\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 0\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n"
-		+ "            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n"
-		+ "            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 0\n            -pluginShapes 0\n"
-		+ "            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 1\n            -captureSequenceNumber -1\n            -width 1910\n            -height 969\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n"
-		+ "\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "            -captureSequenceNumber -1\n            -width 0\n            -height 0\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera_rig:cam_ctrl|camera_rig:render_cam\" \n            -useInteractiveMode 0\n            -displayLights \"all\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 0\n            -useDefaultMaterial 0\n"
+		+ "            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n"
+		+ "            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n            -dynamicConstraints 0\n            -locators 0\n            -manipulators 0\n"
+		+ "            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 1\n            -captureSequenceNumber -1\n            -width 1910\n            -height 969\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1157\\n    -height 583\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 0\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1157\\n    -height 583\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -27680,28 +27678,17 @@ createNode script -n "sceneConfigurationScriptNode";
 createNode reference -n "camera_rigRN";
 	rename -uid "24D402DF-4AF5-7E91-8965-E78A654739C5";
 	setAttr -s 4 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
+	setAttr ".phl[1]" -type "TdataCompound" ;
+	setAttr ".phl[2]" -type "TdataCompound" ;
+	setAttr ".phl[3]" -type "TdataCompound" ;
+	setAttr ".phl[4]" -type "TdataCompound" ;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"camera_rigRN"
-		"camera_rigRN" 0
-		"camera_rigRN" 12
-		2 "|camera_rig:render_cam" "visibility" " 0"
-		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "translate" " -type \"double3\" -2.27994437139854877 21.15464970074252804 25.96531971535187111"
-		
-		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "ortho_scale" " -k 1 40"
+		"camera_rigRN" 6
 		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_aim" 
 		"translate" " -type \"double3\" 9.64454515172107207 14.14645829648879882 0"
 		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_aim" 
 		"rotatePivot" " -type \"double3\" -7.86836390348766024 -6.61514054878440305 0"
-		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_const|camera_rig:render_cam|camera_rig:render_camShape" 
-		"overscan" " 1.3"
-		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_const|camera_rig:render_cam|camera_rig:render_camShape" 
-		"displayFilmGate" " 0"
-		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_const|camera_rig:render_cam|camera_rig:render_camShape" 
-		"displayResolution" " 1"
 		5 3 "camera_rigRN" "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_aim.instObjGroups" 
 		"camera_rigRN.placeHolderList[1]" ""
 		5 3 "camera_rigRN" "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_aim.instObjGroups" 
@@ -27709,7 +27696,21 @@ createNode reference -n "camera_rigRN";
 		5 3 "camera_rigRN" "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_const|camera_rig:render_cam.instObjGroups" 
 		"camera_rigRN.placeHolderList[3]" ""
 		5 3 "camera_rigRN" "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_const|camera_rig:render_cam.instObjGroups" 
-		"camera_rigRN.placeHolderList[4]" "";
+		"camera_rigRN.placeHolderList[4]" ""
+		"camera_rigRN" 7
+		2 "|camera_rig:render_cam" "visibility" " 1"
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "translate" " -type \"double3\" -1.75371656204512405 25.55355329864748981 26.92161061303594494"
+		
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "rotate" " -type \"double3\" -35.68841353875920674 -6.24253859259240773 0"
+		
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "ortho_scale" " -k 1 20.29999999999999716"
+		
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl|camera_rig:render_cam|camera_rig:render_camShape" 
+		"overscan" " 1.3"
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl|camera_rig:render_cam|camera_rig:render_camShape" 
+		"displayFilmGate" " 0"
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl|camera_rig:render_cam|camera_rig:render_camShape" 
+		"displayResolution" " 1";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "eye_tea_1RN";
@@ -27819,7 +27820,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:deformer_grp|eye_tea_1:gloabLSgape_grp|eye_tea_1:ffd3Lattice|eye_tea_1:ffd3LatticeShapeOrig" 
 		"intermediateObject" " 1"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "translate" 
-		" -type \"double3\" -2.04546157025831432 5.91657447180651186 -0.13239689241526226"
+		" -type \"double3\" -2.04776158561060928 5.91617707093853351 -0.13498657326600724"
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "translateZ" 
 		" -av"
@@ -27827,7 +27828,7 @@ createNode reference -n "eye_tea_1RN";
 		" -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "translateX" 
 		" -av"
-		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotate" " -type \"double3\" 15.80040124039651772 41.62519141439513248 7.68410988629370451"
+		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotate" " -type \"double3\" 15.17556341823758892 38.22079989397137467 6.61252608535684772"
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotateZ" " -av"
 		
@@ -27835,7 +27836,7 @@ createNode reference -n "eye_tea_1RN";
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotateX" " -av"
 		
-		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "scale" " -type \"double3\" 0.41 0.41 0.41"
+		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "scale" " -type \"double3\" 0.40087113207448627 0.40087113207448627 0.40087113207448627"
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "scaleZ" " -av"
 		
@@ -27848,9 +27849,9 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "wobble_amplitude" 
 		" -av -k 1 1"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidTop_zero|eye_tea_1:EyeLidTop_ctl" 
-		"translateX" " -av 0"
+		"translateX" " -av 0.0062186316823495307"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidTop_zero|eye_tea_1:EyeLidTop_ctl" 
-		"translateZ" " -av -0.54042228022140615"
+		"translateZ" " -av 0.0187710682190152"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidTop_zero|eye_tea_1:EyeLidTop_ctl" 
 		"bend_left" " -av -k 1 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidTop_zero|eye_tea_1:EyeLidTop_ctl" 
@@ -27858,9 +27859,9 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidTop_zero|eye_tea_1:EyeLidTop_ctl" 
 		"bend_center" " -av -k 1 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidBottom_zero|eye_tea_1:EyeLidBottom_ctl" 
-		"translateX" " -av 0"
+		"translateX" " -av 0.0054464269792402521"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidBottom_zero|eye_tea_1:EyeLidBottom_ctl" 
-		"translateZ" " -av -2.52420366449110123"
+		"translateZ" " -av 0.0094218424923846779"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidBottom_zero|eye_tea_1:EyeLidBottom_ctl" 
 		"bend_left" " -av -k 1 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidBottom_zero|eye_tea_1:EyeLidBottom_ctl" 
@@ -27868,15 +27869,15 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:EyeLidBottom_zero|eye_tea_1:EyeLidBottom_ctl" 
 		"bend_center" " -av -k 1 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:Eye_zero|eye_tea_1:Eye_ctl" 
-		"translateX" " -av 0.24908818228261473"
+		"translateX" " -av -0.06730560395060374"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:Eye_zero|eye_tea_1:Eye_ctl" 
-		"translateZ" " -av 0.039343264806116558"
+		"translateZ" " -av -0.080126857852349548"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:Eye_zero|eye_tea_1:Eye_ctl" 
-		"pupil_size" " -av -k 1 0.20000000000000007"
+		"pupil_size" " -av -k 1 0.4"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:Eye_zero|eye_tea_1:Eye_ctl" 
-		"iris_size" " -av -k 1 -0.5"
+		"iris_size" " -av -k 1 1"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.022609461081405782 -0.036883268051050189 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
@@ -27884,7 +27885,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.044357486325482587 -0.019336586987647092 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
@@ -27892,7 +27893,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group14|eye_tea_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.022609461081405782 0 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group14|eye_tea_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group14|eye_tea_1:nurbsCircle1" 
@@ -27957,7 +27958,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group7|eye_tea_1:border_cr_ctl" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group6|eye_tea_1:border_br_ctl" 
-		"translate" " -type \"double3\" 0.42991993667751466 0 -0.040522390178063472"
+		"translate" " -type \"double3\" 0.052093637300823836 0 0.20918166954858633"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group6|eye_tea_1:border_br_ctl" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group6|eye_tea_1:border_br_ctl" 
@@ -27973,7 +27974,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group5|eye_tea_1:border_bl_ctl" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group4|eye_tea_1:border_tr_ctl" 
-		"translate" " -type \"double3\" 0.08158420838425616 0 0.029617588405740712"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group4|eye_tea_1:border_tr_ctl" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group4|eye_tea_1:border_tr_ctl" 
@@ -28022,7 +28023,7 @@ createNode reference -n "eye_tea_1RN";
 		"intermediateObject" " 1"
 		2 "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:lid_top_geo|eye_tea_1:lid_top_geoShapeOrig" 
 		"intermediateObject" " 1"
-		2 "eye_tea_1:character1" "lv[1:57]" " -s 57 -0.54042228022140615 0 -2.52420366449110123 0 0.039343264806116558 0.24908818228261473 0 0 0 0 0 0 0 0 0 0 0 0 -0.28145216982314314 -0.030325035368492834 0.062110568062382632 0 0 0 0 0 0 0 0 0 -0.13239689241526226 5.91657447180651186 -2.04546157025831432 0 0 0 0 0 0 -0.040522390178063472 0 0.42991993667751466 0 0 0 0.029617588405740712 0 0.08158420838425616 0 0 0 0 0 0 0 0 0"
+		2 "eye_tea_1:character1" "lv[1:57]" " -s 57 0.0187710682190152 0.0062186316823495307 0.0094218424923846779 0.0054464269792402521 -0.080126857852349548 -0.06730560395060374 0 -0.036883268051050189 -0.022609461081405782 0 -0.019336586987647092 -0.044357486325482587 0 0 -0.022609461081405782 0 0 0 -0.28145216982314314 -0.030325035368492834 0.062110568062382632 0 0 0 0 0 0 0 0 0 -0.13498657326600724 5.91617707093853351 -2.04776158561060928 0 0 0 0 0 0 0.20918166954858633 0 0.052093637300823836 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "eye_tea_1:character1" "linearValues" " -s 57"
 		2 "eye_tea_1:character1" "referenceMapping" (" -type \"characterMapping\" 73 \"eye_tea_1:EyeLidTop_ctl.bend_center\" 0 1 \"eye_tea_1:EyeLidTop_ctl.bend_right\" 0 2 \"eye_tea_1:EyeLidTop_ctl.bend_left\" 0 3 \"eye_tea_1:EyeLidTop_ctl.translateZ\" 1 1 \"eye_tea_1:EyeLidTop_ctl.translateX\" 1 2 \"eye_tea_1:EyeLidBottom_ctl.bend_center\" 0 4 \"eye_tea_1:EyeLidBottom_ctl.bend_right\" 0 5 \"eye_tea_1:EyeLidBottom_ctl.bend_left\" 0 6 \"eye_tea_1:EyeLidBottom_ctl.translateZ\" 1 3 \"eye_tea_1:EyeLidBottom_ctl.translateX\" 1 4 \"eye_tea_1:Eye_ctl.iris_size\" 0 7 \"eye_tea_1:Eye_ctl.pupil_size\" 0 8 \"eye_tea_1:Eye_ctl.translateZ\" 1 5 \"eye_tea_1:Eye_ctl.translateX\" 1 6 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateZ\" 1 7 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateY\" 1 8 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateX\" 1 9 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateZ\" 1 10 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateY\" 1 11 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateX\" 1 12 \"eye_tea_1:group14|eye_tea_1:nurbsCircle1.translateZ\" 1 13 \"eye_tea_1:group14|eye_t"
@@ -28372,7 +28373,7 @@ createNode reference -n "eye_tea_2RN";
 		2 "|eye_tea_2:asset|eye_tea_2:deformer_grp|eye_tea_2:gloabLSgape_grp|eye_tea_2:ffd3Lattice|eye_tea_2:ffd3LatticeShapeOrig" 
 		"intermediateObject" " 1"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "translate" 
-		" -type \"double3\" 1.73169283440117638 6.27199799356956245 -1.72012289953592545"
+		" -type \"double3\" 1.65189519240732396 6.24761981011147061 -1.68293560742137771"
 		
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "translateZ" 
 		" -av"
@@ -28380,7 +28381,7 @@ createNode reference -n "eye_tea_2RN";
 		" -av"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "translateX" 
 		" -av"
-		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "rotate" " -type \"double3\" 14.73693177982469216 4.2068043602263554 0.29165009084878413"
+		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "rotate" " -type \"double3\" 14.95244679693048795 4.48117403410502479 -0.33035627826615654"
 		
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "rotateZ" " -av"
 		
@@ -28388,7 +28389,7 @@ createNode reference -n "eye_tea_2RN";
 		
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "rotateX" " -av"
 		
-		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "scale" " -type \"double3\" 0.41 0.41 0.41"
+		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "scale" " -type \"double3\" 0.40087113207448627 0.40087113207448627 0.40087113207448627"
 		
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "scaleZ" " -av"
 		
@@ -28403,7 +28404,7 @@ createNode reference -n "eye_tea_2RN";
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidTop_zero|eye_tea_2:EyeLidTop_ctl" 
 		"translateX" " -av 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidTop_zero|eye_tea_2:EyeLidTop_ctl" 
-		"translateZ" " -av -0.54042228022140637"
+		"translateZ" " -av 0.011589687910201006"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidTop_zero|eye_tea_2:EyeLidTop_ctl" 
 		"bend_left" " -av -k 1 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidTop_zero|eye_tea_2:EyeLidTop_ctl" 
@@ -28413,7 +28414,7 @@ createNode reference -n "eye_tea_2RN";
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidBottom_zero|eye_tea_2:EyeLidBottom_ctl" 
 		"translateX" " -av 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidBottom_zero|eye_tea_2:EyeLidBottom_ctl" 
-		"translateZ" " -av -2.97205884493235795"
+		"translateZ" " -av 0.0056763761994931732"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidBottom_zero|eye_tea_2:EyeLidBottom_ctl" 
 		"bend_left" " -av -k 1 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidBottom_zero|eye_tea_2:EyeLidBottom_ctl" 
@@ -28421,13 +28422,13 @@ createNode reference -n "eye_tea_2RN";
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:EyeLidBottom_zero|eye_tea_2:EyeLidBottom_ctl" 
 		"bend_center" " -av -k 1 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:Eye_zero|eye_tea_2:Eye_ctl" 
-		"translateX" " -av 0.38429595960701257"
+		"translateX" " -av 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:Eye_zero|eye_tea_2:Eye_ctl" 
-		"translateZ" " -av -0.22591904694466092"
+		"translateZ" " -av 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:Eye_zero|eye_tea_2:Eye_ctl" 
-		"pupil_size" " -av -k 1 0.20000000000000007"
+		"pupil_size" " -av -k 1 0.4"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:Eye_zero|eye_tea_2:Eye_ctl" 
-		"iris_size" " -av -k 1 -0.5"
+		"iris_size" " -av -k 1 1"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:global_grp|eye_tea_2:joint24|eye_tea_2:group9|eye_tea_2:nurbsCircle1" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:global_grp|eye_tea_2:joint24|eye_tea_2:group9|eye_tea_2:nurbsCircle1" 
@@ -28509,7 +28510,7 @@ createNode reference -n "eye_tea_2RN";
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group7|eye_tea_2:border_cr_ctl" 
 		"translateX" " -av"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group6|eye_tea_2:border_br_ctl" 
-		"translate" " -type \"double3\" 0.23943695378835156 0 0.037176990451870735"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group6|eye_tea_2:border_br_ctl" 
 		"translateZ" " -av"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group6|eye_tea_2:border_br_ctl" 
@@ -28517,7 +28518,7 @@ createNode reference -n "eye_tea_2RN";
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group6|eye_tea_2:border_br_ctl" 
 		"translateX" " -av"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group5|eye_tea_2:border_bl_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.05326140432430447 0 0.20918166954858636"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group5|eye_tea_2:border_bl_ctl" 
 		"translateZ" " -av"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group5|eye_tea_2:border_bl_ctl" 
@@ -28525,7 +28526,7 @@ createNode reference -n "eye_tea_2RN";
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group5|eye_tea_2:border_bl_ctl" 
 		"translateX" " -av"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group4|eye_tea_2:border_tr_ctl" 
-		"translate" " -type \"double3\" 0.27178884936223713 0 0.03444750529913071"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group4|eye_tea_2:border_tr_ctl" 
 		"translateZ" " -av"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl|eye_tea_2:border|eye_tea_2:group4|eye_tea_2:border_tr_ctl" 
@@ -31635,37 +31636,39 @@ createNode reference -n "MonocleRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"MonocleRN"
 		"MonocleRN" 0
-		"MonocleRN" 25
-		2 "|Monocle:asset|Monocle:root_ctl" "translate" " -type \"double3\" -2.1556010972466928 5.80014103650262847 -0.068214861502708876"
+		"MonocleRN" 27
+		2 "|Monocle:asset|Monocle:root_ctl" "translate" " -type \"double3\" -2.07825910969160121 5.83137562658651998 -0.17414526956219151"
 		
 		2 "|Monocle:asset|Monocle:root_ctl" "translateX" " -av"
 		2 "|Monocle:asset|Monocle:root_ctl" "translateY" " -av"
 		2 "|Monocle:asset|Monocle:root_ctl" "translateZ" " -av"
-		2 "|Monocle:asset|Monocle:root_ctl" "rotate" " -type \"double3\" 21.33231469714759143 32.03852152522742358 12.11216300786372635"
+		2 "|Monocle:asset|Monocle:root_ctl" "rotate" " -type \"double3\" 18.28094596517721726 21.82691291461757999 4.8572322439338933"
 		
 		2 "|Monocle:asset|Monocle:root_ctl" "rotateX" " -av"
 		2 "|Monocle:asset|Monocle:root_ctl" "rotateY" " -av"
 		2 "|Monocle:asset|Monocle:root_ctl" "rotateZ" " -av"
-		2 "|Monocle:asset|Monocle:root_ctl" "scale" " -type \"double3\" 0.4149411878524063 0.4149411878524063 0.41716116467752246"
+		2 "|Monocle:asset|Monocle:root_ctl" "scale" " -type \"double3\" 0.4149411878524063 0.4149411878524063 0.4149411878524063"
 		
+		2 "|Monocle:asset|Monocle:root_ctl" "scaleX" " -av"
+		2 "|Monocle:asset|Monocle:root_ctl" "scaleY" " -av"
 		2 "|Monocle:asset|Monocle:root_ctl" "scaleZ" " -av"
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.scaleX" "MonocleRN.placeHolderList[1]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.translateX" "MonocleRN.placeHolderList[1]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.scaleY" "MonocleRN.placeHolderList[2]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.translateY" "MonocleRN.placeHolderList[2]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.scaleZ" "MonocleRN.placeHolderList[3]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.translateZ" "MonocleRN.placeHolderList[3]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.translateX" "MonocleRN.placeHolderList[4]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.rotateX" "MonocleRN.placeHolderList[4]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.translateY" "MonocleRN.placeHolderList[5]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.rotateY" "MonocleRN.placeHolderList[5]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.translateZ" "MonocleRN.placeHolderList[6]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.rotateZ" "MonocleRN.placeHolderList[6]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.rotateX" "MonocleRN.placeHolderList[7]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.scaleX" "MonocleRN.placeHolderList[7]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.rotateY" "MonocleRN.placeHolderList[8]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.scaleY" "MonocleRN.placeHolderList[8]" 
 		""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.rotateZ" "MonocleRN.placeHolderList[9]" 
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.scaleZ" "MonocleRN.placeHolderList[9]" 
 		""
 		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl.visibility" "MonocleRN.placeHolderList[10]" 
 		""
@@ -31798,22 +31801,21 @@ createNode reference -n "MouthRN";
 		"MouthRN"
 		"MouthRN" 0
 		"MouthRN" 91
-		2 "|Mouth:asset|Mouth:root_ctl" "translate" " -type \"double3\" 0.32988082038345351 5.82160587486921344 -0.14580051141433897"
+		2 "|Mouth:asset|Mouth:root_ctl" "translate" " -type \"double3\" 0.22819402141510089 5.9354632125580169 -0.45549734300665368"
 		
 		2 "|Mouth:asset|Mouth:root_ctl" "translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl" "translateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl" "translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl" "rotate" " -type \"double3\" 157.65051004684610803 -29.3739369559148642 188.92438626932502643"
+		2 "|Mouth:asset|Mouth:root_ctl" "rotate" " -type \"double3\" 4.23251968936067602 -17.38847871408918166 43.68075108042391719"
 		
 		2 "|Mouth:asset|Mouth:root_ctl" "rotateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl" "rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl" "rotateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl" "scale" " -type \"double3\" 0.47143776208997368 1 1"
-		
+		2 "|Mouth:asset|Mouth:root_ctl" "scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl" "scaleX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl" "mouth" " -av -k 1 1"
+		2 "|Mouth:asset|Mouth:root_ctl" "mouth" " -av -k 1 2"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl" 
-		"translate" " -type \"double3\" 0 0 -0.077238038164754733"
+		"translate" " -type \"double3\" 0 0 -0.0659454589069709"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl" 
 		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl" 
@@ -31837,7 +31839,7 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl" 
 		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
-		"translate" " -type \"double3\" 0 0 0.25301763507212449"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
 		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
@@ -31845,11 +31847,11 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
 		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
-		"rotate" " -type \"double3\" 0 -33.60893601755559246 0"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
-		"rotateY" " -av"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
 		"rotateX" " -av"
+		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
+		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
 		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
@@ -31861,7 +31863,7 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl" 
 		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
-		"translate" " -type \"double3\" -0.029991183791070398 0 0.23914404662389466"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
 		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
@@ -31869,11 +31871,11 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
 		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
-		"rotate" " -type \"double3\" 0 36.12208515650910812 0"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
-		"rotateY" " -av"
+		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
 		"rotateX" " -av"
+		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
+		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
 		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
@@ -31914,63 +31916,63 @@ createNode reference -n "MouthRN";
 		"MouthRN.placeHolderList[14]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.translateZ" 
 		"MouthRN.placeHolderList[15]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.visibility" 
-		"MouthRN.placeHolderList[16]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.rotateX" 
-		"MouthRN.placeHolderList[17]" ""
+		"MouthRN.placeHolderList[16]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.rotateY" 
-		"MouthRN.placeHolderList[18]" ""
+		"MouthRN.placeHolderList[17]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.rotateZ" 
-		"MouthRN.placeHolderList[19]" ""
+		"MouthRN.placeHolderList[18]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.scaleX" 
-		"MouthRN.placeHolderList[20]" ""
+		"MouthRN.placeHolderList[19]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.scaleY" 
-		"MouthRN.placeHolderList[21]" ""
+		"MouthRN.placeHolderList[20]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.scaleZ" 
+		"MouthRN.placeHolderList[21]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.visibility" 
 		"MouthRN.placeHolderList[22]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.drawOverride" 
 		"MouthRN.placeHolderList[23]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.drawOverride" 
-		"MouthRN.placeHolderList[24]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.rotateY" 
-		"MouthRN.placeHolderList[25]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.rotateX" 
-		"MouthRN.placeHolderList[26]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.rotateZ" 
-		"MouthRN.placeHolderList[27]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.translateX" 
-		"MouthRN.placeHolderList[28]" ""
+		"MouthRN.placeHolderList[24]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.translateY" 
-		"MouthRN.placeHolderList[29]" ""
+		"MouthRN.placeHolderList[25]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.translateZ" 
-		"MouthRN.placeHolderList[30]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.visibility" 
-		"MouthRN.placeHolderList[31]" ""
+		"MouthRN.placeHolderList[26]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.rotateX" 
+		"MouthRN.placeHolderList[27]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.rotateY" 
+		"MouthRN.placeHolderList[28]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.rotateZ" 
+		"MouthRN.placeHolderList[29]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.scaleX" 
-		"MouthRN.placeHolderList[32]" ""
+		"MouthRN.placeHolderList[30]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.scaleY" 
-		"MouthRN.placeHolderList[33]" ""
+		"MouthRN.placeHolderList[31]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.scaleZ" 
+		"MouthRN.placeHolderList[32]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.drawOverride" 
+		"MouthRN.placeHolderList[33]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_1_grp|Mouth:mouthB_1_ctl.visibility" 
 		"MouthRN.placeHolderList[34]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.drawOverride" 
-		"MouthRN.placeHolderList[35]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.rotateY" 
-		"MouthRN.placeHolderList[36]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.rotateX" 
-		"MouthRN.placeHolderList[37]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.rotateZ" 
-		"MouthRN.placeHolderList[38]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.scaleX" 
-		"MouthRN.placeHolderList[39]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.scaleY" 
-		"MouthRN.placeHolderList[40]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.scaleZ" 
-		"MouthRN.placeHolderList[41]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.translateX" 
-		"MouthRN.placeHolderList[42]" ""
+		"MouthRN.placeHolderList[35]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.translateY" 
-		"MouthRN.placeHolderList[43]" ""
+		"MouthRN.placeHolderList[36]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.translateZ" 
+		"MouthRN.placeHolderList[37]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.rotateX" 
+		"MouthRN.placeHolderList[38]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.rotateY" 
+		"MouthRN.placeHolderList[39]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.rotateZ" 
+		"MouthRN.placeHolderList[40]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.scaleX" 
+		"MouthRN.placeHolderList[41]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.scaleY" 
+		"MouthRN.placeHolderList[42]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.scaleZ" 
+		"MouthRN.placeHolderList[43]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.drawOverride" 
 		"MouthRN.placeHolderList[44]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -32295,8 +32297,8 @@ createNode animCurveTA -n "mouthB_2_ctl_rotateZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  70 0;
 select -ne :time1;
-	setAttr ".o" 80;
-	setAttr ".unw" 80;
+	setAttr ".o" 18;
+	setAttr ".unw" 18;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -32320,6 +32322,7 @@ select -ne :lightList1;
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
 select -ne :initialShadingGroup;
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -32396,10 +32399,6 @@ connectAttr "cup_rig_01RN.phl[25]" "pCylinderShape1.iog.og[0].gco";
 connectAttr "groupId1.msg" "cup_rig_01RN.phl[26]";
 connectAttr "pCylinderShape1.iog.og[0]" "cup_rig_01RN.phl[27]";
 connectAttr "cupShapeOrig1.w" "cup_rig_01RN.phl[28]";
-connectAttr "camera_rigRN.phl[1]" "set2.dsm" -na;
-connectAttr "camera_rigRN.phl[2]" "set4.dsm" -na;
-connectAttr "camera_rigRN.phl[3]" "set1.dsm" -na;
-connectAttr "camera_rigRN.phl[4]" "set3.dsm" -na;
 connectAttr "layer1.di" "eye_tea_1RN.phl[1]";
 connectAttr "layer1.di" "eye_tea_1RN.phl[2]";
 connectAttr "layer1.di" "eye_tea_1RN.phl[3]";
@@ -32660,15 +32659,15 @@ connectAttr "character1_border_tl_ctl_translateZ.o" "eye_tea_2RN.phl[134]";
 connectAttr "character1_border_tl_ctl_translateY.o" "eye_tea_2RN.phl[135]";
 connectAttr "character1_border_tl_ctl_translateX.o" "eye_tea_2RN.phl[136]";
 connectAttr "eye_tea_2RN.phl[137]" "tea.dnsm[0]";
-connectAttr "root_ctl_scaleX.o" "MonocleRN.phl[1]";
-connectAttr "root_ctl_scaleY.o" "MonocleRN.phl[2]";
-connectAttr "root_ctl_scaleZ.o" "MonocleRN.phl[3]";
-connectAttr "root_ctl_translateX.o" "MonocleRN.phl[4]";
-connectAttr "root_ctl_translateY.o" "MonocleRN.phl[5]";
-connectAttr "root_ctl_translateZ.o" "MonocleRN.phl[6]";
-connectAttr "root_ctl_rotateX.o" "MonocleRN.phl[7]";
-connectAttr "root_ctl_rotateY.o" "MonocleRN.phl[8]";
-connectAttr "root_ctl_rotateZ.o" "MonocleRN.phl[9]";
+connectAttr "root_ctl_translateX.o" "MonocleRN.phl[1]";
+connectAttr "root_ctl_translateY.o" "MonocleRN.phl[2]";
+connectAttr "root_ctl_translateZ.o" "MonocleRN.phl[3]";
+connectAttr "root_ctl_rotateX.o" "MonocleRN.phl[4]";
+connectAttr "root_ctl_rotateY.o" "MonocleRN.phl[5]";
+connectAttr "root_ctl_rotateZ.o" "MonocleRN.phl[6]";
+connectAttr "root_ctl_scaleX.o" "MonocleRN.phl[7]";
+connectAttr "root_ctl_scaleY.o" "MonocleRN.phl[8]";
+connectAttr "root_ctl_scaleZ.o" "MonocleRN.phl[9]";
 connectAttr "root_ctl_visibility.o" "MonocleRN.phl[10]";
 connectAttr "layer1.di" "MonocleRN.phl[11]";
 connectAttr "layer1.di" "MonocleRN.phl[12]";
@@ -32690,35 +32689,35 @@ connectAttr "layer1.di" "MouthRN.phl[12]";
 connectAttr "mouthB_0_ctl_translateX.o" "MouthRN.phl[13]";
 connectAttr "mouthB_0_ctl_translateY.o" "MouthRN.phl[14]";
 connectAttr "mouthB_0_ctl_translateZ.o" "MouthRN.phl[15]";
-connectAttr "mouthB_0_ctl_visibility.o" "MouthRN.phl[16]";
-connectAttr "mouthB_0_ctl_rotateX.o" "MouthRN.phl[17]";
-connectAttr "mouthB_0_ctl_rotateY.o" "MouthRN.phl[18]";
-connectAttr "mouthB_0_ctl_rotateZ.o" "MouthRN.phl[19]";
-connectAttr "mouthB_0_ctl_scaleX.o" "MouthRN.phl[20]";
-connectAttr "mouthB_0_ctl_scaleY.o" "MouthRN.phl[21]";
-connectAttr "mouthB_0_ctl_scaleZ.o" "MouthRN.phl[22]";
+connectAttr "mouthB_0_ctl_rotateX.o" "MouthRN.phl[16]";
+connectAttr "mouthB_0_ctl_rotateY.o" "MouthRN.phl[17]";
+connectAttr "mouthB_0_ctl_rotateZ.o" "MouthRN.phl[18]";
+connectAttr "mouthB_0_ctl_scaleX.o" "MouthRN.phl[19]";
+connectAttr "mouthB_0_ctl_scaleY.o" "MouthRN.phl[20]";
+connectAttr "mouthB_0_ctl_scaleZ.o" "MouthRN.phl[21]";
+connectAttr "mouthB_0_ctl_visibility.o" "MouthRN.phl[22]";
 connectAttr "layer1.di" "MouthRN.phl[23]";
-connectAttr "layer1.di" "MouthRN.phl[24]";
-connectAttr "mouthB_1_ctl_rotateY.o" "MouthRN.phl[25]";
-connectAttr "mouthB_1_ctl_rotateX.o" "MouthRN.phl[26]";
-connectAttr "mouthB_1_ctl_rotateZ.o" "MouthRN.phl[27]";
-connectAttr "mouthB_1_ctl_translateX.o" "MouthRN.phl[28]";
-connectAttr "mouthB_1_ctl_translateY.o" "MouthRN.phl[29]";
-connectAttr "mouthB_1_ctl_translateZ.o" "MouthRN.phl[30]";
-connectAttr "mouthB_1_ctl_visibility.o" "MouthRN.phl[31]";
-connectAttr "mouthB_1_ctl_scaleX.o" "MouthRN.phl[32]";
-connectAttr "mouthB_1_ctl_scaleY.o" "MouthRN.phl[33]";
-connectAttr "mouthB_1_ctl_scaleZ.o" "MouthRN.phl[34]";
-connectAttr "layer1.di" "MouthRN.phl[35]";
-connectAttr "mouthB_2_ctl_rotateY.o" "MouthRN.phl[36]";
-connectAttr "mouthB_2_ctl_rotateX.o" "MouthRN.phl[37]";
-connectAttr "mouthB_2_ctl_rotateZ.o" "MouthRN.phl[38]";
-connectAttr "mouthB_2_ctl_scaleX.o" "MouthRN.phl[39]";
-connectAttr "mouthB_2_ctl_scaleY.o" "MouthRN.phl[40]";
-connectAttr "mouthB_2_ctl_scaleZ.o" "MouthRN.phl[41]";
-connectAttr "mouthB_2_ctl_translateX.o" "MouthRN.phl[42]";
-connectAttr "mouthB_2_ctl_translateY.o" "MouthRN.phl[43]";
-connectAttr "mouthB_2_ctl_translateZ.o" "MouthRN.phl[44]";
+connectAttr "mouthB_1_ctl_translateX.o" "MouthRN.phl[24]";
+connectAttr "mouthB_1_ctl_translateY.o" "MouthRN.phl[25]";
+connectAttr "mouthB_1_ctl_translateZ.o" "MouthRN.phl[26]";
+connectAttr "mouthB_1_ctl_rotateX.o" "MouthRN.phl[27]";
+connectAttr "mouthB_1_ctl_rotateY.o" "MouthRN.phl[28]";
+connectAttr "mouthB_1_ctl_rotateZ.o" "MouthRN.phl[29]";
+connectAttr "mouthB_1_ctl_scaleX.o" "MouthRN.phl[30]";
+connectAttr "mouthB_1_ctl_scaleY.o" "MouthRN.phl[31]";
+connectAttr "mouthB_1_ctl_scaleZ.o" "MouthRN.phl[32]";
+connectAttr "layer1.di" "MouthRN.phl[33]";
+connectAttr "mouthB_1_ctl_visibility.o" "MouthRN.phl[34]";
+connectAttr "mouthB_2_ctl_translateX.o" "MouthRN.phl[35]";
+connectAttr "mouthB_2_ctl_translateY.o" "MouthRN.phl[36]";
+connectAttr "mouthB_2_ctl_translateZ.o" "MouthRN.phl[37]";
+connectAttr "mouthB_2_ctl_rotateX.o" "MouthRN.phl[38]";
+connectAttr "mouthB_2_ctl_rotateY.o" "MouthRN.phl[39]";
+connectAttr "mouthB_2_ctl_rotateZ.o" "MouthRN.phl[40]";
+connectAttr "mouthB_2_ctl_scaleX.o" "MouthRN.phl[41]";
+connectAttr "mouthB_2_ctl_scaleY.o" "MouthRN.phl[42]";
+connectAttr "mouthB_2_ctl_scaleZ.o" "MouthRN.phl[43]";
+connectAttr "layer1.di" "MouthRN.phl[44]";
 connectAttr "groupId1.id" "pCylinderShape1.iog.og[0].gid";
 connectAttr "groupId2.id" "pCylinderShape1.iog.og[1].gid";
 connectAttr "tweakSet1.mwc" "pCylinderShape1.iog.og[1].gco";
@@ -32866,8 +32865,12 @@ connectAttr "border_tc_ctl_translateX1.o" "eye_milk_2RN.phl[47]";
 connectAttr "border_tl_ctl_translateZ1.o" "eye_milk_2RN.phl[48]";
 connectAttr "border_tl_ctl_translateY1.o" "eye_milk_2RN.phl[49]";
 connectAttr "border_tl_ctl_translateX1.o" "eye_milk_2RN.phl[50]";
+connectAttr "camera_rigRN.phl[3]" "set1.dsm" -na;
 connectAttr "render_cam.iog" "set1.dsm" -na;
+connectAttr "camera_rigRN.phl[1]" "set2.dsm" -na;
+connectAttr "camera_rigRN.phl[4]" "set3.dsm" -na;
 connectAttr "render_cam.iog" "set3.dsm" -na;
+connectAttr "camera_rigRN.phl[2]" "set4.dsm" -na;
 connectAttr "groupParts2.og" "tweak1.ip[0].ig";
 connectAttr "groupId2.id" "tweak1.ip[0].gi";
 connectAttr "tweak1.og[0]" "groupParts1.ig";
@@ -32893,6 +32896,7 @@ connectAttr "pCylinderShape1.iog" "phong1SG.dsm" -na;
 connectAttr "phong1SG.msg" "materialInfo1.sg";
 connectAttr "phong1.msg" "materialInfo1.m";
 connectAttr "layerManager.dli[1]" "layer1.id";
+connectAttr "sharedReferenceNode.sr" "MonocleRN.sr";
 connectAttr "sharedReferenceNode.sr" "MouthRN.sr";
 connectAttr "phong1SG.pa" ":renderPartition.st" -na;
 connectAttr "phong1.msg" ":defaultShaderList1.s" -na;
