@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc010_sh020.ma
-//Last modified: Sat, Mar 06, 2021 05:55:21 PM
+//Last modified: Sat, Mar 06, 2021 06:42:18 PM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/milk_jug.ma";
@@ -36,13 +36,13 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19042)\n";
 createNode transform -s -n "persp";
 	rename -uid "2C10C754-45C3-2F74-9A01-BAA617812E18";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.4725973856633612 19.474346474405142 65.418302769852971 ;
+	setAttr ".t" -type "double3" 2.3987382069178196 21.854427074277439 65.493213964490891 ;
 	setAttr ".r" -type "double3" -4.5383527293805006 -2.2000000000012014 -2.4866412073199635e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "13AE64E3-40CE-21C3-25B9-41907BB39095";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 65.10949685674089;
+	setAttr ".coi" 65.109496856744229;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -280,19 +280,19 @@ createNode mesh -n "FLUID_beamShape" -p "FLUID_beam";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "630E486B-4151-AAB1-C41A-A7BAC32FD6B5";
+	rename -uid "D1C2AA01-47DF-0705-8F87-5A8C859B0DD7";
 	setAttr -s 40 ".lnk";
 	setAttr -s 40 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "EB037AF4-49C5-E7DD-DDEB-2D9F32D42CAA";
+	rename -uid "0EB8BE2C-47F2-236D-6A63-FCB8E657ABFC";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "867B450C-44F7-1419-E09D-33B2C39D4B55";
+	rename -uid "28A82903-43A6-78FA-BA2A-1F8927C3007A";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "ABC23223-4822-0160-A81D-85BA11DCA643";
+	rename -uid "F8E6EA86-4C79-9149-17AC-DDA58C34796A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FA05B9A1-4E71-B3C9-56AB-0FB22F4826F7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "A0845054-4EC9-2186-8DBC-0B940E6D5EC6";
+	rename -uid "76BD66F2-402C-A8F4-E739-3C9D5648F7F3";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E2DB08F1-452F-FB4D-A71D-7FA2920DCAF0";
 	setAttr ".g" yes;
@@ -371,10 +371,9 @@ createNode reference -n "cup_rig_01RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"cup_rig_01RN"
 		"cup_rig_01RN" 0
-		"cup_rig_01RN" 21
+		"cup_rig_01RN" 20
 		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "amplitude" " -av -k 1 0"
 		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "direction" " -av -k 1 0"
-		2 "cup_rig_01:ffd1" "input" " -s 2"
 		5 4 "cup_rig_01RN" "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl.amplitude" 
 		"cup_rig_01RN.placeHolderList[1]" ""
 		5 4 "cup_rig_01RN" "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl.direction" 
@@ -419,17 +418,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 442\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n"
 		+ "            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n"
-		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 441\n            -height 499\n"
+		+ "            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n"
 		+ "            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n"
 		+ "            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n"
 		+ "            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n"
-		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 442\n            -height 499\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
+		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 894\n            -height 1047\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 801\n            -height 1047\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
@@ -455,13 +454,13 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"camera_rig:render_cam_const|camera_rig:render_cam\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n"
 		+ "            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n"
 		+ "            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 0\n            -nurbsCurves 0\n            -nurbsSurfaces 0\n            -polymeshes 1\n            -subdivSurfaces 0\n            -planes 0\n            -lights 0\n            -cameras 0\n            -controlVertices 0\n            -hulls 0\n            -grid 0\n            -imagePlane 0\n            -joints 0\n            -ikHandles 0\n            -deformers 0\n            -dynamics 0\n            -particleInstancers 0\n            -fluids 0\n            -hairSystems 0\n            -follicles 0\n            -nCloths 0\n            -nParticles 0\n            -nRigids 0\n"
-		+ "            -dynamicConstraints 0\n            -locators 0\n            -manipulators 0\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1030\n            -height 1032\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n"
+		+ "            -dynamicConstraints 0\n            -locators 0\n            -manipulators 0\n            -pluginShapes 0\n            -dimensions 0\n            -handles 0\n            -pivots 0\n            -textures 0\n            -strokes 0\n            -motionTrails 0\n            -clipGhosts 0\n            -greasePencils 0\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 923\n            -height 1032\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 0 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n"
 		+ "                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n"
 		+ "                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
 		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n"
 		+ "                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 894\\n    -height 1047\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 894\\n    -height 1047\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 801\\n    -height 1047\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 801\\n    -height 1047\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -566,7 +565,7 @@ createNode reference -n "camera_rigRN";
 lockNode -l 1 ;
 createNode reference -n "eye_tea_1RN";
 	rename -uid "C217E0C2-49F3-0B59-F40B-2A816EDB55DD";
-	setAttr -s 73 ".phl";
+	setAttr -s 80 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -640,10 +639,17 @@ createNode reference -n "eye_tea_1RN";
 	setAttr ".phl[71]" 0;
 	setAttr ".phl[72]" 0;
 	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"eye_tea_1RN"
 		"eye_tea_1RN" 0
-		"eye_tea_1RN" 169
+		"eye_tea_1RN" 173
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "translate" 
 		" -type \"double3\" 7.96590600993005182 -23.28019115556195473 0.39926956548947956"
 		
@@ -829,171 +835,187 @@ createNode reference -n "eye_tea_1RN";
 		"translateY" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group1|eye_tea_1:border_tl_ctl" 
 		"translateX" " -av"
-		2 "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:border_geo" "visibility" 
-		" 0"
-		2 "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:lid_bot_geo" "visibility" 
-		" 0"
-		2 "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:lid_top_geo" "visibility" 
-		" 0"
 		2 "eye_tea_1:character1" "referenceMapping" (" -type \"characterMapping\" 73 \"eye_tea_1:EyeLidTop_ctl.bend_center\" 0 1 \"eye_tea_1:EyeLidTop_ctl.bend_right\" 0 2 \"eye_tea_1:EyeLidTop_ctl.bend_left\" 0 3 \"eye_tea_1:EyeLidTop_ctl.translateZ\" 1 1 \"eye_tea_1:EyeLidTop_ctl.translateX\" 1 2 \"eye_tea_1:EyeLidBottom_ctl.bend_center\" 0 4 \"eye_tea_1:EyeLidBottom_ctl.bend_right\" 0 5 \"eye_tea_1:EyeLidBottom_ctl.bend_left\" 0 6 \"eye_tea_1:EyeLidBottom_ctl.translateZ\" 1 3 \"eye_tea_1:EyeLidBottom_ctl.translateX\" 1 4 \"eye_tea_1:Eye_ctl.iris_size\" 0 7 \"eye_tea_1:Eye_ctl.pupil_size\" 0 8 \"eye_tea_1:Eye_ctl.translateZ\" 1 5 \"eye_tea_1:Eye_ctl.translateX\" 1 6 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateZ\" 1 7 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateY\" 1 8 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateX\" 1 9 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateZ\" 1 10 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateY\" 1 11 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateX\" 1 12 \"eye_tea_1:group14|eye_tea_1:nurbsCircle1.translateZ\" 1 13 \"eye_tea_1:group14|eye_t"
 		+ "ea_1:nurbsCircle1.translateY\" 1 14 \"eye_tea_1:group14|eye_tea_1:nurbsCircle1.translateX\" 1 15 \"eye_tea_1:group11|eye_tea_1:nurbsCircle2.translateZ\" 1 16 \"eye_tea_1:group11|eye_tea_1:nurbsCircle2.translateY\" 1 17 \"eye_tea_1:group11|eye_tea_1:nurbsCircle2.translateX\" 1 18 \"eye_tea_1:group15|eye_tea_1:nurbsCircle1.translateZ\" 1 19 \"eye_tea_1:group15|eye_tea_1:nurbsCircle1.translateY\" 1 20 \"eye_tea_1:group15|eye_tea_1:nurbsCircle1.translateX\" 1 21 \"eye_tea_1:group12|eye_tea_1:nurbsCircle2.translateZ\" 1 22 \"eye_tea_1:group12|eye_tea_1:nurbsCircle2.translateY\" 1 23 \"eye_tea_1:group12|eye_tea_1:nurbsCircle2.translateX\" 1 24 \"eye_tea_1:group16|eye_tea_1:nurbsCircle1.translateZ\" 1 25 \"eye_tea_1:group16|eye_tea_1:nurbsCircle1.translateY\" 1 26 \"eye_tea_1:group16|eye_tea_1:nurbsCircle1.translateX\" 1 27 \"eye_tea_1:group13|eye_tea_1:nurbsCircle2.translateZ\" 1 28 \"eye_tea_1:group13|eye_tea_1:nurbsCircle2.translateY\" 1 29 \"eye_tea_1:group13|eye_tea_1:nurbsCircle2.translateX\" 1 30 \"eye_tea_1:Root_ctl.wobble_amplitude\" 0 9 \"ey"
 		+ "e_tea_1:Root_ctl.wobble_frequence\" 0 10 \"eye_tea_1:Root_ctl.scaleZ\" 0 11 \"eye_tea_1:Root_ctl.scaleY\" 0 12 \"eye_tea_1:Root_ctl.scaleX\" 0 13 \"eye_tea_1:Root_ctl.rotateZ\" 2 1 \"eye_tea_1:Root_ctl.rotateY\" 2 2 \"eye_tea_1:Root_ctl.rotateX\" 2 3 \"eye_tea_1:Root_ctl.translateZ\" 1 31 \"eye_tea_1:Root_ctl.translateY\" 1 32 \"eye_tea_1:Root_ctl.translateX\" 1 33 \"eye_tea_1:border_cl_ctl.translateZ\" 1 34 \"eye_tea_1:border_cl_ctl.translateY\" 1 35 \"eye_tea_1:border_cl_ctl.translateX\" 1 36 \"eye_tea_1:border_cr_ctl.translateZ\" 1 37 \"eye_tea_1:border_cr_ctl.translateY\" 1 38 \"eye_tea_1:border_cr_ctl.translateX\" 1 39 \"eye_tea_1:border_br_ctl.translateZ\" 1 40 \"eye_tea_1:border_br_ctl.translateY\" 1 41 \"eye_tea_1:border_br_ctl.translateX\" 1 42 \"eye_tea_1:border_bl_ctl.translateZ\" 1 43 \"eye_tea_1:border_bl_ctl.translateY\" 1 44 \"eye_tea_1:border_bl_ctl.translateX\" 1 45 \"eye_tea_1:border_tr_ctl.translateZ\" 1 46 \"eye_tea_1:border_tr_ctl.translateY\" 1 47 \"eye_tea_1:border_tr_ctl.translateX\" 1 48 \"eye_tea_1:border_bc_ctl.translateZ\" 1 49 \"ey"
 		+ "e_tea_1:border_bc_ctl.translateY\" 1 50 \"eye_tea_1:border_bc_ctl.translateX\" 1 51 \"eye_tea_1:border_tc_ctl.translateZ\" 1 52 \"eye_tea_1:border_tc_ctl.translateY\" 1 53 \"eye_tea_1:border_tc_ctl.translateX\" 1 54 \"eye_tea_1:border_tl_ctl.translateZ\" 1 55 \"eye_tea_1:border_tl_ctl.translateY\" 1 56 \"eye_tea_1:border_tl_ctl.translateX\" 1 57"
 		)
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[1]" "eye_tea_1RN.placeHolderList[1]" 
+		5 4 "eye_tea_1RN" "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:glass_geo.visibility" 
+		"eye_tea_1RN.placeHolderList[1]" ""
+		5 4 "eye_tea_1RN" "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:border_geo.visibility" 
+		"eye_tea_1RN.placeHolderList[2]" ""
+		5 4 "eye_tea_1RN" "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:iris_geo.visibility" 
+		"eye_tea_1RN.placeHolderList[3]" ""
+		5 4 "eye_tea_1RN" "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:eye_geo.visibility" 
+		"eye_tea_1RN.placeHolderList[4]" ""
+		5 4 "eye_tea_1RN" "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:pupil_geo.visibility" 
+		"eye_tea_1RN.placeHolderList[5]" ""
+		5 4 "eye_tea_1RN" "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:lid_bot_geo.visibility" 
+		"eye_tea_1RN.placeHolderList[6]" ""
+		5 4 "eye_tea_1RN" "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:lid_top_geo.visibility" 
+		"eye_tea_1RN.placeHolderList[7]" ""
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[1]" "eye_tea_1RN.placeHolderList[8]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[2]" "eye_tea_1RN.placeHolderList[2]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[2]" "eye_tea_1RN.placeHolderList[9]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[3]" "eye_tea_1RN.placeHolderList[3]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[3]" "eye_tea_1RN.placeHolderList[10]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[4]" "eye_tea_1RN.placeHolderList[4]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[4]" "eye_tea_1RN.placeHolderList[11]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[5]" "eye_tea_1RN.placeHolderList[5]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[5]" "eye_tea_1RN.placeHolderList[12]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[6]" "eye_tea_1RN.placeHolderList[6]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[6]" "eye_tea_1RN.placeHolderList[13]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[7]" "eye_tea_1RN.placeHolderList[7]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[7]" "eye_tea_1RN.placeHolderList[14]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[8]" "eye_tea_1RN.placeHolderList[8]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[8]" "eye_tea_1RN.placeHolderList[15]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[9]" "eye_tea_1RN.placeHolderList[9]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[9]" "eye_tea_1RN.placeHolderList[16]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[10]" "eye_tea_1RN.placeHolderList[10]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[10]" "eye_tea_1RN.placeHolderList[17]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[11]" "eye_tea_1RN.placeHolderList[11]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[11]" "eye_tea_1RN.placeHolderList[18]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[12]" "eye_tea_1RN.placeHolderList[12]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[12]" "eye_tea_1RN.placeHolderList[19]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[13]" "eye_tea_1RN.placeHolderList[13]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.unitlessValues[13]" "eye_tea_1RN.placeHolderList[20]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.angularValues[1]" "eye_tea_1RN.placeHolderList[14]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.angularValues[1]" "eye_tea_1RN.placeHolderList[21]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.angularValues[2]" "eye_tea_1RN.placeHolderList[15]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.angularValues[2]" "eye_tea_1RN.placeHolderList[22]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.angularValues[3]" "eye_tea_1RN.placeHolderList[16]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.angularValues[3]" "eye_tea_1RN.placeHolderList[23]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[1]" "eye_tea_1RN.placeHolderList[17]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[1]" "eye_tea_1RN.placeHolderList[24]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[2]" "eye_tea_1RN.placeHolderList[18]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[2]" "eye_tea_1RN.placeHolderList[25]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[3]" "eye_tea_1RN.placeHolderList[19]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[3]" "eye_tea_1RN.placeHolderList[26]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[4]" "eye_tea_1RN.placeHolderList[20]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[4]" "eye_tea_1RN.placeHolderList[27]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[5]" "eye_tea_1RN.placeHolderList[21]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[5]" "eye_tea_1RN.placeHolderList[28]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[6]" "eye_tea_1RN.placeHolderList[22]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[6]" "eye_tea_1RN.placeHolderList[29]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[7]" "eye_tea_1RN.placeHolderList[23]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[7]" "eye_tea_1RN.placeHolderList[30]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[8]" "eye_tea_1RN.placeHolderList[24]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[8]" "eye_tea_1RN.placeHolderList[31]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[9]" "eye_tea_1RN.placeHolderList[25]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[9]" "eye_tea_1RN.placeHolderList[32]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[10]" "eye_tea_1RN.placeHolderList[26]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[10]" "eye_tea_1RN.placeHolderList[33]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[11]" "eye_tea_1RN.placeHolderList[27]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[11]" "eye_tea_1RN.placeHolderList[34]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[12]" "eye_tea_1RN.placeHolderList[28]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[12]" "eye_tea_1RN.placeHolderList[35]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[13]" "eye_tea_1RN.placeHolderList[29]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[13]" "eye_tea_1RN.placeHolderList[36]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[14]" "eye_tea_1RN.placeHolderList[30]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[14]" "eye_tea_1RN.placeHolderList[37]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[15]" "eye_tea_1RN.placeHolderList[31]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[15]" "eye_tea_1RN.placeHolderList[38]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[16]" "eye_tea_1RN.placeHolderList[32]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[16]" "eye_tea_1RN.placeHolderList[39]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[17]" "eye_tea_1RN.placeHolderList[33]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[17]" "eye_tea_1RN.placeHolderList[40]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[18]" "eye_tea_1RN.placeHolderList[34]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[18]" "eye_tea_1RN.placeHolderList[41]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[19]" "eye_tea_1RN.placeHolderList[35]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[19]" "eye_tea_1RN.placeHolderList[42]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[20]" "eye_tea_1RN.placeHolderList[36]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[20]" "eye_tea_1RN.placeHolderList[43]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[21]" "eye_tea_1RN.placeHolderList[37]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[21]" "eye_tea_1RN.placeHolderList[44]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[22]" "eye_tea_1RN.placeHolderList[38]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[22]" "eye_tea_1RN.placeHolderList[45]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[23]" "eye_tea_1RN.placeHolderList[39]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[23]" "eye_tea_1RN.placeHolderList[46]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[24]" "eye_tea_1RN.placeHolderList[40]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[24]" "eye_tea_1RN.placeHolderList[47]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[25]" "eye_tea_1RN.placeHolderList[41]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[25]" "eye_tea_1RN.placeHolderList[48]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[26]" "eye_tea_1RN.placeHolderList[42]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[26]" "eye_tea_1RN.placeHolderList[49]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[27]" "eye_tea_1RN.placeHolderList[43]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[27]" "eye_tea_1RN.placeHolderList[50]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[28]" "eye_tea_1RN.placeHolderList[44]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[28]" "eye_tea_1RN.placeHolderList[51]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[29]" "eye_tea_1RN.placeHolderList[45]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[29]" "eye_tea_1RN.placeHolderList[52]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[30]" "eye_tea_1RN.placeHolderList[46]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[30]" "eye_tea_1RN.placeHolderList[53]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[31]" "eye_tea_1RN.placeHolderList[47]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[31]" "eye_tea_1RN.placeHolderList[54]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[32]" "eye_tea_1RN.placeHolderList[48]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[32]" "eye_tea_1RN.placeHolderList[55]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[33]" "eye_tea_1RN.placeHolderList[49]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[33]" "eye_tea_1RN.placeHolderList[56]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[34]" "eye_tea_1RN.placeHolderList[50]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[34]" "eye_tea_1RN.placeHolderList[57]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[35]" "eye_tea_1RN.placeHolderList[51]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[35]" "eye_tea_1RN.placeHolderList[58]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[36]" "eye_tea_1RN.placeHolderList[52]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[36]" "eye_tea_1RN.placeHolderList[59]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[37]" "eye_tea_1RN.placeHolderList[53]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[37]" "eye_tea_1RN.placeHolderList[60]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[38]" "eye_tea_1RN.placeHolderList[54]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[38]" "eye_tea_1RN.placeHolderList[61]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[39]" "eye_tea_1RN.placeHolderList[55]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[39]" "eye_tea_1RN.placeHolderList[62]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[40]" "eye_tea_1RN.placeHolderList[56]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[40]" "eye_tea_1RN.placeHolderList[63]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[41]" "eye_tea_1RN.placeHolderList[57]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[41]" "eye_tea_1RN.placeHolderList[64]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[42]" "eye_tea_1RN.placeHolderList[58]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[42]" "eye_tea_1RN.placeHolderList[65]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[43]" "eye_tea_1RN.placeHolderList[59]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[43]" "eye_tea_1RN.placeHolderList[66]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[44]" "eye_tea_1RN.placeHolderList[60]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[44]" "eye_tea_1RN.placeHolderList[67]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[45]" "eye_tea_1RN.placeHolderList[61]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[45]" "eye_tea_1RN.placeHolderList[68]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[46]" "eye_tea_1RN.placeHolderList[62]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[46]" "eye_tea_1RN.placeHolderList[69]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[47]" "eye_tea_1RN.placeHolderList[63]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[47]" "eye_tea_1RN.placeHolderList[70]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[48]" "eye_tea_1RN.placeHolderList[64]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[48]" "eye_tea_1RN.placeHolderList[71]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[49]" "eye_tea_1RN.placeHolderList[65]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[49]" "eye_tea_1RN.placeHolderList[72]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[50]" "eye_tea_1RN.placeHolderList[66]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[50]" "eye_tea_1RN.placeHolderList[73]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[51]" "eye_tea_1RN.placeHolderList[67]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[51]" "eye_tea_1RN.placeHolderList[74]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[52]" "eye_tea_1RN.placeHolderList[68]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[52]" "eye_tea_1RN.placeHolderList[75]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[53]" "eye_tea_1RN.placeHolderList[69]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[53]" "eye_tea_1RN.placeHolderList[76]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[54]" "eye_tea_1RN.placeHolderList[70]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[54]" "eye_tea_1RN.placeHolderList[77]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[55]" "eye_tea_1RN.placeHolderList[71]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[55]" "eye_tea_1RN.placeHolderList[78]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[56]" "eye_tea_1RN.placeHolderList[72]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[56]" "eye_tea_1RN.placeHolderList[79]" 
 		""
-		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[57]" "eye_tea_1RN.placeHolderList[73]" 
+		5 4 "eye_tea_1RN" "eye_tea_1:character1.linearValues[57]" "eye_tea_1RN.placeHolderList[80]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "eye_tea_2RN";
 	rename -uid "36C44DE6-40F8-9F9E-ED9F-949E923F9917";
+	setAttr -s 7 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"eye_tea_2RN"
 		"eye_tea_2RN" 0
-		"eye_tea_2RN" 5
+		"eye_tea_2RN" 12
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "translate" 
 		" -type \"double3\" 26.82593859726992491 0 80.88266894280522479"
 		2 "|eye_tea_2:asset|eye_tea_2:control_grp|eye_tea_2:Root_ctl" "translateZ" 
@@ -1006,12 +1028,26 @@ createNode reference -n "eye_tea_2RN";
 		+ "ea_2:nurbsCircle1.translateY\" 1 14 \"eye_tea_2:group14|eye_tea_2:nurbsCircle1.translateX\" 1 15 \"eye_tea_2:group11|eye_tea_2:nurbsCircle2.translateZ\" 1 16 \"eye_tea_2:group11|eye_tea_2:nurbsCircle2.translateY\" 1 17 \"eye_tea_2:group11|eye_tea_2:nurbsCircle2.translateX\" 1 18 \"eye_tea_2:group15|eye_tea_2:nurbsCircle1.translateZ\" 1 19 \"eye_tea_2:group15|eye_tea_2:nurbsCircle1.translateY\" 1 20 \"eye_tea_2:group15|eye_tea_2:nurbsCircle1.translateX\" 1 21 \"eye_tea_2:group12|eye_tea_2:nurbsCircle2.translateZ\" 1 22 \"eye_tea_2:group12|eye_tea_2:nurbsCircle2.translateY\" 1 23 \"eye_tea_2:group12|eye_tea_2:nurbsCircle2.translateX\" 1 24 \"eye_tea_2:group16|eye_tea_2:nurbsCircle1.translateZ\" 1 25 \"eye_tea_2:group16|eye_tea_2:nurbsCircle1.translateY\" 1 26 \"eye_tea_2:group16|eye_tea_2:nurbsCircle1.translateX\" 1 27 \"eye_tea_2:group13|eye_tea_2:nurbsCircle2.translateZ\" 1 28 \"eye_tea_2:group13|eye_tea_2:nurbsCircle2.translateY\" 1 29 \"eye_tea_2:group13|eye_tea_2:nurbsCircle2.translateX\" 1 30 \"eye_tea_2:Root_ctl.wobble_amplitude\" 0 9 \"ey"
 		+ "e_tea_2:Root_ctl.wobble_frequence\" 0 10 \"eye_tea_2:Root_ctl.scaleZ\" 0 11 \"eye_tea_2:Root_ctl.scaleY\" 0 12 \"eye_tea_2:Root_ctl.scaleX\" 0 13 \"eye_tea_2:Root_ctl.rotateZ\" 2 1 \"eye_tea_2:Root_ctl.rotateY\" 2 2 \"eye_tea_2:Root_ctl.rotateX\" 2 3 \"eye_tea_2:Root_ctl.translateZ\" 1 31 \"eye_tea_2:Root_ctl.translateY\" 1 32 \"eye_tea_2:Root_ctl.translateX\" 1 33 \"eye_tea_2:border_cl_ctl.translateZ\" 1 34 \"eye_tea_2:border_cl_ctl.translateY\" 1 35 \"eye_tea_2:border_cl_ctl.translateX\" 1 36 \"eye_tea_2:border_cr_ctl.translateZ\" 1 37 \"eye_tea_2:border_cr_ctl.translateY\" 1 38 \"eye_tea_2:border_cr_ctl.translateX\" 1 39 \"eye_tea_2:border_br_ctl.translateZ\" 1 40 \"eye_tea_2:border_br_ctl.translateY\" 1 41 \"eye_tea_2:border_br_ctl.translateX\" 1 42 \"eye_tea_2:border_bl_ctl.translateZ\" 1 43 \"eye_tea_2:border_bl_ctl.translateY\" 1 44 \"eye_tea_2:border_bl_ctl.translateX\" 1 45 \"eye_tea_2:border_tr_ctl.translateZ\" 1 46 \"eye_tea_2:border_tr_ctl.translateY\" 1 47 \"eye_tea_2:border_tr_ctl.translateX\" 1 48 \"eye_tea_2:border_bc_ctl.translateZ\" 1 49 \"ey"
 		+ "e_tea_2:border_bc_ctl.translateY\" 1 50 \"eye_tea_2:border_bc_ctl.translateX\" 1 51 \"eye_tea_2:border_tc_ctl.translateZ\" 1 52 \"eye_tea_2:border_tc_ctl.translateY\" 1 53 \"eye_tea_2:border_tc_ctl.translateX\" 1 54 \"eye_tea_2:border_tl_ctl.translateZ\" 1 55 \"eye_tea_2:border_tl_ctl.translateY\" 1 56 \"eye_tea_2:border_tl_ctl.translateX\" 1 57"
-		);
+		)
+		5 4 "eye_tea_2RN" "|eye_tea_2:asset|eye_tea_2:geo_grp|eye_tea_2:glass_geo.visibility" 
+		"eye_tea_2RN.placeHolderList[1]" ""
+		5 4 "eye_tea_2RN" "|eye_tea_2:asset|eye_tea_2:geo_grp|eye_tea_2:border_geo.visibility" 
+		"eye_tea_2RN.placeHolderList[2]" ""
+		5 4 "eye_tea_2RN" "|eye_tea_2:asset|eye_tea_2:geo_grp|eye_tea_2:iris_geo.visibility" 
+		"eye_tea_2RN.placeHolderList[3]" ""
+		5 4 "eye_tea_2RN" "|eye_tea_2:asset|eye_tea_2:geo_grp|eye_tea_2:eye_geo.visibility" 
+		"eye_tea_2RN.placeHolderList[4]" ""
+		5 4 "eye_tea_2RN" "|eye_tea_2:asset|eye_tea_2:geo_grp|eye_tea_2:pupil_geo.visibility" 
+		"eye_tea_2RN.placeHolderList[5]" ""
+		5 4 "eye_tea_2RN" "|eye_tea_2:asset|eye_tea_2:geo_grp|eye_tea_2:lid_bot_geo.visibility" 
+		"eye_tea_2RN.placeHolderList[6]" ""
+		5 4 "eye_tea_2RN" "|eye_tea_2:asset|eye_tea_2:geo_grp|eye_tea_2:lid_top_geo.visibility" 
+		"eye_tea_2RN.placeHolderList[7]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "eye_milk_1RN";
 	rename -uid "8E399AE6-4A8F-3339-74E5-239EA4C90C88";
-	setAttr -s 76 ".phl";
+	setAttr -s 83 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -1088,10 +1124,17 @@ createNode reference -n "eye_milk_1RN";
 	setAttr ".phl[74]" 0;
 	setAttr ".phl[75]" 0;
 	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"eye_milk_1RN"
 		"eye_milk_1RN" 0
-		"eye_milk_1RN" 164
+		"eye_milk_1RN" 168
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "translate" 
 		" -type \"double3\" 7.01216483579304306 17.22283388201239873 0.21567162618961372"
 		
@@ -1263,12 +1306,6 @@ createNode reference -n "eye_milk_1RN";
 		"translateY" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:border|eye_milk_1:group1|eye_milk_1:border_tl_ctl" 
 		"translateX" " -av"
-		2 "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:border_geo" "visibility" 
-		" 0"
-		2 "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:lid_bot_geo" "visibility" 
-		" 0"
-		2 "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:lid_top_geo" "visibility" 
-		" 0"
 		2 "eye_milk_1:character1" "referenceMapping" " -type \"characterMapping\" 0"
 		
 		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl.wobble_frequence" 
@@ -1422,15 +1459,37 @@ createNode reference -n "eye_milk_1RN";
 		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:border|eye_milk_1:group1|eye_milk_1:border_tl_ctl.translateY" 
 		"eye_milk_1RN.placeHolderList[75]" ""
 		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:border|eye_milk_1:group1|eye_milk_1:border_tl_ctl.translateX" 
-		"eye_milk_1RN.placeHolderList[76]" "";
+		"eye_milk_1RN.placeHolderList[76]" ""
+		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:glass_geo.visibility" 
+		"eye_milk_1RN.placeHolderList[77]" ""
+		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:border_geo.visibility" 
+		"eye_milk_1RN.placeHolderList[78]" ""
+		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:iris_geo.visibility" 
+		"eye_milk_1RN.placeHolderList[79]" ""
+		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:eye_geo.visibility" 
+		"eye_milk_1RN.placeHolderList[80]" ""
+		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:pupil_geo.visibility" 
+		"eye_milk_1RN.placeHolderList[81]" ""
+		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:lid_bot_geo.visibility" 
+		"eye_milk_1RN.placeHolderList[82]" ""
+		5 4 "eye_milk_1RN" "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:lid_top_geo.visibility" 
+		"eye_milk_1RN.placeHolderList[83]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "eye_milk_2RN";
 	rename -uid "E1C55A95-4D9D-3F14-5D5E-34865B662D75";
+	setAttr -s 7 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"eye_milk_2RN"
 		"eye_milk_2RN" 0
-		"eye_milk_2RN" 5
+		"eye_milk_2RN" 12
 		2 "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl" "translate" 
 		" -type \"double3\" 29.70759197760896342 0 80.88266894280522479"
 		2 "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl" "translateZ" 
@@ -1443,7 +1502,21 @@ createNode reference -n "eye_milk_2RN";
 		+ " 13 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateY\" 1 14 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateX\" 1 15 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateZ\" 1 16 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateY\" 1 17 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateX\" 1 18 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateZ\" 1 19 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateY\" 1 20 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateX\" 1 21 \"eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateZ\" 1 22 \"eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateY\" 1 23 \"eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateX\" 1 24 \"eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateZ\" 1 25 \"eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateY\" 1 26 \"eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateX\" 1 27 \"eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateZ\" 1 28 \"eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateY\" 1 29 \"eye_milk_2:group13|eye_milk_2:nurbsCircle2."
 		+ "translateX\" 1 30 \"eye_milk_2:Root_ctl.wobble_amplitude\" 0 9 \"eye_milk_2:Root_ctl.wobble_frequence\" 0 10 \"eye_milk_2:Root_ctl.scaleZ\" 0 11 \"eye_milk_2:Root_ctl.scaleY\" 0 12 \"eye_milk_2:Root_ctl.scaleX\" 0 13 \"eye_milk_2:Root_ctl.rotateZ\" 2 1 \"eye_milk_2:Root_ctl.rotateY\" 2 2 \"eye_milk_2:Root_ctl.rotateX\" 2 3 \"eye_milk_2:Root_ctl.translateZ\" 1 31 \"eye_milk_2:Root_ctl.translateY\" 1 32 \"eye_milk_2:Root_ctl.translateX\" 1 33 \"eye_milk_2:border_cl_ctl.translateZ\" 1 34 \"eye_milk_2:border_cl_ctl.translateY\" 1 35 \"eye_milk_2:border_cl_ctl.translateX\" 1 36 \"eye_milk_2:border_cr_ctl.translateZ\" 1 37 \"eye_milk_2:border_cr_ctl.translateY\" 1 38 \"eye_milk_2:border_cr_ctl.translateX\" 1 39 \"eye_milk_2:border_br_ctl.translateZ\" 1 40 \"eye_milk_2:border_br_ctl.translateY\" 1 41 \"eye_milk_2:border_br_ctl.translateX\" 1 42 \"eye_milk_2:border_bl_ctl.translateZ\" 1 43 \"eye_milk_2:border_bl_ctl.translateY\" 1 44 \"eye_milk_2:border_bl_ctl.translateX\" 1 45 \"eye_milk_2:border_tr_ctl.translateZ\" 1 46 \"eye_milk_2:border_tr_ctl.translateY\" 1 47 "
 		+ "\"eye_milk_2:border_tr_ctl.translateX\" 1 48 \"eye_milk_2:border_bc_ctl.translateZ\" 1 49 \"eye_milk_2:border_bc_ctl.translateY\" 1 50 \"eye_milk_2:border_bc_ctl.translateX\" 1 51 \"eye_milk_2:border_tc_ctl.translateZ\" 1 52 \"eye_milk_2:border_tc_ctl.translateY\" 1 53 \"eye_milk_2:border_tc_ctl.translateX\" 1 54 \"eye_milk_2:border_tl_ctl.translateZ\" 1 55 \"eye_milk_2:border_tl_ctl.translateY\" 1 56 \"eye_milk_2:border_tl_ctl.translateX\" 1 57"
-		);
+		)
+		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:glass_geo.visibility" 
+		"eye_milk_2RN.placeHolderList[1]" ""
+		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:border_geo.visibility" 
+		"eye_milk_2RN.placeHolderList[2]" ""
+		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:iris_geo.visibility" 
+		"eye_milk_2RN.placeHolderList[3]" ""
+		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:eye_geo.visibility" 
+		"eye_milk_2RN.placeHolderList[4]" ""
+		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:pupil_geo.visibility" 
+		"eye_milk_2RN.placeHolderList[5]" ""
+		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:lid_bot_geo.visibility" 
+		"eye_milk_2RN.placeHolderList[6]" ""
+		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:lid_top_geo.visibility" 
+		"eye_milk_2RN.placeHolderList[7]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTA -n "cam_ctrl_rotateX";
@@ -2428,7 +2501,7 @@ createNode animCurveTU -n "Root_ctlShape_sizeZ";
 		5 5 5 5 5;
 createNode reference -n "mouthRN";
 	rename -uid "872E8646-44D9-FFC4-BA07-1785E38A81E0";
-	setAttr -s 41 ".phl";
+	setAttr -s 47 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -2470,20 +2543,25 @@ createNode reference -n "mouthRN";
 	setAttr ".phl[39]" 0;
 	setAttr ".phl[40]" 0;
 	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mouthRN"
 		"mouthRN" 0
-		"mouthRN" 74
+		"mouthRN" 79
 		2 "|mouth:root_ctl" "translate" " -type \"double3\" 14.44372690222182065 -19.97229719695793193 14.25133730550590272"
 		
-		2 "|mouth:root_ctl" "translateZ" " -av"
 		2 "|mouth:root_ctl" "translateX" " -av"
 		2 "|mouth:root_ctl" "translateY" " -av"
+		2 "|mouth:root_ctl" "translateZ" " -av"
 		2 "|mouth:root_ctl" "rotate" " -type \"double3\" 0 0 0"
 		2 "|mouth:root_ctl" "rotateX" " -av"
 		2 "|mouth:root_ctl" "rotateY" " -av"
 		2 "|mouth:root_ctl" "rotateZ" " -av"
-		2 "|mouth:root_ctl" "mouth" " -k 1"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "translate" 
 		" -type \"double3\" 0 0 0"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "translateX" 
@@ -2494,9 +2572,9 @@ createNode reference -n "mouthRN";
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "rotate" 
 		" -type \"double3\" 0 0 0"
-		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "rotateY" 
-		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "rotateX" 
+		" -av"
+		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "rotateY" 
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "rotateZ" 
 		" -av"
@@ -2526,9 +2604,9 @@ createNode reference -n "mouthRN";
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "rotate" 
 		" -type \"double3\" 0 0 0"
-		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "rotateY" 
-		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "rotateX" 
+		" -av"
+		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "rotateY" 
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "rotateZ" 
 		" -av"
@@ -2536,11 +2614,11 @@ createNode reference -n "mouthRN";
 		
 		5 4 "mouthRN" "|mouth:root_ctl.Tongue" "mouthRN.placeHolderList[2]" 
 		""
-		5 4 "mouthRN" "|mouth:root_ctl.translateZ" "mouthRN.placeHolderList[3]" 
+		5 4 "mouthRN" "|mouth:root_ctl.translateX" "mouthRN.placeHolderList[3]" 
 		""
-		5 4 "mouthRN" "|mouth:root_ctl.translateX" "mouthRN.placeHolderList[4]" 
+		5 4 "mouthRN" "|mouth:root_ctl.translateY" "mouthRN.placeHolderList[4]" 
 		""
-		5 4 "mouthRN" "|mouth:root_ctl.translateY" "mouthRN.placeHolderList[5]" 
+		5 4 "mouthRN" "|mouth:root_ctl.translateZ" "mouthRN.placeHolderList[5]" 
 		""
 		5 4 "mouthRN" "|mouth:root_ctl.rotateX" "mouthRN.placeHolderList[6]" 
 		""
@@ -2554,66 +2632,78 @@ createNode reference -n "mouthRN";
 		""
 		5 4 "mouthRN" "|mouth:root_ctl.scaleZ" "mouthRN.placeHolderList[11]" 
 		""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.translateX" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthA|mouth:mouthA_geo|mouth:mouthA.visibility" 
 		"mouthRN.placeHolderList[12]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.translateY" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.translateX" 
 		"mouthRN.placeHolderList[13]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.translateZ" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.translateY" 
 		"mouthRN.placeHolderList[14]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.scaleX" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.translateZ" 
 		"mouthRN.placeHolderList[15]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.scaleY" 
-		"mouthRN.placeHolderList[16]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.scaleZ" 
-		"mouthRN.placeHolderList[17]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.rotateY" 
-		"mouthRN.placeHolderList[18]" ""
 		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.rotateX" 
-		"mouthRN.placeHolderList[19]" ""
+		"mouthRN.placeHolderList[16]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.rotateY" 
+		"mouthRN.placeHolderList[17]" ""
 		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.rotateZ" 
+		"mouthRN.placeHolderList[18]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.scaleX" 
+		"mouthRN.placeHolderList[19]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.scaleY" 
 		"mouthRN.placeHolderList[20]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.visibility" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.scaleZ" 
 		"mouthRN.placeHolderList[21]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.translateX" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl.visibility" 
 		"mouthRN.placeHolderList[22]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.translateY" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.translateX" 
 		"mouthRN.placeHolderList[23]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.translateZ" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.translateY" 
 		"mouthRN.placeHolderList[24]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.rotateX" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.translateZ" 
 		"mouthRN.placeHolderList[25]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.rotateY" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.rotateX" 
 		"mouthRN.placeHolderList[26]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.rotateZ" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.rotateY" 
 		"mouthRN.placeHolderList[27]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.scaleX" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.rotateZ" 
 		"mouthRN.placeHolderList[28]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.scaleY" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.scaleX" 
 		"mouthRN.placeHolderList[29]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.scaleZ" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.scaleY" 
 		"mouthRN.placeHolderList[30]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.visibility" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.scaleZ" 
 		"mouthRN.placeHolderList[31]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.rotateY" 
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl.visibility" 
 		"mouthRN.placeHolderList[32]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.rotateX" 
-		"mouthRN.placeHolderList[33]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.rotateZ" 
-		"mouthRN.placeHolderList[34]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.scaleX" 
-		"mouthRN.placeHolderList[35]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.scaleY" 
-		"mouthRN.placeHolderList[36]" ""
-		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.scaleZ" 
-		"mouthRN.placeHolderList[37]" ""
 		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.translateX" 
-		"mouthRN.placeHolderList[38]" ""
+		"mouthRN.placeHolderList[33]" ""
 		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.translateY" 
-		"mouthRN.placeHolderList[39]" ""
+		"mouthRN.placeHolderList[34]" ""
 		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.translateZ" 
+		"mouthRN.placeHolderList[35]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.rotateX" 
+		"mouthRN.placeHolderList[36]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.rotateY" 
+		"mouthRN.placeHolderList[37]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.rotateZ" 
+		"mouthRN.placeHolderList[38]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.scaleX" 
+		"mouthRN.placeHolderList[39]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.scaleY" 
 		"mouthRN.placeHolderList[40]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.scaleZ" 
+		"mouthRN.placeHolderList[41]" ""
 		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl.visibility" 
-		"mouthRN.placeHolderList[41]" "";
+		"mouthRN.placeHolderList[42]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_geo|mouth:mouthB.visibility" 
+		"mouthRN.placeHolderList[43]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthC|mouth:mouthC_geo|mouth:mouthC.visibility" 
+		"mouthRN.placeHolderList[44]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthD|mouth:mouthD_geo|mouth:mouthD.visibility" 
+		"mouthRN.placeHolderList[45]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:mouthE|mouth:mouthE_geo|mouth:mouthE.visibility" 
+		"mouthRN.placeHolderList[46]" ""
+		5 4 "mouthRN" "|mouth:root_ctl|mouth:tongue|mouth:tongue_geo|mouth:tongue.visibility" 
+		"mouthRN.placeHolderList[47]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "root_ctl_translateX";
@@ -3391,6 +3481,210 @@ createNode animCurveTU -n "FLUID_beam_scaleZ";
 	setAttr -s 4 ".ktv[0:3]"  78 0.67685894564917237 80 0.5549656209975945
 		 82 0.072201851624832045 86 0.19544129449254999;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
+createNode animCurveTU -n "tongue_visibility";
+	rename -uid "EA119107-4698-4C0C-1933-798233597803";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "pupil_geo_visibility";
+	rename -uid "986C882E-487F-E7BD-8BDC-BEBB1E7C16C2";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "glass_geo_visibility";
+	rename -uid "622A3436-43A5-033D-D0E8-3FA6257B0106";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "eye_geo_visibility";
+	rename -uid "532E6FBB-4299-ADC9-82C2-968B22578D9E";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "iris_geo_visibility";
+	rename -uid "9CC2691D-4AA0-8306-7FC5-3D90C950C255";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "border_geo_visibility";
+	rename -uid "AD18480A-4EB8-DFAE-40F7-C9A3C1C8A50C";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_top_geo_visibility";
+	rename -uid "CCA9DAE5-46D4-B8B9-E999-C19892948EF6";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_bot_geo_visibility";
+	rename -uid "C43B5D17-4C37-5F85-911A-D2BBE9ACBF6F";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "iris_geo_visibility1";
+	rename -uid "3698E7E5-4F7A-551D-4065-32A426BB159D";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "border_geo_visibility1";
+	rename -uid "E897029E-4BDC-B9A5-512F-70BB6A476CF1";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "glass_geo_visibility1";
+	rename -uid "BF26132E-421F-FAA1-F301-E88D6A0FBB17";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "eye_geo_visibility1";
+	rename -uid "0549097E-4C53-11CB-6592-8688C33DCD1A";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "pupil_geo_visibility1";
+	rename -uid "9745F849-49CD-3E03-5F1B-CF82D9FECBDC";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_bot_geo_visibility1";
+	rename -uid "EC8BC726-4D98-CDA0-F503-97A090E69D66";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_top_geo_visibility1";
+	rename -uid "B4C9D299-42C8-B26B-1752-13A567EF17C1";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "glass_geo_visibility2";
+	rename -uid "F3CF12BB-4D74-E451-5260-8BA99149A948";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "iris_geo_visibility2";
+	rename -uid "6EF017E8-4215-526C-114A-1291BE9284F0";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "border_geo_visibility2";
+	rename -uid "68E5C6A4-4895-4478-BF3D-BBB4B3AD9989";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_top_geo_visibility2";
+	rename -uid "F9B5BF12-4505-9D7F-48DA-17B9EB2C3DEC";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_bot_geo_visibility2";
+	rename -uid "F023A6F1-4435-78F1-54F8-5F8B7E93E8EF";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "eye_geo_visibility2";
+	rename -uid "42C1A398-454F-030E-31E1-759C8CF061F3";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "pupil_geo_visibility2";
+	rename -uid "9EDB2CB1-413D-B53C-CFF7-989631B86F15";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "iris_geo_visibility3";
+	rename -uid "A5E7E139-4105-05A2-7FCD-DB8ACCAF8026";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_bot_geo_visibility3";
+	rename -uid "85ADD73F-46FE-7B86-38BB-838504A5D176";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "pupil_geo_visibility3";
+	rename -uid "CAC4B495-4E91-5355-EE54-929B1329F747";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "eye_geo_visibility3";
+	rename -uid "9954E04C-46FE-E2DF-EE25-76A25A6B1EA0";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "lid_top_geo_visibility3";
+	rename -uid "C3122CB8-4114-0B59-E12F-4F906916600E";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "border_geo_visibility3";
+	rename -uid "5CE34B17-4486-D133-A0C9-D0992DF1E3EA";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "glass_geo_visibility3";
+	rename -uid "0D2AE6B9-41CE-ED9B-A07F-AB83097F137C";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "mouthA_visibility";
+	rename -uid "6AA9E033-4E3E-304D-723C-EBA2DA8D19A3";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "mouthB_visibility";
+	rename -uid "06841A32-4FD3-AD20-3B92-0D906B3E6488";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "mouthC_visibility";
+	rename -uid "6DEC644B-4D28-E8E4-4A16-7CBD1BD80C3C";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "mouthD_visibility";
+	rename -uid "11A17F29-426E-D1D3-71EF-D1873BE0F95D";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+createNode animCurveTU -n "mouthE_visibility";
+	rename -uid "510ED78C-46DE-E5AA-9917-1A8F302B4AFD";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3431,8 +3725,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :characterPartition;
 	setAttr -s 4 ".st";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "teapot_ctrl_translateX.o" "teapotRN.phl[1]";
 connectAttr "teapot_ctrl_translateY.o" "teapotRN.phl[2]";
 connectAttr "teapot_ctrl_translateZ.o" "teapotRN.phl[3]";
@@ -3478,79 +3770,93 @@ connectAttr "render_cam_aim_rotateZ.o" "camera_rigRN.phl[18]";
 connectAttr "render_cam_aim_scaleX.o" "camera_rigRN.phl[19]";
 connectAttr "render_cam_aim_scaleY.o" "camera_rigRN.phl[20]";
 connectAttr "render_cam_aim_scaleZ.o" "camera_rigRN.phl[21]";
-connectAttr "character1_EyeLidTop_ctl_bend_center.o" "eye_tea_1RN.phl[1]";
-connectAttr "character1_EyeLidTop_ctl_bend_right.o" "eye_tea_1RN.phl[2]";
-connectAttr "character1_EyeLidTop_ctl_bend_left.o" "eye_tea_1RN.phl[3]";
-connectAttr "character1_EyeLidBottom_ctl_bend_center.o" "eye_tea_1RN.phl[4]";
-connectAttr "character1_EyeLidBottom_ctl_bend_right.o" "eye_tea_1RN.phl[5]";
-connectAttr "character1_EyeLidBottom_ctl_bend_left.o" "eye_tea_1RN.phl[6]";
-connectAttr "character1_Eye_ctl_iris_size.o" "eye_tea_1RN.phl[7]";
-connectAttr "character1_Eye_ctl_pupil_size.o" "eye_tea_1RN.phl[8]";
-connectAttr "character1_Root_ctl_wobble_amplitude.o" "eye_tea_1RN.phl[9]";
-connectAttr "character1_Root_ctl_wobble_frequence.o" "eye_tea_1RN.phl[10]";
-connectAttr "character1_Root_ctl_scaleZ.o" "eye_tea_1RN.phl[11]";
-connectAttr "character1_Root_ctl_scaleY.o" "eye_tea_1RN.phl[12]";
-connectAttr "character1_Root_ctl_scaleX.o" "eye_tea_1RN.phl[13]";
-connectAttr "character1_Root_ctl_rotateZ.o" "eye_tea_1RN.phl[14]";
-connectAttr "character1_Root_ctl_rotateY.o" "eye_tea_1RN.phl[15]";
-connectAttr "character1_Root_ctl_rotateX.o" "eye_tea_1RN.phl[16]";
-connectAttr "character1_EyeLidTop_ctl_translateZ.o" "eye_tea_1RN.phl[17]";
-connectAttr "character1_EyeLidTop_ctl_translateX.o" "eye_tea_1RN.phl[18]";
-connectAttr "character1_EyeLidBottom_ctl_translateZ.o" "eye_tea_1RN.phl[19]";
-connectAttr "character1_EyeLidBottom_ctl_translateX.o" "eye_tea_1RN.phl[20]";
-connectAttr "character1_Eye_ctl_translateZ.o" "eye_tea_1RN.phl[21]";
-connectAttr "character1_Eye_ctl_translateX.o" "eye_tea_1RN.phl[22]";
-connectAttr "character1_nurbsCircle1_translateZ.o" "eye_tea_1RN.phl[23]";
-connectAttr "character1_nurbsCircle1_translateY.o" "eye_tea_1RN.phl[24]";
-connectAttr "character1_nurbsCircle1_translateX.o" "eye_tea_1RN.phl[25]";
-connectAttr "character1_nurbsCircle2_translateZ.o" "eye_tea_1RN.phl[26]";
-connectAttr "character1_nurbsCircle2_translateY.o" "eye_tea_1RN.phl[27]";
-connectAttr "character1_nurbsCircle2_translateX.o" "eye_tea_1RN.phl[28]";
-connectAttr "character1_nurbsCircle1_translateZ23.o" "eye_tea_1RN.phl[29]";
-connectAttr "character1_nurbsCircle1_translateY23.o" "eye_tea_1RN.phl[30]";
-connectAttr "character1_nurbsCircle1_translateX23.o" "eye_tea_1RN.phl[31]";
-connectAttr "character1_nurbsCircle2_translateZ23.o" "eye_tea_1RN.phl[32]";
-connectAttr "character1_nurbsCircle2_translateY23.o" "eye_tea_1RN.phl[33]";
-connectAttr "character1_nurbsCircle2_translateX23.o" "eye_tea_1RN.phl[34]";
-connectAttr "character1_linearValues_19_.o" "eye_tea_1RN.phl[35]";
-connectAttr "character1_linearValues_20_.o" "eye_tea_1RN.phl[36]";
-connectAttr "character1_linearValues_21_.o" "eye_tea_1RN.phl[37]";
-connectAttr "character1_linearValues_22_.o" "eye_tea_1RN.phl[38]";
-connectAttr "character1_linearValues_23_.o" "eye_tea_1RN.phl[39]";
-connectAttr "character1_linearValues_24_.o" "eye_tea_1RN.phl[40]";
-connectAttr "character1_linearValues_25_.o" "eye_tea_1RN.phl[41]";
-connectAttr "character1_linearValues_26_.o" "eye_tea_1RN.phl[42]";
-connectAttr "character1_linearValues_27_.o" "eye_tea_1RN.phl[43]";
-connectAttr "character1_linearValues_28_.o" "eye_tea_1RN.phl[44]";
-connectAttr "character1_linearValues_29_.o" "eye_tea_1RN.phl[45]";
-connectAttr "character1_linearValues_30_.o" "eye_tea_1RN.phl[46]";
-connectAttr "character1_Root_ctl_translateZ.o" "eye_tea_1RN.phl[47]";
-connectAttr "character1_Root_ctl_translateY.o" "eye_tea_1RN.phl[48]";
-connectAttr "character1_Root_ctl_translateX.o" "eye_tea_1RN.phl[49]";
-connectAttr "character1_border_cl_ctl_translateZ.o" "eye_tea_1RN.phl[50]";
-connectAttr "character1_border_cl_ctl_translateY.o" "eye_tea_1RN.phl[51]";
-connectAttr "character1_border_cl_ctl_translateX.o" "eye_tea_1RN.phl[52]";
-connectAttr "character1_border_cr_ctl_translateZ.o" "eye_tea_1RN.phl[53]";
-connectAttr "character1_border_cr_ctl_translateY.o" "eye_tea_1RN.phl[54]";
-connectAttr "character1_border_cr_ctl_translateX.o" "eye_tea_1RN.phl[55]";
-connectAttr "character1_border_br_ctl_translateZ.o" "eye_tea_1RN.phl[56]";
-connectAttr "character1_border_br_ctl_translateY.o" "eye_tea_1RN.phl[57]";
-connectAttr "character1_border_br_ctl_translateX.o" "eye_tea_1RN.phl[58]";
-connectAttr "character1_border_bl_ctl_translateZ.o" "eye_tea_1RN.phl[59]";
-connectAttr "character1_border_bl_ctl_translateY.o" "eye_tea_1RN.phl[60]";
-connectAttr "character1_border_bl_ctl_translateX.o" "eye_tea_1RN.phl[61]";
-connectAttr "character1_border_tr_ctl_translateZ.o" "eye_tea_1RN.phl[62]";
-connectAttr "character1_border_tr_ctl_translateY.o" "eye_tea_1RN.phl[63]";
-connectAttr "character1_border_tr_ctl_translateX.o" "eye_tea_1RN.phl[64]";
-connectAttr "character1_border_bc_ctl_translateZ.o" "eye_tea_1RN.phl[65]";
-connectAttr "character1_border_bc_ctl_translateY.o" "eye_tea_1RN.phl[66]";
-connectAttr "character1_border_bc_ctl_translateX.o" "eye_tea_1RN.phl[67]";
-connectAttr "character1_border_tc_ctl_translateZ.o" "eye_tea_1RN.phl[68]";
-connectAttr "character1_border_tc_ctl_translateY.o" "eye_tea_1RN.phl[69]";
-connectAttr "character1_border_tc_ctl_translateX.o" "eye_tea_1RN.phl[70]";
-connectAttr "character1_border_tl_ctl_translateZ.o" "eye_tea_1RN.phl[71]";
-connectAttr "character1_border_tl_ctl_translateY.o" "eye_tea_1RN.phl[72]";
-connectAttr "character1_border_tl_ctl_translateX.o" "eye_tea_1RN.phl[73]";
+connectAttr "glass_geo_visibility2.o" "eye_tea_1RN.phl[1]";
+connectAttr "border_geo_visibility2.o" "eye_tea_1RN.phl[2]";
+connectAttr "iris_geo_visibility2.o" "eye_tea_1RN.phl[3]";
+connectAttr "eye_geo_visibility2.o" "eye_tea_1RN.phl[4]";
+connectAttr "pupil_geo_visibility2.o" "eye_tea_1RN.phl[5]";
+connectAttr "lid_bot_geo_visibility2.o" "eye_tea_1RN.phl[6]";
+connectAttr "lid_top_geo_visibility2.o" "eye_tea_1RN.phl[7]";
+connectAttr "character1_EyeLidTop_ctl_bend_center.o" "eye_tea_1RN.phl[8]";
+connectAttr "character1_EyeLidTop_ctl_bend_right.o" "eye_tea_1RN.phl[9]";
+connectAttr "character1_EyeLidTop_ctl_bend_left.o" "eye_tea_1RN.phl[10]";
+connectAttr "character1_EyeLidBottom_ctl_bend_center.o" "eye_tea_1RN.phl[11]";
+connectAttr "character1_EyeLidBottom_ctl_bend_right.o" "eye_tea_1RN.phl[12]";
+connectAttr "character1_EyeLidBottom_ctl_bend_left.o" "eye_tea_1RN.phl[13]";
+connectAttr "character1_Eye_ctl_iris_size.o" "eye_tea_1RN.phl[14]";
+connectAttr "character1_Eye_ctl_pupil_size.o" "eye_tea_1RN.phl[15]";
+connectAttr "character1_Root_ctl_wobble_amplitude.o" "eye_tea_1RN.phl[16]";
+connectAttr "character1_Root_ctl_wobble_frequence.o" "eye_tea_1RN.phl[17]";
+connectAttr "character1_Root_ctl_scaleZ.o" "eye_tea_1RN.phl[18]";
+connectAttr "character1_Root_ctl_scaleY.o" "eye_tea_1RN.phl[19]";
+connectAttr "character1_Root_ctl_scaleX.o" "eye_tea_1RN.phl[20]";
+connectAttr "character1_Root_ctl_rotateZ.o" "eye_tea_1RN.phl[21]";
+connectAttr "character1_Root_ctl_rotateY.o" "eye_tea_1RN.phl[22]";
+connectAttr "character1_Root_ctl_rotateX.o" "eye_tea_1RN.phl[23]";
+connectAttr "character1_EyeLidTop_ctl_translateZ.o" "eye_tea_1RN.phl[24]";
+connectAttr "character1_EyeLidTop_ctl_translateX.o" "eye_tea_1RN.phl[25]";
+connectAttr "character1_EyeLidBottom_ctl_translateZ.o" "eye_tea_1RN.phl[26]";
+connectAttr "character1_EyeLidBottom_ctl_translateX.o" "eye_tea_1RN.phl[27]";
+connectAttr "character1_Eye_ctl_translateZ.o" "eye_tea_1RN.phl[28]";
+connectAttr "character1_Eye_ctl_translateX.o" "eye_tea_1RN.phl[29]";
+connectAttr "character1_nurbsCircle1_translateZ.o" "eye_tea_1RN.phl[30]";
+connectAttr "character1_nurbsCircle1_translateY.o" "eye_tea_1RN.phl[31]";
+connectAttr "character1_nurbsCircle1_translateX.o" "eye_tea_1RN.phl[32]";
+connectAttr "character1_nurbsCircle2_translateZ.o" "eye_tea_1RN.phl[33]";
+connectAttr "character1_nurbsCircle2_translateY.o" "eye_tea_1RN.phl[34]";
+connectAttr "character1_nurbsCircle2_translateX.o" "eye_tea_1RN.phl[35]";
+connectAttr "character1_nurbsCircle1_translateZ23.o" "eye_tea_1RN.phl[36]";
+connectAttr "character1_nurbsCircle1_translateY23.o" "eye_tea_1RN.phl[37]";
+connectAttr "character1_nurbsCircle1_translateX23.o" "eye_tea_1RN.phl[38]";
+connectAttr "character1_nurbsCircle2_translateZ23.o" "eye_tea_1RN.phl[39]";
+connectAttr "character1_nurbsCircle2_translateY23.o" "eye_tea_1RN.phl[40]";
+connectAttr "character1_nurbsCircle2_translateX23.o" "eye_tea_1RN.phl[41]";
+connectAttr "character1_linearValues_19_.o" "eye_tea_1RN.phl[42]";
+connectAttr "character1_linearValues_20_.o" "eye_tea_1RN.phl[43]";
+connectAttr "character1_linearValues_21_.o" "eye_tea_1RN.phl[44]";
+connectAttr "character1_linearValues_22_.o" "eye_tea_1RN.phl[45]";
+connectAttr "character1_linearValues_23_.o" "eye_tea_1RN.phl[46]";
+connectAttr "character1_linearValues_24_.o" "eye_tea_1RN.phl[47]";
+connectAttr "character1_linearValues_25_.o" "eye_tea_1RN.phl[48]";
+connectAttr "character1_linearValues_26_.o" "eye_tea_1RN.phl[49]";
+connectAttr "character1_linearValues_27_.o" "eye_tea_1RN.phl[50]";
+connectAttr "character1_linearValues_28_.o" "eye_tea_1RN.phl[51]";
+connectAttr "character1_linearValues_29_.o" "eye_tea_1RN.phl[52]";
+connectAttr "character1_linearValues_30_.o" "eye_tea_1RN.phl[53]";
+connectAttr "character1_Root_ctl_translateZ.o" "eye_tea_1RN.phl[54]";
+connectAttr "character1_Root_ctl_translateY.o" "eye_tea_1RN.phl[55]";
+connectAttr "character1_Root_ctl_translateX.o" "eye_tea_1RN.phl[56]";
+connectAttr "character1_border_cl_ctl_translateZ.o" "eye_tea_1RN.phl[57]";
+connectAttr "character1_border_cl_ctl_translateY.o" "eye_tea_1RN.phl[58]";
+connectAttr "character1_border_cl_ctl_translateX.o" "eye_tea_1RN.phl[59]";
+connectAttr "character1_border_cr_ctl_translateZ.o" "eye_tea_1RN.phl[60]";
+connectAttr "character1_border_cr_ctl_translateY.o" "eye_tea_1RN.phl[61]";
+connectAttr "character1_border_cr_ctl_translateX.o" "eye_tea_1RN.phl[62]";
+connectAttr "character1_border_br_ctl_translateZ.o" "eye_tea_1RN.phl[63]";
+connectAttr "character1_border_br_ctl_translateY.o" "eye_tea_1RN.phl[64]";
+connectAttr "character1_border_br_ctl_translateX.o" "eye_tea_1RN.phl[65]";
+connectAttr "character1_border_bl_ctl_translateZ.o" "eye_tea_1RN.phl[66]";
+connectAttr "character1_border_bl_ctl_translateY.o" "eye_tea_1RN.phl[67]";
+connectAttr "character1_border_bl_ctl_translateX.o" "eye_tea_1RN.phl[68]";
+connectAttr "character1_border_tr_ctl_translateZ.o" "eye_tea_1RN.phl[69]";
+connectAttr "character1_border_tr_ctl_translateY.o" "eye_tea_1RN.phl[70]";
+connectAttr "character1_border_tr_ctl_translateX.o" "eye_tea_1RN.phl[71]";
+connectAttr "character1_border_bc_ctl_translateZ.o" "eye_tea_1RN.phl[72]";
+connectAttr "character1_border_bc_ctl_translateY.o" "eye_tea_1RN.phl[73]";
+connectAttr "character1_border_bc_ctl_translateX.o" "eye_tea_1RN.phl[74]";
+connectAttr "character1_border_tc_ctl_translateZ.o" "eye_tea_1RN.phl[75]";
+connectAttr "character1_border_tc_ctl_translateY.o" "eye_tea_1RN.phl[76]";
+connectAttr "character1_border_tc_ctl_translateX.o" "eye_tea_1RN.phl[77]";
+connectAttr "character1_border_tl_ctl_translateZ.o" "eye_tea_1RN.phl[78]";
+connectAttr "character1_border_tl_ctl_translateY.o" "eye_tea_1RN.phl[79]";
+connectAttr "character1_border_tl_ctl_translateX.o" "eye_tea_1RN.phl[80]";
+connectAttr "glass_geo_visibility3.o" "eye_tea_2RN.phl[1]";
+connectAttr "border_geo_visibility3.o" "eye_tea_2RN.phl[2]";
+connectAttr "iris_geo_visibility3.o" "eye_tea_2RN.phl[3]";
+connectAttr "eye_geo_visibility3.o" "eye_tea_2RN.phl[4]";
+connectAttr "pupil_geo_visibility3.o" "eye_tea_2RN.phl[5]";
+connectAttr "lid_bot_geo_visibility3.o" "eye_tea_2RN.phl[6]";
+connectAttr "lid_top_geo_visibility3.o" "eye_tea_2RN.phl[7]";
 connectAttr "Root_ctl_wobble_frequence.o" "eye_milk_1RN.phl[1]";
 connectAttr "Root_ctl_wobble_amplitude.o" "eye_milk_1RN.phl[2]";
 connectAttr "Root_ctl_rotateZ.o" "eye_milk_1RN.phl[3]";
@@ -3627,47 +3933,67 @@ connectAttr "border_tc_ctl_translateX.o" "eye_milk_1RN.phl[73]";
 connectAttr "border_tl_ctl_translateZ.o" "eye_milk_1RN.phl[74]";
 connectAttr "border_tl_ctl_translateY.o" "eye_milk_1RN.phl[75]";
 connectAttr "border_tl_ctl_translateX.o" "eye_milk_1RN.phl[76]";
+connectAttr "glass_geo_visibility.o" "eye_milk_1RN.phl[77]";
+connectAttr "border_geo_visibility.o" "eye_milk_1RN.phl[78]";
+connectAttr "iris_geo_visibility.o" "eye_milk_1RN.phl[79]";
+connectAttr "eye_geo_visibility.o" "eye_milk_1RN.phl[80]";
+connectAttr "pupil_geo_visibility.o" "eye_milk_1RN.phl[81]";
+connectAttr "lid_bot_geo_visibility.o" "eye_milk_1RN.phl[82]";
+connectAttr "lid_top_geo_visibility.o" "eye_milk_1RN.phl[83]";
+connectAttr "glass_geo_visibility1.o" "eye_milk_2RN.phl[1]";
+connectAttr "border_geo_visibility1.o" "eye_milk_2RN.phl[2]";
+connectAttr "iris_geo_visibility1.o" "eye_milk_2RN.phl[3]";
+connectAttr "eye_geo_visibility1.o" "eye_milk_2RN.phl[4]";
+connectAttr "pupil_geo_visibility1.o" "eye_milk_2RN.phl[5]";
+connectAttr "lid_bot_geo_visibility1.o" "eye_milk_2RN.phl[6]";
+connectAttr "lid_top_geo_visibility1.o" "eye_milk_2RN.phl[7]";
 connectAttr "root_ctl_mouth.o" "mouthRN.phl[1]";
 connectAttr "root_ctl_Tongue.o" "mouthRN.phl[2]";
-connectAttr "root_ctl_translateZ.o" "mouthRN.phl[3]";
-connectAttr "root_ctl_translateX.o" "mouthRN.phl[4]";
-connectAttr "root_ctl_translateY.o" "mouthRN.phl[5]";
+connectAttr "root_ctl_translateX.o" "mouthRN.phl[3]";
+connectAttr "root_ctl_translateY.o" "mouthRN.phl[4]";
+connectAttr "root_ctl_translateZ.o" "mouthRN.phl[5]";
 connectAttr "root_ctl_rotateX.o" "mouthRN.phl[6]";
 connectAttr "root_ctl_rotateY.o" "mouthRN.phl[7]";
 connectAttr "root_ctl_rotateZ.o" "mouthRN.phl[8]";
 connectAttr "root_ctl_scaleX.o" "mouthRN.phl[9]";
 connectAttr "root_ctl_scaleY.o" "mouthRN.phl[10]";
 connectAttr "root_ctl_scaleZ.o" "mouthRN.phl[11]";
-connectAttr "mouthB_0_ctl_translateX.o" "mouthRN.phl[12]";
-connectAttr "mouthB_0_ctl_translateY.o" "mouthRN.phl[13]";
-connectAttr "mouthB_0_ctl_translateZ.o" "mouthRN.phl[14]";
-connectAttr "mouthB_0_ctl_scaleX.o" "mouthRN.phl[15]";
-connectAttr "mouthB_0_ctl_scaleY.o" "mouthRN.phl[16]";
-connectAttr "mouthB_0_ctl_scaleZ.o" "mouthRN.phl[17]";
-connectAttr "mouthB_0_ctl_rotateY.o" "mouthRN.phl[18]";
-connectAttr "mouthB_0_ctl_rotateX.o" "mouthRN.phl[19]";
-connectAttr "mouthB_0_ctl_rotateZ.o" "mouthRN.phl[20]";
-connectAttr "mouthB_0_ctl_visibility.o" "mouthRN.phl[21]";
-connectAttr "mouthB_1_ctl_translateX.o" "mouthRN.phl[22]";
-connectAttr "mouthB_1_ctl_translateY.o" "mouthRN.phl[23]";
-connectAttr "mouthB_1_ctl_translateZ.o" "mouthRN.phl[24]";
-connectAttr "mouthB_1_ctl_rotateX.o" "mouthRN.phl[25]";
-connectAttr "mouthB_1_ctl_rotateY.o" "mouthRN.phl[26]";
-connectAttr "mouthB_1_ctl_rotateZ.o" "mouthRN.phl[27]";
-connectAttr "mouthB_1_ctl_scaleX.o" "mouthRN.phl[28]";
-connectAttr "mouthB_1_ctl_scaleY.o" "mouthRN.phl[29]";
-connectAttr "mouthB_1_ctl_scaleZ.o" "mouthRN.phl[30]";
-connectAttr "mouthB_1_ctl_visibility.o" "mouthRN.phl[31]";
-connectAttr "mouthB_2_ctl_rotateY.o" "mouthRN.phl[32]";
-connectAttr "mouthB_2_ctl_rotateX.o" "mouthRN.phl[33]";
-connectAttr "mouthB_2_ctl_rotateZ.o" "mouthRN.phl[34]";
-connectAttr "mouthB_2_ctl_scaleX.o" "mouthRN.phl[35]";
-connectAttr "mouthB_2_ctl_scaleY.o" "mouthRN.phl[36]";
-connectAttr "mouthB_2_ctl_scaleZ.o" "mouthRN.phl[37]";
-connectAttr "mouthB_2_ctl_translateX.o" "mouthRN.phl[38]";
-connectAttr "mouthB_2_ctl_translateY.o" "mouthRN.phl[39]";
-connectAttr "mouthB_2_ctl_translateZ.o" "mouthRN.phl[40]";
-connectAttr "mouthB_2_ctl_visibility.o" "mouthRN.phl[41]";
+connectAttr "mouthA_visibility.o" "mouthRN.phl[12]";
+connectAttr "mouthB_0_ctl_translateX.o" "mouthRN.phl[13]";
+connectAttr "mouthB_0_ctl_translateY.o" "mouthRN.phl[14]";
+connectAttr "mouthB_0_ctl_translateZ.o" "mouthRN.phl[15]";
+connectAttr "mouthB_0_ctl_rotateX.o" "mouthRN.phl[16]";
+connectAttr "mouthB_0_ctl_rotateY.o" "mouthRN.phl[17]";
+connectAttr "mouthB_0_ctl_rotateZ.o" "mouthRN.phl[18]";
+connectAttr "mouthB_0_ctl_scaleX.o" "mouthRN.phl[19]";
+connectAttr "mouthB_0_ctl_scaleY.o" "mouthRN.phl[20]";
+connectAttr "mouthB_0_ctl_scaleZ.o" "mouthRN.phl[21]";
+connectAttr "mouthB_0_ctl_visibility.o" "mouthRN.phl[22]";
+connectAttr "mouthB_1_ctl_translateX.o" "mouthRN.phl[23]";
+connectAttr "mouthB_1_ctl_translateY.o" "mouthRN.phl[24]";
+connectAttr "mouthB_1_ctl_translateZ.o" "mouthRN.phl[25]";
+connectAttr "mouthB_1_ctl_rotateX.o" "mouthRN.phl[26]";
+connectAttr "mouthB_1_ctl_rotateY.o" "mouthRN.phl[27]";
+connectAttr "mouthB_1_ctl_rotateZ.o" "mouthRN.phl[28]";
+connectAttr "mouthB_1_ctl_scaleX.o" "mouthRN.phl[29]";
+connectAttr "mouthB_1_ctl_scaleY.o" "mouthRN.phl[30]";
+connectAttr "mouthB_1_ctl_scaleZ.o" "mouthRN.phl[31]";
+connectAttr "mouthB_1_ctl_visibility.o" "mouthRN.phl[32]";
+connectAttr "mouthB_2_ctl_translateX.o" "mouthRN.phl[33]";
+connectAttr "mouthB_2_ctl_translateY.o" "mouthRN.phl[34]";
+connectAttr "mouthB_2_ctl_translateZ.o" "mouthRN.phl[35]";
+connectAttr "mouthB_2_ctl_rotateX.o" "mouthRN.phl[36]";
+connectAttr "mouthB_2_ctl_rotateY.o" "mouthRN.phl[37]";
+connectAttr "mouthB_2_ctl_rotateZ.o" "mouthRN.phl[38]";
+connectAttr "mouthB_2_ctl_scaleX.o" "mouthRN.phl[39]";
+connectAttr "mouthB_2_ctl_scaleY.o" "mouthRN.phl[40]";
+connectAttr "mouthB_2_ctl_scaleZ.o" "mouthRN.phl[41]";
+connectAttr "mouthB_2_ctl_visibility.o" "mouthRN.phl[42]";
+connectAttr "mouthB_visibility.o" "mouthRN.phl[43]";
+connectAttr "mouthC_visibility.o" "mouthRN.phl[44]";
+connectAttr "mouthD_visibility.o" "mouthRN.phl[45]";
+connectAttr "mouthE_visibility.o" "mouthRN.phl[46]";
+connectAttr "tongue_visibility.o" "mouthRN.phl[47]";
 connectAttr "FLUID_surface_visibility.o" "FLUID_surface.v";
 connectAttr "groupId1.id" "FLUID_surfaceShape.iog.og[0].gid";
 connectAttr "groupId2.id" "FLUID_surfaceShape.iog.og[1].gid";
