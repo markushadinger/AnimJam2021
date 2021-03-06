@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Eye.ma
-//Last modified: Sat, Mar 06, 2021 03:59:22 PM
+//Last modified: Sat, Mar 06, 2021 04:00:59 PM
 //Codeset: 1252
 requires maya "2019";
 requires -nodeType "decomposeMatrix" "matrixNodes" "1.0";
@@ -14,14 +14,14 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
 createNode transform -s -n "persp";
 	rename -uid "B212AED3-4C93-DE79-D5A4-F7B9EB1882CA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -6.1611214002924886 32.309482612800338 19.436408119750599 ;
+	setAttr ".t" -type "double3" -2.7550625619484617 13.710536467130064 8.2956916494633699 ;
 	setAttr ".r" -type "double3" -57.938352729102668 -376.99999999974318 8.3146995286461229e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "573A1DA0-4916-BC74-3FB6-5480F75B6E37";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 0.001;
-	setAttr ".coi" 42.314583939358911;
+	setAttr ".coi" 20.368340570364431;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -12645,88 +12645,90 @@ createNode objectSet -n "exportSet";
 	setAttr ".ihi" 0;
 	setAttr -s 7 ".dsm";
 createNode character -n "character1";
-	rename -uid "4A841C95-4D76-30C7-FDCB-A89D695D1E44";
+	rename -uid "9937182E-4D8E-A1D7-A35A-DF99C7606738";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 70 ".dnsm";
-	setAttr -s 10 ".uv[7:10]"  1 0.4 0 0.5;
-	setAttr -s 10 ".uv";
+	setAttr -s 73 ".dnsm";
+	setAttr -s 13 ".uv[7:13]"  1 0.4 0 0.5 1 1 1;
+	setAttr -s 13 ".uv";
 	setAttr -s 57 ".lv";
 	setAttr -s 57 ".lv";
 	setAttr -s 3 ".av";
 	setAttr -s 3 ".av";
-	setAttr ".am" -type "characterMapping" 70 "group14|nurbsCircle1.translateZ" 
-		1 1 "group14|nurbsCircle1.translateY" 1 2 "group14|nurbsCircle1.translateX" 
-		1 3 "group11|nurbsCircle2.translateZ" 1 4 "group11|nurbsCircle2.translateY" 
-		1 5 "group11|nurbsCircle2.translateX" 1 6 "group15|nurbsCircle1.translateZ" 
-		1 7 "group15|nurbsCircle1.translateY" 1 8 "group15|nurbsCircle1.translateX" 
-		1 9 "group12|nurbsCircle2.translateZ" 1 10 "group12|nurbsCircle2.translateY" 
-		1 11 "group12|nurbsCircle2.translateX" 1 12 "group16|nurbsCircle1.translateZ" 
-		1 13 "group16|nurbsCircle1.translateY" 1 14 "group16|nurbsCircle1.translateX" 
-		1 15 "group13|nurbsCircle2.translateZ" 1 16 "group13|nurbsCircle2.translateY" 
-		1 17 "group13|nurbsCircle2.translateX" 1 18 "EyeLidTop_ctl.bend_center" 
-		0 1 "EyeLidTop_ctl.bend_right" 0 2 "EyeLidTop_ctl.bend_left" 
-		0 3 "EyeLidTop_ctl.translateZ" 1 19 "EyeLidTop_ctl.translateX" 
-		1 20 "EyeLidBottom_ctl.bend_center" 0 4 "EyeLidBottom_ctl.bend_right" 
+	setAttr ".am" -type "characterMapping" 73 "EyeLidTop_ctl.bend_center" 0 
+		1 "EyeLidTop_ctl.bend_right" 0 2 "EyeLidTop_ctl.bend_left" 0 
+		3 "EyeLidTop_ctl.translateZ" 1 1 "EyeLidTop_ctl.translateX" 1 
+		2 "EyeLidBottom_ctl.bend_center" 0 4 "EyeLidBottom_ctl.bend_right" 
 		0 5 "EyeLidBottom_ctl.bend_left" 0 6 "EyeLidBottom_ctl.translateZ" 
-		1 21 "EyeLidBottom_ctl.translateX" 1 22 "Eye_ctl.iris_size" 0 
-		7 "Eye_ctl.pupil_size" 0 8 "Eye_ctl.translateZ" 1 23 "Eye_ctl.translateX" 
-		1 24 "group9|nurbsCircle1.translateZ" 1 25 "group9|nurbsCircle1.translateY" 
-		1 26 "group9|nurbsCircle1.translateX" 1 27 "group10|nurbsCircle2.translateZ" 
-		1 28 "group10|nurbsCircle2.translateY" 1 29 "group10|nurbsCircle2.translateX" 
-		1 30 "border_cl_ctl.translateZ" 1 31 "border_cl_ctl.translateY" 
-		1 32 "border_cl_ctl.translateX" 1 33 "border_cr_ctl.translateZ" 
-		1 34 "border_cr_ctl.translateY" 1 35 "border_cr_ctl.translateX" 
-		1 36 "border_br_ctl.translateZ" 1 37 "border_br_ctl.translateY" 
-		1 38 "border_br_ctl.translateX" 1 39 "border_bl_ctl.translateZ" 
-		1 40 "border_bl_ctl.translateY" 1 41 "border_bl_ctl.translateX" 
-		1 42 "border_tr_ctl.translateZ" 1 43 "border_tr_ctl.translateY" 
-		1 44 "border_tr_ctl.translateX" 1 45 "border_bc_ctl.translateZ" 
-		1 46 "border_bc_ctl.translateY" 1 47 "border_bc_ctl.translateX" 
-		1 48 "border_tc_ctl.translateZ" 1 49 "border_tc_ctl.translateY" 
-		1 50 "border_tc_ctl.translateX" 1 51 "border_tl_ctl.translateZ" 
-		1 52 "border_tl_ctl.translateY" 1 53 "border_tl_ctl.translateX" 
-		1 54 "Root_ctl.wobble_amplitude" 0 9 "Root_ctl.wobble_frequence" 
-		0 10 "Root_ctl.rotateZ" 2 1 "Root_ctl.rotateY" 2 2 "Root_ctl.rotateX" 
-		2 3 "Root_ctl.translateZ" 1 55 "Root_ctl.translateY" 1 56 "Root_ctl.translateX" 
+		1 3 "EyeLidBottom_ctl.translateX" 1 4 "Eye_ctl.iris_size" 0 
+		7 "Eye_ctl.pupil_size" 0 8 "Eye_ctl.translateZ" 1 5 "Eye_ctl.translateX" 
+		1 6 "group9|nurbsCircle1.translateZ" 1 7 "group9|nurbsCircle1.translateY" 
+		1 8 "group9|nurbsCircle1.translateX" 1 9 "group10|nurbsCircle2.translateZ" 
+		1 10 "group10|nurbsCircle2.translateY" 1 11 "group10|nurbsCircle2.translateX" 
+		1 12 "group14|nurbsCircle1.translateZ" 1 13 "group14|nurbsCircle1.translateY" 
+		1 14 "group14|nurbsCircle1.translateX" 1 15 "group11|nurbsCircle2.translateZ" 
+		1 16 "group11|nurbsCircle2.translateY" 1 17 "group11|nurbsCircle2.translateX" 
+		1 18 "group15|nurbsCircle1.translateZ" 1 19 "group15|nurbsCircle1.translateY" 
+		1 20 "group15|nurbsCircle1.translateX" 1 21 "group12|nurbsCircle2.translateZ" 
+		1 22 "group12|nurbsCircle2.translateY" 1 23 "group12|nurbsCircle2.translateX" 
+		1 24 "group16|nurbsCircle1.translateZ" 1 25 "group16|nurbsCircle1.translateY" 
+		1 26 "group16|nurbsCircle1.translateX" 1 27 "group13|nurbsCircle2.translateZ" 
+		1 28 "group13|nurbsCircle2.translateY" 1 29 "group13|nurbsCircle2.translateX" 
+		1 30 "Root_ctl.wobble_amplitude" 0 9 "Root_ctl.wobble_frequence" 
+		0 10 "Root_ctl.scaleZ" 0 11 "Root_ctl.scaleY" 0 12 "Root_ctl.scaleX" 
+		0 13 "Root_ctl.rotateZ" 2 1 "Root_ctl.rotateY" 2 2 "Root_ctl.rotateX" 
+		2 3 "Root_ctl.translateZ" 1 31 "Root_ctl.translateY" 1 32 "Root_ctl.translateX" 
+		1 33 "border_cl_ctl.translateZ" 1 34 "border_cl_ctl.translateY" 
+		1 35 "border_cl_ctl.translateX" 1 36 "border_cr_ctl.translateZ" 
+		1 37 "border_cr_ctl.translateY" 1 38 "border_cr_ctl.translateX" 
+		1 39 "border_br_ctl.translateZ" 1 40 "border_br_ctl.translateY" 
+		1 41 "border_br_ctl.translateX" 1 42 "border_bl_ctl.translateZ" 
+		1 43 "border_bl_ctl.translateY" 1 44 "border_bl_ctl.translateX" 
+		1 45 "border_tr_ctl.translateZ" 1 46 "border_tr_ctl.translateY" 
+		1 47 "border_tr_ctl.translateX" 1 48 "border_bc_ctl.translateZ" 
+		1 49 "border_bc_ctl.translateY" 1 50 "border_bc_ctl.translateX" 
+		1 51 "border_tc_ctl.translateZ" 1 52 "border_tc_ctl.translateY" 
+		1 53 "border_tc_ctl.translateX" 1 54 "border_tl_ctl.translateZ" 
+		1 55 "border_tl_ctl.translateY" 1 56 "border_tl_ctl.translateX" 
 		1 57  ;
 	setAttr ".aal" -type "attributeAlias" {"Root_ctl_rotateZ","angularValues[1]","Root_ctl_rotateY"
-		,"angularValues[2]","Root_ctl_rotateX","angularValues[3]","nurbsCircle2_translateZ1"
-		,"linearValues[10]","nurbsCircle2_translateY1","linearValues[11]","nurbsCircle2_translateX1"
-		,"linearValues[12]","nurbsCircle1_translateZ2","linearValues[13]","nurbsCircle1_translateY2"
-		,"linearValues[14]","nurbsCircle1_translateX2","linearValues[15]","nurbsCircle2_translateZ2"
-		,"linearValues[16]","nurbsCircle2_translateY2","linearValues[17]","nurbsCircle2_translateX2"
-		,"linearValues[18]","EyeLidTop_ctl_translateZ","linearValues[19]","nurbsCircle1_translateZ"
-		,"linearValues[1]","EyeLidTop_ctl_translateX","linearValues[20]","EyeLidBottom_ctl_translateZ"
-		,"linearValues[21]","EyeLidBottom_ctl_translateX","linearValues[22]","Eye_ctl_translateZ"
-		,"linearValues[23]","Eye_ctl_translateX","linearValues[24]","nurbsCircle1_translateZ3"
+		,"angularValues[2]","Root_ctl_rotateX","angularValues[3]","nurbsCircle2_translateZ"
+		,"linearValues[10]","nurbsCircle2_translateY","linearValues[11]","nurbsCircle2_translateX"
+		,"linearValues[12]","nurbsCircle1_translateZ1","linearValues[13]","nurbsCircle1_translateY1"
+		,"linearValues[14]","nurbsCircle1_translateX1","linearValues[15]","nurbsCircle2_translateZ1"
+		,"linearValues[16]","nurbsCircle2_translateY1","linearValues[17]","nurbsCircle2_translateX1"
+		,"linearValues[18]","nurbsCircle1_translateZ2","linearValues[19]","EyeLidTop_ctl_translateZ"
+		,"linearValues[1]","nurbsCircle1_translateY2","linearValues[20]","nurbsCircle1_translateX2"
+		,"linearValues[21]","nurbsCircle2_translateZ2","linearValues[22]","nurbsCircle2_translateY2"
+		,"linearValues[23]","nurbsCircle2_translateX2","linearValues[24]","nurbsCircle1_translateZ3"
 		,"linearValues[25]","nurbsCircle1_translateY3","linearValues[26]","nurbsCircle1_translateX3"
 		,"linearValues[27]","nurbsCircle2_translateZ3","linearValues[28]","nurbsCircle2_translateY3"
-		,"linearValues[29]","nurbsCircle1_translateY","linearValues[2]","nurbsCircle2_translateX3"
-		,"linearValues[30]","border_cl_ctl_translateZ","linearValues[31]","border_cl_ctl_translateY"
-		,"linearValues[32]","border_cl_ctl_translateX","linearValues[33]","border_cr_ctl_translateZ"
-		,"linearValues[34]","border_cr_ctl_translateY","linearValues[35]","border_cr_ctl_translateX"
-		,"linearValues[36]","border_br_ctl_translateZ","linearValues[37]","border_br_ctl_translateY"
-		,"linearValues[38]","border_br_ctl_translateX","linearValues[39]","nurbsCircle1_translateX"
-		,"linearValues[3]","border_bl_ctl_translateZ","linearValues[40]","border_bl_ctl_translateY"
-		,"linearValues[41]","border_bl_ctl_translateX","linearValues[42]","border_tr_ctl_translateZ"
-		,"linearValues[43]","border_tr_ctl_translateY","linearValues[44]","border_tr_ctl_translateX"
-		,"linearValues[45]","border_bc_ctl_translateZ","linearValues[46]","border_bc_ctl_translateY"
-		,"linearValues[47]","border_bc_ctl_translateX","linearValues[48]","border_tc_ctl_translateZ"
-		,"linearValues[49]","nurbsCircle2_translateZ","linearValues[4]","border_tc_ctl_translateY"
-		,"linearValues[50]","border_tc_ctl_translateX","linearValues[51]","border_tl_ctl_translateZ"
-		,"linearValues[52]","border_tl_ctl_translateY","linearValues[53]","border_tl_ctl_translateX"
-		,"linearValues[54]","Root_ctl_translateZ","linearValues[55]","Root_ctl_translateY"
-		,"linearValues[56]","Root_ctl_translateX","linearValues[57]","nurbsCircle2_translateY"
-		,"linearValues[5]","nurbsCircle2_translateX","linearValues[6]","nurbsCircle1_translateZ1"
-		,"linearValues[7]","nurbsCircle1_translateY1","linearValues[8]","nurbsCircle1_translateX1"
-		,"linearValues[9]","Root_ctl_wobble_frequence","unitlessValues[10]","EyeLidTop_ctl_bend_center"
-		,"unitlessValues[1]","EyeLidTop_ctl_bend_right","unitlessValues[2]","EyeLidTop_ctl_bend_left"
-		,"unitlessValues[3]","EyeLidBottom_ctl_bend_center","unitlessValues[4]","EyeLidBottom_ctl_bend_right"
-		,"unitlessValues[5]","EyeLidBottom_ctl_bend_left","unitlessValues[6]","Eye_ctl_iris_size"
-		,"unitlessValues[7]","Eye_ctl_pupil_size","unitlessValues[8]","Root_ctl_wobble_amplitude"
-		,"unitlessValues[9]"} ;
+		,"linearValues[29]","EyeLidTop_ctl_translateX","linearValues[2]","nurbsCircle2_translateX3"
+		,"linearValues[30]","Root_ctl_translateZ","linearValues[31]","Root_ctl_translateY"
+		,"linearValues[32]","Root_ctl_translateX","linearValues[33]","border_cl_ctl_translateZ"
+		,"linearValues[34]","border_cl_ctl_translateY","linearValues[35]","border_cl_ctl_translateX"
+		,"linearValues[36]","border_cr_ctl_translateZ","linearValues[37]","border_cr_ctl_translateY"
+		,"linearValues[38]","border_cr_ctl_translateX","linearValues[39]","EyeLidBottom_ctl_translateZ"
+		,"linearValues[3]","border_br_ctl_translateZ","linearValues[40]","border_br_ctl_translateY"
+		,"linearValues[41]","border_br_ctl_translateX","linearValues[42]","border_bl_ctl_translateZ"
+		,"linearValues[43]","border_bl_ctl_translateY","linearValues[44]","border_bl_ctl_translateX"
+		,"linearValues[45]","border_tr_ctl_translateZ","linearValues[46]","border_tr_ctl_translateY"
+		,"linearValues[47]","border_tr_ctl_translateX","linearValues[48]","border_bc_ctl_translateZ"
+		,"linearValues[49]","EyeLidBottom_ctl_translateX","linearValues[4]","border_bc_ctl_translateY"
+		,"linearValues[50]","border_bc_ctl_translateX","linearValues[51]","border_tc_ctl_translateZ"
+		,"linearValues[52]","border_tc_ctl_translateY","linearValues[53]","border_tc_ctl_translateX"
+		,"linearValues[54]","border_tl_ctl_translateZ","linearValues[55]","border_tl_ctl_translateY"
+		,"linearValues[56]","border_tl_ctl_translateX","linearValues[57]","Eye_ctl_translateZ"
+		,"linearValues[5]","Eye_ctl_translateX","linearValues[6]","nurbsCircle1_translateZ"
+		,"linearValues[7]","nurbsCircle1_translateY","linearValues[8]","nurbsCircle1_translateX"
+		,"linearValues[9]","Root_ctl_wobble_frequence","unitlessValues[10]","Root_ctl_scaleZ"
+		,"unitlessValues[11]","Root_ctl_scaleY","unitlessValues[12]","Root_ctl_scaleX","unitlessValues[13]"
+		,"EyeLidTop_ctl_bend_center","unitlessValues[1]","EyeLidTop_ctl_bend_right","unitlessValues[2]"
+		,"EyeLidTop_ctl_bend_left","unitlessValues[3]","EyeLidBottom_ctl_bend_center","unitlessValues[4]"
+		,"EyeLidBottom_ctl_bend_right","unitlessValues[5]","EyeLidBottom_ctl_bend_left","unitlessValues[6]"
+		,"Eye_ctl_iris_size","unitlessValues[7]","Eye_ctl_pupil_size","unitlessValues[8]"
+		,"Root_ctl_wobble_amplitude","unitlessValues[9]"} ;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "2A8A9404-4701-24F9-F902-3FB445EFF649";
+	rename -uid "DC36B8A5-405B-24B7-0033-EF9061AC2DD1";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 6517.8568838607816 -95.833329525258932 ;
 	setAttr ".tgi[0].vh" -type "double2" 8784.523460458211 1011.3094836236954 ;
@@ -13149,99 +13151,102 @@ connectAttr "character1.uv[9]" "Root_ctl.wobble_amplitude";
 connectAttr "character1.av[1]" "Root_ctl.rz";
 connectAttr "character1.av[2]" "Root_ctl.ry";
 connectAttr "character1.av[3]" "Root_ctl.rx";
-connectAttr "character1.lv[55]" "Root_ctl.tz";
-connectAttr "character1.lv[56]" "Root_ctl.ty";
-connectAttr "character1.lv[57]" "Root_ctl.tx";
-connectAttr "character1.lv[19]" "EyeLidTop_ctl.tz";
-connectAttr "character1.lv[20]" "EyeLidTop_ctl.tx";
+connectAttr "character1.lv[31]" "Root_ctl.tz";
+connectAttr "character1.lv[32]" "Root_ctl.ty";
+connectAttr "character1.lv[33]" "Root_ctl.tx";
+connectAttr "character1.uv[11]" "Root_ctl.sz";
+connectAttr "character1.uv[12]" "Root_ctl.sy";
+connectAttr "character1.uv[13]" "Root_ctl.sx";
+connectAttr "character1.lv[1]" "EyeLidTop_ctl.tz";
+connectAttr "character1.lv[2]" "EyeLidTop_ctl.tx";
 connectAttr "character1.uv[3]" "EyeLidTop_ctl.bend_left";
 connectAttr "character1.uv[2]" "EyeLidTop_ctl.bend_right";
 connectAttr "character1.uv[1]" "EyeLidTop_ctl.bend_center";
-connectAttr "character1.lv[21]" "EyeLidBottom_ctl.tz";
-connectAttr "character1.lv[22]" "EyeLidBottom_ctl.tx";
+connectAttr "character1.lv[3]" "EyeLidBottom_ctl.tz";
+connectAttr "character1.lv[4]" "EyeLidBottom_ctl.tx";
 connectAttr "character1.uv[6]" "EyeLidBottom_ctl.bend_left";
 connectAttr "character1.uv[5]" "EyeLidBottom_ctl.bend_right";
 connectAttr "character1.uv[4]" "EyeLidBottom_ctl.bend_center";
-connectAttr "character1.lv[23]" "Eye_ctl.tz";
-connectAttr "character1.lv[24]" "Eye_ctl.tx";
+connectAttr "character1.lv[5]" "Eye_ctl.tz";
+connectAttr "character1.lv[6]" "Eye_ctl.tx";
 connectAttr "character1.uv[8]" "Eye_ctl.pupil_size";
 connectAttr "character1.uv[7]" "Eye_ctl.iris_size";
-connectAttr "character1.lv[25]" "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tz"
+connectAttr "character1.lv[7]" "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tz"
 		;
-connectAttr "character1.lv[26]" "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.ty"
+connectAttr "character1.lv[8]" "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.ty"
 		;
-connectAttr "character1.lv[27]" "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tx"
+connectAttr "character1.lv[9]" "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tx"
 		;
 connectAttr "makeNurbCircle1.oc" "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1|nurbsCircleShape1.cr"
 		;
-connectAttr "character1.lv[28]" "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tz"
+connectAttr "character1.lv[10]" "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tz"
 		;
-connectAttr "character1.lv[29]" "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.ty"
+connectAttr "character1.lv[11]" "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.ty"
 		;
-connectAttr "character1.lv[30]" "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tx"
+connectAttr "character1.lv[12]" "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tx"
 		;
 connectAttr "makeNurbCircle2.oc" "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2|nurbsCircleShape2.cr"
 		;
-connectAttr "character1.lv[1]" "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tz"
+connectAttr "character1.lv[13]" "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tz"
 		;
-connectAttr "character1.lv[2]" "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.ty"
+connectAttr "character1.lv[14]" "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.ty"
 		;
-connectAttr "character1.lv[3]" "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tx"
+connectAttr "character1.lv[15]" "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tx"
 		;
-connectAttr "character1.lv[4]" "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tz"
+connectAttr "character1.lv[16]" "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tz"
 		;
-connectAttr "character1.lv[5]" "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.ty"
+connectAttr "character1.lv[17]" "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.ty"
 		;
-connectAttr "character1.lv[6]" "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tx"
+connectAttr "character1.lv[18]" "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tx"
 		;
-connectAttr "character1.lv[7]" "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tz"
+connectAttr "character1.lv[19]" "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tz"
 		;
-connectAttr "character1.lv[8]" "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.ty"
+connectAttr "character1.lv[20]" "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.ty"
 		;
-connectAttr "character1.lv[9]" "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tx"
+connectAttr "character1.lv[21]" "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tx"
 		;
-connectAttr "character1.lv[10]" "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tz"
+connectAttr "character1.lv[22]" "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tz"
 		;
-connectAttr "character1.lv[11]" "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.ty"
+connectAttr "character1.lv[23]" "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.ty"
 		;
-connectAttr "character1.lv[12]" "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tx"
+connectAttr "character1.lv[24]" "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tx"
 		;
-connectAttr "character1.lv[13]" "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tz"
+connectAttr "character1.lv[25]" "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tz"
 		;
-connectAttr "character1.lv[14]" "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.ty"
+connectAttr "character1.lv[26]" "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.ty"
 		;
-connectAttr "character1.lv[15]" "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tx"
+connectAttr "character1.lv[27]" "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tx"
 		;
-connectAttr "character1.lv[16]" "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tz"
+connectAttr "character1.lv[28]" "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tz"
 		;
-connectAttr "character1.lv[17]" "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.ty"
+connectAttr "character1.lv[29]" "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.ty"
 		;
-connectAttr "character1.lv[18]" "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tx"
+connectAttr "character1.lv[30]" "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tx"
 		;
-connectAttr "character1.lv[31]" "border_cl_ctl.tz";
-connectAttr "character1.lv[32]" "border_cl_ctl.ty";
-connectAttr "character1.lv[33]" "border_cl_ctl.tx";
-connectAttr "character1.lv[34]" "border_cr_ctl.tz";
-connectAttr "character1.lv[35]" "border_cr_ctl.ty";
-connectAttr "character1.lv[36]" "border_cr_ctl.tx";
-connectAttr "character1.lv[37]" "border_br_ctl.tz";
-connectAttr "character1.lv[38]" "border_br_ctl.ty";
-connectAttr "character1.lv[39]" "border_br_ctl.tx";
-connectAttr "character1.lv[40]" "border_bl_ctl.tz";
-connectAttr "character1.lv[41]" "border_bl_ctl.ty";
-connectAttr "character1.lv[42]" "border_bl_ctl.tx";
-connectAttr "character1.lv[43]" "border_tr_ctl.tz";
-connectAttr "character1.lv[44]" "border_tr_ctl.ty";
-connectAttr "character1.lv[45]" "border_tr_ctl.tx";
-connectAttr "character1.lv[46]" "border_bc_ctl.tz";
-connectAttr "character1.lv[47]" "border_bc_ctl.ty";
-connectAttr "character1.lv[48]" "border_bc_ctl.tx";
-connectAttr "character1.lv[49]" "border_tc_ctl.tz";
-connectAttr "character1.lv[50]" "border_tc_ctl.ty";
-connectAttr "character1.lv[51]" "border_tc_ctl.tx";
-connectAttr "character1.lv[52]" "border_tl_ctl.tz";
-connectAttr "character1.lv[53]" "border_tl_ctl.ty";
-connectAttr "character1.lv[54]" "border_tl_ctl.tx";
+connectAttr "character1.lv[34]" "border_cl_ctl.tz";
+connectAttr "character1.lv[35]" "border_cl_ctl.ty";
+connectAttr "character1.lv[36]" "border_cl_ctl.tx";
+connectAttr "character1.lv[37]" "border_cr_ctl.tz";
+connectAttr "character1.lv[38]" "border_cr_ctl.ty";
+connectAttr "character1.lv[39]" "border_cr_ctl.tx";
+connectAttr "character1.lv[40]" "border_br_ctl.tz";
+connectAttr "character1.lv[41]" "border_br_ctl.ty";
+connectAttr "character1.lv[42]" "border_br_ctl.tx";
+connectAttr "character1.lv[43]" "border_bl_ctl.tz";
+connectAttr "character1.lv[44]" "border_bl_ctl.ty";
+connectAttr "character1.lv[45]" "border_bl_ctl.tx";
+connectAttr "character1.lv[46]" "border_tr_ctl.tz";
+connectAttr "character1.lv[47]" "border_tr_ctl.ty";
+connectAttr "character1.lv[48]" "border_tr_ctl.tx";
+connectAttr "character1.lv[49]" "border_bc_ctl.tz";
+connectAttr "character1.lv[50]" "border_bc_ctl.ty";
+connectAttr "character1.lv[51]" "border_bc_ctl.tx";
+connectAttr "character1.lv[52]" "border_tc_ctl.tz";
+connectAttr "character1.lv[53]" "border_tc_ctl.ty";
+connectAttr "character1.lv[54]" "border_tc_ctl.tx";
+connectAttr "character1.lv[55]" "border_tl_ctl.tz";
+connectAttr "character1.lv[56]" "border_tl_ctl.ty";
+connectAttr "character1.lv[57]" "border_tl_ctl.tx";
 connectAttr "decomposeMatrix1.or" "geo_grp.r";
 connectAttr "decomposeMatrix1.os" "geo_grp.s";
 connectAttr "decomposeMatrix1.ot" "geo_grp.t";
@@ -13908,100 +13913,103 @@ connectAttr "eye_geo.iog" "exportSet.dsm" -na;
 connectAttr "pupil_geo.iog" "exportSet.dsm" -na;
 connectAttr "lid_bot_geo.iog" "exportSet.dsm" -na;
 connectAttr "lid_top_geo.iog" "exportSet.dsm" -na;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tz" "character1.dnsm[0]"
+connectAttr "EyeLidTop_ctl.bend_center" "character1.dnsm[0]";
+connectAttr "EyeLidTop_ctl.bend_right" "character1.dnsm[1]";
+connectAttr "EyeLidTop_ctl.bend_left" "character1.dnsm[2]";
+connectAttr "EyeLidTop_ctl.tz" "character1.dnsm[3]";
+connectAttr "EyeLidTop_ctl.tx" "character1.dnsm[4]";
+connectAttr "EyeLidBottom_ctl.bend_center" "character1.dnsm[5]";
+connectAttr "EyeLidBottom_ctl.bend_right" "character1.dnsm[6]";
+connectAttr "EyeLidBottom_ctl.bend_left" "character1.dnsm[7]";
+connectAttr "EyeLidBottom_ctl.tz" "character1.dnsm[8]";
+connectAttr "EyeLidBottom_ctl.tx" "character1.dnsm[9]";
+connectAttr "Eye_ctl.iris_size" "character1.dnsm[10]";
+connectAttr "Eye_ctl.pupil_size" "character1.dnsm[11]";
+connectAttr "Eye_ctl.tz" "character1.dnsm[12]";
+connectAttr "Eye_ctl.tx" "character1.dnsm[13]";
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tz" "character1.dnsm[14]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.ty" "character1.dnsm[1]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.ty" "character1.dnsm[15]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tx" "character1.dnsm[2]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tx" "character1.dnsm[16]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tz" "character1.dnsm[3]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tz" "character1.dnsm[17]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.ty" "character1.dnsm[4]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.ty" "character1.dnsm[18]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tx" "character1.dnsm[5]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tx" "character1.dnsm[19]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tz" "character1.dnsm[6]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tz" "character1.dnsm[20]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.ty" "character1.dnsm[7]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.ty" "character1.dnsm[21]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tx" "character1.dnsm[8]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group14|nurbsCircle1.tx" "character1.dnsm[22]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tz" "character1.dnsm[9]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tz" "character1.dnsm[23]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.ty" "character1.dnsm[10]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.ty" "character1.dnsm[24]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tx" "character1.dnsm[11]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group11|nurbsCircle2.tx" "character1.dnsm[25]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tz" "character1.dnsm[12]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tz" "character1.dnsm[26]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.ty" "character1.dnsm[13]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.ty" "character1.dnsm[27]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tx" "character1.dnsm[14]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group15|nurbsCircle1.tx" "character1.dnsm[28]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tz" "character1.dnsm[15]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tz" "character1.dnsm[29]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.ty" "character1.dnsm[16]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.ty" "character1.dnsm[30]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tx" "character1.dnsm[17]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group12|nurbsCircle2.tx" "character1.dnsm[31]"
 		;
-connectAttr "EyeLidTop_ctl.bend_center" "character1.dnsm[18]";
-connectAttr "EyeLidTop_ctl.bend_right" "character1.dnsm[19]";
-connectAttr "EyeLidTop_ctl.bend_left" "character1.dnsm[20]";
-connectAttr "EyeLidTop_ctl.tz" "character1.dnsm[21]";
-connectAttr "EyeLidTop_ctl.tx" "character1.dnsm[22]";
-connectAttr "EyeLidBottom_ctl.bend_center" "character1.dnsm[23]";
-connectAttr "EyeLidBottom_ctl.bend_right" "character1.dnsm[24]";
-connectAttr "EyeLidBottom_ctl.bend_left" "character1.dnsm[25]";
-connectAttr "EyeLidBottom_ctl.tz" "character1.dnsm[26]";
-connectAttr "EyeLidBottom_ctl.tx" "character1.dnsm[27]";
-connectAttr "Eye_ctl.iris_size" "character1.dnsm[28]";
-connectAttr "Eye_ctl.pupil_size" "character1.dnsm[29]";
-connectAttr "Eye_ctl.tz" "character1.dnsm[30]";
-connectAttr "Eye_ctl.tx" "character1.dnsm[31]";
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tz" "character1.dnsm[32]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tz" "character1.dnsm[32]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.ty" "character1.dnsm[33]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.ty" "character1.dnsm[33]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group9|nurbsCircle1.tx" "character1.dnsm[34]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group16|nurbsCircle1.tx" "character1.dnsm[34]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tz" "character1.dnsm[35]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tz" "character1.dnsm[35]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.ty" "character1.dnsm[36]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.ty" "character1.dnsm[36]"
 		;
-connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group10|nurbsCircle2.tx" "character1.dnsm[37]"
+connectAttr "|asset|control_grp|Root_ctl|global_grp|joint24|group13|nurbsCircle2.tx" "character1.dnsm[37]"
 		;
-connectAttr "border_cl_ctl.tz" "character1.dnsm[38]";
-connectAttr "border_cl_ctl.ty" "character1.dnsm[39]";
-connectAttr "border_cl_ctl.tx" "character1.dnsm[40]";
-connectAttr "border_cr_ctl.tz" "character1.dnsm[41]";
-connectAttr "border_cr_ctl.ty" "character1.dnsm[42]";
-connectAttr "border_cr_ctl.tx" "character1.dnsm[43]";
-connectAttr "border_br_ctl.tz" "character1.dnsm[44]";
-connectAttr "border_br_ctl.ty" "character1.dnsm[45]";
-connectAttr "border_br_ctl.tx" "character1.dnsm[46]";
-connectAttr "border_bl_ctl.tz" "character1.dnsm[47]";
-connectAttr "border_bl_ctl.ty" "character1.dnsm[48]";
-connectAttr "border_bl_ctl.tx" "character1.dnsm[49]";
-connectAttr "border_tr_ctl.tz" "character1.dnsm[50]";
-connectAttr "border_tr_ctl.ty" "character1.dnsm[51]";
-connectAttr "border_tr_ctl.tx" "character1.dnsm[52]";
-connectAttr "border_bc_ctl.tz" "character1.dnsm[53]";
-connectAttr "border_bc_ctl.ty" "character1.dnsm[54]";
-connectAttr "border_bc_ctl.tx" "character1.dnsm[55]";
-connectAttr "border_tc_ctl.tz" "character1.dnsm[56]";
-connectAttr "border_tc_ctl.ty" "character1.dnsm[57]";
-connectAttr "border_tc_ctl.tx" "character1.dnsm[58]";
-connectAttr "border_tl_ctl.tz" "character1.dnsm[59]";
-connectAttr "border_tl_ctl.ty" "character1.dnsm[60]";
-connectAttr "border_tl_ctl.tx" "character1.dnsm[61]";
-connectAttr "Root_ctl.wobble_amplitude" "character1.dnsm[62]";
-connectAttr "Root_ctl.wobble_frequence" "character1.dnsm[63]";
-connectAttr "Root_ctl.rz" "character1.dnsm[64]";
-connectAttr "Root_ctl.ry" "character1.dnsm[65]";
-connectAttr "Root_ctl.rx" "character1.dnsm[66]";
-connectAttr "Root_ctl.tz" "character1.dnsm[67]";
-connectAttr "Root_ctl.ty" "character1.dnsm[68]";
-connectAttr "Root_ctl.tx" "character1.dnsm[69]";
+connectAttr "Root_ctl.wobble_amplitude" "character1.dnsm[38]";
+connectAttr "Root_ctl.wobble_frequence" "character1.dnsm[39]";
+connectAttr "Root_ctl.sz" "character1.dnsm[40]";
+connectAttr "Root_ctl.sy" "character1.dnsm[41]";
+connectAttr "Root_ctl.sx" "character1.dnsm[42]";
+connectAttr "Root_ctl.rz" "character1.dnsm[43]";
+connectAttr "Root_ctl.ry" "character1.dnsm[44]";
+connectAttr "Root_ctl.rx" "character1.dnsm[45]";
+connectAttr "Root_ctl.tz" "character1.dnsm[46]";
+connectAttr "Root_ctl.ty" "character1.dnsm[47]";
+connectAttr "Root_ctl.tx" "character1.dnsm[48]";
+connectAttr "border_cl_ctl.tz" "character1.dnsm[49]";
+connectAttr "border_cl_ctl.ty" "character1.dnsm[50]";
+connectAttr "border_cl_ctl.tx" "character1.dnsm[51]";
+connectAttr "border_cr_ctl.tz" "character1.dnsm[52]";
+connectAttr "border_cr_ctl.ty" "character1.dnsm[53]";
+connectAttr "border_cr_ctl.tx" "character1.dnsm[54]";
+connectAttr "border_br_ctl.tz" "character1.dnsm[55]";
+connectAttr "border_br_ctl.ty" "character1.dnsm[56]";
+connectAttr "border_br_ctl.tx" "character1.dnsm[57]";
+connectAttr "border_bl_ctl.tz" "character1.dnsm[58]";
+connectAttr "border_bl_ctl.ty" "character1.dnsm[59]";
+connectAttr "border_bl_ctl.tx" "character1.dnsm[60]";
+connectAttr "border_tr_ctl.tz" "character1.dnsm[61]";
+connectAttr "border_tr_ctl.ty" "character1.dnsm[62]";
+connectAttr "border_tr_ctl.tx" "character1.dnsm[63]";
+connectAttr "border_bc_ctl.tz" "character1.dnsm[64]";
+connectAttr "border_bc_ctl.ty" "character1.dnsm[65]";
+connectAttr "border_bc_ctl.tx" "character1.dnsm[66]";
+connectAttr "border_tc_ctl.tz" "character1.dnsm[67]";
+connectAttr "border_tc_ctl.ty" "character1.dnsm[68]";
+connectAttr "border_tc_ctl.tx" "character1.dnsm[69]";
+connectAttr "border_tl_ctl.tz" "character1.dnsm[70]";
+connectAttr "border_tl_ctl.ty" "character1.dnsm[71]";
+connectAttr "border_tl_ctl.tx" "character1.dnsm[72]";
 connectAttr "lid_top_geo_rotateX.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[0].dn"
 		;
 connectAttr "C_botEyelid_JNT.msg" "MayaNodeEditorSavedTabsInfo.tgi[0].ni[1].dn";
