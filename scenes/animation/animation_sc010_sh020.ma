@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc010_sh020.ma
-//Last modified: Sat, Mar 06, 2021 06:50:13 PM
+//Last modified: Sat, Mar 06, 2021 07:04:30 PM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/milk_jug.ma";
@@ -36,17 +36,17 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19042)\n";
 createNode transform -s -n "persp";
 	rename -uid "2C10C754-45C3-2F74-9A01-BAA617812E18";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -40.49661589522168 48.999462268299638 34.343010389278142 ;
-	setAttr ".r" -type "double3" -29.738352729380949 -53.400000000001377 -2.6672442018181824e-15 ;
+	setAttr ".t" -type "double3" -43.642239207849499 42.894611556545136 65.410747542778481 ;
+	setAttr ".r" -type "double3" -24.338352729381068 -33.800000000001539 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "13AE64E3-40CE-21C3-25B9-41907BB39095";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 65.109496856744229;
+	setAttr ".coi" 68.8788803389793;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1.9810231252512638 14.322466641083961 0.56079146371508104 ;
+	setAttr ".tp" -type "double3" 6.3877685974923537 9.7603763351442723 25.965319715351864 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "FBB0123C-4FC0-9CF5-2D30-0BA9F181953C";
@@ -239,36 +239,11 @@ createNode transform -n "tmGroups1" -p "tmXML1";
 	setAttr ".type" -type "string" "tmGroups";
 createNode transform -n "fluids";
 	rename -uid "B0D300BE-40DF-8EBB-C16E-279846ECE129";
-createNode transform -n "FLUID_surface" -p "fluids";
-	rename -uid "6AFC5E0E-45B5-8957-76BD-ACB10292440F";
-	setAttr ".t" -type "double3" 0 4.9736953369999286 0 ;
-	setAttr ".s" -type "double3" 4.2424995945387671 4.2424995945387671 4.2424995945387671 ;
-createNode mesh -n "FLUID_surfaceShape" -p "FLUID_surface";
-	rename -uid "0F8BD5A9-45B3-16BE-7546-1DB7236646A8";
-	setAttr -k off ".v";
-	setAttr -s 4 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49999998230487108 0 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "FLUID_surfaceShape1Orig" -p "FLUID_surface";
-	rename -uid "7888E39B-43B4-5E33-95D2-F1AAE389C2DA";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "FLUID_beam" -p "fluids";
 	rename -uid "0A2DCA02-431B-60B6-57E4-148E3FF102DC";
-	setAttr ".t" -type "double3" 0 19.253489289955702 0 ;
+	setAttr -av ".v";
+	setAttr ".t" -type "double3" 0 -342.98732988922472 0 ;
+	setAttr -av ".ty";
 createNode mesh -n "FLUID_beamShape" -p "FLUID_beam";
 	rename -uid "DBF622C2-4DEE-6587-7FAC-FAA6B86B6059";
 	setAttr -k off ".v";
@@ -280,19 +255,19 @@ createNode mesh -n "FLUID_beamShape" -p "FLUID_beam";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "E96552E3-4FCB-D7B5-AD69-459685D17EAD";
+	rename -uid "F0C00405-4159-C74E-349C-D2AD58DF8E2A";
 	setAttr -s 40 ".lnk";
 	setAttr -s 40 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "268F521E-43CB-F708-1F6E-1B8B3D4F7FF1";
+	rename -uid "FC8436C2-4718-2CEB-0652-098645F52FC5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "979712E7-4956-B346-F28C-2FA8FDEB3267";
+	rename -uid "DC23ED53-4059-957D-8EAF-718A5535A352";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "B5FCFA0E-4D09-A458-9FDB-708ADC846FD2";
+	rename -uid "B73E35CA-47C2-5BD7-CEEC-5691FE8CA0AB";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FA05B9A1-4E71-B3C9-56AB-0FB22F4826F7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "85D31B56-4CE4-5E3F-BA2B-1188913C20DE";
+	rename -uid "4C257352-437F-A917-BC61-D7992113D60C";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E2DB08F1-452F-FB4D-A71D-7FA2920DCAF0";
 	setAttr ".g" yes;
@@ -349,7 +324,7 @@ createNode reference -n "milk_jugRN";
 lockNode -l 1 ;
 createNode reference -n "cup_rig_01RN";
 	rename -uid "E0C23797-4A8B-B95D-62D0-4CB504759BA3";
-	setAttr -s 18 ".phl";
+	setAttr -s 15 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -365,13 +340,10 @@ createNode reference -n "cup_rig_01RN";
 	setAttr ".phl[13]" 0;
 	setAttr ".phl[14]" 0;
 	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
-	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"cup_rig_01RN"
 		"cup_rig_01RN" 0
-		"cup_rig_01RN" 20
+		"cup_rig_01RN" 17
 		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "amplitude" " -av -k 1 0"
 		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "direction" " -av -k 1 0"
 		5 4 "cup_rig_01RN" "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl.amplitude" 
@@ -398,17 +370,11 @@ createNode reference -n "cup_rig_01RN";
 		"cup_rig_01RN.placeHolderList[11]" ""
 		5 4 "cup_rig_01RN" "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl.visibility" 
 		"cup_rig_01RN.placeHolderList[12]" ""
-		5 3 "cup_rig_01RN" "cup_rig_01:ffd1.outputGeometry[1]" "cup_rig_01RN.placeHolderList[13]" 
+		5 4 "cup_rig_01RN" "cup_rig_01:ffd1.input[1].inputGeometry" "cup_rig_01RN.placeHolderList[13]" 
 		""
-		5 4 "cup_rig_01RN" "cup_rig_01:ffd1.input[1].inputGeometry" "cup_rig_01RN.placeHolderList[14]" 
+		5 4 "cup_rig_01RN" "cup_rig_01:ffd1.input[1].groupId" "cup_rig_01RN.placeHolderList[14]" 
 		""
-		5 4 "cup_rig_01RN" "cup_rig_01:ffd1.input[1].groupId" "cup_rig_01RN.placeHolderList[15]" 
-		""
-		5 3 "cup_rig_01RN" "cup_rig_01:ffd1Set.memberWireframeColor" "cup_rig_01RN.placeHolderList[16]" 
-		""
-		5 4 "cup_rig_01RN" "cup_rig_01:ffd1Set.groupNodes" "cup_rig_01RN.placeHolderList[17]" 
-		""
-		5 4 "cup_rig_01RN" "cup_rig_01:ffd1Set.dagSetMembers" "cup_rig_01RN.placeHolderList[18]" 
+		5 4 "cup_rig_01RN" "cup_rig_01:ffd1Set.groupNodes" "cup_rig_01RN.placeHolderList[15]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -3439,18 +3405,6 @@ createNode groupParts -n "groupParts2";
 	rename -uid "830E92B4-4920-B96C-B279-839616954927";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "vtx[*]";
-createNode animCurveTU -n "FLUID_beam_visibility";
-	rename -uid "233939F9-40BE-62E4-5DEF-A8BA548DD216";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 51 1 95 0;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
-createNode animCurveTU -n "FLUID_surface_visibility";
-	rename -uid "C024CDF9-43DD-1007-6F60-D4BDBFE02BA5";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  1 0 51 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTU -n "FLUID_beam_scaleX";
 	rename -uid "EFCB728C-4F01-7691-46C7-AEA3AAFE71F9";
 	setAttr ".tan" 2;
@@ -3675,6 +3629,24 @@ createNode animCurveTU -n "mouthE_visibility";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 	setAttr ".kot[0]"  5;
+createNode animCurveTL -n "FLUID_beam_translateX";
+	rename -uid "003958EB-4CC2-99FF-46AD-04B156928292";
+	setAttr ".tan" 2;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 78 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "FLUID_beam_translateY";
+	rename -uid "EE5F1522-4E63-00B8-39A7-9C931BF2EFE3";
+	setAttr ".tan" 2;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 -342.98732988922472 78 19.253489289955702;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "FLUID_beam_translateZ";
+	rename -uid "A8296866-4AC6-7A21-E4C7-F3997EB28083";
+	setAttr ".tan" 2;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 78 0;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -3699,7 +3671,7 @@ select -ne :defaultRenderingList1;
 select -ne :defaultTextureList1;
 	setAttr -s 2 ".tx";
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
+	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -3733,12 +3705,9 @@ connectAttr "cup_ctrl_scaleX.o" "cup_rig_01RN.phl[9]";
 connectAttr "cup_ctrl_scaleY.o" "cup_rig_01RN.phl[10]";
 connectAttr "cup_ctrl_scaleZ.o" "cup_rig_01RN.phl[11]";
 connectAttr "cup_ctrl_visibility.o" "cup_rig_01RN.phl[12]";
-connectAttr "cup_rig_01RN.phl[13]" "FLUID_surfaceShape.i";
-connectAttr "groupParts1.og" "cup_rig_01RN.phl[14]";
-connectAttr "groupId1.id" "cup_rig_01RN.phl[15]";
-connectAttr "cup_rig_01RN.phl[16]" "FLUID_surfaceShape.iog.og[0].gco";
-connectAttr "groupId1.msg" "cup_rig_01RN.phl[17]";
-connectAttr "FLUID_surfaceShape.iog.og[0]" "cup_rig_01RN.phl[18]";
+connectAttr "groupParts1.og" "cup_rig_01RN.phl[13]";
+connectAttr "groupId1.id" "cup_rig_01RN.phl[14]";
+connectAttr "groupId1.msg" "cup_rig_01RN.phl[15]";
 connectAttr "cam_ctrl_ortho_scale.o" "camera_rigRN.phl[22]";
 connectAttr "cam_ctrl_translateX.o" "camera_rigRN.phl[23]";
 connectAttr "cam_ctrl_translateY.o" "camera_rigRN.phl[24]";
@@ -3974,16 +3943,12 @@ connectAttr "mouthC_visibility.o" "mouthRN.phl[44]";
 connectAttr "mouthD_visibility.o" "mouthRN.phl[45]";
 connectAttr "mouthE_visibility.o" "mouthRN.phl[46]";
 connectAttr "tongue_visibility.o" "mouthRN.phl[47]";
-connectAttr "FLUID_surface_visibility.o" "FLUID_surface.v";
-connectAttr "groupId1.id" "FLUID_surfaceShape.iog.og[0].gid";
-connectAttr "groupId2.id" "FLUID_surfaceShape.iog.og[1].gid";
-connectAttr "tweakSet1.mwc" "FLUID_surfaceShape.iog.og[1].gco";
-connectAttr "tweak1.vl[0].vt[0]" "FLUID_surfaceShape.twl";
-connectAttr "polyCloseBorder1.out" "FLUID_surfaceShape1Orig.i";
-connectAttr "FLUID_beam_visibility.o" "FLUID_beam.v";
 connectAttr "FLUID_beam_scaleX.o" "FLUID_beam.sx";
 connectAttr "FLUID_beam_scaleY.o" "FLUID_beam.sy";
 connectAttr "FLUID_beam_scaleZ.o" "FLUID_beam.sz";
+connectAttr "FLUID_beam_translateX.o" "FLUID_beam.tx";
+connectAttr "FLUID_beam_translateY.o" "FLUID_beam.ty";
+connectAttr "FLUID_beam_translateZ.o" "FLUID_beam.tz";
 connectAttr "polyCylinder1.out" "FLUID_beamShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -4009,11 +3974,9 @@ connectAttr "groupId2.id" "tweak1.ip[0].gi";
 connectAttr "tweak1.og[0]" "groupParts1.ig";
 connectAttr "groupId1.id" "groupParts1.gi";
 connectAttr "groupId2.msg" "tweakSet1.gn" -na;
-connectAttr "FLUID_surfaceShape.iog.og[1]" "tweakSet1.dsm" -na;
 connectAttr "tweak1.msg" "tweakSet1.ub[0]";
-connectAttr "FLUID_surfaceShape1Orig.w" "groupParts2.ig";
+connectAttr "polyCloseBorder1.out" "groupParts2.ig";
 connectAttr "groupId2.id" "groupParts2.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "FLUID_beamShape.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "FLUID_surfaceShape.iog" ":initialShadingGroup.dsm" -na;
 // End of animation_sc010_sh020.ma
