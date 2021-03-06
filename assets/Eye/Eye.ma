@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Eye.ma
-//Last modified: Sat, Mar 06, 2021 03:32:13 PM
+//Last modified: Sat, Mar 06, 2021 03:34:05 PM
 //Codeset: 1252
 requires maya "2019";
 requires -nodeType "decomposeMatrix" "matrixNodes" "1.0";
@@ -11,17 +11,18 @@ fileInfo "product" "Maya 2019";
 fileInfo "version" "2019";
 fileInfo "cutIdentifier" "202004141915-92acaa8c08";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
+fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "B212AED3-4C93-DE79-D5A4-F7B9EB1882CA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.8303502060379946 8.6611007045416546 5.2710938187404919 ;
+	setAttr ".t" -type "double3" -6.1611214002924886 32.309482612800338 19.436408119750599 ;
 	setAttr ".r" -type "double3" -57.938352729102668 -376.99999999974318 8.3146995286461229e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "573A1DA0-4916-BC74-3FB6-5480F75B6E37";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
 	setAttr ".ncp" 0.001;
-	setAttr ".coi" 14.410145667602903;
+	setAttr ".coi" 42.314583939358911;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
