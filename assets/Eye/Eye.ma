@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Eye.ma
-//Last modified: Sat, Mar 06, 2021 04:00:59 PM
+//Last modified: Sat, Mar 06, 2021 04:04:30 PM
 //Codeset: 1252
 requires maya "2019";
 requires -nodeType "decomposeMatrix" "matrixNodes" "1.0";
@@ -12645,10 +12645,10 @@ createNode objectSet -n "exportSet";
 	setAttr ".ihi" 0;
 	setAttr -s 7 ".dsm";
 createNode character -n "character1";
-	rename -uid "9937182E-4D8E-A1D7-A35A-DF99C7606738";
+	rename -uid "C3D60AD7-44ED-E5AB-C5C3-D59F838EBE25";
 	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
 	setAttr -s 73 ".dnsm";
-	setAttr -s 13 ".uv[7:13]"  1 0.4 0 0.5 1 1 1;
+	setAttr -s 13 ".uv[10:13]"  0.5 1 1 1;
 	setAttr -s 13 ".uv";
 	setAttr -s 57 ".lv";
 	setAttr -s 57 ".lv";
@@ -12728,7 +12728,7 @@ createNode character -n "character1";
 		,"Eye_ctl_iris_size","unitlessValues[7]","Eye_ctl_pupil_size","unitlessValues[8]"
 		,"Root_ctl_wobble_amplitude","unitlessValues[9]"} ;
 createNode nodeGraphEditorInfo -n "MayaNodeEditorSavedTabsInfo";
-	rename -uid "DC36B8A5-405B-24B7-0033-EF9061AC2DD1";
+	rename -uid "005DC45E-4347-19AA-28F8-B59451B15982";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 6517.8568838607816 -95.833329525258932 ;
 	setAttr ".tgi[0].vh" -type "double2" 8784.523460458211 1011.3094836236954 ;
