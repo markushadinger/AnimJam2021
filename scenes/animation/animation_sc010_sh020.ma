@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc010_sh020.ma
-//Last modified: Sat, Mar 06, 2021 05:30:45 PM
+//Last modified: Sat, Mar 06, 2021 05:34:34 PM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/milk_jug.ma";
@@ -309,12 +309,12 @@ createNode reference -n "teapotRN";
 		"teapotRN"
 		"teapotRN" 0
 		"teapotRN" 17
-		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "translate" " -type \"double3\" 22.50161674561894998 13.89844512834241286 0.54625678083451845"
+		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "translate" " -type \"double3\" 47.74798117015233601 13.89844512834241286 0.54625678083451845"
 		
 		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "translateX" " -av"
 		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "translateY" " -av"
 		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "translateZ" " -av"
-		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "rotate" " -type \"double3\" 0 180 27.15686065499861357"
+		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "rotate" " -type \"double3\" 0 180 5.7251855687095059"
 		
 		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "rotateX" " -av"
 		2 "|teapot:teapot_rig|teapot:teapot_ctrl" "rotateY" " -av"
@@ -371,8 +371,9 @@ createNode reference -n "cup_rig_01RN";
 		"cup_rig_01RN"
 		"cup_rig_01RN" 0
 		"cup_rig_01RN" 21
-		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "amplitude" " -av -k 1 0"
-		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "direction" " -av -k 1 0"
+		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "amplitude" " -av -k 1 -4.10000000000000053"
+		
+		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "direction" " -av -k 1 -24"
 		2 "cup_rig_01:ffd1" "input" " -s 2"
 		5 4 "cup_rig_01RN" "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl.amplitude" 
 		"cup_rig_01RN.placeHolderList[1]" ""
@@ -496,17 +497,18 @@ createNode reference -n "camera_rigRN";
 		"camera_rigRN" 0
 		"camera_rigRN" 36
 		2 "|camera_rig:render_cam" "visibility" " 1"
-		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "translate" " -type \"double3\" 6.38776859749235371 9.76037633514427228 25.96531971535186401"
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "translate" " -type \"double3\" -0.21940554799842626 14.4391358530847338 29.36894731136880665"
 		
 		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "translateX" " -av"
 		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "translateY" " -av"
 		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "translateZ" " -av"
-		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "ortho_scale" " -av -k 1 40"
+		2 "|camera_rig:render_cam|camera_rig:cam_ctrl" "ortho_scale" " -av -k 1 19.80508474576270928"
 		
 		2 "|camera_rig:render_cam|camera_rig:render_cam_grp" "nodeState" " 0"
 		2 "|camera_rig:render_cam|camera_rig:render_cam_grp" "twist" " 0"
 		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_aim" 
-		"translate" " -type \"double3\" 6.38776859749235371 9.76037633514427228 0"
+		"translate" " -type \"double3\" -0.21940554799842626 5.84007158661207448 3.40362759601694265"
+		
 		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_aim" 
 		"translateX" " -av"
 		2 "|camera_rig:render_cam|camera_rig:render_cam_grp|camera_rig:render_cam_aim" 
@@ -644,7 +646,7 @@ createNode reference -n "eye_tea_1RN";
 		"eye_tea_1RN" 0
 		"eye_tea_1RN" 169
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "translate" 
-		" -type \"double3\" 7.96590600993005182 -23.28019115556195473 0.39926956548947956"
+		" -type \"double3\" -0.9341984402577117 -24.83200585704915753 -1.65846196317254724"
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "translateZ" 
 		" -av"
@@ -652,7 +654,7 @@ createNode reference -n "eye_tea_1RN";
 		" -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "translateX" 
 		" -av"
-		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotate" " -type \"double3\" 0 0 0"
+		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotate" " -type \"double3\" 92.04004802456890388 -3.24286526202476155 91.53148153226170791"
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotateZ" " -av"
 		
@@ -660,7 +662,7 @@ createNode reference -n "eye_tea_1RN";
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "rotateX" " -av"
 		
-		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "scale" " -type \"double3\" 0.58323631339702386 0.58323631339702386 0.58323631339702386"
+		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "scale" " -type \"double3\" 1.86310999475908234 0.58323631339702386 0.37374263620064013"
 		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl" "scaleZ" " -av"
 		
@@ -701,7 +703,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:Eye_zero|eye_tea_1:Eye_ctl" 
 		"iris_size" " -av -k 1 1"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -1.12197322356468754 0 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
@@ -709,7 +711,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group9|eye_tea_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.90517807711245835 0 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
@@ -717,7 +719,8 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group10|eye_tea_1:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group14|eye_tea_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.95288210618163982 -0.088559352445529732 -0.84441008710704057"
+		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group14|eye_tea_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group14|eye_tea_1:nurbsCircle1" 
@@ -725,7 +728,8 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group14|eye_tea_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group11|eye_tea_1:nurbsCircle2" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.68208215898215441 -0.040502816899085234 -0.87539906867111661"
+		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group11|eye_tea_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group11|eye_tea_1:nurbsCircle2" 
@@ -741,7 +745,7 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group15|eye_tea_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group12|eye_tea_1:nurbsCircle2" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 1.34569036792082453 0 0"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group12|eye_tea_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group12|eye_tea_1:nurbsCircle2" 
@@ -757,7 +761,8 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group16|eye_tea_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group13|eye_tea_1:nurbsCircle2" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.60391435575822694 0.070998574665369546 0.90581847610181654"
+		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group13|eye_tea_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:global_grp|eye_tea_1:joint24|eye_tea_1:group13|eye_tea_1:nurbsCircle2" 
@@ -805,7 +810,8 @@ createNode reference -n "eye_tea_1RN";
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group4|eye_tea_1:border_tr_ctl" 
 		"translateX" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group3|eye_tea_1:border_bc_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -5.67334531826285904 2.76942845010185845 0.024043466978710713"
+		
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group3|eye_tea_1:border_bc_ctl" 
 		"translateZ" " -av"
 		2 "|eye_tea_1:asset|eye_tea_1:control_grp|eye_tea_1:Root_ctl|eye_tea_1:border|eye_tea_1:group3|eye_tea_1:border_bc_ctl" 
@@ -1092,7 +1098,7 @@ createNode reference -n "eye_milk_1RN";
 		"eye_milk_1RN" 0
 		"eye_milk_1RN" 164
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "translate" 
-		" -type \"double3\" 7.01216483579304306 17.22283388201239873 0.21567162618961372"
+		" -type \"double3\" 2.00964057899265125 -22.85836759611684954 -1.30005847832777954"
 		
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "translateZ" 
 		" -av"
@@ -1101,7 +1107,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "translateX" 
 		" -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "rotate" 
-		" -type \"double3\" 71.54487445434905624 3.95222747624867887 11.67592591943818725"
+		" -type \"double3\" 88.73130775778811596 -2.12231275201294878 90.73960321510205063"
 		
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "rotateZ" 
 		" -av"
@@ -1110,7 +1116,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "rotateX" 
 		" -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "scale" 
-		" -type \"double3\" 1 1 1"
+		" -type \"double3\" 0.57198860723412182 0.57198860723412182 0.57198860723412182"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "scaleZ" 
 		" -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "scaleY" 
@@ -1118,23 +1124,23 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl" "scaleX" 
 		" -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:EyeLidTop_zero|eye_milk_1:EyeLidTop_ctl" 
-		"translateX" " -av 0.19522426784869823"
+		"translateX" " -av 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:EyeLidTop_zero|eye_milk_1:EyeLidTop_ctl" 
-		"translateZ" " -av -0.90739823923156449"
+		"translateZ" " -av 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:EyeLidBottom_zero|eye_milk_1:EyeLidBottom_ctl" 
-		"translateX" " -av -0.3670789559641035"
+		"translateX" " -av 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:EyeLidBottom_zero|eye_milk_1:EyeLidBottom_ctl" 
-		"translateZ" " -av -1.52415240696587739"
+		"translateZ" " -av 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:Eye_zero|eye_milk_1:Eye_ctl" 
-		"translateX" " -av -0.2214444256391932"
+		"translateX" " -av -0.28238633134623958"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:Eye_zero|eye_milk_1:Eye_ctl" 
-		"translateZ" " -av -0.37464432903501887"
+		"translateZ" " -av 0.0095051015229544698"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:Eye_zero|eye_milk_1:Eye_ctl" 
 		"pupil_size" " -av -k 1 0.4"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:Eye_zero|eye_milk_1:Eye_ctl" 
 		"iris_size" " -av -k 1 1"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group9|eye_milk_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 -0.35180595298850387"
+		"translate" " -type \"double3\" -3.67314735690356331 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group9|eye_milk_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group9|eye_milk_1:nurbsCircle1" 
@@ -1142,7 +1148,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group9|eye_milk_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group10|eye_milk_1:nurbsCircle2" 
-		"translate" " -type \"double3\" -0.28552498317644004 0 0.5826626203417602"
+		"translate" " -type \"double3\" -3.67314735690356331 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group10|eye_milk_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group10|eye_milk_1:nurbsCircle2" 
@@ -1150,7 +1156,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group10|eye_milk_1:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group14|eye_milk_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -3.67314735690356331 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group14|eye_milk_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group14|eye_milk_1:nurbsCircle1" 
@@ -1158,8 +1164,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group14|eye_milk_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group11|eye_milk_1:nurbsCircle2" 
-		"translate" " -type \"double3\" -0.19710619296027063 0.046891362514258322 0.092254505796247277"
-		
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group11|eye_milk_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group11|eye_milk_1:nurbsCircle2" 
@@ -1167,7 +1172,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group11|eye_milk_1:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group15|eye_milk_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 4.42630062943166358 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group15|eye_milk_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group15|eye_milk_1:nurbsCircle1" 
@@ -1175,7 +1180,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group15|eye_milk_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group12|eye_milk_1:nurbsCircle2" 
-		"translate" " -type \"double3\" 0.2440685411957558 0 0.93448150793017848"
+		"translate" " -type \"double3\" 9.1559424426008178 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group12|eye_milk_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group12|eye_milk_1:nurbsCircle2" 
@@ -1183,7 +1188,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group12|eye_milk_1:nurbsCircle2" 
 		"translateX" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group16|eye_milk_1:nurbsCircle1" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 4.42630062943166358 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group16|eye_milk_1:nurbsCircle1" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group16|eye_milk_1:nurbsCircle1" 
@@ -1191,7 +1196,7 @@ createNode reference -n "eye_milk_1RN";
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group16|eye_milk_1:nurbsCircle1" 
 		"translateX" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group13|eye_milk_1:nurbsCircle2" 
-		"translate" " -type \"double3\" 0.045018730923539071 0 -0.30995908205288597"
+		"translate" " -type \"double3\" 0 0 0"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group13|eye_milk_1:nurbsCircle2" 
 		"translateZ" " -av"
 		2 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl|eye_milk_1:global_grp|eye_milk_1:joint24|eye_milk_1:group13|eye_milk_1:nurbsCircle2" 
@@ -2533,12 +2538,13 @@ createNode reference -n "mouthRN";
 		"mouthRN"
 		"mouthRN" 0
 		"mouthRN" 74
-		2 "|mouth:root_ctl" "translate" " -type \"double3\" 14.44372690222182065 -19.97229719695793193 14.25133730550590272"
+		2 "|mouth:root_ctl" "translate" " -type \"double3\" -1.84047344603715768 -34.30368031791321215 -0.89355372519241261"
 		
 		2 "|mouth:root_ctl" "translateZ" " -av"
 		2 "|mouth:root_ctl" "translateX" " -av"
 		2 "|mouth:root_ctl" "translateY" " -av"
-		2 "|mouth:root_ctl" "rotate" " -type \"double3\" 0 0 0"
+		2 "|mouth:root_ctl" "rotate" " -type \"double3\" 95.8063124465905247 -13.15259773135309374 89.21185838448666061"
+		
 		2 "|mouth:root_ctl" "rotateX" " -av"
 		2 "|mouth:root_ctl" "rotateY" " -av"
 		2 "|mouth:root_ctl" "rotateZ" " -av"
@@ -2560,7 +2566,8 @@ createNode reference -n "mouthRN";
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_0_grp1|mouth:mouthB_0_ctl" "rotateZ" 
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl" "translate" 
-		" -type \"double3\" 0 0 0"
+		" -type \"double3\" 3.23238931802429885 -0.75607377308698609 0.030983482624524099"
+		
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl" "translateX" 
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl" "translateY" 
@@ -2576,7 +2583,8 @@ createNode reference -n "mouthRN";
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_1_grp|mouth:mouthB_1_ctl" "rotateZ" 
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "translate" 
-		" -type \"double3\" 0 0 0"
+		" -type \"double3\" -6.38757830018643791 1.4940899598264934 -0.061226975405791244"
+		
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "translateX" 
 		" -av"
 		2 "|mouth:root_ctl|mouth:mouthB|mouth:mouthB_2_grp|mouth:mouthB_2_ctl" "translateY" 
@@ -3451,8 +3459,8 @@ createNode animCurveTU -n "FLUID_beam_scaleZ";
 		 108 0.072201851624832045 112 0.19544129449254999;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 130;
+	setAttr ".unw" 130;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
