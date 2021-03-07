@@ -1437,7 +1437,7 @@
 			<Plugin_minor_version>0</Plugin_minor_version>
 			<KnobsCount>0</KnobsCount>
 			<Inputs_map>
-				<count>3</count>
+				<count>2</count>
 				<item_version>0</item_version>
 				<item>
 					<first>1</first>
@@ -1445,11 +1445,7 @@
 				</item>
 				<item>
 					<first>2</first>
-					<second>Transform1</second>
-				</item>
-				<item>
-					<first>6</first>
-					<second>ContactSheet1</second>
+					<second>ColorCorrect1_2_2_2_2_2_3_3</second>
 				</item>
 			</Inputs_map>
 			<KnobsAge>0</KnobsAge>
@@ -38779,7 +38775,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(002_040_render0018.exr)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(002_020_render0070.exr)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -38800,7 +38796,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>D:/projects/2020_10_cardiff_quick_draw/render2021/002_040/002_040_render####.exr</Value>
+					<Value>D:/projects/2020_10_cardiff_quick_draw/render2021/002_020/002_020_render####.exr</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -38821,8 +38817,8 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>18</Value>
-					<Default>18</Default>
+					<Value>70</Value>
+					<Default>70</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
 					<ExprHasRet>0</ExprHasRet>
@@ -39008,7 +39004,7 @@
 				<count>0</count>
 				<item_version>0</item_version>
 			</Inputs_map>
-			<KnobsAge>36</KnobsAge>
+			<KnobsAge>50</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -39033,7 +39029,7 @@
 			<PythonModuleVersion>0</PythonModuleVersion>
 			<Plugin_major_version>2</Plugin_major_version>
 			<Plugin_minor_version>0</Plugin_minor_version>
-			<KnobsCount>19</KnobsCount>
+			<KnobsCount>20</KnobsCount>
 			<item>
 				<Name>NatronOfxParamProcessR</Name>
 				<Type>Bool</Type>
@@ -39785,9 +39781,31 @@
 				</StringsAnimation>
 				<UserKnob>0</UserKnob>
 			</item>
+			<item>
+				<Name>Source_channels</Name>
+				<Type>Choice</Type>
+				<Dimension>1</Dimension>
+				<Secret>0</Secret>
+				<MasterIsAlias>0</MasterIsAlias>
+				<item>
+					<Enabled>1</Enabled>
+					<HasAnimation>0</HasAnimation>
+					<Value>1</Value>
+					<Default>1</Default>
+					<HasMaster>0</HasMaster>
+					<Expression></Expression>
+					<ExprHasRet>0</ExprHasRet>
+				</item>
+				<ChoiceLabel>uk.co.thefoundry.OfxImagePlaneColour</ChoiceLabel>
+				<UserKnob>0</UserKnob>
+			</item>
 			<Inputs_map>
-				<count>0</count>
+				<count>1</count>
 				<item_version>0</item_version>
+				<item>
+					<first>Source</first>
+					<second>Read1_3_2_2_2_3_3</second>
+				</item>
 			</Inputs_map>
 			<KnobsAge>680</KnobsAge>
 			<MasterNode>Grade1_3</MasterNode>
@@ -42273,7 +42291,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(002_040.mp4)&lt;/Natron&gt;&lt;/font&gt;</Value>
+					<Value>&lt;font size=&quot;6&quot; color=&quot;#000000&quot; face=&quot;Droid Sans&quot;&gt;&lt;Natron&gt;(002_020.mp4)&lt;/Natron&gt;&lt;/font&gt;</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -42380,7 +42398,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>D:/projects/2020_10_cardiff_quick_draw/render2021/00_nuke_render/002_040.mp4</Value>
+					<Value>D:/projects/2020_10_cardiff_quick_draw/render2021/00_nuke_render/002_020.mp4</Value>
 					<Default></Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -42475,7 +42493,7 @@
 				<item>
 					<Enabled>1</Enabled>
 					<HasAnimation>0</HasAnimation>
-					<Value>50</Value>
+					<Value>70</Value>
 					<Default>0</Default>
 					<HasMaster>0</HasMaster>
 					<Expression></Expression>
@@ -42732,7 +42750,7 @@
 					<second>ColorCorrect1_2_2_2_2_2_3_3</second>
 				</item>
 			</Inputs_map>
-			<KnobsAge>50</KnobsAge>
+			<KnobsAge>52</KnobsAge>
 			<MasterNode></MasterNode>
 			<HasRotoContext>0</HasRotoContext>
 			<HasTrackerContext>0</HasTrackerContext>
@@ -51907,7 +51925,7 @@
 			<Name></Name>
 		</item>
 	</AdditionalFormats>
-	<Timeline_current_time>136</Timeline_current_time>
+	<Timeline_current_time>160</Timeline_current_time>
 	<CreationDate>1615047786262</CreationDate>
 </Project>
 <ProjectGui class_id="17" tracking_level="0" version="11">
@@ -52983,7 +53001,7 @@
 							<item>dopeSheetEditor</item>
 							<item>progress</item>
 						</Tabs>
-						<Index>0</Index>
+						<Index>3</Index>
 						<Name>pane3</Name>
 						<IsAnchor>0</IsAnchor>
 					</Child>
@@ -53013,9 +53031,9 @@
 		<item class_id="26" tracking_level="0" version="0">
 			<first>Viewer2</first>
 			<second class_id="27" tracking_level="0" version="14">
-				<zoomLeft>-9.42160907777113835e+002</zoomLeft>
-				<zoomBottom>-7.92544629016572344e+001</zoomBottom>
-				<zoomFactor>5.60863760355893692e-001</zoomFactor>
+				<zoomLeft>-1.87574947824160040e+003</zoomLeft>
+				<zoomBottom>-3.34815240701300695e+002</zoomBottom>
+				<zoomFactor>3.89535495458507575e-001</zoomFactor>
 				<UserRoIEnabled>0</UserRoIEnabled>
 				<UserRoI class_id="28" tracking_level="0" version="0">
 					<Left>2.70000000000000000e+002</Left>
@@ -53061,16 +53079,16 @@
 	<OpenedPanels>
 		<count>10</count>
 		<item_version>0</item_version>
+		<item>Write_03_040_2_3</item>
+		<item>Read1_3_2_2_2_3_3</item>
+		<item>Write_03_040_2_4</item>
 		<item>Read1_3_2_2_2_3_4</item>
 		<item>Write1</item>
 		<item>Read1_2</item>
 		<item>Transform1</item>
-		<item>Read1_3_2_2_2_3_3</item>
 		<item>Write_010_050</item>
-		<item>Write_03_040_2_4</item>
 		<item>Write_002_050</item>
 		<item>Write_03_040_2</item>
-		<item>Write_03_040_2_3</item>
 	</OpenedPanels>
 	<ScriptEditorInput></ScriptEditorInput>
 	<NumPyPanels>0</NumPyPanels>
