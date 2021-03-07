@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc020_sh050.ma
-//Last modified: Sun, Mar 07, 2021 10:34:21 AM
+//Last modified: Sun, Mar 07, 2021 10:39:41 AM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/milk_jug.ma";
@@ -40,7 +40,7 @@ fileInfo "product" "Maya 2019";
 fileInfo "version" "2019";
 fileInfo "cutIdentifier" "202004141915-92acaa8c08";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19042)\n";
-
+fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "2C10C754-45C3-2F74-9A01-BAA617812E18";
 	setAttr ".v" no;
@@ -5568,7 +5568,7 @@ createNode mesh -n "polySurfaceShape1" -p "milk";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "teapotRNfosterParent1";
-	rename -uid "ED6AECF5-435D-D2AE-A248-BBAE896B278B";
+	rename -uid "8A24E48A-46A9-E90C-1D7A-3DAEFCBD85B8";
 createNode mesh -n "teapot_geoShapeOrig1" -p "teapotRNfosterParent1";
 	rename -uid "8F30900A-4957-FE1F-6FCF-7FAA0C8AE272";
 	setAttr -k off ".v";
@@ -13752,7 +13752,7 @@ createNode mesh -n "teapot_geoShapeOrig1" -p "teapotRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "milk_jugRNfosterParent1";
-	rename -uid "A205A269-4CE0-B3EE-520F-CD9491B5361B";
+	rename -uid "91F6C0A9-4D2D-A920-7922-4D8B95997C35";
 createNode mesh -n "milk_jug_geoShapeOrig1" -p "milk_jugRNfosterParent1";
 	rename -uid "52E7640F-45B2-650B-1607-2990EE59FB3E";
 	setAttr -k off ".v";
@@ -15920,7 +15920,7 @@ createNode mesh -n "milk_jug_geoShapeOrig1" -p "milk_jugRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "cup_rig_01RNfosterParent1";
-	rename -uid "F1BB4444-464C-579D-CAF2-02A73EBA86C0";
+	rename -uid "BD2B5047-4B71-26F9-1102-E4ACCA172542";
 createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	rename -uid "AB7CF9CB-4DE7-2FE5-A1F7-B9AABF2BA002";
 	setAttr -k off ".v";
@@ -32063,22 +32063,22 @@ createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "21770EDA-4D7B-8D01-D102-05A2E9004597";
-	setAttr -s 44 ".lnk";
-	setAttr -s 44 ".slnk";
+	rename -uid "991216DE-4D72-006C-7296-AA87EBEB5F23";
+	setAttr -s 43 ".lnk";
+	setAttr -s 43 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8637F9B7-42DA-413B-ADFD-76AF6A19B3B1";
+	rename -uid "F3223B5A-4B9C-8C57-A325-5596E4BC171B";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "56995AF9-4402-32D2-068A-14B6F9570797";
+	rename -uid "1DB792CA-49FC-339C-F17D-65B3837BAA25";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "47090955-4F41-7F11-FCA6-958315282C5B";
+	rename -uid "83FA0150-4CE7-A1AC-26DE-63A366879EF6";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FA05B9A1-4E71-B3C9-56AB-0FB22F4826F7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "BE09320E-4B34-4FA1-99A7-FB928CF75E8F";
+	rename -uid "FF4CF969-458A-163F-CF2A-77B8B7A23308";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E2DB08F1-452F-FB4D-A71D-7FA2920DCAF0";
 	setAttr ".g" yes;
@@ -32124,20 +32124,20 @@ createNode reference -n "teapotRN";
 		2 "teapot:groupParts2" "groupId" " 460"
 		2 "teapot:ffd1GroupParts" "inputComponents" " -type \"componentList\" 1 \"vtx[0:3240]\""
 		
-		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[0]" 
-		"teapot:MAT_CupPorcelain.dagSetMembers" "-na"
-		3 "teapot:groupId1.message" "teapot:MAT_CupPorcelain.groupNodes" "-na"
 		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShapeOrig.worldMesh" 
 		"teapot:groupParts1.inputGeometry" ""
 		3 "teapot:groupId1.groupId" "teapot:groupParts1.groupId" ""
 		3 "teapot:groupParts1.outputGeometry" "teapot:groupParts2.inputGeometry" 
 		""
 		3 "teapot:groupId2.groupId" "teapot:groupParts2.groupId" ""
-		3 "teapot:groupParts2.outputGeometry" "teapot:groupParts4.inputGeometry" 
-		""
 		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[1]" 
 		"teapot:MAT_Gold.dagSetMembers" "-na"
 		3 "teapot:groupId2.message" "teapot:MAT_Gold.groupNodes" "-na"
+		3 "teapot:groupParts2.outputGeometry" "teapot:groupParts4.inputGeometry" 
+		""
+		3 "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[0]" 
+		"teapot:MAT_CupPorcelain.dagSetMembers" "-na"
+		3 "teapot:groupId1.message" "teapot:MAT_CupPorcelain.groupNodes" "-na"
 		3 "teapot:MAT_CupPorcelain.memberWireframeColor" "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "teapot:MAT_Gold.memberWireframeColor" "|teapot:teapot_rig|teapot:teapot_geo|teapot:teapot_geoShape.instObjGroups.objectGroups[1].objectGrpColor" 
@@ -32237,15 +32237,9 @@ createNode reference -n "milk_jugRN";
 		2 "milk_jug:lambert4" "transparency" " -type \"float3\" 0 0 0"
 		2 "milk_jug:groupParts1" "groupId" " 465"
 		2 "milk_jug:groupParts2" "groupId" " 466"
-		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[1]" 
-		"milk_jug:gold1.dagSetMembers" "-na"
-		3 "milk_jug:groupId2.message" "milk_jug:gold1.groupNodes" "-na"
 		3 "milk_jug:groupParts1.outputGeometry" "milk_jug:groupParts2.inputGeometry" 
 		""
 		3 "milk_jug:groupId2.groupId" "milk_jug:groupParts2.groupId" ""
-		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[0]" 
-		"milk_jug:null_1.dagSetMembers" "-na"
-		3 "milk_jug:groupId1.message" "milk_jug:null_1.groupNodes" "-na"
 		3 "milk_jug:null_1.memberWireframeColor" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "milk_jug:gold1.memberWireframeColor" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[1].objectGrpColor" 
@@ -32256,11 +32250,17 @@ createNode reference -n "milk_jugRN";
 		""
 		3 "milk_jug:ffd1.outputGeometry[0]" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.inMesh" 
 		""
+		3 "milk_jug:groupParts2.outputGeometry" "milk_jug:groupParts4.inputGeometry" 
+		""
+		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[1]" 
+		"milk_jug:gold1.dagSetMembers" "-na"
+		3 "milk_jug:groupId2.message" "milk_jug:gold1.groupNodes" "-na"
+		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[0]" 
+		"milk_jug:null_1.dagSetMembers" "-na"
+		3 "milk_jug:groupId1.message" "milk_jug:null_1.groupNodes" "-na"
 		3 "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShapeOrig.worldMesh" 
 		"milk_jug:groupParts1.inputGeometry" ""
 		3 "milk_jug:groupId1.groupId" "milk_jug:groupParts1.groupId" ""
-		3 "milk_jug:groupParts2.outputGeometry" "milk_jug:groupParts4.inputGeometry" 
-		""
 		5 4 "milk_jugRN" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[4].objectGroupId" 
 		"milk_jugRN.placeHolderList[1]" ""
 		5 0 "milk_jugRN" "milk_jug:gold1.memberWireframeColor" "|milk_jug:milk_jug|milk_jug:milk_jug_geo|milk_jug:milk_jug_geoShape.instObjGroups.objectGroups[4].objectGrpColor" 
@@ -32339,7 +32339,7 @@ createNode reference -n "cup_rig_01RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"cup_rig_01RN"
 		"cup_rig_01RN" 0
-		"cup_rig_01RN" 36
+		"cup_rig_01RN" 33
 		0 "|cup_rig_01RNfosterParent1|cupShapeOrig1" "|cup_rig_01:cup_rig|cup_rig_01:cup" 
 		"-s -r "
 		2 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape" "instObjGroups.objectGroups" 
@@ -32348,9 +32348,6 @@ createNode reference -n "cup_rig_01RN";
 		" -type \"string\" \"map1\""
 		2 "|cup_rig_01:cup_rig|cup_rig_01:ffd|cup_rig_01:ffd1Lattice|cup_rig_01:ffd1LatticeShapeOrig" 
 		"intermediateObject" " 1"
-		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "amplitude" " -k 1"
-		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "direction" " -k 1"
-		2 "cup_rig_01:ffd1" "input" " -s 2"
 		2 "cup_rig_01:groupParts1" "groupId" " 596"
 		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShapeOrig.worldMesh" 
 		"cup_rig_01:groupParts1.inputGeometry" ""
@@ -32361,11 +32358,11 @@ createNode reference -n "cup_rig_01RN";
 		""
 		3 "cup_rig_01:ffd1.outputGeometry[0]" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.inMesh" 
 		""
-		3 "cup_rig_01:groupParts1.outputGeometry" "cup_rig_01:groupParts3.inputGeometry" 
-		""
 		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[0]" 
 		"cup_rig_01:None.dagSetMembers" "-na"
 		3 "cup_rig_01:groupId1.message" "cup_rig_01:None.groupNodes" "-na"
+		3 "cup_rig_01:groupParts1.outputGeometry" "cup_rig_01:groupParts3.inputGeometry" 
+		""
 		5 4 "cup_rig_01RN" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[3].objectGroupId" 
 		"cup_rig_01RN.placeHolderList[1]" ""
 		5 0 "cup_rig_01RN" "cup_rig_01:None.memberWireframeColor" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[3].objectGrpColor" 
@@ -32851,7 +32848,7 @@ createNode reference -n "eye_tea_1RN";
 		"intermediateObject" " 1"
 		2 "|eye_tea_1:asset|eye_tea_1:geo_grp|eye_tea_1:lid_top_geo|eye_tea_1:lid_top_geoShapeOrig" 
 		"intermediateObject" " 1"
-		2 "eye_tea_1:character1" "lv[1:57]" " -s 57 -0.5506564674739306 -0.11050701689297121 0.62848632349917344 0.090357028610494203 0.27849706711318334 -0.14401185454878765 0.72816103144674749 0 0 0 0 0 0 0 0 0.17597451381004153 0 0 0.67592063283834347 0 0.0013197756815040412 0 0 0 0.72816103144674749 0 0 1.5359734436573913 0 0 -1.73321070837145053 6.05984384174906587 0.25922228635020717 0 0 0 0 0 0 0.29476604407583162 0 0.43326738174879037 0.042624876886512231 0 -0.46788498438523285 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "eye_tea_1:character1" "lv[1:57]" " -s 57 -0.5506564674739306 -0.11050701689297121 0.62848632349917344 0.090357028610494203 0.27849706711318334 -0.14401185454878765 0.72816103144674749 0 0 0 0 0 0 0 0 0.17597451381004153 0 0 0.67592063283834347 0 0.0013197756815040412 0 0 0 0.72816103144674749 0 0 1.5359734436573913 0 0 -5.52968791365641721 6.06983661381608997 5.13233408355522691 0 0 0 0 0 0 0.29476604407583162 0 0.43326738174879037 0.042624876886512231 0 -0.46788498438523285 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "eye_tea_1:character1" "linearValues" " -s 57"
 		2 "eye_tea_1:character1" "referenceMapping" (" -type \"characterMapping\" 73 \"eye_tea_1:EyeLidTop_ctl.bend_center\" 0 1 \"eye_tea_1:EyeLidTop_ctl.bend_right\" 0 2 \"eye_tea_1:EyeLidTop_ctl.bend_left\" 0 3 \"eye_tea_1:EyeLidTop_ctl.translateZ\" 1 1 \"eye_tea_1:EyeLidTop_ctl.translateX\" 1 2 \"eye_tea_1:EyeLidBottom_ctl.bend_center\" 0 4 \"eye_tea_1:EyeLidBottom_ctl.bend_right\" 0 5 \"eye_tea_1:EyeLidBottom_ctl.bend_left\" 0 6 \"eye_tea_1:EyeLidBottom_ctl.translateZ\" 1 3 \"eye_tea_1:EyeLidBottom_ctl.translateX\" 1 4 \"eye_tea_1:Eye_ctl.iris_size\" 0 7 \"eye_tea_1:Eye_ctl.pupil_size\" 0 8 \"eye_tea_1:Eye_ctl.translateZ\" 1 5 \"eye_tea_1:Eye_ctl.translateX\" 1 6 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateZ\" 1 7 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateY\" 1 8 \"eye_tea_1:group9|eye_tea_1:nurbsCircle1.translateX\" 1 9 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateZ\" 1 10 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateY\" 1 11 \"eye_tea_1:group10|eye_tea_1:nurbsCircle2.translateX\" 1 12 \"eye_tea_1:group14|eye_tea_1:nurbsCircle1.translateZ\" 1 13 \"eye_tea_1:group14|eye_t"
@@ -34415,7 +34412,7 @@ createNode reference -n "eye_milk_2RN";
 		"intermediateObject" " 1"
 		2 "|eye_milk_2:asset|eye_milk_2:geo_grp|eye_milk_2:lid_top_geo|eye_milk_2:lid_top_geoShapeOrig" 
 		"intermediateObject" " 1"
-		2 "eye_milk_2:character1" "lv[1:57]" " -s 57 -1 0 -0.67089267477727554 0 -0.019410669573248246 -0.33187273054289657 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8.70803143325055728 3.49407243461862782 6.47627615242432331 0 0 0 0 0 0 -0.65621303380479967 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "eye_milk_2:character1" "lv[1:57]" " -s 57 -1 0 -0.67089267477727554 0 -0.019410669573248246 -0.33187273054289657 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.64333993643177756 4.74160130038658778 -3.44646728207372899 0 0 0 0 0 0 -0.65621303380479967 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
 		2 "eye_milk_2:character1" "linearValues" " -s 24"
 		2 "eye_milk_2:character1" "referenceMapping" (" -type \"characterMapping\" 24 \"eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateZ\" 1 7 \"eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateY\" 1 8 \"eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateX\" 1 9 \"eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateZ\" 1 10 \"eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateY\" 1 11 \"eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateX\" 1 12 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateZ\" 1 13 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateY\" 1 14 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateX\" 1 15 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateZ\" 1 16 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateY\" 1 17 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateX\" 1 18 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateZ\" 1 19 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateY\" 1 20 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateX\" 1 21 \"eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateZ\" 1 22 \"eye_milk_2:group12|eye_m"
@@ -35911,15 +35908,15 @@ createNode reference -n "MonocleRN";
 		"MonocleRN.placeHolderList[43]" ""
 		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group2|Monocle:ring_left_ctl.scaleZ" 
 		"MonocleRN.placeHolderList[44]" ""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.drawOverride" 
-		"MonocleRN.placeHolderList[45]" ""
-		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.visibility" 
-		"MonocleRN.placeHolderList[46]" ""
 		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.translateX" 
-		"MonocleRN.placeHolderList[47]" ""
+		"MonocleRN.placeHolderList[45]" ""
 		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.translateY" 
-		"MonocleRN.placeHolderList[48]" ""
+		"MonocleRN.placeHolderList[46]" ""
 		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.translateZ" 
+		"MonocleRN.placeHolderList[47]" ""
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.drawOverride" 
+		"MonocleRN.placeHolderList[48]" ""
+		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.visibility" 
 		"MonocleRN.placeHolderList[49]" ""
 		5 4 "MonocleRN" "|Monocle:asset|Monocle:root_ctl|Monocle:group1|Monocle:ring_right_ctl.rotateX" 
 		"MonocleRN.placeHolderList[50]" ""
@@ -36146,7 +36143,7 @@ createNode reference -n "MouthRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"MouthRN"
 		"MouthRN" 0
-		"MouthRN" 217
+		"MouthRN" 197
 		2 "|Mouth:asset|Mouth:root_ctl" "translate" " -type \"double3\" 0.37024168753827524 4.87558139709401761 -0.11499804505636377"
 		
 		2 "|Mouth:asset|Mouth:root_ctl" "translateX" " -av"
@@ -36239,46 +36236,6 @@ createNode reference -n "MouthRN";
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl" 
 		"scaleZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translate" " -type \"double3\" -0.11817019843840901 0 0.18417371277354908"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_1_grp|Mouth:mouthD_1_ctl" 
-		"translate" " -type \"double3\" -0.68370459852714227 0 -0.48925782855837763"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_1_grp|Mouth:mouthD_1_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_1_grp|Mouth:mouthD_1_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_1_grp|Mouth:mouthD_1_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_1_grp|Mouth:mouthD_1_ctl" 
-		"rotate" " -type \"double3\" 0 65.1337321669523277 0"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_1_grp|Mouth:mouthD_1_ctl" 
-		"rotateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translate" " -type \"double3\" 0.096937950369356984 0 0.1841737127735493"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
-		"translate" " -type \"double3\" -0.44029910277887324 0 0.75943143398686641"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
-		"rotate" " -type \"double3\" 0 -72.62325167062584796 0"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
-		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl" 
@@ -42100,11 +42057,11 @@ connectAttr "ring_left_ctl_rotateZ.o" "MonocleRN.phl[41]";
 connectAttr "ring_left_ctl_scaleX.o" "MonocleRN.phl[42]";
 connectAttr "ring_left_ctl_scaleY.o" "MonocleRN.phl[43]";
 connectAttr "ring_left_ctl_scaleZ.o" "MonocleRN.phl[44]";
-connectAttr "layer1.di" "MonocleRN.phl[45]";
-connectAttr "ring_right_ctl_visibility.o" "MonocleRN.phl[46]";
-connectAttr "ring_right_ctl_translateX.o" "MonocleRN.phl[47]";
-connectAttr "ring_right_ctl_translateY.o" "MonocleRN.phl[48]";
-connectAttr "ring_right_ctl_translateZ.o" "MonocleRN.phl[49]";
+connectAttr "ring_right_ctl_translateX.o" "MonocleRN.phl[45]";
+connectAttr "ring_right_ctl_translateY.o" "MonocleRN.phl[46]";
+connectAttr "ring_right_ctl_translateZ.o" "MonocleRN.phl[47]";
+connectAttr "layer1.di" "MonocleRN.phl[48]";
+connectAttr "ring_right_ctl_visibility.o" "MonocleRN.phl[49]";
 connectAttr "ring_right_ctl_rotateX.o" "MonocleRN.phl[50]";
 connectAttr "ring_right_ctl_rotateY.o" "MonocleRN.phl[51]";
 connectAttr "ring_right_ctl_rotateZ.o" "MonocleRN.phl[52]";
