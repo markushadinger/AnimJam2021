@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: SculptBlob.ma
-//Last modified: Sun, Mar 07, 2021 09:04:04 AM
+//Last modified: Sun, Mar 07, 2021 09:26:51 AM
 //Codeset: 1252
 requires maya "2019";
 requires -nodeType "ngSkinLayerData" -dataType "ngSkinLayerDataStorage" "ngSkinTools" "1.8.1";

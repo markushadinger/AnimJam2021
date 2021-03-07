@@ -3,3 +3,5 @@ premiere/Unbenannt.prproj
 *.xmp
 *.mpeg
 *.prproj
+
+*/movies/render/*
