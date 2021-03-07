@@ -4,4 +4,4 @@ premiere/Unbenannt.prproj
 *.mpeg
 *.prproj
 
-*\movies\render\*
+movies/render/*
