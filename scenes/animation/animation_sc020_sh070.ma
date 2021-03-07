@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: animation_sc020_sh070.ma
-//Last modified: Sun, Mar 07, 2021 01:33:20 PM
+//Last modified: Sun, Mar 07, 2021 02:06:13 PM
 //Codeset: 1252
 file -rdi 1 -ns "teapot" -dr 1 -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
 file -rdi 1 -ns "milk_jug" -dr 1 -rfn "milk_jugRN" -op "v=0;" -typ "mayaAscii"
@@ -21,7 +21,7 @@ file -rdi 1 -ns "Monocle" -dr 1 -rfn "MonocleRN" -op "v=0;" -typ "mayaAscii"
 		 "H:/AnimJam2021//assets/Monocel/Monocle.ma";
 file -rdi 1 -ns "Mouth" -rfn "MouthRN" -op "v=0;" -typ "mayaAscii" "H:/AnimJam2021//assets/Mouth/Mouth.ma";
 file -rdi 1 -ns "blob_1" -rfn "blob_1RN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/SculptBlob/SculptBlob.ma";
-file -rdi 1 -ns "blob_2" -rfn "blob_2RN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/SculptBlob/SculptBlob.ma";
+file -rdi 1 -ns "blob_2" -dr 1 -rfn "blob_2RN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/SculptBlob/SculptBlob.ma";
 file -rdi 1 -ns "blob_3" -rfn "blob_3RN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/SculptBlob/SculptBlob.ma";
 file -rdi 1 -ns "heart" -dr 1 -rfn "heartRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/heart.ma";
 file -r -ns "teapot" -dr 1 -rfn "teapotRN" -op "v=0;" -typ "mayaAscii" "D:/personalWork/2021/AnimJam2021//Assets/teapot.ma";
@@ -51,13 +51,13 @@ fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 19041)\n";
 createNode transform -s -n "persp";
 	rename -uid "2C10C754-45C3-2F74-9A01-BAA617812E18";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.1037395458574988 8.940512145181799 4.420185959049407 ;
+	setAttr ".t" -type "double3" 38.785936273251913 21.887256809094794 34.124843171392236 ;
 	setAttr ".r" -type "double3" -15.338352735467744 -668.99999999998181 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "13AE64E3-40CE-21C3-25B9-41907BB39095";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.5901827568381748;
+	setAttr ".coi" 54.534727031380328;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -15927,7 +15927,7 @@ createNode mesh -n "teapot_geoShapeOrig1" -p "teapotRNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode fosterParent -n "cup_rig_01RNfosterParent1";
-	rename -uid "FB7A580D-4E26-0EA6-4419-1EADD68A4495";
+	rename -uid "B13DA6C0-4581-EC78-552B-BA919DB6C46B";
 createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	rename -uid "AB7CF9CB-4DE7-2FE5-A1F7-B9AABF2BA002";
 	setAttr -k off ".v";
@@ -32070,22 +32070,22 @@ createNode mesh -n "cupShapeOrig1" -p "cup_rig_01RNfosterParent1";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DCC2B8EA-496C-6A4F-7F79-D5A41C6C2361";
+	rename -uid "F19D64B8-4F95-EE26-6BE0-3CB7F81460B8";
 	setAttr -s 22 ".lnk";
 	setAttr -s 22 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "65507935-40CE-2E00-5266-D1B750676958";
+	rename -uid "24CAE718-4ED9-589C-88CD-338D6E797F82";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CD12B8E9-4A68-00A6-B866-6DBE6AEF9B9F";
+	rename -uid "45E4DD0E-4238-614E-0FF4-71A01EB3EDD2";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7859EC66-44D9-1543-739A-CB8A4D3D88B4";
+	rename -uid "4FBD40EF-43B9-69FD-E7EE-FC9BE0B0FB8C";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "FA05B9A1-4E71-B3C9-56AB-0FB22F4826F7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7CC20FBA-45CC-EE8C-DE14-089BF93307E3";
+	rename -uid "94240DD4-484E-4B01-1959-F288DD7D90D7";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "E2DB08F1-452F-FB4D-A71D-7FA2920DCAF0";
 	setAttr ".g" yes;
@@ -36259,15 +36259,15 @@ createNode reference -n "cup_rig_01RN";
 		
 		2 "|cup_rig_01:cup_rig|cup_rig_01:cup_ctrl" "direction" " -av -k 1 14.8"
 		2 "cup_rig_01:groupParts1" "groupId" " 596"
-		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShapeOrig.worldMesh" 
-		"cup_rig_01:groupParts1.inputGeometry" ""
-		3 "cup_rig_01:groupId1.groupId" "cup_rig_01:groupParts1.groupId" ""
 		3 "cup_rig_01:None.memberWireframeColor" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[0].objectGrpColor" 
 		""
 		3 "cup_rig_01:groupId1.groupId" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[0].objectGroupId" 
 		""
 		3 "cup_rig_01:ffd1.outputGeometry[0]" "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.inMesh" 
 		""
+		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShapeOrig.worldMesh" 
+		"cup_rig_01:groupParts1.inputGeometry" ""
+		3 "cup_rig_01:groupId1.groupId" "cup_rig_01:groupParts1.groupId" ""
 		3 "cup_rig_01:groupParts1.outputGeometry" "cup_rig_01:groupParts3.inputGeometry" 
 		""
 		3 "|cup_rig_01:cup_rig|cup_rig_01:cup|cup_rig_01:cupShape.instObjGroups.objectGroups[0]" 
@@ -36349,7 +36349,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "95CE0BFB-41A3-0C26-0853-1AB961DC1F78";
-	setAttr ".b" -type "string" "playbackOptions -min 10 -max 31 -ast 0 -aet 40 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 31 -ast 0 -aet 40 ";
 	setAttr ".st" 6;
 createNode reference -n "camera_rigRN";
 	rename -uid "24D402DF-4AF5-7E91-8965-E78A654739C5";
@@ -37710,11 +37710,8 @@ createNode reference -n "eye_milk_1RN";
 		"intermediateObject" " 1"
 		2 "|eye_milk_1:asset|eye_milk_1:geo_grp|eye_milk_1:lid_top_geo|eye_milk_1:lid_top_geoShapeOrig" 
 		"intermediateObject" " 1"
-		2 "eye_milk_1:character1" "referenceMapping" (" -type \"characterMapping\" 73 \"eye_milk_1:EyeLidTop_ctl.bend_center\" 0 85 \"eye_milk_1:EyeLidTop_ctl.bend_right\" 0 86 \"eye_milk_1:EyeLidTop_ctl.bend_left\" 0 87 \"eye_milk_1:EyeLidTop_ctl.translateZ\" 1 94 \"eye_milk_1:EyeLidTop_ctl.translateX\" 1 95 \"eye_milk_1:EyeLidBottom_ctl.bend_center\" 0 93 \"eye_milk_1:EyeLidBottom_ctl.bend_right\" 0 94 \"eye_milk_1:EyeLidBottom_ctl.bend_left\" 0 95 \"eye_milk_1:EyeLidBottom_ctl.translateZ\" 1 147 \"eye_milk_1:EyeLidBottom_ctl.translateX\" 1 148 \"eye_milk_1:Eye_ctl.iris_size\" 0 96 \"eye_milk_1:Eye_ctl.pupil_size\" 0 97 \"eye_milk_1:Eye_ctl.translateZ\" 1 149 \"eye_milk_1:Eye_ctl.translateX\" 1 150 \"eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateZ\" 1 99 \"eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateY\" 1 100 \"eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateX\" 1 101 \"eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateZ\" 1 138 \"eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateY\" 1 139 \"eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateX\" 1 140 \"eye_milk_1:group14|eye_milk_1:"
-		+ "nurbsCircle1.translateZ\" 1 144 \"eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateY\" 1 145 \"eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateX\" 1 146 \"eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateZ\" 1 141 \"eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateY\" 1 142 \"eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateX\" 1 143 \"eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateZ\" 1 135 \"eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateY\" 1 136 \"eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateX\" 1 137 \"eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateZ\" 1 126 \"eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateY\" 1 127 \"eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateX\" 1 128 \"eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateZ\" 1 123 \"eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateY\" 1 124 \"eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateX\" 1 125 \"eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateZ\" 1 120 \"eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateY\" 1 121 \""
-		+ "eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateX\" 1 122 \"eye_milk_1:Root_ctl.wobble_amplitude\" 0 88 \"eye_milk_1:Root_ctl.wobble_frequence\" 0 89 \"eye_milk_1:Root_ctl.scaleZ\" 0 90 \"eye_milk_1:Root_ctl.scaleY\" 0 91 \"eye_milk_1:Root_ctl.scaleX\" 0 92 \"eye_milk_1:Root_ctl.rotateZ\" 2 85 \"eye_milk_1:Root_ctl.rotateY\" 2 86 \"eye_milk_1:Root_ctl.rotateX\" 2 87 \"eye_milk_1:Root_ctl.translateZ\" 1 96 \"eye_milk_1:Root_ctl.translateY\" 1 97 \"eye_milk_1:Root_ctl.translateX\" 1 98 \"eye_milk_1:border_cl_ctl.translateZ\" 1 132 \"eye_milk_1:border_cl_ctl.translateY\" 1 133 \"eye_milk_1:border_cl_ctl.translateX\" 1 134 \"eye_milk_1:border_cr_ctl.translateZ\" 1 117 \"eye_milk_1:border_cr_ctl.translateY\" 1 118 \"eye_milk_1:border_cr_ctl.translateX\" 1 119 \"eye_milk_1:border_br_ctl.translateZ\" 1 129 \"eye_milk_1:border_br_ctl.translateY\" 1 130 \"eye_milk_1:border_br_ctl.translateX\" 1 131 \"eye_milk_1:border_bl_ctl.translateZ\" 1 111 \"eye_milk_1:border_bl_ctl.translateY\" 1 112 \"eye_milk_1:border_bl_ctl.translateX\" 1 113 \"eye_milk_1:border_tr_ctl."
-		+ "translateZ\" 1 114 \"eye_milk_1:border_tr_ctl.translateY\" 1 115 \"eye_milk_1:border_tr_ctl.translateX\" 1 116 \"eye_milk_1:border_bc_ctl.translateZ\" 1 108 \"eye_milk_1:border_bc_ctl.translateY\" 1 109 \"eye_milk_1:border_bc_ctl.translateX\" 1 110 \"eye_milk_1:border_tc_ctl.translateZ\" 1 105 \"eye_milk_1:border_tc_ctl.translateY\" 1 106 \"eye_milk_1:border_tc_ctl.translateX\" 1 107 \"eye_milk_1:border_tl_ctl.translateZ\" 1 102 \"eye_milk_1:border_tl_ctl.translateY\" 1 103 \"eye_milk_1:border_tl_ctl.translateX\" 1 104"
-		)
+		2 "eye_milk_1:character1" "referenceMapping" " -type \"characterMapping\" 0"
+		
 		3 "eye_milk_1:character1.partition" ":characterPartition.sets" "-na"
 		3 "|eye_milk_1:asset|eye_milk_1:control_grp|eye_milk_1:Root_ctl.wobble_amplitude" 
 		"eye_milk_1:character1.dnSetMembers" "-na"
@@ -38306,10 +38303,12 @@ createNode reference -n "eye_milk_2RN";
 	setAttr ".phl[147]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"eye_milk_2RN"
-		"eye_milk_2RN" 1
+		"eye_milk_2RN" 2
 		2 "eye_milk_2:character1" "attributeAliasList" " -type \"attributeAlias\" Root_ctl_rotateZ"
 		
-		"eye_milk_2RN" 354
+		2 "eye_milk_2:character1" "attributeAliasList" " -type \"attributeAlias\" Root_ctl_rotateZ"
+		
+		"eye_milk_2RN" 353
 		2 "|eye_milk_2:asset|eye_milk_2:deformer_grp|eye_milk_2:border_grp|eye_milk_2:ffd2Lattice|eye_milk_2:ffd2LatticeShapeOrig" 
 		"intermediateObject" " 1"
 		2 "|eye_milk_2:asset|eye_milk_2:deformer_grp|eye_milk_2:gloabLSgape_grp|eye_milk_2:ffd3Lattice|eye_milk_2:ffd3LatticeShapeOrig" 
@@ -38324,7 +38323,7 @@ createNode reference -n "eye_milk_2RN";
 		2 "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl" "translateX" 
 		" -av"
 		2 "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl" "rotate" 
-		" -type \"double3\" 134.9338042224251808 -51.44596279019511087 -217.24247245894923708"
+		" -type \"double3\" 134.9338042224251808 -51.44596279019511798 -217.24247245894923708"
 		
 		2 "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl" "rotateZ" 
 		" -av"
@@ -38521,72 +38520,20 @@ createNode reference -n "eye_milk_2RN";
 		2 "eye_milk_2:character1" "unitlessValues" " -s 89"
 		2 "eye_milk_2:character1" "uv[22:97]" " 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.32105248409404319 1.8017740618207756 1.8017740618207756 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.56327046534164515 0.56327046534164515 0.56327046534164515 1 1 1 0 0 0 0.3 0.99624060150375948 0.45383295185052325 0.38326022683461169 0.38326022683461169 0 0 0 1 0.4"
 		
-		2 "eye_milk_2:character1" "lv[1:150]" " -s 150 -0.27232667994420012 0 -0.84386469696219657 0 -0.081117296791355542 -0.29348496879138319 0.15084110594692224 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.093767888832282847 0 0 0.032131005593717954 0 0 0.98438542874940727 -1.74821338753133482 0 0 0 0 0 -0.095530251124439358 -0.4091190916492613 0 -0.60162602766253859 0 0 0 0 -2.92474557550362046 7.06819148815864917 1.09483938291036687 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.73858184799843762 0 0 -0.50827902751350429 0 0 -0.079724354522295648 0 0 0 -1.85251317536388704 0.9159057650744149 -0.0097385485082374917 -0.72763650489774767 -0.70444081468522934 -4.30804115178374225 7.33306794655572514 2.67522833108081359 -0.58351308061030216 -0.84514245575497848 0.41594608096020258 -0.0076006184244478778 0 0.88747154801980688 7.20747189586056436 -1.66009805090646645 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.13097742939546309 0.12801314752217155 0.020401180901465248 -0.11633957741899899"
+		2 "eye_milk_2:character1" "lv[1:150]" " -s 150 0.0052505271864936639 0 -0.84386469696219657 0 0.033624652918060077 -0.35824023068309102 0.15084110594692224 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.093767888832282847 0 0 0.032131005593717954 0 0 1.82211859084608996 7.96857145227685315 -1.85173993526380709 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.73858184799843762 0 0 -0.50827902751350429 0 0 -0.079724354522295648 0 0 0 -1.85251317536388704 0.9159057650744149 -0.0097385485082374917 -0.72763650489774767 -0.70444081468522934 -4.30804115178374225 7.33306794655572514 2.67522833108081359 -0.58351308061030216 -0.84514245575497848 0.41594608096020258 -0.0076006184244478778 0 0.88747154801980688 7.20747189586056436 -1.66009805090646645 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.13097742939546309 0.12801314752217155 0.020401180901465248 -0.11633957741899899"
 		
 		2 "eye_milk_2:character1" "angularValues" " -s 69"
 		2 "eye_milk_2:character1" "av[22:87]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 20.88722636462740923 -55.92222829097273262 1.26947233595742159 19.82898054773518481 -19.57684862191274178 -11.01175511212961844 -85.44060798153704184 -103.04263743289855881 4.92425342647500219"
 		
 		2 "eye_milk_2:character1" "animationMapping" " -type \"characterMapping\" 0"
 		
-		2 "eye_milk_2:character1" "referenceMapping" (" -type \"characterMapping\" 286 \"eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateZ\" 1 7 \"eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateY\" 1 8 \"eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateX\" 1 9 \"eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateZ\" 1 10 \"eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateY\" 1 11 \"eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateX\" 1 12 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateZ\" 1 13 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateY\" 1 14 \"eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateX\" 1 15 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateZ\" 1 16 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateY\" 1 17 \"eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateX\" 1 18 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateZ\" 1 19 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateY\" 1 20 \"eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateX\" 1 21 \"eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateZ\" 1 22 \"eye_milk_2:group12|eye_"
-		+ "milk_2:nurbsCircle2.translateY\" 1 23 \"eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateX\" 1 24 \"eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateZ\" 1 25 \"eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateY\" 1 26 \"eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateX\" 1 27 \"eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateZ\" 1 28 \"eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateY\" 1 29 \"eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateX\" 1 30 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateX\" 1 31 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateY\" 1 32 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateZ\" 1 33 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateX\" 2 22 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateY\" 2 23 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateZ\" 2 24 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleX\" 0 22 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleY\" 0 23 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleZ\" 0 24 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateX\" 1 34 \"blob_1:ctrl_1_zero3|"
-		+ "blob_1:ctrl_1_ctl.translateY\" 1 35 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateZ\" 1 36 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateX\" 2 25 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateY\" 2 26 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateZ\" 2 27 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleX\" 0 25 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleY\" 0 26 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleZ\" 0 27 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateX\" 1 37 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateY\" 1 38 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateZ\" 1 39 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateX\" 2 28 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateY\" 2 29 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateZ\" 2 30 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleX\" 0 28 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleY\" 0 29 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleZ\" 0 30 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateX\" 1 40 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateY\" 1 41 \"blob_1:ctrl_1_zero4|bl"
-		+ "ob_1:ctrl_1_ctl.translateZ\" 1 42 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateX\" 2 31 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateY\" 2 32 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateZ\" 2 33 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleX\" 0 31 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleY\" 0 32 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleZ\" 0 33 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateX\" 1 43 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateY\" 1 44 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateZ\" 1 45 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateX\" 2 34 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateY\" 2 35 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateZ\" 2 36 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleX\" 0 34 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleY\" 0 35 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleZ\" 0 36 \"blob_1:root_ctrl.translateX\" 1 46 \"blob_1:root_ctrl.translateY\" 1 47 \"blob_1:root_ctrl.translateZ\" 1 48 \"blob_1:root_ctrl.rotateX\" 2 37 \"blob_1:root_ctrl.rotateY\" 2 38 \"blob_1:root_ctrl.rotate"
-		+ "Z\" 2 39 \"blob_1:root_ctrl.scaleX\" 0 37 \"blob_1:root_ctrl.scaleY\" 0 38 \"blob_1:root_ctrl.scaleZ\" 0 39 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateX\" 1 49 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateY\" 1 50 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateZ\" 1 51 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateX\" 2 40 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateY\" 2 41 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateZ\" 2 42 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleX\" 0 40 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleY\" 0 41 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleZ\" 0 42 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateX\" 1 52 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateY\" 1 53 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateZ\" 1 54 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateX\" 2 43 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateY\" 2 44 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateZ\" 2 45 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleX\" 0 43 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleY\" 0 44 \"blob_2:ctrl_1_zer"
-		+ "o4|blob_2:ctrl_1_ctl.scaleZ\" 0 45 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateX\" 1 55 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateY\" 1 56 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateZ\" 1 57 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateX\" 2 46 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateY\" 2 47 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateZ\" 2 48 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleX\" 0 46 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleY\" 0 47 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleZ\" 0 48 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateX\" 1 58 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateY\" 1 59 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateZ\" 1 60 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateX\" 2 49 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateY\" 2 50 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateZ\" 2 51 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleX\" 0 49 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleY\" 0 50 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleZ\" 0 51 \"blob_2:ctrl_1_zero|blob"
-		+ "_2:ctrl_1_ctl.translateX\" 1 61 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateY\" 1 62 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateZ\" 1 63 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateX\" 2 52 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateY\" 2 53 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateZ\" 2 54 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleX\" 0 52 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleY\" 0 53 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleZ\" 0 54 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateX\" 1 64 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateY\" 1 65 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateZ\" 1 66 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateX\" 2 55 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateY\" 2 56 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateZ\" 2 57 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleX\" 0 55 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleY\" 0 56 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleZ\" 0 57 \"blob_2:root_ctrl.translateX\" 1 67 \"blob_2:root_ctrl.translateY\" 1 68 \"blob_2:root_ctrl.tra"
-		+ "nslateZ\" 1 69 \"blob_2:root_ctrl.rotateX\" 2 58 \"blob_2:root_ctrl.rotateY\" 2 59 \"blob_2:root_ctrl.rotateZ\" 2 60 \"blob_2:root_ctrl.scaleX\" 0 58 \"blob_2:root_ctrl.scaleY\" 0 59 \"blob_2:root_ctrl.scaleZ\" 0 60 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateX\" 1 70 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateY\" 1 71 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateZ\" 1 72 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateX\" 2 61 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateY\" 2 62 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateZ\" 2 63 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleX\" 0 61 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleY\" 0 62 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleZ\" 0 63 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateX\" 1 73 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateY\" 1 74 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateZ\" 1 75 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateX\" 2 64 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateY\" 2 65 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateZ\" 2 66 \"blob_3:ctr"
-		+ "l_1_zero3|blob_3:ctrl_1_ctl.scaleX\" 0 64 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleY\" 0 65 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleZ\" 0 66 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateX\" 1 76 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateY\" 1 77 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateZ\" 1 78 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateX\" 2 67 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateY\" 2 68 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateZ\" 2 69 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleX\" 0 67 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleY\" 0 68 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleZ\" 0 69 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateX\" 1 79 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateY\" 1 80 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateZ\" 1 81 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateX\" 2 70 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateY\" 2 71 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateZ\" 2 72 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleX\" 0 70 \"blob_3:ctrl_1_ze"
-		+ "ro1|blob_3:ctrl_1_ctl.scaleY\" 0 71 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleZ\" 0 72 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateX\" 1 82 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateY\" 1 83 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateZ\" 1 84 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateX\" 2 73 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateY\" 2 74 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateZ\" 2 75 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleX\" 0 73 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleY\" 0 74 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleZ\" 0 75 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateX\" 1 85 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateY\" 1 86 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateZ\" 1 87 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateX\" 2 76 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateY\" 2 77 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateZ\" 2 78 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleX\" 0 76 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleY\" 0 77 \"blob_3:ctrl_1_zero2|bl"
-		+ "ob_3:ctrl_1_ctl.scaleZ\" 0 78 \"blob_3:root_ctrl.translateX\" 1 88 \"blob_3:root_ctrl.translateY\" 1 89 \"blob_3:root_ctrl.translateZ\" 1 90 \"blob_3:root_ctrl.rotateX\" 2 79 \"blob_3:root_ctrl.rotateY\" 2 80 \"blob_3:root_ctrl.rotateZ\" 2 81 \"blob_3:root_ctrl.scaleX\" 0 79 \"blob_3:root_ctrl.scaleY\" 0 80 \"blob_3:root_ctrl.scaleZ\" 0 81 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateX\" 1 91 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateY\" 1 92 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateZ\" 1 93 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateX\" 2 82 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateY\" 2 83 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateZ\" 2 84 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleX\" 0 82 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleY\" 0 83 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleZ\" 0 84 \"eye_milk_1:EyeLidTop_ctl.bend_center\" 0 85 \"eye_milk_1:EyeLidTop_ctl.bend_right\" 0 86 \"eye_milk_1:EyeLidTop_ctl.bend_left\" 0 87 \"eye_milk_1:EyeLidTop_ctl.translateZ\" 1 94 \"eye_milk_1:EyeLidTop_ctl.translateX\" 1 95 \"eye_milk_1:"
-		+ "Root_ctl.wobble_amplitude\" 0 88 \"eye_milk_1:Root_ctl.wobble_frequence\" 0 89 \"eye_milk_1:Root_ctl.scaleZ\" 0 90 \"eye_milk_1:Root_ctl.scaleY\" 0 91 \"eye_milk_1:Root_ctl.scaleX\" 0 92 \"eye_milk_1:Root_ctl.rotateZ\" 2 85 \"eye_milk_1:Root_ctl.rotateY\" 2 86 \"eye_milk_1:Root_ctl.rotateX\" 2 87 \"eye_milk_1:Root_ctl.translateZ\" 1 96 \"eye_milk_1:Root_ctl.translateY\" 1 97 \"eye_milk_1:Root_ctl.translateX\" 1 98 \"eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateZ\" 1 99 \"eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateY\" 1 100 \"eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateX\" 1 101 \"eye_milk_1:border_tl_ctl.translateZ\" 1 102 \"eye_milk_1:border_tl_ctl.translateY\" 1 103 \"eye_milk_1:border_tl_ctl.translateX\" 1 104 \"eye_milk_1:border_tc_ctl.translateZ\" 1 105 \"eye_milk_1:border_tc_ctl.translateY\" 1 106 \"eye_milk_1:border_tc_ctl.translateX\" 1 107 \"eye_milk_1:border_bc_ctl.translateZ\" 1 108 \"eye_milk_1:border_bc_ctl.translateY\" 1 109 \"eye_milk_1:border_bc_ctl.translateX\" 1 110 \"eye_milk_1:border_bl_ctl.translateZ\" 1 111 \"eye_"
-		+ "milk_1:border_bl_ctl.translateY\" 1 112 \"eye_milk_1:border_bl_ctl.translateX\" 1 113 \"eye_milk_1:border_tr_ctl.translateZ\" 1 114 \"eye_milk_1:border_tr_ctl.translateY\" 1 115 \"eye_milk_1:border_tr_ctl.translateX\" 1 116 \"eye_milk_1:border_cr_ctl.translateZ\" 1 117 \"eye_milk_1:border_cr_ctl.translateY\" 1 118 \"eye_milk_1:border_cr_ctl.translateX\" 1 119 \"eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateZ\" 1 120 \"eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateY\" 1 121 \"eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateX\" 1 122 \"eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateZ\" 1 123 \"eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateY\" 1 124 \"eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateX\" 1 125 \"eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateZ\" 1 126 \"eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateY\" 1 127 \"eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateX\" 1 128 \"eye_milk_1:border_br_ctl.translateZ\" 1 129 \"eye_milk_1:border_br_ctl.translateY\" 1 130 \"eye_milk_1:border_br_ctl.trans"
-		+ "lateX\" 1 131 \"eye_milk_1:border_cl_ctl.translateZ\" 1 132 \"eye_milk_1:border_cl_ctl.translateY\" 1 133 \"eye_milk_1:border_cl_ctl.translateX\" 1 134 \"eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateZ\" 1 135 \"eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateY\" 1 136 \"eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateX\" 1 137 \"eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateZ\" 1 138 \"eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateY\" 1 139 \"eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateX\" 1 140 \"eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateZ\" 1 141 \"eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateY\" 1 142 \"eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateX\" 1 143 \"eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateZ\" 1 144 \"eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateY\" 1 145 \"eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateX\" 1 146 \"eye_milk_1:EyeLidBottom_ctl.bend_center\" 0 93 \"eye_milk_1:EyeLidBottom_ctl.bend_right\" 0 94 \"eye_milk_1:EyeLidBottom_ctl.bend_left\" 0 "
-		+ "95 \"eye_milk_1:EyeLidBottom_ctl.translateZ\" 1 147 \"eye_milk_1:EyeLidBottom_ctl.translateX\" 1 148 \"eye_milk_1:Eye_ctl.iris_size\" 0 96 \"eye_milk_1:Eye_ctl.pupil_size\" 0 97 \"eye_milk_1:Eye_ctl.translateZ\" 1 149 \"eye_milk_1:Eye_ctl.translateX\" 1 150"
-		)
-		2 "eye_milk_2:character1" "attributeAliasList" " -type \"attributeAlias\" Root_ctl_rotateZ"
+		2 "eye_milk_2:character1" "referenceMapping" " -type \"characterMapping\" 0"
 		
-		3 "eye_milk_2:character1.linearValues[22]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateZ" 
-		""
-		3 "eye_milk_2:character1.linearValues[23]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateY" 
-		""
-		3 "eye_milk_2:character1.linearValues[24]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateX" 
-		""
-		3 "eye_milk_2:character1.linearValues[7]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateZ" 
-		""
-		3 "eye_milk_2:character1.linearValues[8]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateY" 
-		""
-		3 "eye_milk_2:character1.linearValues[9]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateX" 
-		""
-		3 "eye_milk_2:character1.linearValues[19]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateZ" 
-		""
-		3 "eye_milk_2:character1.linearValues[20]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateY" 
-		""
-		3 "eye_milk_2:character1.linearValues[21]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateX" 
-		""
-		3 "eye_milk_2:character1.linearValues[10]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateZ" 
-		""
-		3 "eye_milk_2:character1.linearValues[11]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateY" 
-		""
-		3 "eye_milk_2:character1.linearValues[12]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateX" 
-		""
-		3 "eye_milk_2:character1.linearValues[28]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateZ" 
-		""
-		3 "eye_milk_2:character1.linearValues[29]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateY" 
-		""
-		3 "eye_milk_2:character1.linearValues[30]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateX" 
-		""
 		3 "eye_milk_2:character1.linearValues[25]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateZ" 
 		""
 		3 "eye_milk_2:character1.linearValues[26]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateY" 
 		""
 		3 "eye_milk_2:character1.linearValues[27]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateX" 
-		""
-		3 "eye_milk_2:character1.linearValues[13]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateZ" 
-		""
-		3 "eye_milk_2:character1.linearValues[14]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateY" 
-		""
-		3 "eye_milk_2:character1.linearValues[15]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateX" 
 		""
 		3 "eye_milk_2:character1.linearValues[16]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateZ" 
 		""
@@ -38737,6 +38684,42 @@ createNode reference -n "eye_milk_2RN";
 		"eye_milk_2:character1.dnSetMembers" "-na"
 		3 "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:EyeLidBottom_zero|eye_milk_2:EyeLidBottom_ctl.bend_left" 
 		"eye_milk_2:character1.dnSetMembers" "-na"
+		3 "eye_milk_2:character1.linearValues[22]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateZ" 
+		""
+		3 "eye_milk_2:character1.linearValues[23]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateY" 
+		""
+		3 "eye_milk_2:character1.linearValues[24]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateX" 
+		""
+		3 "eye_milk_2:character1.linearValues[7]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateZ" 
+		""
+		3 "eye_milk_2:character1.linearValues[8]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateY" 
+		""
+		3 "eye_milk_2:character1.linearValues[9]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateX" 
+		""
+		3 "eye_milk_2:character1.linearValues[13]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateZ" 
+		""
+		3 "eye_milk_2:character1.linearValues[14]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateY" 
+		""
+		3 "eye_milk_2:character1.linearValues[15]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateX" 
+		""
+		3 "eye_milk_2:character1.linearValues[10]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateZ" 
+		""
+		3 "eye_milk_2:character1.linearValues[11]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateY" 
+		""
+		3 "eye_milk_2:character1.linearValues[12]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateX" 
+		""
+		3 "eye_milk_2:character1.linearValues[19]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateZ" 
+		""
+		3 "eye_milk_2:character1.linearValues[20]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateY" 
+		""
+		3 "eye_milk_2:character1.linearValues[21]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateX" 
+		""
+		3 "eye_milk_2:character1.linearValues[28]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateZ" 
+		""
+		3 "eye_milk_2:character1.linearValues[29]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateY" 
+		""
+		3 "eye_milk_2:character1.linearValues[30]" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl|eye_milk_2:global_grp|eye_milk_2:joint24|eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateX" 
+		""
 		5 4 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:control_grp.drawOverride" 
 		"eye_milk_2RN.placeHolderList[1]" ""
 		5 3 "eye_milk_2RN" "|eye_milk_2:asset|eye_milk_2:control_grp|eye_milk_2:Root_ctl.wobble_frequence" 
@@ -40792,7 +40775,7 @@ createNode reference -n "MouthRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"MouthRN"
 		"MouthRN" 0
-		"MouthRN" 623
+		"MouthRN" 591
 		2 "|Mouth:asset|Mouth:root_ctl" "translate" " -type \"double3\" -2.25819608930099225 6.80403734851962394 2.54986314334395825"
 		
 		2 "|Mouth:asset|Mouth:root_ctl" "translateX" " -av"
@@ -40810,14 +40793,6 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl" "mouth" " -av -k 1 5"
 		2 "|Mouth:asset|Mouth:root_ctl" "Tongue" " -av -k 1 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl" 
-		"translate" " -type \"double3\" 0 0 -0.29520926239814482"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl" 
 		"rotateX" " -av"
@@ -40834,14 +40809,6 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl" 
 		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"translate" " -type \"double3\" 0 0 0.10426428249395736"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
 		"rotateX" " -av"
@@ -40849,41 +40816,6 @@ createNode reference -n "MouthRN";
 		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
 		"rotateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"scale" " -type \"double3\" 1.68603355237495145 1.68603355237495145 1.15968416261916563"
-		
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"scaleX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"scaleY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl" 
-		"scaleZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"translate" " -type \"double3\" 0.0066270836972619988 -0.020309827593384743 0.10426428249395736"
-		
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"rotate" " -type \"double3\" 0 0 2.31527919925649606"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"rotateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"rotateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"rotateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"scale" " -type \"double3\" 1.70694191683917174 1.70694191683917174 1.17406531126313585"
-		
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"scaleX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"scaleY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl" 
-		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl" 
@@ -41032,14 +40964,6 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl" 
 		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translate" " -type \"double3\" -0.11817019843840901 0 0.18417371277354908"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
-		"translateZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl" 
 		"rotateX" " -av"
@@ -41079,14 +41003,6 @@ createNode reference -n "MouthRN";
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_1_grp|Mouth:mouthD_1_ctl" 
 		"scaleZ" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translate" " -type \"double3\" 0.096937950369356984 0 0.1841737127735493"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translateX" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translateY" " -av"
-		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
-		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_2_grp|Mouth:mouthD_2_ctl" 
@@ -41130,147 +41046,147 @@ createNode reference -n "MouthRN";
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
 		"translateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
 		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
-		"scaleZ" " -av"
+		"scaleX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl" 
-		"scaleX" " -av"
+		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
 		"translateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
 		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
-		"scaleZ" " -av"
+		"scaleX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl" 
-		"scaleX" " -av"
+		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
 		"translateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
 		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
-		"scaleZ" " -av"
+		"scaleX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl" 
-		"scaleX" " -av"
+		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
 		"translateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
 		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
-		"scaleZ" " -av"
+		"scaleX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl" 
-		"scaleX" " -av"
+		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
 		"translateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
 		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
-		"scaleZ" " -av"
+		"scaleX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl" 
-		"scaleX" " -av"
+		"scaleZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
 		"translateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
-		"rotateZ" " -av"
+		"rotateX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
 		"rotateY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
-		"rotateX" " -av"
+		"rotateZ" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
 		"scale" " -type \"double3\" 1 1 1"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
-		"scaleZ" " -av"
+		"scaleX" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
 		"scaleY" " -av"
 		2 "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl" 
-		"scaleX" " -av"
+		"scaleZ" " -av"
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl.mouth" "MouthRN.placeHolderList[1]" 
 		""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl.mouth" "MouthRN.placeHolderList[2]" 
@@ -41329,31 +41245,31 @@ createNode reference -n "MouthRN";
 		"MouthRN.placeHolderList[28]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.translateZ" 
 		"MouthRN.placeHolderList[29]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleX" 
-		"MouthRN.placeHolderList[30]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleX" 
-		"MouthRN.placeHolderList[31]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleY" 
-		"MouthRN.placeHolderList[32]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleY" 
-		"MouthRN.placeHolderList[33]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleZ" 
-		"MouthRN.placeHolderList[34]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleZ" 
-		"MouthRN.placeHolderList[35]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.visibility" 
-		"MouthRN.placeHolderList[36]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.rotateX" 
-		"MouthRN.placeHolderList[37]" ""
+		"MouthRN.placeHolderList[30]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.rotateX" 
-		"MouthRN.placeHolderList[38]" ""
+		"MouthRN.placeHolderList[31]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.rotateY" 
-		"MouthRN.placeHolderList[39]" ""
+		"MouthRN.placeHolderList[32]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.rotateY" 
-		"MouthRN.placeHolderList[40]" ""
+		"MouthRN.placeHolderList[33]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.rotateZ" 
-		"MouthRN.placeHolderList[41]" ""
+		"MouthRN.placeHolderList[34]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.rotateZ" 
+		"MouthRN.placeHolderList[35]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleX" 
+		"MouthRN.placeHolderList[36]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleX" 
+		"MouthRN.placeHolderList[37]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleY" 
+		"MouthRN.placeHolderList[38]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleY" 
+		"MouthRN.placeHolderList[39]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleZ" 
+		"MouthRN.placeHolderList[40]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.scaleZ" 
+		"MouthRN.placeHolderList[41]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_0_grp|Mouth:mouthA_0_ctl.visibility" 
 		"MouthRN.placeHolderList[42]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.translateX" 
 		"MouthRN.placeHolderList[43]" ""
@@ -41367,31 +41283,31 @@ createNode reference -n "MouthRN";
 		"MouthRN.placeHolderList[47]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.translateZ" 
 		"MouthRN.placeHolderList[48]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleX" 
-		"MouthRN.placeHolderList[49]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleX" 
-		"MouthRN.placeHolderList[50]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleY" 
-		"MouthRN.placeHolderList[51]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleY" 
-		"MouthRN.placeHolderList[52]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleZ" 
-		"MouthRN.placeHolderList[53]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleZ" 
-		"MouthRN.placeHolderList[54]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.visibility" 
-		"MouthRN.placeHolderList[55]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.rotateX" 
-		"MouthRN.placeHolderList[56]" ""
+		"MouthRN.placeHolderList[49]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.rotateX" 
-		"MouthRN.placeHolderList[57]" ""
+		"MouthRN.placeHolderList[50]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.rotateY" 
-		"MouthRN.placeHolderList[58]" ""
+		"MouthRN.placeHolderList[51]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.rotateY" 
-		"MouthRN.placeHolderList[59]" ""
+		"MouthRN.placeHolderList[52]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.rotateZ" 
-		"MouthRN.placeHolderList[60]" ""
+		"MouthRN.placeHolderList[53]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.rotateZ" 
+		"MouthRN.placeHolderList[54]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleX" 
+		"MouthRN.placeHolderList[55]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleX" 
+		"MouthRN.placeHolderList[56]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleY" 
+		"MouthRN.placeHolderList[57]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleY" 
+		"MouthRN.placeHolderList[58]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleZ" 
+		"MouthRN.placeHolderList[59]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.scaleZ" 
+		"MouthRN.placeHolderList[60]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_1_grp|Mouth:mouthA_1_ctl.visibility" 
 		"MouthRN.placeHolderList[61]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.translateX" 
 		"MouthRN.placeHolderList[62]" ""
@@ -41405,31 +41321,31 @@ createNode reference -n "MouthRN";
 		"MouthRN.placeHolderList[66]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.translateZ" 
 		"MouthRN.placeHolderList[67]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleX" 
-		"MouthRN.placeHolderList[68]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleX" 
-		"MouthRN.placeHolderList[69]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleY" 
-		"MouthRN.placeHolderList[70]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleY" 
-		"MouthRN.placeHolderList[71]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleZ" 
-		"MouthRN.placeHolderList[72]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleZ" 
-		"MouthRN.placeHolderList[73]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.visibility" 
-		"MouthRN.placeHolderList[74]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.rotateX" 
-		"MouthRN.placeHolderList[75]" ""
+		"MouthRN.placeHolderList[68]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.rotateX" 
-		"MouthRN.placeHolderList[76]" ""
+		"MouthRN.placeHolderList[69]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.rotateY" 
-		"MouthRN.placeHolderList[77]" ""
+		"MouthRN.placeHolderList[70]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.rotateY" 
-		"MouthRN.placeHolderList[78]" ""
+		"MouthRN.placeHolderList[71]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.rotateZ" 
-		"MouthRN.placeHolderList[79]" ""
+		"MouthRN.placeHolderList[72]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.rotateZ" 
+		"MouthRN.placeHolderList[73]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleX" 
+		"MouthRN.placeHolderList[74]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleX" 
+		"MouthRN.placeHolderList[75]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleY" 
+		"MouthRN.placeHolderList[76]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleY" 
+		"MouthRN.placeHolderList[77]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleZ" 
+		"MouthRN.placeHolderList[78]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.scaleZ" 
+		"MouthRN.placeHolderList[79]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthA|Mouth:mouthA_2_grp|Mouth:mouthA_2_ctl.visibility" 
 		"MouthRN.placeHolderList[80]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_0_grp1|Mouth:mouthB_0_ctl.translateX" 
 		"MouthRN.placeHolderList[81]" ""
@@ -41551,119 +41467,119 @@ createNode reference -n "MouthRN";
 		"MouthRN.placeHolderList[139]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthB|Mouth:mouthB_2_grp|Mouth:mouthB_2_ctl.visibility" 
 		"MouthRN.placeHolderList[140]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateX" 
-		"MouthRN.placeHolderList[141]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateX" 
-		"MouthRN.placeHolderList[142]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateY" 
-		"MouthRN.placeHolderList[143]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateY" 
-		"MouthRN.placeHolderList[144]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateZ" 
-		"MouthRN.placeHolderList[145]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateZ" 
-		"MouthRN.placeHolderList[146]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.visibility" 
-		"MouthRN.placeHolderList[147]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.translateX" 
-		"MouthRN.placeHolderList[148]" ""
+		"MouthRN.placeHolderList[141]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.translateX" 
-		"MouthRN.placeHolderList[149]" ""
+		"MouthRN.placeHolderList[142]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.translateY" 
-		"MouthRN.placeHolderList[150]" ""
+		"MouthRN.placeHolderList[143]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.translateY" 
-		"MouthRN.placeHolderList[151]" ""
+		"MouthRN.placeHolderList[144]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.translateZ" 
-		"MouthRN.placeHolderList[152]" ""
+		"MouthRN.placeHolderList[145]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.translateZ" 
-		"MouthRN.placeHolderList[153]" ""
+		"MouthRN.placeHolderList[146]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateX" 
+		"MouthRN.placeHolderList[147]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateX" 
+		"MouthRN.placeHolderList[148]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateY" 
+		"MouthRN.placeHolderList[149]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateY" 
+		"MouthRN.placeHolderList[150]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateZ" 
+		"MouthRN.placeHolderList[151]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.rotateZ" 
+		"MouthRN.placeHolderList[152]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.scaleX" 
-		"MouthRN.placeHolderList[154]" ""
+		"MouthRN.placeHolderList[153]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.scaleX" 
-		"MouthRN.placeHolderList[155]" ""
+		"MouthRN.placeHolderList[154]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.scaleY" 
-		"MouthRN.placeHolderList[156]" ""
+		"MouthRN.placeHolderList[155]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.scaleY" 
-		"MouthRN.placeHolderList[157]" ""
+		"MouthRN.placeHolderList[156]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.scaleZ" 
-		"MouthRN.placeHolderList[158]" ""
+		"MouthRN.placeHolderList[157]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.scaleZ" 
+		"MouthRN.placeHolderList[158]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_0_grp|Mouth:mouthC_0_ctl.visibility" 
 		"MouthRN.placeHolderList[159]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateX" 
-		"MouthRN.placeHolderList[160]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateX" 
-		"MouthRN.placeHolderList[161]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateY" 
-		"MouthRN.placeHolderList[162]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateY" 
-		"MouthRN.placeHolderList[163]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateZ" 
-		"MouthRN.placeHolderList[164]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateZ" 
-		"MouthRN.placeHolderList[165]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.visibility" 
-		"MouthRN.placeHolderList[166]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.translateX" 
-		"MouthRN.placeHolderList[167]" ""
+		"MouthRN.placeHolderList[160]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.translateX" 
-		"MouthRN.placeHolderList[168]" ""
+		"MouthRN.placeHolderList[161]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.translateY" 
-		"MouthRN.placeHolderList[169]" ""
+		"MouthRN.placeHolderList[162]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.translateY" 
-		"MouthRN.placeHolderList[170]" ""
+		"MouthRN.placeHolderList[163]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.translateZ" 
-		"MouthRN.placeHolderList[171]" ""
+		"MouthRN.placeHolderList[164]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.translateZ" 
-		"MouthRN.placeHolderList[172]" ""
+		"MouthRN.placeHolderList[165]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateX" 
+		"MouthRN.placeHolderList[166]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateX" 
+		"MouthRN.placeHolderList[167]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateY" 
+		"MouthRN.placeHolderList[168]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateY" 
+		"MouthRN.placeHolderList[169]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateZ" 
+		"MouthRN.placeHolderList[170]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.rotateZ" 
+		"MouthRN.placeHolderList[171]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.scaleX" 
-		"MouthRN.placeHolderList[173]" ""
+		"MouthRN.placeHolderList[172]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.scaleX" 
-		"MouthRN.placeHolderList[174]" ""
+		"MouthRN.placeHolderList[173]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.scaleY" 
-		"MouthRN.placeHolderList[175]" ""
+		"MouthRN.placeHolderList[174]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.scaleY" 
-		"MouthRN.placeHolderList[176]" ""
+		"MouthRN.placeHolderList[175]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.scaleZ" 
-		"MouthRN.placeHolderList[177]" ""
+		"MouthRN.placeHolderList[176]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.scaleZ" 
+		"MouthRN.placeHolderList[177]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_1_grp|Mouth:mouthC_1_ctl.visibility" 
 		"MouthRN.placeHolderList[178]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateX" 
-		"MouthRN.placeHolderList[179]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateX" 
-		"MouthRN.placeHolderList[180]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateY" 
-		"MouthRN.placeHolderList[181]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateY" 
-		"MouthRN.placeHolderList[182]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateZ" 
-		"MouthRN.placeHolderList[183]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateZ" 
-		"MouthRN.placeHolderList[184]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.visibility" 
-		"MouthRN.placeHolderList[185]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.translateX" 
-		"MouthRN.placeHolderList[186]" ""
+		"MouthRN.placeHolderList[179]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.translateX" 
-		"MouthRN.placeHolderList[187]" ""
+		"MouthRN.placeHolderList[180]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.translateY" 
-		"MouthRN.placeHolderList[188]" ""
+		"MouthRN.placeHolderList[181]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.translateY" 
-		"MouthRN.placeHolderList[189]" ""
+		"MouthRN.placeHolderList[182]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.translateZ" 
-		"MouthRN.placeHolderList[190]" ""
+		"MouthRN.placeHolderList[183]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.translateZ" 
-		"MouthRN.placeHolderList[191]" ""
+		"MouthRN.placeHolderList[184]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateX" 
+		"MouthRN.placeHolderList[185]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateX" 
+		"MouthRN.placeHolderList[186]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateY" 
+		"MouthRN.placeHolderList[187]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateY" 
+		"MouthRN.placeHolderList[188]" ""
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateZ" 
+		"MouthRN.placeHolderList[189]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.rotateZ" 
+		"MouthRN.placeHolderList[190]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.scaleX" 
-		"MouthRN.placeHolderList[192]" ""
+		"MouthRN.placeHolderList[191]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.scaleX" 
-		"MouthRN.placeHolderList[193]" ""
+		"MouthRN.placeHolderList[192]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.scaleY" 
-		"MouthRN.placeHolderList[194]" ""
+		"MouthRN.placeHolderList[193]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.scaleY" 
-		"MouthRN.placeHolderList[195]" ""
+		"MouthRN.placeHolderList[194]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.scaleZ" 
-		"MouthRN.placeHolderList[196]" ""
+		"MouthRN.placeHolderList[195]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.scaleZ" 
+		"MouthRN.placeHolderList[196]" ""
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthC|Mouth:mouthC_2_grp|Mouth:mouthC_2_ctl.visibility" 
 		"MouthRN.placeHolderList[197]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_0_grp|Mouth:mouthD_0_ctl.translateX" 
 		"MouthRN.placeHolderList[198]" ""
@@ -41817,221 +41733,221 @@ createNode reference -n "MouthRN";
 		"MouthRN.placeHolderList[272]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthD|Mouth:mouthD_3_grp|Mouth:mouthD_3_ctl.visibility" 
 		"MouthRN.placeHolderList[273]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateX" 
 		"MouthRN.placeHolderList[274]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateX" 
 		"MouthRN.placeHolderList[275]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateY" 
 		"MouthRN.placeHolderList[276]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateY" 
 		"MouthRN.placeHolderList[277]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateZ" 
 		"MouthRN.placeHolderList[278]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateZ" 
 		"MouthRN.placeHolderList[279]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateX" 
 		"MouthRN.placeHolderList[280]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateX" 
 		"MouthRN.placeHolderList[281]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateY" 
 		"MouthRN.placeHolderList[282]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateY" 
 		"MouthRN.placeHolderList[283]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateZ" 
 		"MouthRN.placeHolderList[284]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.rotateZ" 
 		"MouthRN.placeHolderList[285]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleX" 
 		"MouthRN.placeHolderList[286]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleX" 
 		"MouthRN.placeHolderList[287]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleY" 
 		"MouthRN.placeHolderList[288]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleY" 
 		"MouthRN.placeHolderList[289]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleZ" 
 		"MouthRN.placeHolderList[290]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.translateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_0_grp|Mouth:mouthE_0_ctl.scaleZ" 
 		"MouthRN.placeHolderList[291]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateX" 
 		"MouthRN.placeHolderList[292]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateX" 
 		"MouthRN.placeHolderList[293]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateY" 
 		"MouthRN.placeHolderList[294]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateY" 
 		"MouthRN.placeHolderList[295]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateZ" 
 		"MouthRN.placeHolderList[296]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateZ" 
 		"MouthRN.placeHolderList[297]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateX" 
 		"MouthRN.placeHolderList[298]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateX" 
 		"MouthRN.placeHolderList[299]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateY" 
 		"MouthRN.placeHolderList[300]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateY" 
 		"MouthRN.placeHolderList[301]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateZ" 
 		"MouthRN.placeHolderList[302]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.rotateZ" 
 		"MouthRN.placeHolderList[303]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleX" 
 		"MouthRN.placeHolderList[304]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleX" 
 		"MouthRN.placeHolderList[305]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleY" 
 		"MouthRN.placeHolderList[306]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleY" 
 		"MouthRN.placeHolderList[307]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleZ" 
 		"MouthRN.placeHolderList[308]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.translateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_1_grp|Mouth:mouthE_1_ctl.scaleZ" 
 		"MouthRN.placeHolderList[309]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateX" 
 		"MouthRN.placeHolderList[310]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateX" 
 		"MouthRN.placeHolderList[311]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateY" 
 		"MouthRN.placeHolderList[312]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateY" 
 		"MouthRN.placeHolderList[313]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateZ" 
 		"MouthRN.placeHolderList[314]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateZ" 
 		"MouthRN.placeHolderList[315]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateX" 
 		"MouthRN.placeHolderList[316]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateX" 
 		"MouthRN.placeHolderList[317]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateY" 
 		"MouthRN.placeHolderList[318]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateY" 
 		"MouthRN.placeHolderList[319]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateZ" 
 		"MouthRN.placeHolderList[320]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.rotateZ" 
 		"MouthRN.placeHolderList[321]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleX" 
 		"MouthRN.placeHolderList[322]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleX" 
 		"MouthRN.placeHolderList[323]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleY" 
 		"MouthRN.placeHolderList[324]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleY" 
 		"MouthRN.placeHolderList[325]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleZ" 
 		"MouthRN.placeHolderList[326]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.translateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:mouthE|Mouth:mouthE_2_grp|Mouth:mouthE_2_ctl.scaleZ" 
 		"MouthRN.placeHolderList[327]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateX" 
 		"MouthRN.placeHolderList[328]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateX" 
 		"MouthRN.placeHolderList[329]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateY" 
 		"MouthRN.placeHolderList[330]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateY" 
 		"MouthRN.placeHolderList[331]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateZ" 
 		"MouthRN.placeHolderList[332]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateZ" 
 		"MouthRN.placeHolderList[333]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateX" 
 		"MouthRN.placeHolderList[334]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateX" 
 		"MouthRN.placeHolderList[335]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateY" 
 		"MouthRN.placeHolderList[336]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateY" 
 		"MouthRN.placeHolderList[337]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateZ" 
 		"MouthRN.placeHolderList[338]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.rotateZ" 
 		"MouthRN.placeHolderList[339]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleX" 
 		"MouthRN.placeHolderList[340]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleX" 
 		"MouthRN.placeHolderList[341]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleY" 
 		"MouthRN.placeHolderList[342]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleY" 
 		"MouthRN.placeHolderList[343]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleZ" 
 		"MouthRN.placeHolderList[344]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.translateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl.scaleZ" 
 		"MouthRN.placeHolderList[345]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateX" 
 		"MouthRN.placeHolderList[346]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateX" 
 		"MouthRN.placeHolderList[347]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateY" 
 		"MouthRN.placeHolderList[348]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateY" 
 		"MouthRN.placeHolderList[349]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateZ" 
 		"MouthRN.placeHolderList[350]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateZ" 
 		"MouthRN.placeHolderList[351]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateX" 
 		"MouthRN.placeHolderList[352]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateX" 
 		"MouthRN.placeHolderList[353]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateY" 
 		"MouthRN.placeHolderList[354]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateY" 
 		"MouthRN.placeHolderList[355]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateZ" 
 		"MouthRN.placeHolderList[356]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.rotateZ" 
 		"MouthRN.placeHolderList[357]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleX" 
 		"MouthRN.placeHolderList[358]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleX" 
 		"MouthRN.placeHolderList[359]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleY" 
 		"MouthRN.placeHolderList[360]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleY" 
 		"MouthRN.placeHolderList[361]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleZ" 
 		"MouthRN.placeHolderList[362]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.translateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl.scaleZ" 
 		"MouthRN.placeHolderList[363]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateX" 
 		"MouthRN.placeHolderList[364]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateX" 
 		"MouthRN.placeHolderList[365]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateY" 
 		"MouthRN.placeHolderList[366]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateY" 
 		"MouthRN.placeHolderList[367]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateZ" 
 		"MouthRN.placeHolderList[368]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateZ" 
 		"MouthRN.placeHolderList[369]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateX" 
 		"MouthRN.placeHolderList[370]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateX" 
 		"MouthRN.placeHolderList[371]" ""
 		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateY" 
 		"MouthRN.placeHolderList[372]" ""
 		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateY" 
 		"MouthRN.placeHolderList[373]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateZ" 
 		"MouthRN.placeHolderList[374]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.rotateZ" 
 		"MouthRN.placeHolderList[375]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateZ" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleX" 
 		"MouthRN.placeHolderList[376]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateZ" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleX" 
 		"MouthRN.placeHolderList[377]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateY" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleY" 
 		"MouthRN.placeHolderList[378]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateY" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleY" 
 		"MouthRN.placeHolderList[379]" ""
-		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateX" 
+		5 3 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleZ" 
 		"MouthRN.placeHolderList[380]" ""
-		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.translateX" 
+		5 4 "MouthRN" "|Mouth:asset|Mouth:root_ctl|Mouth:tongue|Mouth:tongue_0_grp|Mouth:tongue_0_ctl|Mouth:tongue_1_grp|Mouth:tongue_1_ctl|Mouth:tongue_2_grp|Mouth:tongue_2_ctl.scaleZ" 
 		"MouthRN.placeHolderList[381]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -42818,7 +42734,7 @@ createNode animCurveTA -n "Root_ctl_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 6 ".ktv[0:5]"  0 -53.817779211030413 14 -53.062063103498602
-		 18 -53.062063103498602 20 -53.062063103498602 24 -51.647975329358047 28 -51.445962790195111;
+		 18 -53.062063103498602 20 -53.062063103498602 24 -51.647975329358047 28 -51.445962790195118;
 createNode animCurveTA -n "Root_ctl_rotateZ1";
 	rename -uid "0BCA7EFF-438E-569D-7107-BB879452BB10";
 	setAttr ".tan" 18;
@@ -43040,7 +42956,7 @@ createNode animCurveTU -n "mouthD_0_ctl_visibility";
 		9;
 createNode reference -n "blob_1RN";
 	rename -uid "C80B617F-4AAB-A441-A537-709B2060485D";
-	setAttr -s 314 ".phl";
+	setAttr -s 252 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -43293,72 +43209,12 @@ createNode reference -n "blob_1RN";
 	setAttr ".phl[250]" 0;
 	setAttr ".phl[251]" 0;
 	setAttr ".phl[252]" 0;
-	setAttr ".phl[253]" 0;
-	setAttr ".phl[254]" 0;
-	setAttr ".phl[255]" 0;
-	setAttr ".phl[256]" 0;
-	setAttr ".phl[257]" 0;
-	setAttr ".phl[258]" 0;
-	setAttr ".phl[259]" 0;
-	setAttr ".phl[260]" 0;
-	setAttr ".phl[261]" 0;
-	setAttr ".phl[262]" 0;
-	setAttr ".phl[263]" 0;
-	setAttr ".phl[264]" 0;
-	setAttr ".phl[265]" 0;
-	setAttr ".phl[266]" 0;
-	setAttr ".phl[267]" 0;
-	setAttr ".phl[268]" 0;
-	setAttr ".phl[269]" 0;
-	setAttr ".phl[270]" 0;
-	setAttr ".phl[271]" 0;
-	setAttr ".phl[272]" 0;
-	setAttr ".phl[273]" 0;
-	setAttr ".phl[274]" 0;
-	setAttr ".phl[275]" 0;
-	setAttr ".phl[276]" 0;
-	setAttr ".phl[277]" 0;
-	setAttr ".phl[278]" 0;
-	setAttr ".phl[279]" 0;
-	setAttr ".phl[280]" 0;
-	setAttr ".phl[281]" 0;
-	setAttr ".phl[282]" 0;
-	setAttr ".phl[283]" 0;
-	setAttr ".phl[284]" 0;
-	setAttr ".phl[285]" 0;
-	setAttr ".phl[286]" 0;
-	setAttr ".phl[287]" 0;
-	setAttr ".phl[288]" 0;
-	setAttr ".phl[289]" 0;
-	setAttr ".phl[290]" 0;
-	setAttr ".phl[291]" 0;
-	setAttr ".phl[292]" 0;
-	setAttr ".phl[293]" 0;
-	setAttr ".phl[294]" 0;
-	setAttr ".phl[295]" 0;
-	setAttr ".phl[296]" 0;
-	setAttr ".phl[297]" 0;
-	setAttr ".phl[298]" 0;
-	setAttr ".phl[299]" 0;
-	setAttr ".phl[300]" 0;
-	setAttr ".phl[301]" 0;
-	setAttr ".phl[302]" 0;
-	setAttr ".phl[303]" 0;
-	setAttr ".phl[304]" 0;
-	setAttr ".phl[305]" 0;
-	setAttr ".phl[306]" 0;
-	setAttr ".phl[307]" 0;
-	setAttr ".phl[308]" 0;
-	setAttr ".phl[309]" 0;
-	setAttr ".phl[310]" 0;
-	setAttr ".phl[311]" 0;
-	setAttr ".phl[312]" 0;
-	setAttr ".phl[313]" 0;
-	setAttr ".phl[314]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"blob_1RN"
-		"blob_1RN" 0
-		"blob_1RN" 516
+		"blob_1RN" 1
+		2 "blob_1:character1" "attributeAliasList" " -type \"attributeAlias\" root_ctrl_rotateZ"
+		
+		"blob_1RN" 452
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl" "translate" " -type \"double3\" -2.92474557550362046 7.06819148815864917 1.09483938291036687"
 		
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl" "translateZ" " -av"
@@ -43500,7 +43356,8 @@ createNode reference -n "blob_1RN";
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl" 
 		"scaleX" " -av"
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
-		"translate" " -type \"double3\" 0.98438542874940727 -1.74821338753133482 0"
+		"translate" " -type \"double3\" 0.4443111357274982 -1.11106079465268515 0.40913892516331657"
+		
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
 		"translateZ" " -av"
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
@@ -43508,7 +43365,7 @@ createNode reference -n "blob_1RN";
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
 		"translateX" " -av"
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 34.81796844620568976 0 0"
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
 		"rotateZ" " -av"
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
@@ -43523,40 +43380,124 @@ createNode reference -n "blob_1RN";
 		"scaleY" " -av"
 		2 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl" 
 		"scaleX" " -av"
-		2 "blob_1:character1" "unitlessValues" " -s 63"
-		2 "blob_1:character1" "uv[1:21]" " 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.8017740618207756 1.8017740618207756 1.32105248409404319"
+		2 "blob_1:character1" "uv[1:42]" " -s 42 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1.8017740618207756 1.8017740618207756 1.32105248409404319 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.68453663716805013 0 0 0"
 		
-		2 "blob_1:character1" "unitlessValues[39]" " 1.68453663716805013"
-		2 "blob_1:character1" "linearValues" " -s 63"
-		2 "blob_1:character1" "lv[1:21]" " 0 -1.74821338753133482 0.98438542874940727 0 0 0 -0.0016392818650336394 -0.021892197470538621 0.041827191595060036 -0.0060657738781400902 0.0045969326832107594 -0.0081286544615174049 -0.38535263639809952 -0.10282386932446791 0.10158830582000025 0 -0.60162602766253859 0 1.09483938291036687 7.06819148815864917 -2.92474557550362046"
+		2 "blob_1:character1" "unitlessValues" " -s 21"
+		2 "blob_1:character1" "linearValues" " -s 42"
+		2 "blob_1:character1" "lv[1:21]" " 0.40913892516331657 -1.11106079465268515 0.4443111357274982 0 0 0 -0.0016392818650336394 -0.021892197470538621 0.041827191595060036 -0.0060657738781400902 0.0045969326832107594 -0.0081286544615174049 -0.38535263639809952 -0.10282386932446791 0.10158830582000025 0 -0.60162602766253859 0 1.09483938291036687 7.06819148815864917 -2.92474557550362046"
 		
-		2 "blob_1:character1" "angularValues" " -s 63"
-		2 "blob_1:character1" "av[1:21]" " 0 0 0 0 0 0 -0.82602467926041445 -4.97763933174783002 0.15361562298320056 0 0 0 -0.18727758391574706 -1.2094876544287958 -0.12935929174196301 0 0 0 0 0 0"
+		2 "blob_1:character1" "av[1:42]" " -s 42 0 0 34.81796844620568976 0 0 0 -0.82602467926041445 -4.97763933174783002 0.15361562298320056 0 0 0 -0.18727758391574706 -1.2094876544287958 -0.12935929174196301 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 		
-		2 "blob_1:character1" "referenceMapping" (" -type \"characterMapping\" 63 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleZ\" 0 24 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleY\" 0 23 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleX\" 0 22 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateZ\" 2 24 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateY\" 2 23 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateX\" 2 22 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateZ\" 1 33 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateY\" 1 32 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateX\" 1 31 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleZ\" 0 27 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleY\" 0 26 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleX\" 0 25 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateZ\" 2 27 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateY\" 2 26 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateX\" 2 25 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateZ\" 1 36 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateY\" 1 35 \"blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateX\" 1 34 \"blob_1:ctrl_1_zero|blob_1:ct"
-		+ "rl_1_ctl.scaleZ\" 0 42 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleY\" 0 41 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleX\" 0 40 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateZ\" 2 42 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateY\" 2 41 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateX\" 2 40 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateZ\" 1 51 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateY\" 1 50 \"blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateX\" 1 49 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleZ\" 0 36 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleY\" 0 35 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleX\" 0 34 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateZ\" 2 36 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateY\" 2 35 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateX\" 2 34 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateZ\" 1 45 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateY\" 1 44 \"blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateX\" 1 43 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleZ\" 0 30 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scale"
-		+ "Y\" 0 29 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleX\" 0 28 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateZ\" 2 30 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateY\" 2 29 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateX\" 2 28 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateZ\" 1 39 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateY\" 1 38 \"blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateX\" 1 37 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleZ\" 0 33 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleY\" 0 32 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleX\" 0 31 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateZ\" 2 33 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateY\" 2 32 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateX\" 2 31 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateZ\" 1 42 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateY\" 1 41 \"blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateX\" 1 40 \"blob_1:root_ctrl.scaleZ\" 0 39 \"blob_1:root_ctrl.scaleY\" 0 38 \"blob_1:root_ctrl.scaleX\" 0 37 \"blob_1:root_ctrl.rotateZ\" 2 39 \"blob_1:root_ctrl.rotateY\" 2 "
-		+ "38 \"blob_1:root_ctrl.rotateX\" 2 37 \"blob_1:root_ctrl.translateZ\" 1 48 \"blob_1:root_ctrl.translateY\" 1 47 \"blob_1:root_ctrl.translateX\" 1 46"
-		)
-		2 "blob_1:character1" "attributeAliasList" " -type \"attributeAlias\" root_ctrl_rotateZ"
+		2 "blob_1:character1" "angularValues" " -s 21"
+		2 "blob_1:character1" "referenceMapping" " -type \"characterMapping\" 9 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleZ\" 0 1 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleY\" 0 2 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleX\" 0 3 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateZ\" 2 1 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateY\" 2 2 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateX\" 2 3 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateZ\" 1 1 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateY\" 1 2 \"blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateX\" 1 3"
 		
-		3 "blob_1:character1.linearValues[18]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateX" 
+		3 "blob_1:character1.linearValues[15]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateX" 
 		""
-		3 "blob_1:character1.linearValues[17]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateY" 
+		3 "blob_1:character1.linearValues[14]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateY" 
 		""
-		3 "blob_1:character1.linearValues[16]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateZ" 
+		3 "blob_1:character1.linearValues[13]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateZ" 
 		""
-		3 "blob_1:character1.angularValues[18]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateX" 
+		3 "blob_1:character1.angularValues[15]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateX" 
 		""
-		3 "blob_1:character1.angularValues[17]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateY" 
+		3 "blob_1:character1.angularValues[14]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateY" 
 		""
-		3 "blob_1:character1.angularValues[16]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateZ" 
+		3 "blob_1:character1.angularValues[13]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateZ" 
 		""
-		3 "blob_1:character1.unitlessValues[18]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleX" 
+		3 "blob_1:character1.unitlessValues[15]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleX" 
 		""
-		3 "blob_1:character1.unitlessValues[17]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleY" 
+		3 "blob_1:character1.unitlessValues[14]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleY" 
 		""
-		3 "blob_1:character1.unitlessValues[16]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleZ" 
+		3 "blob_1:character1.unitlessValues[13]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_1:character1.linearValues[9]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_1:character1.linearValues[8]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_1:character1.linearValues[7]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_1:character1.angularValues[9]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_1:character1.angularValues[8]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_1:character1.angularValues[7]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_1:character1.unitlessValues[9]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_1:character1.unitlessValues[8]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_1:character1.unitlessValues[7]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_1:character1.linearValues[21]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.translateX" 
+		""
+		3 "blob_1:character1.linearValues[20]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.translateY" 
+		""
+		3 "blob_1:character1.linearValues[19]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.translateZ" 
+		""
+		3 "blob_1:character1.angularValues[21]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.rotateX" 
+		""
+		3 "blob_1:character1.angularValues[20]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.rotateY" 
+		""
+		3 "blob_1:character1.angularValues[19]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.rotateZ" 
+		""
+		3 "blob_1:character1.unitlessValues[21]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.scaleX" 
+		""
+		3 "blob_1:character1.unitlessValues[20]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.scaleY" 
+		""
+		3 "blob_1:character1.unitlessValues[19]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.scaleZ" 
+		""
+		3 "blob_1:character1.linearValues[3]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_1:character1.linearValues[2]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_1:character1.linearValues[1]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_1:character1.angularValues[3]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_1:character1.angularValues[2]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_1:character1.angularValues[1]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_1:character1.unitlessValues[3]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_1:character1.unitlessValues[2]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_1:character1.unitlessValues[1]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_1:character1.linearValues[6]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_1:character1.linearValues[5]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_1:character1.linearValues[4]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_1:character1.angularValues[6]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_1:character1.angularValues[5]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_1:character1.angularValues[4]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_1:character1.unitlessValues[6]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_1:character1.unitlessValues[5]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_1:character1.unitlessValues[4]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_1:character1.linearValues[12]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_1:character1.linearValues[11]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_1:character1.linearValues[10]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_1:character1.angularValues[12]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_1:character1.angularValues[11]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_1:character1.angularValues[10]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_1:character1.unitlessValues[12]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_1:character1.unitlessValues[11]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_1:character1.unitlessValues[10]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleZ" 
 		""
 		3 "blob_1:character1.partition" ":characterPartition.sets" "-na"
 		3 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.scaleZ" "blob_1:character1.dnSetMembers" 
@@ -43667,113 +43608,23 @@ createNode reference -n "blob_1RN";
 		"blob_1:character1.dnSetMembers" "-na"
 		3 "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateX" 
 		"blob_1:character1.dnSetMembers" "-na"
-		3 "blob_1:character1.linearValues[12]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateX" 
+		3 "blob_1:character1.linearValues[18]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateX" 
 		""
-		3 "blob_1:character1.linearValues[11]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateY" 
+		3 "blob_1:character1.linearValues[17]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateY" 
 		""
-		3 "blob_1:character1.linearValues[10]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateZ" 
+		3 "blob_1:character1.linearValues[16]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateZ" 
 		""
-		3 "blob_1:character1.angularValues[12]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateX" 
+		3 "blob_1:character1.angularValues[18]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateX" 
 		""
-		3 "blob_1:character1.angularValues[11]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateY" 
+		3 "blob_1:character1.angularValues[17]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateY" 
 		""
-		3 "blob_1:character1.angularValues[10]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateZ" 
+		3 "blob_1:character1.angularValues[16]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateZ" 
 		""
-		3 "blob_1:character1.unitlessValues[12]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleX" 
+		3 "blob_1:character1.unitlessValues[18]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleX" 
 		""
-		3 "blob_1:character1.unitlessValues[11]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleY" 
+		3 "blob_1:character1.unitlessValues[17]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleY" 
 		""
-		3 "blob_1:character1.unitlessValues[10]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleZ" 
-		""
-		3 "blob_1:character1.linearValues[9]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_1:character1.linearValues[8]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_1:character1.linearValues[7]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_1:character1.angularValues[9]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_1:character1.angularValues[8]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_1:character1.angularValues[7]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_1:character1.unitlessValues[9]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_1:character1.unitlessValues[8]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_1:character1.unitlessValues[7]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleZ" 
-		""
-		3 "blob_1:character1.linearValues[21]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.translateX" 
-		""
-		3 "blob_1:character1.linearValues[20]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.translateY" 
-		""
-		3 "blob_1:character1.linearValues[19]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.translateZ" 
-		""
-		3 "blob_1:character1.angularValues[21]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.rotateX" 
-		""
-		3 "blob_1:character1.angularValues[20]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.rotateY" 
-		""
-		3 "blob_1:character1.angularValues[19]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.rotateZ" 
-		""
-		3 "blob_1:character1.unitlessValues[21]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.scaleX" 
-		""
-		3 "blob_1:character1.unitlessValues[20]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.scaleY" 
-		""
-		3 "blob_1:character1.unitlessValues[19]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.scaleZ" 
-		""
-		3 "blob_1:character1.linearValues[15]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_1:character1.linearValues[14]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_1:character1.linearValues[13]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_1:character1.angularValues[15]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_1:character1.angularValues[14]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_1:character1.angularValues[13]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_1:character1.unitlessValues[15]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_1:character1.unitlessValues[14]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_1:character1.unitlessValues[13]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleZ" 
-		""
-		3 "blob_1:character1.linearValues[6]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_1:character1.linearValues[5]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_1:character1.linearValues[4]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_1:character1.angularValues[6]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_1:character1.angularValues[5]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_1:character1.angularValues[4]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_1:character1.unitlessValues[6]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_1:character1.unitlessValues[5]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_1:character1.unitlessValues[4]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleZ" 
-		""
-		3 "blob_1:character1.linearValues[3]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_1:character1.linearValues[2]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_1:character1.linearValues[1]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_1:character1.angularValues[3]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_1:character1.angularValues[2]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_1:character1.angularValues[1]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_1:character1.unitlessValues[3]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_1:character1.unitlessValues[2]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_1:character1.unitlessValues[1]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero5|blob_1:ctrl_1_ctl.scaleZ" 
+		3 "blob_1:character1.unitlessValues[16]" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleZ" 
 		""
 		5 3 "blob_1RN" "|blob_1:asset|blob_1:controls|blob_1:root_ctrl.rotateZ" 
 		"blob_1RN.placeHolderList[1]" "blob_1:character1.dnsm"
@@ -44127,594 +43978,271 @@ createNode reference -n "blob_1RN";
 		"blob_1:root_ctrl.rx"
 		5 4 "blob_1RN" "blob_1:character1.angularValues[21]" "blob_1RN.placeHolderList[173]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[22]" "blob_1RN.placeHolderList[174]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[1]" "blob_1RN.placeHolderList[174]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[23]" "blob_1RN.placeHolderList[175]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[2]" "blob_1RN.placeHolderList[175]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[24]" "blob_1RN.placeHolderList[176]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[3]" "blob_1RN.placeHolderList[176]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[25]" "blob_1RN.placeHolderList[177]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[26]" "blob_1RN.placeHolderList[178]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[27]" "blob_1RN.placeHolderList[179]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[28]" "blob_1RN.placeHolderList[180]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[29]" "blob_1RN.placeHolderList[181]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[30]" "blob_1RN.placeHolderList[182]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[31]" "blob_1RN.placeHolderList[183]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[32]" "blob_1RN.placeHolderList[184]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[33]" "blob_1RN.placeHolderList[185]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[34]" "blob_1RN.placeHolderList[186]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[35]" "blob_1RN.placeHolderList[187]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[36]" "blob_1RN.placeHolderList[188]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[37]" "blob_1RN.placeHolderList[189]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[38]" "blob_1RN.placeHolderList[190]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[39]" "blob_1RN.placeHolderList[191]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[40]" "blob_1RN.placeHolderList[192]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[41]" "blob_1RN.placeHolderList[193]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.angularValues[42]" "blob_1RN.placeHolderList[194]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[1]" "blob_1RN.placeHolderList[195]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[2]" "blob_1RN.placeHolderList[196]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[3]" "blob_1RN.placeHolderList[197]" 
-		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[4]" "blob_1RN.placeHolderList[198]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[4]" "blob_1RN.placeHolderList[177]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.tz"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[4]" "blob_1RN.placeHolderList[199]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[4]" "blob_1RN.placeHolderList[178]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[5]" "blob_1RN.placeHolderList[200]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[5]" "blob_1RN.placeHolderList[179]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.ty"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[5]" "blob_1RN.placeHolderList[201]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[5]" "blob_1RN.placeHolderList[180]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[6]" "blob_1RN.placeHolderList[202]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[6]" "blob_1RN.placeHolderList[181]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.tx"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[6]" "blob_1RN.placeHolderList[203]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[6]" "blob_1RN.placeHolderList[182]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[7]" "blob_1RN.placeHolderList[204]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[7]" "blob_1RN.placeHolderList[183]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.tz"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[7]" "blob_1RN.placeHolderList[205]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[7]" "blob_1RN.placeHolderList[184]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[8]" "blob_1RN.placeHolderList[206]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[8]" "blob_1RN.placeHolderList[185]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.ty"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[8]" "blob_1RN.placeHolderList[207]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[8]" "blob_1RN.placeHolderList[186]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[9]" "blob_1RN.placeHolderList[208]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[9]" "blob_1RN.placeHolderList[187]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.tx"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[9]" "blob_1RN.placeHolderList[209]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[9]" "blob_1RN.placeHolderList[188]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[10]" "blob_1RN.placeHolderList[210]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[10]" "blob_1RN.placeHolderList[189]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.tz"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[10]" "blob_1RN.placeHolderList[211]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[10]" "blob_1RN.placeHolderList[190]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[11]" "blob_1RN.placeHolderList[212]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[11]" "blob_1RN.placeHolderList[191]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.ty"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[11]" "blob_1RN.placeHolderList[213]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[11]" "blob_1RN.placeHolderList[192]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[12]" "blob_1RN.placeHolderList[214]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[12]" "blob_1RN.placeHolderList[193]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.tx"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[12]" "blob_1RN.placeHolderList[215]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[12]" "blob_1RN.placeHolderList[194]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[13]" "blob_1RN.placeHolderList[216]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[13]" "blob_1RN.placeHolderList[195]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.tz"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[13]" "blob_1RN.placeHolderList[217]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[13]" "blob_1RN.placeHolderList[196]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[14]" "blob_1RN.placeHolderList[218]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[14]" "blob_1RN.placeHolderList[197]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.ty"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[14]" "blob_1RN.placeHolderList[219]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[14]" "blob_1RN.placeHolderList[198]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[15]" "blob_1RN.placeHolderList[220]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[15]" "blob_1RN.placeHolderList[199]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.tx"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[15]" "blob_1RN.placeHolderList[221]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[15]" "blob_1RN.placeHolderList[200]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[16]" "blob_1RN.placeHolderList[222]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[16]" "blob_1RN.placeHolderList[201]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.tz"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[16]" "blob_1RN.placeHolderList[223]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[16]" "blob_1RN.placeHolderList[202]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[17]" "blob_1RN.placeHolderList[224]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[17]" "blob_1RN.placeHolderList[203]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.ty"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[17]" "blob_1RN.placeHolderList[225]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[17]" "blob_1RN.placeHolderList[204]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[18]" "blob_1RN.placeHolderList[226]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[18]" "blob_1RN.placeHolderList[205]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.tx"
 		
-		5 4 "blob_1RN" "blob_1:character1.linearValues[18]" "blob_1RN.placeHolderList[227]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[18]" "blob_1RN.placeHolderList[206]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[19]" "blob_1RN.placeHolderList[228]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[19]" "blob_1RN.placeHolderList[207]" 
 		"blob_1:root_ctrl.tz"
-		5 4 "blob_1RN" "blob_1:character1.linearValues[19]" "blob_1RN.placeHolderList[229]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[19]" "blob_1RN.placeHolderList[208]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[20]" "blob_1RN.placeHolderList[230]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[20]" "blob_1RN.placeHolderList[209]" 
 		"blob_1:root_ctrl.ty"
-		5 4 "blob_1RN" "blob_1:character1.linearValues[20]" "blob_1RN.placeHolderList[231]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[20]" "blob_1RN.placeHolderList[210]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.linearValues[21]" "blob_1RN.placeHolderList[232]" 
+		5 3 "blob_1RN" "blob_1:character1.linearValues[21]" "blob_1RN.placeHolderList[211]" 
 		"blob_1:root_ctrl.tx"
-		5 4 "blob_1RN" "blob_1:character1.linearValues[21]" "blob_1RN.placeHolderList[233]" 
+		5 4 "blob_1RN" "blob_1:character1.linearValues[21]" "blob_1RN.placeHolderList[212]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[31]" "blob_1RN.placeHolderList[234]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[1]" "blob_1RN.placeHolderList[213]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[32]" "blob_1RN.placeHolderList[235]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[2]" "blob_1RN.placeHolderList[214]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[33]" "blob_1RN.placeHolderList[236]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[3]" "blob_1RN.placeHolderList[215]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[34]" "blob_1RN.placeHolderList[237]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[35]" "blob_1RN.placeHolderList[238]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[36]" "blob_1RN.placeHolderList[239]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[37]" "blob_1RN.placeHolderList[240]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[38]" "blob_1RN.placeHolderList[241]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[39]" "blob_1RN.placeHolderList[242]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[40]" "blob_1RN.placeHolderList[243]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[41]" "blob_1RN.placeHolderList[244]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[42]" "blob_1RN.placeHolderList[245]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[43]" "blob_1RN.placeHolderList[246]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[44]" "blob_1RN.placeHolderList[247]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[45]" "blob_1RN.placeHolderList[248]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[46]" "blob_1RN.placeHolderList[249]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[47]" "blob_1RN.placeHolderList[250]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[48]" "blob_1RN.placeHolderList[251]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[49]" "blob_1RN.placeHolderList[252]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[50]" "blob_1RN.placeHolderList[253]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.linearValues[51]" "blob_1RN.placeHolderList[254]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[1]" "blob_1RN.placeHolderList[255]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[2]" "blob_1RN.placeHolderList[256]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[3]" "blob_1RN.placeHolderList[257]" 
-		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[4]" "blob_1RN.placeHolderList[258]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[4]" "blob_1RN.placeHolderList[216]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.sz"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[4]" "blob_1RN.placeHolderList[259]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[4]" "blob_1RN.placeHolderList[217]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[5]" "blob_1RN.placeHolderList[260]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[5]" "blob_1RN.placeHolderList[218]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.sy"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[5]" "blob_1RN.placeHolderList[261]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[5]" "blob_1RN.placeHolderList[219]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[6]" "blob_1RN.placeHolderList[262]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[6]" "blob_1RN.placeHolderList[220]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.sx"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[6]" "blob_1RN.placeHolderList[263]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[6]" "blob_1RN.placeHolderList[221]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[7]" "blob_1RN.placeHolderList[264]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[7]" "blob_1RN.placeHolderList[222]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.sz"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[7]" "blob_1RN.placeHolderList[265]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[7]" "blob_1RN.placeHolderList[223]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[8]" "blob_1RN.placeHolderList[266]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[8]" "blob_1RN.placeHolderList[224]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.sy"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[8]" "blob_1RN.placeHolderList[267]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[8]" "blob_1RN.placeHolderList[225]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[9]" "blob_1RN.placeHolderList[268]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[9]" "blob_1RN.placeHolderList[226]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.sx"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[9]" "blob_1RN.placeHolderList[269]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[9]" "blob_1RN.placeHolderList[227]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[10]" "blob_1RN.placeHolderList[270]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[10]" "blob_1RN.placeHolderList[228]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.sz"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[10]" "blob_1RN.placeHolderList[271]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[10]" "blob_1RN.placeHolderList[229]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[11]" "blob_1RN.placeHolderList[272]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[11]" "blob_1RN.placeHolderList[230]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.sy"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[11]" "blob_1RN.placeHolderList[273]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[11]" "blob_1RN.placeHolderList[231]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[12]" "blob_1RN.placeHolderList[274]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[12]" "blob_1RN.placeHolderList[232]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.sx"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[12]" "blob_1RN.placeHolderList[275]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[12]" "blob_1RN.placeHolderList[233]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[13]" "blob_1RN.placeHolderList[276]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[13]" "blob_1RN.placeHolderList[234]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.sz"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[13]" "blob_1RN.placeHolderList[277]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[13]" "blob_1RN.placeHolderList[235]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[14]" "blob_1RN.placeHolderList[278]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[14]" "blob_1RN.placeHolderList[236]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.sy"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[14]" "blob_1RN.placeHolderList[279]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[14]" "blob_1RN.placeHolderList[237]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[15]" "blob_1RN.placeHolderList[280]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[15]" "blob_1RN.placeHolderList[238]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.sx"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[15]" "blob_1RN.placeHolderList[281]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[15]" "blob_1RN.placeHolderList[239]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[16]" "blob_1RN.placeHolderList[282]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[16]" "blob_1RN.placeHolderList[240]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.sz"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[16]" "blob_1RN.placeHolderList[283]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[16]" "blob_1RN.placeHolderList[241]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[17]" "blob_1RN.placeHolderList[284]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[17]" "blob_1RN.placeHolderList[242]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.sy"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[17]" "blob_1RN.placeHolderList[285]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[17]" "blob_1RN.placeHolderList[243]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[18]" "blob_1RN.placeHolderList[286]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[18]" "blob_1RN.placeHolderList[244]" 
 		"|blob_1:asset|blob_1:controls|blob_1:root_ctrl|blob_1:sub|blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.sx"
 		
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[18]" "blob_1RN.placeHolderList[287]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[18]" "blob_1RN.placeHolderList[245]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[19]" "blob_1RN.placeHolderList[288]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[19]" "blob_1RN.placeHolderList[246]" 
 		"blob_1:root_ctrl.sz"
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[19]" "blob_1RN.placeHolderList[289]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[19]" "blob_1RN.placeHolderList[247]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[20]" "blob_1RN.placeHolderList[290]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[20]" "blob_1RN.placeHolderList[248]" 
 		"blob_1:root_ctrl.sy"
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[20]" "blob_1RN.placeHolderList[291]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[20]" "blob_1RN.placeHolderList[249]" 
 		""
-		5 3 "blob_1RN" "blob_1:character1.unitlessValues[21]" "blob_1RN.placeHolderList[292]" 
+		5 3 "blob_1RN" "blob_1:character1.unitlessValues[21]" "blob_1RN.placeHolderList[250]" 
 		"blob_1:root_ctrl.sx"
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[21]" "blob_1RN.placeHolderList[293]" 
+		5 4 "blob_1RN" "blob_1:character1.unitlessValues[21]" "blob_1RN.placeHolderList[251]" 
 		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[22]" "blob_1RN.placeHolderList[294]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[23]" "blob_1RN.placeHolderList[295]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[24]" "blob_1RN.placeHolderList[296]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[25]" "blob_1RN.placeHolderList[297]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[26]" "blob_1RN.placeHolderList[298]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[27]" "blob_1RN.placeHolderList[299]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[28]" "blob_1RN.placeHolderList[300]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[29]" "blob_1RN.placeHolderList[301]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[30]" "blob_1RN.placeHolderList[302]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[31]" "blob_1RN.placeHolderList[303]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[32]" "blob_1RN.placeHolderList[304]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[33]" "blob_1RN.placeHolderList[305]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[34]" "blob_1RN.placeHolderList[306]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[35]" "blob_1RN.placeHolderList[307]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[36]" "blob_1RN.placeHolderList[308]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[37]" "blob_1RN.placeHolderList[309]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[38]" "blob_1RN.placeHolderList[310]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[40]" "blob_1RN.placeHolderList[311]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[41]" "blob_1RN.placeHolderList[312]" 
-		""
-		5 4 "blob_1RN" "blob_1:character1.unitlessValues[42]" "blob_1RN.placeHolderList[313]" 
-		""
-		5 3 "blob_1RN" "blob_1:character1.message" "blob_1RN.placeHolderList[314]" 
+		5 3 "blob_1RN" "blob_1:character1.message" "blob_1RN.placeHolderList[252]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "blob_2RN";
 	rename -uid "2993B641-41D2-64A1-A028-A0939837E5EE";
-	setAttr -s 261 ".phl";
+	setAttr -s 198 ".phl";
 	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
 	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
 	setAttr ".phl[7]" 0;
-	setAttr ".phl[8]" 0;
 	setAttr ".phl[9]" 0;
-	setAttr ".phl[10]" 0;
 	setAttr ".phl[11]" 0;
-	setAttr ".phl[12]" 0;
 	setAttr ".phl[13]" 0;
-	setAttr ".phl[14]" 0;
 	setAttr ".phl[15]" 0;
-	setAttr ".phl[16]" 0;
 	setAttr ".phl[17]" 0;
-	setAttr ".phl[18]" 0;
-	setAttr ".phl[19]" 0;
-	setAttr ".phl[20]" 0;
 	setAttr ".phl[21]" 0;
-	setAttr ".phl[22]" 0;
 	setAttr ".phl[23]" 0;
-	setAttr ".phl[24]" 0;
 	setAttr ".phl[25]" 0;
-	setAttr ".phl[26]" 0;
 	setAttr ".phl[27]" 0;
-	setAttr ".phl[28]" 0;
 	setAttr ".phl[29]" 0;
-	setAttr ".phl[30]" 0;
 	setAttr ".phl[31]" 0;
-	setAttr ".phl[32]" 0;
 	setAttr ".phl[33]" 0;
-	setAttr ".phl[34]" 0;
 	setAttr ".phl[35]" 0;
-	setAttr ".phl[36]" 0;
 	setAttr ".phl[37]" 0;
-	setAttr ".phl[38]" 0;
-	setAttr ".phl[39]" 0;
 	setAttr ".phl[40]" 0;
-	setAttr ".phl[41]" 0;
 	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
 	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
 	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
 	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
 	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
 	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
 	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
 	setAttr ".phl[56]" 0;
-	setAttr ".phl[57]" 0;
-	setAttr ".phl[58]" 0;
 	setAttr ".phl[59]" 0;
-	setAttr ".phl[60]" 0;
 	setAttr ".phl[61]" 0;
-	setAttr ".phl[62]" 0;
 	setAttr ".phl[63]" 0;
-	setAttr ".phl[64]" 0;
 	setAttr ".phl[65]" 0;
-	setAttr ".phl[66]" 0;
 	setAttr ".phl[67]" 0;
-	setAttr ".phl[68]" 0;
 	setAttr ".phl[69]" 0;
-	setAttr ".phl[70]" 0;
 	setAttr ".phl[71]" 0;
-	setAttr ".phl[72]" 0;
 	setAttr ".phl[73]" 0;
-	setAttr ".phl[74]" 0;
 	setAttr ".phl[75]" 0;
-	setAttr ".phl[76]" 0;
-	setAttr ".phl[77]" 0;
 	setAttr ".phl[78]" 0;
-	setAttr ".phl[79]" 0;
 	setAttr ".phl[80]" 0;
-	setAttr ".phl[81]" 0;
 	setAttr ".phl[82]" 0;
-	setAttr ".phl[83]" 0;
 	setAttr ".phl[84]" 0;
-	setAttr ".phl[85]" 0;
 	setAttr ".phl[86]" 0;
-	setAttr ".phl[87]" 0;
 	setAttr ".phl[88]" 0;
-	setAttr ".phl[89]" 0;
 	setAttr ".phl[90]" 0;
-	setAttr ".phl[91]" 0;
 	setAttr ".phl[92]" 0;
-	setAttr ".phl[93]" 0;
 	setAttr ".phl[94]" 0;
-	setAttr ".phl[95]" 0;
-	setAttr ".phl[96]" 0;
 	setAttr ".phl[97]" 0;
-	setAttr ".phl[98]" 0;
 	setAttr ".phl[99]" 0;
-	setAttr ".phl[100]" 0;
 	setAttr ".phl[101]" 0;
-	setAttr ".phl[102]" 0;
 	setAttr ".phl[103]" 0;
-	setAttr ".phl[104]" 0;
 	setAttr ".phl[105]" 0;
-	setAttr ".phl[106]" 0;
 	setAttr ".phl[107]" 0;
-	setAttr ".phl[108]" 0;
 	setAttr ".phl[109]" 0;
-	setAttr ".phl[110]" 0;
 	setAttr ".phl[111]" 0;
-	setAttr ".phl[112]" 0;
 	setAttr ".phl[113]" 0;
-	setAttr ".phl[114]" 0;
-	setAttr ".phl[115]" 0;
 	setAttr ".phl[116]" 0;
-	setAttr ".phl[117]" 0;
 	setAttr ".phl[118]" 0;
-	setAttr ".phl[119]" 0;
 	setAttr ".phl[120]" 0;
-	setAttr ".phl[121]" 0;
 	setAttr ".phl[122]" 0;
-	setAttr ".phl[123]" 0;
 	setAttr ".phl[124]" 0;
-	setAttr ".phl[125]" 0;
 	setAttr ".phl[126]" 0;
-	setAttr ".phl[127]" 0;
 	setAttr ".phl[128]" 0;
-	setAttr ".phl[129]" 0;
 	setAttr ".phl[130]" 0;
-	setAttr ".phl[131]" 0;
 	setAttr ".phl[132]" 0;
-	setAttr ".phl[133]" 0;
-	setAttr ".phl[134]" 0;
-	setAttr ".phl[135]" 0;
-	setAttr ".phl[136]" 0;
-	setAttr ".phl[137]" 0;
-	setAttr ".phl[138]" 0;
-	setAttr ".phl[139]" 0;
-	setAttr ".phl[140]" 0;
-	setAttr ".phl[141]" 0;
-	setAttr ".phl[142]" 0;
-	setAttr ".phl[143]" 0;
-	setAttr ".phl[144]" 0;
-	setAttr ".phl[145]" 0;
-	setAttr ".phl[146]" 0;
-	setAttr ".phl[147]" 0;
-	setAttr ".phl[148]" 0;
-	setAttr ".phl[149]" 0;
-	setAttr ".phl[150]" 0;
-	setAttr ".phl[151]" 0;
-	setAttr ".phl[152]" 0;
-	setAttr ".phl[153]" 0;
-	setAttr ".phl[154]" 0;
-	setAttr ".phl[155]" 0;
-	setAttr ".phl[156]" 0;
-	setAttr ".phl[157]" 0;
-	setAttr ".phl[158]" 0;
-	setAttr ".phl[159]" 0;
-	setAttr ".phl[160]" 0;
-	setAttr ".phl[161]" 0;
-	setAttr ".phl[162]" 0;
-	setAttr ".phl[163]" 0;
-	setAttr ".phl[164]" 0;
-	setAttr ".phl[165]" 0;
-	setAttr ".phl[166]" 0;
-	setAttr ".phl[167]" 0;
-	setAttr ".phl[168]" 0;
-	setAttr ".phl[169]" 0;
-	setAttr ".phl[170]" 0;
-	setAttr ".phl[171]" 0;
-	setAttr ".phl[172]" 0;
-	setAttr ".phl[173]" 0;
-	setAttr ".phl[174]" 0;
-	setAttr ".phl[175]" 0;
-	setAttr ".phl[176]" 0;
-	setAttr ".phl[177]" 0;
-	setAttr ".phl[178]" 0;
-	setAttr ".phl[179]" 0;
-	setAttr ".phl[180]" 0;
-	setAttr ".phl[181]" 0;
-	setAttr ".phl[182]" 0;
-	setAttr ".phl[183]" 0;
-	setAttr ".phl[184]" 0;
-	setAttr ".phl[185]" 0;
-	setAttr ".phl[186]" 0;
-	setAttr ".phl[187]" 0;
-	setAttr ".phl[188]" 0;
-	setAttr ".phl[189]" 0;
-	setAttr ".phl[190]" 0;
-	setAttr ".phl[191]" 0;
-	setAttr ".phl[192]" 0;
-	setAttr ".phl[193]" 0;
-	setAttr ".phl[194]" 0;
-	setAttr ".phl[195]" 0;
-	setAttr ".phl[196]" 0;
-	setAttr ".phl[197]" 0;
-	setAttr ".phl[198]" 0;
-	setAttr ".phl[199]" 0;
-	setAttr ".phl[200]" 0;
-	setAttr ".phl[201]" 0;
-	setAttr ".phl[202]" 0;
-	setAttr ".phl[203]" 0;
-	setAttr ".phl[204]" 0;
-	setAttr ".phl[205]" 0;
-	setAttr ".phl[206]" 0;
-	setAttr ".phl[207]" 0;
-	setAttr ".phl[208]" 0;
-	setAttr ".phl[209]" 0;
-	setAttr ".phl[210]" 0;
-	setAttr ".phl[211]" 0;
-	setAttr ".phl[212]" 0;
-	setAttr ".phl[213]" 0;
-	setAttr ".phl[214]" 0;
-	setAttr ".phl[215]" 0;
-	setAttr ".phl[216]" 0;
-	setAttr ".phl[217]" 0;
-	setAttr ".phl[218]" 0;
-	setAttr ".phl[219]" 0;
-	setAttr ".phl[220]" 0;
-	setAttr ".phl[221]" 0;
-	setAttr ".phl[222]" 0;
-	setAttr ".phl[223]" 0;
-	setAttr ".phl[224]" 0;
-	setAttr ".phl[225]" 0;
-	setAttr ".phl[226]" 0;
-	setAttr ".phl[227]" 0;
-	setAttr ".phl[228]" 0;
-	setAttr ".phl[229]" 0;
-	setAttr ".phl[230]" 0;
-	setAttr ".phl[231]" 0;
-	setAttr ".phl[232]" 0;
-	setAttr ".phl[233]" 0;
-	setAttr ".phl[234]" 0;
-	setAttr ".phl[235]" 0;
-	setAttr ".phl[236]" 0;
-	setAttr ".phl[237]" 0;
-	setAttr ".phl[238]" 0;
-	setAttr ".phl[239]" 0;
-	setAttr ".phl[240]" 0;
-	setAttr ".phl[241]" 0;
-	setAttr ".phl[242]" 0;
-	setAttr ".phl[243]" 0;
-	setAttr ".phl[244]" 0;
-	setAttr ".phl[245]" 0;
-	setAttr ".phl[246]" 0;
-	setAttr ".phl[247]" 0;
-	setAttr ".phl[248]" 0;
-	setAttr ".phl[249]" 0;
-	setAttr ".phl[250]" 0;
-	setAttr ".phl[251]" 0;
-	setAttr ".phl[252]" 0;
-	setAttr ".phl[253]" 0;
-	setAttr ".phl[254]" 0;
-	setAttr ".phl[255]" 0;
-	setAttr ".phl[256]" 0;
-	setAttr ".phl[257]" 0;
-	setAttr ".phl[258]" 0;
-	setAttr ".phl[259]" 0;
-	setAttr ".phl[260]" 0;
-	setAttr ".phl[261]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"blob_2RN"
-		"blob_2RN" 0
-		"blob_2RN" 353
-		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "translate" " -type \"double3\" 0 0 0"
+		"blob_2RN" 290
+		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "translate" " -type \"double3\" -1.26660127063682926 5.53590127454493341 -0.041959934614836714"
 		
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "translateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "translateY" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "translateX" " -av"
-		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "rotate" " -type \"double3\" 0 0 0"
+		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "rotate" " -type \"double3\" -155.3194278995805746 10.87829597568291362 -18.3346287222613249"
 		
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "rotateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "rotateY" " -av"
@@ -44725,7 +44253,8 @@ createNode reference -n "blob_2RN";
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "scaleY" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl" "scaleX" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.41862572618598382 -0.73248093182172036 -0.2250756908190287"
+		
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
 		"translateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
@@ -44733,7 +44262,7 @@ createNode reference -n "blob_2RN";
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
 		"translateX" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 -22.85600211596287323"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
 		"rotateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
@@ -44749,7 +44278,8 @@ createNode reference -n "blob_2RN";
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl" 
 		"scaleX" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" -0.65181027566953553 0.32250336784605615 0.38722734338921105"
+		
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl" 
 		"translateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl" 
@@ -44757,7 +44287,8 @@ createNode reference -n "blob_2RN";
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl" 
 		"translateX" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 29.93368614551690499 -59.90039563793200728 -42.97194855952489689"
+		
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl" 
 		"rotateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl" 
@@ -44797,7 +44328,8 @@ createNode reference -n "blob_2RN";
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl" 
 		"scaleX" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl" 
-		"translate" " -type \"double3\" 0 0 0"
+		"translate" " -type \"double3\" 0.21828630974171831 -1.89572231389126022 1.16973950680478422"
+		
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl" 
 		"translateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl" 
@@ -44805,7 +44337,8 @@ createNode reference -n "blob_2RN";
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl" 
 		"translateX" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -16.097819025187313 2.25823027610397764 -73.9674235708409924"
+		
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl" 
 		"rotateZ" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl" 
@@ -44868,20 +44401,110 @@ createNode reference -n "blob_2RN";
 		"scaleY" " -av"
 		2 "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl" 
 		"scaleX" " -av"
-		2 "blob_2:character1" "unitlessValues" " -s 63"
+		2 "blob_2:character1" "unitlessValues" " -s 42"
 		2 "blob_2:character1" "uv[1:21]" " 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
 		
-		2 "blob_2:character1" "linearValues" " -s 63"
-		2 "blob_2:character1" "lv[1:21]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "blob_2:character1" "linearValues" " -s 42"
+		2 "blob_2:character1" "lv[1:21]" " 0 0 0 1.16973950680478422 -1.89572231389126022 0.21828630974171831 -0.2250756908190287 -0.73248093182172036 -0.41862572618598382 0.38722734338921105 0.32250336784605615 -0.65181027566953553 0 0 0 0 0 0 -0.041959934614836714 5.53590127454493341 -1.26660127063682926"
 		
-		2 "blob_2:character1" "angularValues" " -s 63"
-		2 "blob_2:character1" "av[1:21]" " 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+		2 "blob_2:character1" "angularValues" " -s 42"
+		2 "blob_2:character1" "av[1:21]" " 0 0 0 -73.9674235708409924 2.25823027610397764 -16.097819025187313 -22.85600211596287323 0 0 -42.97194855952489689 -59.90039563793200728 29.93368614551690499 0 0 0 0 0 0 -18.3346287222613249 10.87829597568291362 -155.3194278995805746"
 		
-		2 "blob_2:character1" "referenceMapping" (" -type \"characterMapping\" 63 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleZ\" 0 63 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleY\" 0 62 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleX\" 0 61 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateZ\" 2 63 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateY\" 2 62 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateX\" 2 61 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateZ\" 1 72 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateY\" 1 71 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateX\" 1 70 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleZ\" 0 48 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleY\" 0 47 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleX\" 0 46 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateZ\" 2 48 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateY\" 2 47 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateX\" 2 46 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateZ\" 1 57 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateY\" 1 56 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateX\" 1 55 \"blob_2:ctrl_1_zero|blob_2:ct"
-		+ "rl_1_ctl.scaleZ\" 0 54 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleY\" 0 53 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleX\" 0 52 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateZ\" 2 54 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateY\" 2 53 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateX\" 2 52 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateZ\" 1 63 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateY\" 1 62 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateX\" 1 61 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleZ\" 0 57 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleY\" 0 56 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleX\" 0 55 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateZ\" 2 57 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateY\" 2 56 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateX\" 2 55 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateZ\" 1 66 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateY\" 1 65 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateX\" 1 64 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleZ\" 0 51 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scale"
-		+ "Y\" 0 50 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleX\" 0 49 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateZ\" 2 51 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateY\" 2 50 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateX\" 2 49 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateZ\" 1 60 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateY\" 1 59 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateX\" 1 58 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleZ\" 0 45 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleY\" 0 44 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleX\" 0 43 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateZ\" 2 45 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateY\" 2 44 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateX\" 2 43 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateZ\" 1 54 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateY\" 1 53 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateX\" 1 52 \"blob_2:root_ctrl.scaleZ\" 0 60 \"blob_2:root_ctrl.scaleY\" 0 59 \"blob_2:root_ctrl.scaleX\" 0 58 \"blob_2:root_ctrl.rotateZ\" 2 60 \"blob_2:root_ctrl.rotateY\" 2 "
-		+ "59 \"blob_2:root_ctrl.rotateX\" 2 58 \"blob_2:root_ctrl.translateZ\" 1 69 \"blob_2:root_ctrl.translateY\" 1 68 \"blob_2:root_ctrl.translateX\" 1 67"
+		2 "blob_2:character1" "referenceMapping" (" -type \"characterMapping\" 63 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleZ\" 0 1 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleY\" 0 2 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleX\" 0 3 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateZ\" 2 1 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateY\" 2 2 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.rotateX\" 2 3 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateZ\" 1 1 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateY\" 1 2 \"blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.translateX\" 1 3 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleZ\" 0 4 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleY\" 0 5 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleX\" 0 6 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateZ\" 2 4 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateY\" 2 5 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateX\" 2 6 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateZ\" 1 4 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateY\" 1 5 \"blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateX\" 1 6 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleZ\" 0"
+		+ " 7 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleY\" 0 8 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleX\" 0 9 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateZ\" 2 7 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateY\" 2 8 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateX\" 2 9 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateZ\" 1 7 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateY\" 1 8 \"blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateX\" 1 9 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleZ\" 0 10 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleY\" 0 11 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleX\" 0 12 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateZ\" 2 10 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateY\" 2 11 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateX\" 2 12 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateZ\" 1 10 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateY\" 1 11 \"blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateX\" 1 12 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleZ\" 0 13 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleY\" 0 14 \"blob_2:ctrl_1_zero"
+		+ "2|blob_2:ctrl_1_ctl.scaleX\" 0 15 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateZ\" 2 13 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateY\" 2 14 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateX\" 2 15 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateZ\" 1 13 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateY\" 1 14 \"blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateX\" 1 15 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleZ\" 0 16 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleY\" 0 17 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.scaleX\" 0 18 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateZ\" 2 16 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateY\" 2 17 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.rotateX\" 2 18 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateZ\" 1 16 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateY\" 1 17 \"blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateX\" 1 18 \"blob_2:root_ctrl.scaleZ\" 0 19 \"blob_2:root_ctrl.scaleY\" 0 20 \"blob_2:root_ctrl.scaleX\" 0 21 \"blob_2:root_ctrl.rotateZ\" 2 19 \"blob_2:root_ctrl.rotateY\" 2 20 \"blob_2:root_ctrl.rotate"
+		+ "X\" 2 21 \"blob_2:root_ctrl.translateZ\" 1 19 \"blob_2:root_ctrl.translateY\" 1 20 \"blob_2:root_ctrl.translateX\" 1 21"
 		)
+		3 "blob_2:character1.linearValues[21]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.translateX" 
+		""
+		3 "blob_2:character1.linearValues[20]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.translateY" 
+		""
+		3 "blob_2:character1.linearValues[19]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.translateZ" 
+		""
+		3 "blob_2:character1.angularValues[21]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.rotateX" 
+		""
+		3 "blob_2:character1.angularValues[20]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.rotateY" 
+		""
+		3 "blob_2:character1.angularValues[19]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.rotateZ" 
+		""
+		3 "blob_2:character1.unitlessValues[21]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.scaleX" 
+		""
+		3 "blob_2:character1.unitlessValues[20]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.scaleY" 
+		""
+		3 "blob_2:character1.unitlessValues[19]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.scaleZ" 
+		""
+		3 "blob_2:character1.linearValues[9]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_2:character1.linearValues[8]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_2:character1.linearValues[7]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_2:character1.angularValues[9]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_2:character1.angularValues[8]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_2:character1.angularValues[7]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_2:character1.unitlessValues[9]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_2:character1.unitlessValues[8]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_2:character1.unitlessValues[7]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_2:character1.linearValues[12]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_2:character1.linearValues[11]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_2:character1.linearValues[10]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_2:character1.angularValues[12]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_2:character1.angularValues[11]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_2:character1.angularValues[10]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_2:character1.unitlessValues[12]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_2:character1.unitlessValues[11]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_2:character1.unitlessValues[10]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_2:character1.linearValues[15]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_2:character1.linearValues[14]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_2:character1.linearValues[13]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_2:character1.angularValues[15]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_2:character1.angularValues[14]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_2:character1.angularValues[13]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_2:character1.unitlessValues[15]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_2:character1.unitlessValues[14]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_2:character1.unitlessValues[13]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_2:character1.linearValues[6]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_2:character1.linearValues[5]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_2:character1.linearValues[4]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_2:character1.angularValues[6]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_2:character1.angularValues[5]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_2:character1.angularValues[4]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_2:character1.unitlessValues[6]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_2:character1.unitlessValues[5]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_2:character1.unitlessValues[4]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleZ" 
+		""
 		3 "blob_2:character1.linearValues[18]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateX" 
 		""
 		3 "blob_2:character1.linearValues[17]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero4|blob_2:ctrl_1_ctl.translateY" 
@@ -44918,97 +44541,7 @@ createNode reference -n "blob_2RN";
 		""
 		3 "blob_2:character1.unitlessValues[1]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero5|blob_2:ctrl_1_ctl.scaleZ" 
 		""
-		3 "blob_2:character1.linearValues[6]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_2:character1.linearValues[5]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_2:character1.linearValues[4]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_2:character1.angularValues[6]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_2:character1.angularValues[5]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_2:character1.angularValues[4]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_2:character1.unitlessValues[6]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_2:character1.unitlessValues[5]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_2:character1.unitlessValues[4]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero3|blob_2:ctrl_1_ctl.scaleZ" 
-		""
-		3 "blob_2:character1.linearValues[12]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_2:character1.linearValues[11]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_2:character1.linearValues[10]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_2:character1.angularValues[12]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_2:character1.angularValues[11]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_2:character1.angularValues[10]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_2:character1.unitlessValues[12]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_2:character1.unitlessValues[11]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_2:character1.unitlessValues[10]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero1|blob_2:ctrl_1_ctl.scaleZ" 
-		""
-		3 "blob_2:character1.linearValues[21]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.translateX" 
-		""
-		3 "blob_2:character1.linearValues[20]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.translateY" 
-		""
-		3 "blob_2:character1.linearValues[19]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.translateZ" 
-		""
-		3 "blob_2:character1.angularValues[21]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.rotateX" 
-		""
-		3 "blob_2:character1.angularValues[20]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.rotateY" 
-		""
-		3 "blob_2:character1.angularValues[19]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.rotateZ" 
-		""
-		3 "blob_2:character1.unitlessValues[21]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.scaleX" 
-		""
-		3 "blob_2:character1.unitlessValues[20]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.scaleY" 
-		""
-		3 "blob_2:character1.unitlessValues[19]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.scaleZ" 
-		""
-		3 "blob_2:character1.linearValues[15]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_2:character1.linearValues[14]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_2:character1.linearValues[13]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_2:character1.angularValues[15]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_2:character1.angularValues[14]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_2:character1.angularValues[13]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_2:character1.unitlessValues[15]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_2:character1.unitlessValues[14]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_2:character1.unitlessValues[13]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero2|blob_2:ctrl_1_ctl.scaleZ" 
-		""
 		3 "blob_2:character1.partition" ":characterPartition.sets" "-na"
-		3 "blob_2:character1.linearValues[9]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_2:character1.linearValues[8]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_2:character1.linearValues[7]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_2:character1.angularValues[9]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_2:character1.angularValues[8]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_2:character1.angularValues[7]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_2:character1.unitlessValues[9]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_2:character1.unitlessValues[8]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_2:character1.unitlessValues[7]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl|blob_2:sub|blob_2:ctrl_1_zero|blob_2:ctrl_1_ctl.scaleZ" 
-		""
 		5 0 "blob_2RN" "blob_2:character1.angularValues[19]" "|blob_2:asset|blob_2:controls|blob_2:root_ctrl.rotateZ" 
 		"blob_2RN.placeHolderList[1]" "blob_2RN.placeHolderList[2]" "blob_2:root_ctrl.rz"
 		
@@ -45256,223 +44789,97 @@ createNode reference -n "blob_2RN";
 		""
 		5 4 "blob_2RN" "blob_2:character1.angularValues[21]" "blob_2RN.placeHolderList[155]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[43]" "blob_2RN.placeHolderList[156]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[1]" "blob_2RN.placeHolderList[156]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[44]" "blob_2RN.placeHolderList[157]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[2]" "blob_2RN.placeHolderList[157]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[45]" "blob_2RN.placeHolderList[158]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[3]" "blob_2RN.placeHolderList[158]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[46]" "blob_2RN.placeHolderList[159]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[4]" "blob_2RN.placeHolderList[159]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[47]" "blob_2RN.placeHolderList[160]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[5]" "blob_2RN.placeHolderList[160]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[48]" "blob_2RN.placeHolderList[161]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[6]" "blob_2RN.placeHolderList[161]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[49]" "blob_2RN.placeHolderList[162]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[7]" "blob_2RN.placeHolderList[162]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[50]" "blob_2RN.placeHolderList[163]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[8]" "blob_2RN.placeHolderList[163]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[51]" "blob_2RN.placeHolderList[164]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[9]" "blob_2RN.placeHolderList[164]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[52]" "blob_2RN.placeHolderList[165]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[10]" "blob_2RN.placeHolderList[165]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[53]" "blob_2RN.placeHolderList[166]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[11]" "blob_2RN.placeHolderList[166]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[54]" "blob_2RN.placeHolderList[167]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[12]" "blob_2RN.placeHolderList[167]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[55]" "blob_2RN.placeHolderList[168]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[13]" "blob_2RN.placeHolderList[168]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[56]" "blob_2RN.placeHolderList[169]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[14]" "blob_2RN.placeHolderList[169]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[57]" "blob_2RN.placeHolderList[170]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[15]" "blob_2RN.placeHolderList[170]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[58]" "blob_2RN.placeHolderList[171]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[16]" "blob_2RN.placeHolderList[171]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[59]" "blob_2RN.placeHolderList[172]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[17]" "blob_2RN.placeHolderList[172]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[60]" "blob_2RN.placeHolderList[173]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[18]" "blob_2RN.placeHolderList[173]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[61]" "blob_2RN.placeHolderList[174]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[19]" "blob_2RN.placeHolderList[174]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[62]" "blob_2RN.placeHolderList[175]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[20]" "blob_2RN.placeHolderList[175]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.angularValues[63]" "blob_2RN.placeHolderList[176]" 
+		5 4 "blob_2RN" "blob_2:character1.linearValues[21]" "blob_2RN.placeHolderList[176]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[1]" "blob_2RN.placeHolderList[177]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[1]" "blob_2RN.placeHolderList[177]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[2]" "blob_2RN.placeHolderList[178]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[2]" "blob_2RN.placeHolderList[178]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[3]" "blob_2RN.placeHolderList[179]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[3]" "blob_2RN.placeHolderList[179]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[4]" "blob_2RN.placeHolderList[180]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[4]" "blob_2RN.placeHolderList[180]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[5]" "blob_2RN.placeHolderList[181]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[5]" "blob_2RN.placeHolderList[181]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[6]" "blob_2RN.placeHolderList[182]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[6]" "blob_2RN.placeHolderList[182]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[7]" "blob_2RN.placeHolderList[183]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[7]" "blob_2RN.placeHolderList[183]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[8]" "blob_2RN.placeHolderList[184]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[8]" "blob_2RN.placeHolderList[184]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[9]" "blob_2RN.placeHolderList[185]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[9]" "blob_2RN.placeHolderList[185]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[10]" "blob_2RN.placeHolderList[186]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[10]" "blob_2RN.placeHolderList[186]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[11]" "blob_2RN.placeHolderList[187]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[11]" "blob_2RN.placeHolderList[187]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[12]" "blob_2RN.placeHolderList[188]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[12]" "blob_2RN.placeHolderList[188]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[13]" "blob_2RN.placeHolderList[189]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[13]" "blob_2RN.placeHolderList[189]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[14]" "blob_2RN.placeHolderList[190]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[14]" "blob_2RN.placeHolderList[190]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[15]" "blob_2RN.placeHolderList[191]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[15]" "blob_2RN.placeHolderList[191]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[16]" "blob_2RN.placeHolderList[192]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[16]" "blob_2RN.placeHolderList[192]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[17]" "blob_2RN.placeHolderList[193]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[17]" "blob_2RN.placeHolderList[193]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[18]" "blob_2RN.placeHolderList[194]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[18]" "blob_2RN.placeHolderList[194]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[19]" "blob_2RN.placeHolderList[195]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[19]" "blob_2RN.placeHolderList[195]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[20]" "blob_2RN.placeHolderList[196]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[20]" "blob_2RN.placeHolderList[196]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[21]" "blob_2RN.placeHolderList[197]" 
+		5 4 "blob_2RN" "blob_2:character1.unitlessValues[21]" "blob_2RN.placeHolderList[197]" 
 		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[52]" "blob_2RN.placeHolderList[198]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[53]" "blob_2RN.placeHolderList[199]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[54]" "blob_2RN.placeHolderList[200]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[55]" "blob_2RN.placeHolderList[201]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[56]" "blob_2RN.placeHolderList[202]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[57]" "blob_2RN.placeHolderList[203]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[58]" "blob_2RN.placeHolderList[204]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[59]" "blob_2RN.placeHolderList[205]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[60]" "blob_2RN.placeHolderList[206]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[61]" "blob_2RN.placeHolderList[207]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[62]" "blob_2RN.placeHolderList[208]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[63]" "blob_2RN.placeHolderList[209]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[64]" "blob_2RN.placeHolderList[210]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[65]" "blob_2RN.placeHolderList[211]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[66]" "blob_2RN.placeHolderList[212]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[67]" "blob_2RN.placeHolderList[213]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[68]" "blob_2RN.placeHolderList[214]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[69]" "blob_2RN.placeHolderList[215]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[70]" "blob_2RN.placeHolderList[216]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[71]" "blob_2RN.placeHolderList[217]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.linearValues[72]" "blob_2RN.placeHolderList[218]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[1]" "blob_2RN.placeHolderList[219]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[2]" "blob_2RN.placeHolderList[220]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[3]" "blob_2RN.placeHolderList[221]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[4]" "blob_2RN.placeHolderList[222]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[5]" "blob_2RN.placeHolderList[223]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[6]" "blob_2RN.placeHolderList[224]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[7]" "blob_2RN.placeHolderList[225]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[8]" "blob_2RN.placeHolderList[226]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[9]" "blob_2RN.placeHolderList[227]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[10]" "blob_2RN.placeHolderList[228]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[11]" "blob_2RN.placeHolderList[229]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[12]" "blob_2RN.placeHolderList[230]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[13]" "blob_2RN.placeHolderList[231]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[14]" "blob_2RN.placeHolderList[232]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[15]" "blob_2RN.placeHolderList[233]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[16]" "blob_2RN.placeHolderList[234]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[17]" "blob_2RN.placeHolderList[235]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[18]" "blob_2RN.placeHolderList[236]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[19]" "blob_2RN.placeHolderList[237]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[20]" "blob_2RN.placeHolderList[238]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[21]" "blob_2RN.placeHolderList[239]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[43]" "blob_2RN.placeHolderList[240]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[44]" "blob_2RN.placeHolderList[241]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[45]" "blob_2RN.placeHolderList[242]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[46]" "blob_2RN.placeHolderList[243]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[47]" "blob_2RN.placeHolderList[244]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[48]" "blob_2RN.placeHolderList[245]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[49]" "blob_2RN.placeHolderList[246]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[50]" "blob_2RN.placeHolderList[247]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[51]" "blob_2RN.placeHolderList[248]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[52]" "blob_2RN.placeHolderList[249]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[53]" "blob_2RN.placeHolderList[250]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[54]" "blob_2RN.placeHolderList[251]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[55]" "blob_2RN.placeHolderList[252]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[56]" "blob_2RN.placeHolderList[253]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[57]" "blob_2RN.placeHolderList[254]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[58]" "blob_2RN.placeHolderList[255]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[59]" "blob_2RN.placeHolderList[256]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[60]" "blob_2RN.placeHolderList[257]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[61]" "blob_2RN.placeHolderList[258]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[62]" "blob_2RN.placeHolderList[259]" 
-		""
-		5 4 "blob_2RN" "blob_2:character1.unitlessValues[63]" "blob_2RN.placeHolderList[260]" 
-		""
-		5 3 "blob_2RN" "blob_2:character1.message" "blob_2RN.placeHolderList[261]" 
+		5 3 "blob_2RN" "blob_2:character1.message" "blob_2RN.placeHolderList[198]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "blob_3RN";
 	rename -uid "DAF91119-4E43-E423-4AF5-0FA44DFA6FD7";
-	setAttr -s 322 ".phl";
+	setAttr -s 260 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -45733,72 +45140,12 @@ createNode reference -n "blob_3RN";
 	setAttr ".phl[258]" 0;
 	setAttr ".phl[259]" 0;
 	setAttr ".phl[260]" 0;
-	setAttr ".phl[261]" 0;
-	setAttr ".phl[262]" 0;
-	setAttr ".phl[263]" 0;
-	setAttr ".phl[264]" 0;
-	setAttr ".phl[265]" 0;
-	setAttr ".phl[266]" 0;
-	setAttr ".phl[267]" 0;
-	setAttr ".phl[268]" 0;
-	setAttr ".phl[269]" 0;
-	setAttr ".phl[270]" 0;
-	setAttr ".phl[271]" 0;
-	setAttr ".phl[272]" 0;
-	setAttr ".phl[273]" 0;
-	setAttr ".phl[274]" 0;
-	setAttr ".phl[275]" 0;
-	setAttr ".phl[276]" 0;
-	setAttr ".phl[277]" 0;
-	setAttr ".phl[278]" 0;
-	setAttr ".phl[279]" 0;
-	setAttr ".phl[280]" 0;
-	setAttr ".phl[281]" 0;
-	setAttr ".phl[282]" 0;
-	setAttr ".phl[283]" 0;
-	setAttr ".phl[284]" 0;
-	setAttr ".phl[285]" 0;
-	setAttr ".phl[286]" 0;
-	setAttr ".phl[287]" 0;
-	setAttr ".phl[288]" 0;
-	setAttr ".phl[289]" 0;
-	setAttr ".phl[290]" 0;
-	setAttr ".phl[291]" 0;
-	setAttr ".phl[292]" 0;
-	setAttr ".phl[293]" 0;
-	setAttr ".phl[294]" 0;
-	setAttr ".phl[295]" 0;
-	setAttr ".phl[296]" 0;
-	setAttr ".phl[297]" 0;
-	setAttr ".phl[298]" 0;
-	setAttr ".phl[299]" 0;
-	setAttr ".phl[300]" 0;
-	setAttr ".phl[301]" 0;
-	setAttr ".phl[302]" 0;
-	setAttr ".phl[303]" 0;
-	setAttr ".phl[304]" 0;
-	setAttr ".phl[305]" 0;
-	setAttr ".phl[306]" 0;
-	setAttr ".phl[307]" 0;
-	setAttr ".phl[308]" 0;
-	setAttr ".phl[309]" 0;
-	setAttr ".phl[310]" 0;
-	setAttr ".phl[311]" 0;
-	setAttr ".phl[312]" 0;
-	setAttr ".phl[313]" 0;
-	setAttr ".phl[314]" 0;
-	setAttr ".phl[315]" 0;
-	setAttr ".phl[316]" 0;
-	setAttr ".phl[317]" 0;
-	setAttr ".phl[318]" 0;
-	setAttr ".phl[319]" 0;
-	setAttr ".phl[320]" 0;
-	setAttr ".phl[321]" 0;
-	setAttr ".phl[322]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"blob_3RN"
-		"blob_3RN" 0
-		"blob_3RN" 542
+		"blob_3RN" 1
+		2 "blob_3:character1" "attributeAliasList" " -type \"attributeAlias\" root_ctrl_rotateZ"
+		
+		"blob_3RN" 479
 		2 "|blob_3:asset|blob_3:controls|blob_3:root_ctrl" "translate" " -type \"double3\" -4.30804115178374225 7.33306794655572514 2.67522833108081359"
 		
 		2 "|blob_3:asset|blob_3:controls|blob_3:root_ctrl" "translateZ" " -av"
@@ -45961,58 +45308,52 @@ createNode reference -n "blob_3RN";
 		"scaleY" " -av"
 		2 "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl" 
 		"scaleX" " -av"
-		2 "blob_3:character1" "unitlessValues" " -s 42"
+		2 "blob_3:character1" "unitlessValues" " -s 22"
 		2 "blob_3:character1" "uv[1:21]" " 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.56327046534164515 0.56327046534164515 0.56327046534164515"
 		
 		2 "blob_3:character1" "unitlessValues[66]" " 1"
-		2 "blob_3:character1" "linearValues" " -s 42"
-		2 "blob_3:character1" "lv[1:21]" " -0.026636592724943765 0 -0.50827902751350429 -0.026636592724943765 0 -0.73858184799843762 0.41594608096020258 -0.84514245575497848 -0.58351308061030216 -0.026636592724943765 0 -0.079724354522295648 -0.71752656089281963 -0.717820656799385 -0.15828629959458496 0.9159057650744149 -1.85251317536388704 0 2.67522833108081359 7.33306794655572514 -4.30804115178374225"
+		2 "blob_3:character1" "lv[1:21]" " -s 21 -0.026636592724943765 0 -0.50827902751350429 -0.026636592724943765 0 -0.73858184799843762 0.41594608096020258 -0.84514245575497848 -0.58351308061030216 -0.026636592724943765 0 -0.079724354522295648 -0.71752656089281963 -0.717820656799385 -0.15828629959458496 0.9159057650744149 -1.85251317536388704 0 2.67522833108081359 7.33306794655572514 -4.30804115178374225"
 		
-		2 "blob_3:character1" "angularValues" " -s 42"
-		2 "blob_3:character1" "av[1:21]" " 0 0 0 0 0 0 -11.01175511212961844 -19.57684862191274178 19.82898054773518481 0 0 0 0 0 0 0 0 0 1.26947233595742159 -55.92222829097273262 20.88722636462740923"
+		2 "blob_3:character1" "linearValues" " -s 21"
+		2 "blob_3:character1" "av[1:21]" " -s 21 0 0 0 0 0 0 -11.01175511212961844 -19.57684862191274178 19.82898054773518481 0 0 0 0 0 0 0 0 0 1.26947233595742159 -55.92222829097273262 20.88722636462740923"
 		
-		2 "blob_3:character1" "referenceMapping" (" -type \"characterMapping\" 63 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleZ\" 0 69 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleY\" 0 68 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleX\" 0 67 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateZ\" 2 69 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateY\" 2 68 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateX\" 2 67 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateZ\" 1 78 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateY\" 1 77 \"blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateX\" 1 76 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleZ\" 0 66 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleY\" 0 65 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleX\" 0 64 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateZ\" 2 66 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateY\" 2 65 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateX\" 2 64 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateZ\" 1 75 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateY\" 1 74 \"blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateX\" 1 73 \"blob_3:ctrl_1_zero|blob_3:ct"
-		+ "rl_1_ctl.scaleZ\" 0 84 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleY\" 0 83 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleX\" 0 82 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateZ\" 2 84 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateY\" 2 83 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateX\" 2 82 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateZ\" 1 93 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateY\" 1 92 \"blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateX\" 1 91 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleZ\" 0 72 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleY\" 0 71 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleX\" 0 70 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateZ\" 2 72 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateY\" 2 71 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateX\" 2 70 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateZ\" 1 81 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateY\" 1 80 \"blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateX\" 1 79 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleZ\" 0 78 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scale"
-		+ "Y\" 0 77 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleX\" 0 76 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateZ\" 2 78 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateY\" 2 77 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateX\" 2 76 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateZ\" 1 87 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateY\" 1 86 \"blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateX\" 1 85 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleZ\" 0 75 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleY\" 0 74 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleX\" 0 73 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateZ\" 2 75 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateY\" 2 74 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateX\" 2 73 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateZ\" 1 84 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateY\" 1 83 \"blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateX\" 1 82 \"blob_3:root_ctrl.scaleZ\" 0 81 \"blob_3:root_ctrl.scaleY\" 0 80 \"blob_3:root_ctrl.scaleX\" 0 79 \"blob_3:root_ctrl.rotateZ\" 2 81 \"blob_3:root_ctrl.rotateY\" 2 "
-		+ "80 \"blob_3:root_ctrl.rotateX\" 2 79 \"blob_3:root_ctrl.translateZ\" 1 90 \"blob_3:root_ctrl.translateY\" 1 89 \"blob_3:root_ctrl.translateX\" 1 88"
-		)
-		2 "blob_3:character1" "attributeAliasList" " -type \"attributeAlias\" root_ctrl_rotateZ"
-		
-		3 "blob_3:character1.linearValues[15]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateX" 
+		2 "blob_3:character1" "angularValues" " -s 21"
+		2 "blob_3:character1" "referenceMapping" " -type \"characterMapping\" 0"
+		3 "blob_3:character1.linearValues[18]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateX" 
 		""
-		3 "blob_3:character1.linearValues[14]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateY" 
+		3 "blob_3:character1.linearValues[17]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateY" 
 		""
-		3 "blob_3:character1.linearValues[13]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateZ" 
+		3 "blob_3:character1.linearValues[16]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateZ" 
 		""
-		3 "blob_3:character1.angularValues[15]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateX" 
+		3 "blob_3:character1.angularValues[18]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateX" 
 		""
-		3 "blob_3:character1.angularValues[14]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateY" 
+		3 "blob_3:character1.angularValues[17]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateY" 
 		""
-		3 "blob_3:character1.angularValues[13]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateZ" 
+		3 "blob_3:character1.angularValues[16]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateZ" 
 		""
-		3 "blob_3:character1.unitlessValues[15]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleX" 
+		3 "blob_3:character1.unitlessValues[18]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleX" 
 		""
-		3 "blob_3:character1.unitlessValues[14]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleY" 
+		3 "blob_3:character1.unitlessValues[17]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleY" 
 		""
-		3 "blob_3:character1.unitlessValues[13]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleZ" 
+		3 "blob_3:character1.unitlessValues[16]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleZ" 
 		""
-		3 "blob_3:character1.linearValues[12]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateX" 
+		3 "blob_3:character1.linearValues[3]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateX" 
 		""
-		3 "blob_3:character1.linearValues[11]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateY" 
+		3 "blob_3:character1.linearValues[2]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateY" 
 		""
-		3 "blob_3:character1.linearValues[10]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateZ" 
+		3 "blob_3:character1.linearValues[1]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateZ" 
 		""
-		3 "blob_3:character1.angularValues[12]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateX" 
+		3 "blob_3:character1.angularValues[3]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateX" 
 		""
-		3 "blob_3:character1.angularValues[11]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateY" 
+		3 "blob_3:character1.angularValues[2]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateY" 
 		""
-		3 "blob_3:character1.angularValues[10]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateZ" 
+		3 "blob_3:character1.angularValues[1]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateZ" 
 		""
-		3 "blob_3:character1.unitlessValues[12]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleX" 
+		3 "blob_3:character1.unitlessValues[3]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleX" 
 		""
-		3 "blob_3:character1.unitlessValues[11]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleY" 
+		3 "blob_3:character1.unitlessValues[2]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleY" 
 		""
-		3 "blob_3:character1.unitlessValues[10]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleZ" 
+		3 "blob_3:character1.unitlessValues[1]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleZ" 
 		""
 		3 "blob_3:character1.linearValues[21]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl.translateX" 
 		""
@@ -46031,24 +45372,6 @@ createNode reference -n "blob_3RN";
 		3 "blob_3:character1.unitlessValues[20]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl.scaleY" 
 		""
 		3 "blob_3:character1.unitlessValues[19]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl.scaleZ" 
-		""
-		3 "blob_3:character1.linearValues[9]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_3:character1.linearValues[8]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_3:character1.linearValues[7]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_3:character1.angularValues[9]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_3:character1.angularValues[8]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_3:character1.angularValues[7]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_3:character1.unitlessValues[9]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_3:character1.unitlessValues[8]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_3:character1.unitlessValues[7]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleZ" 
 		""
 		3 "blob_3:character1.partition" ":characterPartition.sets" "-na"
 		3 "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleZ" 
@@ -46177,23 +45500,59 @@ createNode reference -n "blob_3RN";
 		"blob_3:character1.dnSetMembers" "-na"
 		3 "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateX" 
 		"blob_3:character1.dnSetMembers" "-na"
-		3 "blob_3:character1.linearValues[3]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateX" 
+		3 "blob_3:character1.linearValues[12]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateX" 
 		""
-		3 "blob_3:character1.linearValues[2]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateY" 
+		3 "blob_3:character1.linearValues[11]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateY" 
 		""
-		3 "blob_3:character1.linearValues[1]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateZ" 
+		3 "blob_3:character1.linearValues[10]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateZ" 
 		""
-		3 "blob_3:character1.angularValues[3]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateX" 
+		3 "blob_3:character1.angularValues[12]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateX" 
 		""
-		3 "blob_3:character1.angularValues[2]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateY" 
+		3 "blob_3:character1.angularValues[11]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateY" 
 		""
-		3 "blob_3:character1.angularValues[1]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateZ" 
+		3 "blob_3:character1.angularValues[10]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateZ" 
 		""
-		3 "blob_3:character1.unitlessValues[3]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleX" 
+		3 "blob_3:character1.unitlessValues[12]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleX" 
 		""
-		3 "blob_3:character1.unitlessValues[2]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleY" 
+		3 "blob_3:character1.unitlessValues[11]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleY" 
 		""
-		3 "blob_3:character1.unitlessValues[1]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleZ" 
+		3 "blob_3:character1.unitlessValues[10]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_3:character1.linearValues[9]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_3:character1.linearValues[8]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_3:character1.linearValues[7]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_3:character1.angularValues[9]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_3:character1.angularValues[8]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_3:character1.angularValues[7]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_3:character1.unitlessValues[9]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_3:character1.unitlessValues[8]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_3:character1.unitlessValues[7]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleZ" 
+		""
+		3 "blob_3:character1.linearValues[15]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateX" 
+		""
+		3 "blob_3:character1.linearValues[14]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateY" 
+		""
+		3 "blob_3:character1.linearValues[13]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateZ" 
+		""
+		3 "blob_3:character1.angularValues[15]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateX" 
+		""
+		3 "blob_3:character1.angularValues[14]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateY" 
+		""
+		3 "blob_3:character1.angularValues[13]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateZ" 
+		""
+		3 "blob_3:character1.unitlessValues[15]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleX" 
+		""
+		3 "blob_3:character1.unitlessValues[14]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleY" 
+		""
+		3 "blob_3:character1.unitlessValues[13]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleZ" 
 		""
 		3 "blob_3:character1.linearValues[6]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateX" 
 		""
@@ -46212,24 +45571,6 @@ createNode reference -n "blob_3RN";
 		3 "blob_3:character1.unitlessValues[5]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleY" 
 		""
 		3 "blob_3:character1.unitlessValues[4]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleZ" 
-		""
-		3 "blob_3:character1.linearValues[18]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateX" 
-		""
-		3 "blob_3:character1.linearValues[17]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateY" 
-		""
-		3 "blob_3:character1.linearValues[16]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateZ" 
-		""
-		3 "blob_3:character1.angularValues[18]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateX" 
-		""
-		3 "blob_3:character1.angularValues[17]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateY" 
-		""
-		3 "blob_3:character1.angularValues[16]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateZ" 
-		""
-		3 "blob_3:character1.unitlessValues[18]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleX" 
-		""
-		3 "blob_3:character1.unitlessValues[17]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleY" 
-		""
-		3 "blob_3:character1.unitlessValues[16]" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleZ" 
 		""
 		5 3 "blob_3RN" "|blob_3:asset|blob_3:controls|blob_3:root_ctrl.rotateZ" 
 		"blob_3RN.placeHolderList[1]" "blob_3:character1.dnsm"
@@ -46599,335 +45940,211 @@ createNode reference -n "blob_3RN";
 		"blob_3:root_ctrl.rx"
 		5 4 "blob_3RN" "blob_3:character1.angularValues[21]" "blob_3RN.placeHolderList[175]" 
 		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[64]" "blob_3RN.placeHolderList[176]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[65]" "blob_3RN.placeHolderList[177]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[66]" "blob_3RN.placeHolderList[178]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[67]" "blob_3RN.placeHolderList[179]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[68]" "blob_3RN.placeHolderList[180]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[69]" "blob_3RN.placeHolderList[181]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[70]" "blob_3RN.placeHolderList[182]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[71]" "blob_3RN.placeHolderList[183]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[72]" "blob_3RN.placeHolderList[184]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[73]" "blob_3RN.placeHolderList[185]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[74]" "blob_3RN.placeHolderList[186]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[75]" "blob_3RN.placeHolderList[187]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[76]" "blob_3RN.placeHolderList[188]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[77]" "blob_3RN.placeHolderList[189]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[78]" "blob_3RN.placeHolderList[190]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[79]" "blob_3RN.placeHolderList[191]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[80]" "blob_3RN.placeHolderList[192]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[81]" "blob_3RN.placeHolderList[193]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[82]" "blob_3RN.placeHolderList[194]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[83]" "blob_3RN.placeHolderList[195]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.angularValues[84]" "blob_3RN.placeHolderList[196]" 
-		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[1]" "blob_3RN.placeHolderList[197]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[1]" "blob_3RN.placeHolderList[176]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.tz"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[1]" "blob_3RN.placeHolderList[198]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[1]" "blob_3RN.placeHolderList[177]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[2]" "blob_3RN.placeHolderList[199]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[2]" "blob_3RN.placeHolderList[178]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.ty"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[2]" "blob_3RN.placeHolderList[200]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[2]" "blob_3RN.placeHolderList[179]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[3]" "blob_3RN.placeHolderList[201]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[3]" "blob_3RN.placeHolderList[180]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.tx"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[3]" "blob_3RN.placeHolderList[202]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[3]" "blob_3RN.placeHolderList[181]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[4]" "blob_3RN.placeHolderList[203]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[4]" "blob_3RN.placeHolderList[182]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.tz"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[4]" "blob_3RN.placeHolderList[204]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[4]" "blob_3RN.placeHolderList[183]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[5]" "blob_3RN.placeHolderList[205]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[5]" "blob_3RN.placeHolderList[184]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.ty"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[5]" "blob_3RN.placeHolderList[206]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[5]" "blob_3RN.placeHolderList[185]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[6]" "blob_3RN.placeHolderList[207]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[6]" "blob_3RN.placeHolderList[186]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.tx"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[6]" "blob_3RN.placeHolderList[208]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[6]" "blob_3RN.placeHolderList[187]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[7]" "blob_3RN.placeHolderList[209]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[7]" "blob_3RN.placeHolderList[188]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.tz"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[7]" "blob_3RN.placeHolderList[210]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[7]" "blob_3RN.placeHolderList[189]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[8]" "blob_3RN.placeHolderList[211]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[8]" "blob_3RN.placeHolderList[190]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.ty"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[8]" "blob_3RN.placeHolderList[212]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[8]" "blob_3RN.placeHolderList[191]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[9]" "blob_3RN.placeHolderList[213]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[9]" "blob_3RN.placeHolderList[192]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.tx"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[9]" "blob_3RN.placeHolderList[214]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[9]" "blob_3RN.placeHolderList[193]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[10]" "blob_3RN.placeHolderList[215]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[10]" "blob_3RN.placeHolderList[194]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.tz"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[10]" "blob_3RN.placeHolderList[216]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[10]" "blob_3RN.placeHolderList[195]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[11]" "blob_3RN.placeHolderList[217]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[11]" "blob_3RN.placeHolderList[196]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.ty"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[11]" "blob_3RN.placeHolderList[218]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[11]" "blob_3RN.placeHolderList[197]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[12]" "blob_3RN.placeHolderList[219]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[12]" "blob_3RN.placeHolderList[198]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.tx"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[12]" "blob_3RN.placeHolderList[220]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[12]" "blob_3RN.placeHolderList[199]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[13]" "blob_3RN.placeHolderList[221]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[13]" "blob_3RN.placeHolderList[200]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.tz"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[13]" "blob_3RN.placeHolderList[222]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[13]" "blob_3RN.placeHolderList[201]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[14]" "blob_3RN.placeHolderList[223]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[14]" "blob_3RN.placeHolderList[202]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.ty"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[14]" "blob_3RN.placeHolderList[224]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[14]" "blob_3RN.placeHolderList[203]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[15]" "blob_3RN.placeHolderList[225]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[15]" "blob_3RN.placeHolderList[204]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.tx"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[15]" "blob_3RN.placeHolderList[226]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[15]" "blob_3RN.placeHolderList[205]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[16]" "blob_3RN.placeHolderList[227]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[16]" "blob_3RN.placeHolderList[206]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.tz"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[16]" "blob_3RN.placeHolderList[228]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[16]" "blob_3RN.placeHolderList[207]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[17]" "blob_3RN.placeHolderList[229]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[17]" "blob_3RN.placeHolderList[208]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.ty"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[17]" "blob_3RN.placeHolderList[230]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[17]" "blob_3RN.placeHolderList[209]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[18]" "blob_3RN.placeHolderList[231]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[18]" "blob_3RN.placeHolderList[210]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.tx"
 		
-		5 4 "blob_3RN" "blob_3:character1.linearValues[18]" "blob_3RN.placeHolderList[232]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[18]" "blob_3RN.placeHolderList[211]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[19]" "blob_3RN.placeHolderList[233]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[19]" "blob_3RN.placeHolderList[212]" 
 		"blob_3:root_ctrl.tz"
-		5 4 "blob_3RN" "blob_3:character1.linearValues[19]" "blob_3RN.placeHolderList[234]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[19]" "blob_3RN.placeHolderList[213]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[20]" "blob_3RN.placeHolderList[235]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[20]" "blob_3RN.placeHolderList[214]" 
 		"blob_3:root_ctrl.ty"
-		5 4 "blob_3RN" "blob_3:character1.linearValues[20]" "blob_3RN.placeHolderList[236]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[20]" "blob_3RN.placeHolderList[215]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.linearValues[21]" "blob_3RN.placeHolderList[237]" 
+		5 3 "blob_3RN" "blob_3:character1.linearValues[21]" "blob_3RN.placeHolderList[216]" 
 		"blob_3:root_ctrl.tx"
-		5 4 "blob_3RN" "blob_3:character1.linearValues[21]" "blob_3RN.placeHolderList[238]" 
+		5 4 "blob_3RN" "blob_3:character1.linearValues[21]" "blob_3RN.placeHolderList[217]" 
 		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[73]" "blob_3RN.placeHolderList[239]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[74]" "blob_3RN.placeHolderList[240]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[75]" "blob_3RN.placeHolderList[241]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[76]" "blob_3RN.placeHolderList[242]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[77]" "blob_3RN.placeHolderList[243]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[78]" "blob_3RN.placeHolderList[244]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[79]" "blob_3RN.placeHolderList[245]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[80]" "blob_3RN.placeHolderList[246]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[81]" "blob_3RN.placeHolderList[247]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[82]" "blob_3RN.placeHolderList[248]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[83]" "blob_3RN.placeHolderList[249]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[84]" "blob_3RN.placeHolderList[250]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[85]" "blob_3RN.placeHolderList[251]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[86]" "blob_3RN.placeHolderList[252]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[87]" "blob_3RN.placeHolderList[253]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[88]" "blob_3RN.placeHolderList[254]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[89]" "blob_3RN.placeHolderList[255]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[90]" "blob_3RN.placeHolderList[256]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[91]" "blob_3RN.placeHolderList[257]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[92]" "blob_3RN.placeHolderList[258]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.linearValues[93]" "blob_3RN.placeHolderList[259]" 
-		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[1]" "blob_3RN.placeHolderList[260]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[1]" "blob_3RN.placeHolderList[218]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.sz"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[1]" "blob_3RN.placeHolderList[261]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[1]" "blob_3RN.placeHolderList[219]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[2]" "blob_3RN.placeHolderList[262]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[2]" "blob_3RN.placeHolderList[220]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.sy"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[2]" "blob_3RN.placeHolderList[263]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[2]" "blob_3RN.placeHolderList[221]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[3]" "blob_3RN.placeHolderList[264]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[3]" "blob_3RN.placeHolderList[222]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.sx"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[3]" "blob_3RN.placeHolderList[265]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[3]" "blob_3RN.placeHolderList[223]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[4]" "blob_3RN.placeHolderList[266]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[4]" "blob_3RN.placeHolderList[224]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.sz"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[4]" "blob_3RN.placeHolderList[267]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[4]" "blob_3RN.placeHolderList[225]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[5]" "blob_3RN.placeHolderList[268]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[5]" "blob_3RN.placeHolderList[226]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.sy"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[5]" "blob_3RN.placeHolderList[269]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[5]" "blob_3RN.placeHolderList[227]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[6]" "blob_3RN.placeHolderList[270]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[6]" "blob_3RN.placeHolderList[228]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.sx"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[6]" "blob_3RN.placeHolderList[271]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[6]" "blob_3RN.placeHolderList[229]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[7]" "blob_3RN.placeHolderList[272]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[7]" "blob_3RN.placeHolderList[230]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.sz"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[7]" "blob_3RN.placeHolderList[273]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[7]" "blob_3RN.placeHolderList[231]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[8]" "blob_3RN.placeHolderList[274]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[8]" "blob_3RN.placeHolderList[232]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.sy"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[8]" "blob_3RN.placeHolderList[275]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[8]" "blob_3RN.placeHolderList[233]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[9]" "blob_3RN.placeHolderList[276]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[9]" "blob_3RN.placeHolderList[234]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.sx"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[9]" "blob_3RN.placeHolderList[277]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[9]" "blob_3RN.placeHolderList[235]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[10]" "blob_3RN.placeHolderList[278]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[10]" "blob_3RN.placeHolderList[236]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.sz"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[10]" "blob_3RN.placeHolderList[279]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[10]" "blob_3RN.placeHolderList[237]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[11]" "blob_3RN.placeHolderList[280]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[11]" "blob_3RN.placeHolderList[238]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.sy"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[11]" "blob_3RN.placeHolderList[281]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[11]" "blob_3RN.placeHolderList[239]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[12]" "blob_3RN.placeHolderList[282]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[12]" "blob_3RN.placeHolderList[240]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.sx"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[12]" "blob_3RN.placeHolderList[283]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[12]" "blob_3RN.placeHolderList[241]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[13]" "blob_3RN.placeHolderList[284]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[13]" "blob_3RN.placeHolderList[242]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.sz"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[13]" "blob_3RN.placeHolderList[285]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[13]" "blob_3RN.placeHolderList[243]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[14]" "blob_3RN.placeHolderList[286]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[14]" "blob_3RN.placeHolderList[244]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.sy"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[14]" "blob_3RN.placeHolderList[287]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[14]" "blob_3RN.placeHolderList[245]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[15]" "blob_3RN.placeHolderList[288]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[15]" "blob_3RN.placeHolderList[246]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.sx"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[15]" "blob_3RN.placeHolderList[289]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[15]" "blob_3RN.placeHolderList[247]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[16]" "blob_3RN.placeHolderList[290]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[16]" "blob_3RN.placeHolderList[248]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.sz"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[16]" "blob_3RN.placeHolderList[291]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[16]" "blob_3RN.placeHolderList[249]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[17]" "blob_3RN.placeHolderList[292]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[17]" "blob_3RN.placeHolderList[250]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.sy"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[17]" "blob_3RN.placeHolderList[293]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[17]" "blob_3RN.placeHolderList[251]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[18]" "blob_3RN.placeHolderList[294]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[18]" "blob_3RN.placeHolderList[252]" 
 		"|blob_3:asset|blob_3:controls|blob_3:root_ctrl|blob_3:sub|blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.sx"
 		
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[18]" "blob_3RN.placeHolderList[295]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[18]" "blob_3RN.placeHolderList[253]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[19]" "blob_3RN.placeHolderList[296]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[19]" "blob_3RN.placeHolderList[254]" 
 		"blob_3:root_ctrl.sz"
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[19]" "blob_3RN.placeHolderList[297]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[19]" "blob_3RN.placeHolderList[255]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[20]" "blob_3RN.placeHolderList[298]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[20]" "blob_3RN.placeHolderList[256]" 
 		"blob_3:root_ctrl.sy"
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[20]" "blob_3RN.placeHolderList[299]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[20]" "blob_3RN.placeHolderList[257]" 
 		""
-		5 3 "blob_3RN" "blob_3:character1.unitlessValues[21]" "blob_3RN.placeHolderList[300]" 
+		5 3 "blob_3RN" "blob_3:character1.unitlessValues[21]" "blob_3RN.placeHolderList[258]" 
 		"blob_3:root_ctrl.sx"
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[21]" "blob_3RN.placeHolderList[301]" 
+		5 4 "blob_3RN" "blob_3:character1.unitlessValues[21]" "blob_3RN.placeHolderList[259]" 
 		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[64]" "blob_3RN.placeHolderList[302]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[65]" "blob_3RN.placeHolderList[303]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[67]" "blob_3RN.placeHolderList[304]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[68]" "blob_3RN.placeHolderList[305]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[69]" "blob_3RN.placeHolderList[306]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[70]" "blob_3RN.placeHolderList[307]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[71]" "blob_3RN.placeHolderList[308]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[72]" "blob_3RN.placeHolderList[309]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[73]" "blob_3RN.placeHolderList[310]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[74]" "blob_3RN.placeHolderList[311]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[75]" "blob_3RN.placeHolderList[312]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[76]" "blob_3RN.placeHolderList[313]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[77]" "blob_3RN.placeHolderList[314]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[78]" "blob_3RN.placeHolderList[315]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[79]" "blob_3RN.placeHolderList[316]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[80]" "blob_3RN.placeHolderList[317]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[81]" "blob_3RN.placeHolderList[318]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[82]" "blob_3RN.placeHolderList[319]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[83]" "blob_3RN.placeHolderList[320]" 
-		""
-		5 4 "blob_3RN" "blob_3:character1.unitlessValues[84]" "blob_3RN.placeHolderList[321]" 
-		""
-		5 3 "blob_3RN" "blob_3:character1.message" "blob_3RN.placeHolderList[322]" 
+		5 3 "blob_3RN" "blob_3:character1.message" "blob_3RN.placeHolderList[260]" 
 		"";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -50797,231 +50014,231 @@ createNode character -n "character1";
 	setAttr -s 213 ".lv";
 	setAttr -s 105 ".av";
 	setAttr -s 105 ".av";
-	setAttr ".am" -type "characterMapping" 446 "blob_1:character1.message" 4 
-		0 "blob_2:character1.message" 4 0 "blob_3:character1.message" 4 
-		0 "eye_milk_1:character1.message" 4 0 "eye_milk_2:character1.message" 
-		4 0 "Mouth:tongue_1_ctl.scaleZ" 0 1 "Mouth:tongue_1_ctl.scaleY" 
-		0 2 "Mouth:tongue_1_ctl.scaleX" 0 3 "Mouth:tongue_1_ctl.rotateZ" 
-		2 1 "Mouth:tongue_1_ctl.rotateY" 2 2 "Mouth:tongue_1_ctl.rotateX" 
-		2 3 "Mouth:tongue_1_ctl.translateZ" 1 1 "Mouth:tongue_1_ctl.translateY" 
-		1 2 "Mouth:tongue_1_ctl.translateX" 1 3 "Mouth:tongue_0_ctl.scaleZ" 
-		0 4 "Mouth:tongue_0_ctl.scaleY" 0 5 "Mouth:tongue_0_ctl.scaleX" 
-		0 6 "Mouth:tongue_0_ctl.rotateZ" 2 4 "Mouth:tongue_0_ctl.rotateY" 
-		2 5 "Mouth:tongue_0_ctl.rotateX" 2 6 "Mouth:tongue_0_ctl.translateZ" 
-		1 4 "Mouth:tongue_0_ctl.translateY" 1 5 "Mouth:tongue_0_ctl.translateX" 
-		1 6 "Mouth:root_ctl.scaleZ" 0 7 "Mouth:root_ctl.scaleY" 0 
-		8 "Mouth:root_ctl.scaleX" 0 9 "Mouth:root_ctl.rotateZ" 2 7 "Mouth:root_ctl.rotateY" 
-		2 8 "Mouth:root_ctl.rotateX" 2 9 "Mouth:root_ctl.translateZ" 
-		1 7 "Mouth:root_ctl.translateY" 1 8 "Mouth:root_ctl.translateX" 
-		1 9 "Mouth:mouthE_2_ctl.scaleZ" 0 10 "Mouth:mouthE_2_ctl.scaleY" 
-		0 11 "Mouth:mouthE_2_ctl.scaleX" 0 12 "Mouth:mouthE_2_ctl.rotateZ" 
-		2 10 "Mouth:mouthE_2_ctl.rotateY" 2 11 "Mouth:mouthE_2_ctl.rotateX" 
-		2 12 "Mouth:mouthE_2_ctl.translateZ" 1 10 "Mouth:mouthE_2_ctl.translateY" 
-		1 11 "Mouth:mouthE_2_ctl.translateX" 1 12 "Mouth:mouthE_1_ctl.scaleZ" 
-		0 13 "Mouth:mouthE_1_ctl.scaleY" 0 14 "Mouth:mouthE_1_ctl.scaleX" 
-		0 15 "Mouth:mouthE_1_ctl.rotateZ" 2 13 "Mouth:mouthE_1_ctl.rotateY" 
-		2 14 "Mouth:mouthE_1_ctl.rotateX" 2 15 "Mouth:mouthE_1_ctl.translateZ" 
-		1 13 "Mouth:mouthE_1_ctl.translateY" 1 14 "Mouth:mouthE_1_ctl.translateX" 
-		1 15 "Mouth:mouthE_0_ctl.scaleZ" 0 16 "Mouth:mouthE_0_ctl.scaleY" 
-		0 17 "Mouth:mouthE_0_ctl.scaleX" 0 18 "Mouth:mouthE_0_ctl.rotateZ" 
-		2 16 "Mouth:mouthE_0_ctl.rotateY" 2 17 "Mouth:mouthE_0_ctl.rotateX" 
-		2 18 "Mouth:mouthE_0_ctl.translateZ" 1 16 "Mouth:mouthE_0_ctl.translateY" 
-		1 17 "Mouth:mouthE_0_ctl.translateX" 1 18 "Mouth:mouthD_3_ctl.scaleZ" 
-		0 19 "Mouth:mouthD_3_ctl.scaleY" 0 20 "Mouth:mouthD_3_ctl.scaleX" 
-		0 21 "Mouth:mouthD_3_ctl.rotateZ" 2 19 "Mouth:mouthD_3_ctl.rotateY" 
-		2 20 "Mouth:mouthD_3_ctl.rotateX" 2 21 "Mouth:mouthD_3_ctl.translateZ" 
-		1 19 "Mouth:mouthD_3_ctl.translateY" 1 20 "Mouth:mouthD_3_ctl.translateX" 
-		1 21 "Mouth:mouthD_2_ctl.scaleZ" 0 22 "Mouth:mouthD_2_ctl.scaleY" 
-		0 23 "Mouth:mouthD_2_ctl.scaleX" 0 24 "Mouth:mouthD_2_ctl.rotateZ" 
-		2 22 "Mouth:mouthD_2_ctl.rotateY" 2 23 "Mouth:mouthD_2_ctl.rotateX" 
-		2 24 "Mouth:mouthD_2_ctl.translateZ" 1 22 "Mouth:mouthD_2_ctl.translateY" 
-		1 23 "Mouth:mouthD_2_ctl.translateX" 1 24 "Mouth:mouthD_1_ctl.scaleZ" 
-		0 25 "Mouth:mouthD_1_ctl.scaleY" 0 26 "Mouth:mouthD_1_ctl.scaleX" 
-		0 27 "Mouth:mouthD_1_ctl.rotateZ" 2 25 "Mouth:mouthD_1_ctl.rotateY" 
-		2 26 "Mouth:mouthD_1_ctl.rotateX" 2 27 "Mouth:mouthD_1_ctl.translateZ" 
-		1 25 "Mouth:mouthD_1_ctl.translateY" 1 26 "Mouth:mouthD_1_ctl.translateX" 
-		1 27 "Mouth:mouthD_0_ctl.scaleZ" 0 28 "Mouth:mouthD_0_ctl.scaleY" 
-		0 29 "Mouth:mouthD_0_ctl.scaleX" 0 30 "Mouth:mouthD_0_ctl.rotateZ" 
-		2 28 "Mouth:mouthD_0_ctl.rotateY" 2 29 "Mouth:mouthD_0_ctl.rotateX" 
-		2 30 "Mouth:mouthD_0_ctl.translateZ" 1 28 "Mouth:mouthD_0_ctl.translateY" 
-		1 29 "Mouth:mouthD_0_ctl.translateX" 1 30 "Mouth:mouthC_2_ctl.scaleZ" 
-		0 31 "Mouth:mouthC_2_ctl.scaleY" 0 32 "Mouth:mouthC_2_ctl.scaleX" 
-		0 33 "Mouth:mouthC_2_ctl.rotateZ" 2 31 "Mouth:mouthC_2_ctl.rotateY" 
-		2 32 "Mouth:mouthC_2_ctl.rotateX" 2 33 "Mouth:mouthC_2_ctl.translateZ" 
-		1 31 "Mouth:mouthC_2_ctl.translateY" 1 32 "Mouth:mouthC_2_ctl.translateX" 
-		1 33 "Mouth:mouthC_1_ctl.scaleZ" 0 34 "Mouth:mouthC_1_ctl.scaleY" 
-		0 35 "Mouth:mouthC_1_ctl.scaleX" 0 36 "Mouth:mouthC_1_ctl.rotateZ" 
-		2 34 "Mouth:mouthC_1_ctl.rotateY" 2 35 "Mouth:mouthC_1_ctl.rotateX" 
-		2 36 "Mouth:mouthC_1_ctl.translateZ" 1 34 "Mouth:mouthC_1_ctl.translateY" 
-		1 35 "Mouth:mouthC_1_ctl.translateX" 1 36 "Mouth:mouthC_0_ctl.scaleZ" 
-		0 37 "Mouth:mouthC_0_ctl.scaleY" 0 38 "Mouth:mouthC_0_ctl.scaleX" 
-		0 39 "Mouth:mouthC_0_ctl.rotateZ" 2 37 "Mouth:mouthC_0_ctl.rotateY" 
-		2 38 "Mouth:mouthC_0_ctl.rotateX" 2 39 "Mouth:mouthC_0_ctl.translateZ" 
-		1 37 "Mouth:mouthC_0_ctl.translateY" 1 38 "Mouth:mouthC_0_ctl.translateX" 
-		1 39 "Mouth:mouthB_2_ctl.scaleZ" 0 40 "Mouth:mouthB_2_ctl.scaleY" 
-		0 41 "Mouth:mouthB_2_ctl.scaleX" 0 42 "Mouth:mouthB_2_ctl.rotateZ" 
-		2 40 "Mouth:mouthB_2_ctl.rotateY" 2 41 "Mouth:mouthB_2_ctl.rotateX" 
-		2 42 "Mouth:mouthB_2_ctl.translateZ" 1 40 "Mouth:mouthB_2_ctl.translateY" 
-		1 41 "Mouth:mouthB_2_ctl.translateX" 1 42 "Mouth:mouthB_1_ctl.scaleZ" 
-		0 43 "Mouth:mouthB_1_ctl.scaleY" 0 44 "Mouth:mouthB_1_ctl.scaleX" 
-		0 45 "Mouth:mouthB_1_ctl.rotateZ" 2 43 "Mouth:mouthB_1_ctl.rotateY" 
-		2 44 "Mouth:mouthB_1_ctl.rotateX" 2 45 "Mouth:mouthB_1_ctl.translateZ" 
-		1 43 "Mouth:mouthB_1_ctl.translateY" 1 44 "Mouth:mouthB_1_ctl.translateX" 
-		1 45 "Mouth:mouthB_0_ctl.scaleZ" 0 46 "Mouth:mouthB_0_ctl.scaleY" 
-		0 47 "Mouth:mouthB_0_ctl.scaleX" 0 48 "Mouth:mouthB_0_ctl.rotateZ" 
-		2 46 "Mouth:mouthB_0_ctl.rotateY" 2 47 "Mouth:mouthB_0_ctl.rotateX" 
-		2 48 "Mouth:mouthB_0_ctl.translateZ" 1 46 "Mouth:mouthB_0_ctl.translateY" 
-		1 47 "Mouth:mouthB_0_ctl.translateX" 1 48 "Mouth:mouthA_2_ctl.scaleZ" 
-		0 49 "Mouth:mouthA_2_ctl.scaleY" 0 50 "Mouth:mouthA_2_ctl.scaleX" 
-		0 51 "Mouth:mouthA_2_ctl.rotateZ" 2 49 "Mouth:mouthA_2_ctl.rotateY" 
-		2 50 "Mouth:mouthA_2_ctl.rotateX" 2 51 "Mouth:mouthA_2_ctl.translateZ" 
-		1 49 "Mouth:mouthA_2_ctl.translateY" 1 50 "Mouth:mouthA_2_ctl.translateX" 
-		1 51 "Mouth:mouthA_1_ctl.scaleZ" 0 52 "Mouth:mouthA_1_ctl.scaleY" 
-		0 53 "Mouth:mouthA_1_ctl.scaleX" 0 54 "Mouth:mouthA_1_ctl.rotateZ" 
-		2 52 "Mouth:mouthA_1_ctl.rotateY" 2 53 "Mouth:mouthA_1_ctl.rotateX" 
-		2 54 "Mouth:mouthA_1_ctl.translateZ" 1 52 "Mouth:mouthA_1_ctl.translateY" 
-		1 53 "Mouth:mouthA_1_ctl.translateX" 1 54 "Mouth:mouthA_0_ctl.scaleZ" 
-		0 55 "Mouth:mouthA_0_ctl.scaleY" 0 56 "Mouth:mouthA_0_ctl.scaleX" 
-		0 57 "Mouth:mouthA_0_ctl.rotateZ" 2 55 "Mouth:mouthA_0_ctl.rotateY" 
-		2 56 "Mouth:mouthA_0_ctl.rotateX" 2 57 "Mouth:mouthA_0_ctl.translateZ" 
-		1 55 "Mouth:mouthA_0_ctl.translateY" 1 56 "Mouth:mouthA_0_ctl.translateX" 
-		1 57 "Mouth:tongue_2_ctl.scaleZ" 0 58 "Mouth:tongue_2_ctl.scaleY" 
-		0 59 "Mouth:tongue_2_ctl.scaleX" 0 60 "Mouth:tongue_2_ctl.rotateZ" 
-		2 58 "Mouth:tongue_2_ctl.rotateY" 2 59 "Mouth:tongue_2_ctl.rotateX" 
-		2 60 "Mouth:tongue_2_ctl.translateZ" 1 58 "Mouth:tongue_2_ctl.translateY" 
-		1 59 "Mouth:tongue_2_ctl.translateX" 1 60 "Mouth:root_ctl.Tongue" 
-		0 61 "Mouth:root_ctl.mouth" 0 62 "eye_milk_2:Root_ctl.wobble_amplitude" 
-		0 63 "eye_milk_2:Root_ctl.wobble_frequence" 0 64 "eye_milk_2:Root_ctl.scaleZ" 
-		0 65 "eye_milk_2:Root_ctl.scaleY" 0 66 "eye_milk_2:Root_ctl.scaleX" 
-		0 67 "eye_milk_2:Root_ctl.rotateZ" 2 61 "eye_milk_2:Root_ctl.rotateY" 
-		2 62 "eye_milk_2:Root_ctl.rotateX" 2 63 "eye_milk_2:Root_ctl.translateZ" 
-		1 61 "eye_milk_2:Root_ctl.translateY" 1 62 "eye_milk_2:Root_ctl.translateX" 
-		1 63 "eye_milk_1:Root_ctl.wobble_amplitude" 0 68 "eye_milk_1:Root_ctl.wobble_frequence" 
-		0 69 "eye_milk_1:Root_ctl.scaleZ" 0 70 "eye_milk_1:Root_ctl.scaleY" 
-		0 71 "eye_milk_1:Root_ctl.scaleX" 0 72 "eye_milk_1:Root_ctl.rotateZ" 
-		2 64 "eye_milk_1:Root_ctl.rotateY" 2 65 "eye_milk_1:Root_ctl.rotateX" 
-		2 66 "eye_milk_1:Root_ctl.translateZ" 1 64 "eye_milk_1:Root_ctl.translateY" 
-		1 65 "eye_milk_1:Root_ctl.translateX" 1 66 "eye_milk_1:EyeLidBottom_ctl.translateZ" 
-		1 67 "eye_milk_1:EyeLidBottom_ctl.translateX" 1 68 "eye_milk_1:Eye_ctl.translateZ" 
-		1 69 "eye_milk_1:Eye_ctl.translateX" 1 70 "eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateZ" 
-		1 71 "eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateY" 1 72 "eye_milk_1:group9|eye_milk_1:nurbsCircle1.translateX" 
-		1 73 "eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateZ" 1 74 "eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateY" 
-		1 75 "eye_milk_1:group10|eye_milk_1:nurbsCircle2.translateX" 1 76 "eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateZ" 
-		1 77 "eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateY" 1 78 "eye_milk_1:group14|eye_milk_1:nurbsCircle1.translateX" 
-		1 79 "eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateZ" 1 80 "eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateY" 
-		1 81 "eye_milk_1:group11|eye_milk_1:nurbsCircle2.translateX" 1 82 "eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateZ" 
-		1 83 "eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateY" 1 84 "eye_milk_1:group15|eye_milk_1:nurbsCircle1.translateX" 
-		1 85 "eye_milk_1:EyeLidTop_ctl.translateZ" 1 86 "eye_milk_1:EyeLidTop_ctl.translateX" 
-		1 87 "eye_milk_2:EyeLidTop_ctl.translateZ" 1 88 "eye_milk_2:EyeLidTop_ctl.translateX" 
-		1 89 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleZ" 0 73 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleY" 
-		0 74 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.scaleX" 0 75 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateZ" 
-		2 67 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateY" 2 68 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.rotateX" 
-		2 69 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateZ" 1 90 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateY" 
-		1 91 "blob_3:ctrl_1_zero3|blob_3:ctrl_1_ctl.translateX" 1 92 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleZ" 
-		0 76 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleY" 0 77 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.scaleX" 
-		0 78 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateZ" 2 70 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateY" 
-		2 71 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.rotateX" 2 72 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateZ" 
-		1 93 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateY" 1 94 "blob_3:ctrl_1_zero4|blob_3:ctrl_1_ctl.translateX" 
-		1 95 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleZ" 0 79 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleY" 
-		0 80 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.scaleX" 0 81 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateZ" 
-		2 73 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateY" 2 74 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.rotateX" 
-		2 75 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateZ" 1 96 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateY" 
-		1 97 "blob_3:ctrl_1_zero5|blob_3:ctrl_1_ctl.translateX" 1 98 "eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateZ" 
-		1 99 "eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateY" 1 100 "eye_milk_1:group12|eye_milk_1:nurbsCircle2.translateX" 
-		1 101 "eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateZ" 1 102 "eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateY" 
-		1 103 "eye_milk_1:group16|eye_milk_1:nurbsCircle1.translateX" 1 104 "eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateZ" 
-		1 105 "eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateY" 1 106 "eye_milk_1:group13|eye_milk_1:nurbsCircle2.translateX" 
-		1 107 "eye_milk_2:EyeLidBottom_ctl.translateZ" 1 108 "eye_milk_2:EyeLidBottom_ctl.translateX" 
-		1 109 "eye_milk_2:Eye_ctl.translateZ" 1 110 "eye_milk_2:Eye_ctl.translateX" 
-		1 111 "eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateZ" 1 112 "eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateY" 
-		1 113 "eye_milk_2:group9|eye_milk_2:nurbsCircle1.translateX" 1 114 "eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateZ" 
-		1 115 "eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateY" 1 116 "eye_milk_2:group10|eye_milk_2:nurbsCircle2.translateX" 
-		1 117 "eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateZ" 1 118 "eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateY" 
-		1 119 "eye_milk_2:group14|eye_milk_2:nurbsCircle1.translateX" 1 120 "eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateZ" 
-		1 121 "eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateY" 1 122 "eye_milk_2:group11|eye_milk_2:nurbsCircle2.translateX" 
-		1 123 "eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateZ" 1 124 "eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateY" 
-		1 125 "eye_milk_2:group15|eye_milk_2:nurbsCircle1.translateX" 1 126 "blob_3:root_ctrl.scaleZ" 
-		0 82 "blob_3:root_ctrl.scaleY" 0 83 "blob_3:root_ctrl.scaleX" 0 
-		84 "blob_3:root_ctrl.rotateZ" 2 76 "blob_3:root_ctrl.rotateY" 2 
-		77 "blob_3:root_ctrl.rotateX" 2 78 "blob_3:root_ctrl.translateZ" 1 
-		127 "blob_3:root_ctrl.translateY" 1 128 "blob_3:root_ctrl.translateX" 
-		1 129 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleZ" 0 85 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleY" 
-		0 86 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.scaleX" 0 87 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateZ" 
-		2 79 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateY" 2 80 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.rotateX" 
-		2 81 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateZ" 1 130 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateY" 
-		1 131 "blob_3:ctrl_1_zero|blob_3:ctrl_1_ctl.translateX" 1 132 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleZ" 
-		0 88 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleY" 0 89 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.scaleX" 
-		0 90 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateZ" 2 82 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateY" 
-		2 83 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.rotateX" 2 84 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateZ" 
-		1 133 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateY" 1 134 "blob_3:ctrl_1_zero1|blob_3:ctrl_1_ctl.translateX" 
-		1 135 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleZ" 0 91 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleY" 
-		0 92 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.scaleX" 0 93 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateZ" 
-		2 85 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateY" 2 86 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.rotateX" 
-		2 87 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateZ" 1 136 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateY" 
-		1 137 "blob_3:ctrl_1_zero2|blob_3:ctrl_1_ctl.translateX" 1 138 "blob_1:root_ctrl.scaleZ" 
-		0 94 "blob_1:root_ctrl.scaleY" 0 95 "blob_1:root_ctrl.scaleX" 0 
-		96 "blob_1:root_ctrl.rotateZ" 2 88 "blob_1:root_ctrl.rotateY" 2 
-		89 "blob_1:root_ctrl.rotateX" 2 90 "blob_1:root_ctrl.translateZ" 1 
-		139 "blob_1:root_ctrl.translateY" 1 140 "blob_1:root_ctrl.translateX" 
-		1 141 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleZ" 0 97 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleY" 
-		0 98 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.scaleX" 0 99 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateZ" 
-		2 91 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateY" 2 92 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.rotateX" 
-		2 93 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateZ" 1 142 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateY" 
-		1 143 "blob_1:ctrl_1_zero|blob_1:ctrl_1_ctl.translateX" 1 144 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleZ" 
-		0 100 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleY" 0 101 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.scaleX" 
-		0 102 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateZ" 2 94 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateY" 
-		2 95 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.rotateX" 2 96 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateZ" 
-		1 145 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateY" 1 146 "blob_1:ctrl_1_zero1|blob_1:ctrl_1_ctl.translateX" 
-		1 147 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleZ" 0 103 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleY" 
-		0 104 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.scaleX" 0 105 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateZ" 
-		2 97 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateY" 2 98 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.rotateX" 
-		2 99 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateZ" 1 148 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateY" 
-		1 149 "blob_1:ctrl_1_zero2|blob_1:ctrl_1_ctl.translateX" 1 150 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleZ" 
-		0 106 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleY" 0 107 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.scaleX" 
-		0 108 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateZ" 2 100 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateY" 
-		2 101 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.rotateX" 2 102 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateZ" 
-		1 151 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateY" 1 152 "blob_1:ctrl_1_zero3|blob_1:ctrl_1_ctl.translateX" 
-		1 153 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleZ" 0 109 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleY" 
-		0 110 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.scaleX" 0 111 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateZ" 
-		2 103 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateY" 2 104 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.rotateX" 
-		2 105 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateZ" 1 154 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateY" 
-		1 155 "blob_1:ctrl_1_zero4|blob_1:ctrl_1_ctl.translateX" 1 156 "eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateZ" 
-		1 157 "eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateY" 1 158 "eye_milk_2:group12|eye_milk_2:nurbsCircle2.translateX" 
-		1 159 "eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateZ" 1 160 "eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateY" 
-		1 161 "eye_milk_2:group16|eye_milk_2:nurbsCircle1.translateX" 1 162 "eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateZ" 
-		1 163 "eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateY" 1 164 "eye_milk_2:group13|eye_milk_2:nurbsCircle2.translateX" 
-		1 165 "eye_milk_1:border_bl_ctl.translateZ" 1 166 "eye_milk_1:border_bl_ctl.translateY" 
-		1 167 "eye_milk_1:border_bl_ctl.translateX" 1 168 "eye_milk_1:border_tr_ctl.translateZ" 
-		1 169 "eye_milk_1:border_tr_ctl.translateY" 1 170 "eye_milk_1:border_tr_ctl.translateX" 
-		1 171 "eye_milk_1:border_bc_ctl.translateZ" 1 172 "eye_milk_1:border_bc_ctl.translateY" 
-		1 173 "eye_milk_1:border_bc_ctl.translateX" 1 174 "eye_milk_1:border_tc_ctl.translateZ" 
-		1 175 "eye_milk_1:border_tc_ctl.translateY" 1 176 "eye_milk_1:border_tc_ctl.translateX" 
-		1 177 "eye_milk_1:border_tl_ctl.translateZ" 1 178 "eye_milk_1:border_tl_ctl.translateY" 
-		1 179 "eye_milk_1:border_tl_ctl.translateX" 1 180 "eye_milk_2:border_bl_ctl.translateZ" 
-		1 181 "eye_milk_2:border_bl_ctl.translateY" 1 182 "eye_milk_2:border_bl_ctl.translateX" 
-		1 183 "eye_milk_2:border_tr_ctl.translateZ" 1 184 "eye_milk_2:border_tr_ctl.translateY" 
-		1 185 "eye_milk_2:border_tr_ctl.translateX" 1 186 "eye_milk_2:border_bc_ctl.translateZ" 
-		1 187 "eye_milk_2:border_bc_ctl.translateY" 1 188 "eye_milk_2:border_bc_ctl.translateX" 
-		1 189 "eye_milk_2:border_tc_ctl.translateZ" 1 190 "eye_milk_2:border_tc_ctl.translateY" 
-		1 191 "eye_milk_2:border_tc_ctl.translateX" 1 192 "eye_milk_2:border_tl_ctl.translateZ" 
-		1 193 "eye_milk_2:border_tl_ctl.translateY" 1 194 "eye_milk_2:border_tl_ctl.translateX" 
-		1 195 "eye_milk_1:border_cl_ctl.translateZ" 1 196 "eye_milk_1:border_cl_ctl.translateY" 
-		1 197 "eye_milk_1:border_cl_ctl.translateX" 1 198 "eye_milk_1:border_cr_ctl.translateZ" 
-		1 199 "eye_milk_1:border_cr_ctl.translateY" 1 200 "eye_milk_1:border_cr_ctl.translateX" 
-		1 201 "eye_milk_1:border_br_ctl.translateZ" 1 202 "eye_milk_1:border_br_ctl.translateY" 
-		1 203 "eye_milk_1:border_br_ctl.translateX" 1 204 "eye_milk_2:border_cl_ctl.translateZ" 
-		1 205 "eye_milk_2:border_cl_ctl.translateY" 1 206 "eye_milk_2:border_cl_ctl.translateX" 
-		1 207 "eye_milk_2:border_cr_ctl.translateZ" 1 208 "eye_milk_2:border_cr_ctl.translateY" 
-		1 209 "eye_milk_2:border_cr_ctl.translateX" 1 210 "eye_milk_2:border_br_ctl.translateZ" 
-		1 211 "eye_milk_2:border_br_ctl.translateY" 1 212 "eye_milk_2:border_br_ctl.translateX" 
-		1 213 "eye_milk_1:EyeLidBottom_ctl.bend_center" 0 112 "eye_milk_1:EyeLidBottom_ctl.bend_right" 
-		0 113 "eye_milk_1:EyeLidBottom_ctl.bend_left" 0 114 "eye_milk_2:EyeLidTop_ctl.bend_center" 
-		0 115 "eye_milk_2:EyeLidTop_ctl.bend_right" 0 116 "eye_milk_2:EyeLidTop_ctl.bend_left" 
-		0 117 "eye_milk_2:EyeLidBottom_ctl.bend_center" 0 118 "eye_milk_2:EyeLidBottom_ctl.bend_right" 
-		0 119 "eye_milk_2:EyeLidBottom_ctl.bend_left" 0 120 "eye_milk_1:EyeLidTop_ctl.bend_center" 
-		0 121 "eye_milk_1:EyeLidTop_ctl.bend_right" 0 122 "eye_milk_1:EyeLidTop_ctl.bend_left" 
-		0 123  ;
-	setAttr ".tce" 28;
+	setAttr ".am" -type "characterMapping" 446 "blob_1RN.placeHolderList[314]" 4 
+		0 "blob_2RN.placeHolderList[261]" 4 0 "blob_3RN.placeHolderList[322]" 
+		4 0 "eye_milk_1RN.placeHolderList[147]" 4 0 "eye_milk_2RN.placeHolderList[147]" 
+		4 0 "MouthRN.placeHolderList[346]" 4 0 "MouthRN.placeHolderList[348]" 
+		4 0 "MouthRN.placeHolderList[350]" 4 0 "MouthRN.placeHolderList[352]" 
+		4 0 "MouthRN.placeHolderList[354]" 4 0 "MouthRN.placeHolderList[356]" 
+		4 0 "MouthRN.placeHolderList[358]" 4 0 "MouthRN.placeHolderList[360]" 
+		4 0 "MouthRN.placeHolderList[362]" 4 0 "MouthRN.placeHolderList[328]" 
+		4 0 "MouthRN.placeHolderList[330]" 4 0 "MouthRN.placeHolderList[332]" 
+		4 0 "MouthRN.placeHolderList[334]" 4 0 "MouthRN.placeHolderList[336]" 
+		4 0 "MouthRN.placeHolderList[338]" 4 0 "MouthRN.placeHolderList[340]" 
+		4 0 "MouthRN.placeHolderList[342]" 4 0 "MouthRN.placeHolderList[344]" 
+		4 0 "MouthRN.placeHolderList[21]" 4 0 "MouthRN.placeHolderList[19]" 
+		4 0 "MouthRN.placeHolderList[17]" 4 0 "MouthRN.placeHolderList[15]" 
+		4 0 "MouthRN.placeHolderList[13]" 4 0 "MouthRN.placeHolderList[11]" 
+		4 0 "MouthRN.placeHolderList[9]" 4 0 "MouthRN.placeHolderList[7]" 
+		4 0 "MouthRN.placeHolderList[5]" 4 0 "MouthRN.placeHolderList[310]" 
+		4 0 "MouthRN.placeHolderList[312]" 4 0 "MouthRN.placeHolderList[314]" 
+		4 0 "MouthRN.placeHolderList[316]" 4 0 "MouthRN.placeHolderList[318]" 
+		4 0 "MouthRN.placeHolderList[320]" 4 0 "MouthRN.placeHolderList[322]" 
+		4 0 "MouthRN.placeHolderList[324]" 4 0 "MouthRN.placeHolderList[326]" 
+		4 0 "MouthRN.placeHolderList[292]" 4 0 "MouthRN.placeHolderList[294]" 
+		4 0 "MouthRN.placeHolderList[296]" 4 0 "MouthRN.placeHolderList[298]" 
+		4 0 "MouthRN.placeHolderList[300]" 4 0 "MouthRN.placeHolderList[302]" 
+		4 0 "MouthRN.placeHolderList[304]" 4 0 "MouthRN.placeHolderList[306]" 
+		4 0 "MouthRN.placeHolderList[308]" 4 0 "MouthRN.placeHolderList[274]" 
+		4 0 "MouthRN.placeHolderList[276]" 4 0 "MouthRN.placeHolderList[278]" 
+		4 0 "MouthRN.placeHolderList[280]" 4 0 "MouthRN.placeHolderList[282]" 
+		4 0 "MouthRN.placeHolderList[284]" 4 0 "MouthRN.placeHolderList[286]" 
+		4 0 "MouthRN.placeHolderList[288]" 4 0 "MouthRN.placeHolderList[290]" 
+		4 0 "MouthRN.placeHolderList[271]" 4 0 "MouthRN.placeHolderList[269]" 
+		4 0 "MouthRN.placeHolderList[267]" 4 0 "MouthRN.placeHolderList[265]" 
+		4 0 "MouthRN.placeHolderList[263]" 4 0 "MouthRN.placeHolderList[261]" 
+		4 0 "MouthRN.placeHolderList[259]" 4 0 "MouthRN.placeHolderList[257]" 
+		4 0 "MouthRN.placeHolderList[255]" 4 0 "MouthRN.placeHolderList[252]" 
+		4 0 "MouthRN.placeHolderList[250]" 4 0 "MouthRN.placeHolderList[248]" 
+		4 0 "MouthRN.placeHolderList[246]" 4 0 "MouthRN.placeHolderList[244]" 
+		4 0 "MouthRN.placeHolderList[242]" 4 0 "MouthRN.placeHolderList[240]" 
+		4 0 "MouthRN.placeHolderList[238]" 4 0 "MouthRN.placeHolderList[236]" 
+		4 0 "MouthRN.placeHolderList[233]" 4 0 "MouthRN.placeHolderList[231]" 
+		4 0 "MouthRN.placeHolderList[229]" 4 0 "MouthRN.placeHolderList[227]" 
+		4 0 "MouthRN.placeHolderList[225]" 4 0 "MouthRN.placeHolderList[223]" 
+		4 0 "MouthRN.placeHolderList[221]" 4 0 "MouthRN.placeHolderList[219]" 
+		4 0 "MouthRN.placeHolderList[217]" 4 0 "MouthRN.placeHolderList[214]" 
+		4 0 "MouthRN.placeHolderList[212]" 4 0 "MouthRN.placeHolderList[210]" 
+		4 0 "MouthRN.placeHolderList[208]" 4 0 "MouthRN.placeHolderList[206]" 
+		4 0 "MouthRN.placeHolderList[204]" 4 0 "MouthRN.placeHolderList[202]" 
+		4 0 "MouthRN.placeHolderList[200]" 4 0 "MouthRN.placeHolderList[198]" 
+		4 0 "MouthRN.placeHolderList[196]" 4 0 "MouthRN.placeHolderList[194]" 
+		4 0 "MouthRN.placeHolderList[192]" 4 0 "MouthRN.placeHolderList[183]" 
+		4 0 "MouthRN.placeHolderList[181]" 4 0 "MouthRN.placeHolderList[179]" 
+		4 0 "MouthRN.placeHolderList[190]" 4 0 "MouthRN.placeHolderList[188]" 
+		4 0 "MouthRN.placeHolderList[186]" 4 0 "MouthRN.placeHolderList[177]" 
+		4 0 "MouthRN.placeHolderList[175]" 4 0 "MouthRN.placeHolderList[173]" 
+		4 0 "MouthRN.placeHolderList[164]" 4 0 "MouthRN.placeHolderList[162]" 
+		4 0 "MouthRN.placeHolderList[160]" 4 0 "MouthRN.placeHolderList[171]" 
+		4 0 "MouthRN.placeHolderList[169]" 4 0 "MouthRN.placeHolderList[167]" 
+		4 0 "MouthRN.placeHolderList[158]" 4 0 "MouthRN.placeHolderList[156]" 
+		4 0 "MouthRN.placeHolderList[154]" 4 0 "MouthRN.placeHolderList[145]" 
+		4 0 "MouthRN.placeHolderList[143]" 4 0 "MouthRN.placeHolderList[141]" 
+		4 0 "MouthRN.placeHolderList[152]" 4 0 "MouthRN.placeHolderList[150]" 
+		4 0 "MouthRN.placeHolderList[148]" 4 0 "MouthRN.placeHolderList[137]" 
+		4 0 "MouthRN.placeHolderList[135]" 4 0 "MouthRN.placeHolderList[133]" 
+		4 0 "MouthRN.placeHolderList[131]" 4 0 "MouthRN.placeHolderList[129]" 
+		4 0 "MouthRN.placeHolderList[127]" 4 0 "MouthRN.placeHolderList[125]" 
+		4 0 "MouthRN.placeHolderList[123]" 4 0 "MouthRN.placeHolderList[121]" 
+		4 0 "MouthRN.placeHolderList[117]" 4 0 "MouthRN.placeHolderList[115]" 
+		4 0 "MouthRN.placeHolderList[113]" 4 0 "MouthRN.placeHolderList[111]" 
+		4 0 "MouthRN.placeHolderList[109]" 4 0 "MouthRN.placeHolderList[107]" 
+		4 0 "MouthRN.placeHolderList[105]" 4 0 "MouthRN.placeHolderList[103]" 
+		4 0 "MouthRN.placeHolderList[101]" 4 0 "MouthRN.placeHolderList[97]" 
+		4 0 "MouthRN.placeHolderList[95]" 4 0 "MouthRN.placeHolderList[93]" 
+		4 0 "MouthRN.placeHolderList[91]" 4 0 "MouthRN.placeHolderList[89]" 
+		4 0 "MouthRN.placeHolderList[87]" 4 0 "MouthRN.placeHolderList[85]" 
+		4 0 "MouthRN.placeHolderList[83]" 4 0 "MouthRN.placeHolderList[81]" 
+		4 0 "MouthRN.placeHolderList[72]" 4 0 "MouthRN.placeHolderList[70]" 
+		4 0 "MouthRN.placeHolderList[68]" 4 0 "MouthRN.placeHolderList[79]" 
+		4 0 "MouthRN.placeHolderList[77]" 4 0 "MouthRN.placeHolderList[75]" 
+		4 0 "MouthRN.placeHolderList[66]" 4 0 "MouthRN.placeHolderList[64]" 
+		4 0 "MouthRN.placeHolderList[62]" 4 0 "MouthRN.placeHolderList[53]" 
+		4 0 "MouthRN.placeHolderList[51]" 4 0 "MouthRN.placeHolderList[49]" 
+		4 0 "MouthRN.placeHolderList[60]" 4 0 "MouthRN.placeHolderList[58]" 
+		4 0 "MouthRN.placeHolderList[56]" 4 0 "MouthRN.placeHolderList[47]" 
+		4 0 "MouthRN.placeHolderList[45]" 4 0 "MouthRN.placeHolderList[43]" 
+		4 0 "MouthRN.placeHolderList[34]" 4 0 "MouthRN.placeHolderList[32]" 
+		4 0 "MouthRN.placeHolderList[30]" 4 0 "MouthRN.placeHolderList[41]" 
+		4 0 "MouthRN.placeHolderList[39]" 4 0 "MouthRN.placeHolderList[37]" 
+		4 0 "MouthRN.placeHolderList[28]" 4 0 "MouthRN.placeHolderList[26]" 
+		4 0 "MouthRN.placeHolderList[24]" 4 0 "MouthRN.placeHolderList[364]" 
+		4 0 "MouthRN.placeHolderList[366]" 4 0 "MouthRN.placeHolderList[368]" 
+		4 0 "MouthRN.placeHolderList[370]" 4 0 "MouthRN.placeHolderList[372]" 
+		4 0 "MouthRN.placeHolderList[374]" 4 0 "MouthRN.placeHolderList[376]" 
+		4 0 "MouthRN.placeHolderList[378]" 4 0 "MouthRN.placeHolderList[380]" 
+		4 0 "MouthRN.placeHolderList[3]" 4 0 "MouthRN.placeHolderList[1]" 
+		4 0 "eye_milk_2RN.placeHolderList[4]" 4 0 "eye_milk_2RN.placeHolderList[2]" 
+		4 0 "eye_milk_2RN.placeHolderList[18]" 4 0 "eye_milk_2RN.placeHolderList[20]" 
+		4 0 "eye_milk_2RN.placeHolderList[22]" 4 0 "eye_milk_2RN.placeHolderList[6]" 
+		4 0 "eye_milk_2RN.placeHolderList[8]" 4 0 "eye_milk_2RN.placeHolderList[10]" 
+		4 0 "eye_milk_2RN.placeHolderList[12]" 4 0 "eye_milk_2RN.placeHolderList[14]" 
+		4 0 "eye_milk_2RN.placeHolderList[16]" 4 0 "eye_milk_1RN.placeHolderList[4]" 
+		4 0 "eye_milk_1RN.placeHolderList[2]" 4 0 "eye_milk_1RN.placeHolderList[18]" 
+		4 0 "eye_milk_1RN.placeHolderList[20]" 4 0 "eye_milk_1RN.placeHolderList[22]" 
+		4 0 "eye_milk_1RN.placeHolderList[6]" 4 0 "eye_milk_1RN.placeHolderList[8]" 
+		4 0 "eye_milk_1RN.placeHolderList[10]" 4 0 "eye_milk_1RN.placeHolderList[12]" 
+		4 0 "eye_milk_1RN.placeHolderList[14]" 4 0 "eye_milk_1RN.placeHolderList[16]" 
+		4 0 "eye_milk_1RN.placeHolderList[35]" 4 0 "eye_milk_1RN.placeHolderList[37]" 
+		4 0 "eye_milk_1RN.placeHolderList[45]" 4 0 "eye_milk_1RN.placeHolderList[47]" 
+		4 0 "eye_milk_1RN.placeHolderList[51]" 4 0 "eye_milk_1RN.placeHolderList[53]" 
+		4 0 "eye_milk_1RN.placeHolderList[55]" 4 0 "eye_milk_1RN.placeHolderList[57]" 
+		4 0 "eye_milk_1RN.placeHolderList[59]" 4 0 "eye_milk_1RN.placeHolderList[61]" 
+		4 0 "eye_milk_1RN.placeHolderList[63]" 4 0 "eye_milk_1RN.placeHolderList[65]" 
+		4 0 "eye_milk_1RN.placeHolderList[67]" 4 0 "eye_milk_1RN.placeHolderList[69]" 
+		4 0 "eye_milk_1RN.placeHolderList[71]" 4 0 "eye_milk_1RN.placeHolderList[73]" 
+		4 0 "eye_milk_1RN.placeHolderList[75]" 4 0 "eye_milk_1RN.placeHolderList[77]" 
+		4 0 "eye_milk_1RN.placeHolderList[79]" 4 0 "eye_milk_1RN.placeHolderList[25]" 
+		4 0 "eye_milk_1RN.placeHolderList[27]" 4 0 "eye_milk_2RN.placeHolderList[25]" 
+		4 0 "eye_milk_2RN.placeHolderList[27]" 4 0 "blob_3RN.placeHolderList[89]" 
+		4 0 "blob_3RN.placeHolderList[91]" 4 0 "blob_3RN.placeHolderList[93]" 
+		4 0 "blob_3RN.placeHolderList[77]" 4 0 "blob_3RN.placeHolderList[79]" 
+		4 0 "blob_3RN.placeHolderList[81]" 4 0 "blob_3RN.placeHolderList[83]" 
+		4 0 "blob_3RN.placeHolderList[85]" 4 0 "blob_3RN.placeHolderList[87]" 
+		4 0 "blob_3RN.placeHolderList[108]" 4 0 "blob_3RN.placeHolderList[110]" 
+		4 0 "blob_3RN.placeHolderList[112]" 4 0 "blob_3RN.placeHolderList[96]" 
+		4 0 "blob_3RN.placeHolderList[98]" 4 0 "blob_3RN.placeHolderList[100]" 
+		4 0 "blob_3RN.placeHolderList[102]" 4 0 "blob_3RN.placeHolderList[104]" 
+		4 0 "blob_3RN.placeHolderList[106]" 4 0 "blob_3RN.placeHolderList[127]" 
+		4 0 "blob_3RN.placeHolderList[129]" 4 0 "blob_3RN.placeHolderList[131]" 
+		4 0 "blob_3RN.placeHolderList[115]" 4 0 "blob_3RN.placeHolderList[117]" 
+		4 0 "blob_3RN.placeHolderList[119]" 4 0 "blob_3RN.placeHolderList[121]" 
+		4 0 "blob_3RN.placeHolderList[123]" 4 0 "blob_3RN.placeHolderList[125]" 
+		4 0 "eye_milk_1RN.placeHolderList[81]" 4 0 "eye_milk_1RN.placeHolderList[83]" 
+		4 0 "eye_milk_1RN.placeHolderList[85]" 4 0 "eye_milk_1RN.placeHolderList[87]" 
+		4 0 "eye_milk_1RN.placeHolderList[89]" 4 0 "eye_milk_1RN.placeHolderList[91]" 
+		4 0 "eye_milk_1RN.placeHolderList[93]" 4 0 "eye_milk_1RN.placeHolderList[95]" 
+		4 0 "eye_milk_1RN.placeHolderList[97]" 4 0 "eye_milk_2RN.placeHolderList[35]" 
+		4 0 "eye_milk_2RN.placeHolderList[37]" 4 0 "eye_milk_2RN.placeHolderList[45]" 
+		4 0 "eye_milk_2RN.placeHolderList[47]" 4 0 "eye_milk_2RN.placeHolderList[51]" 
+		4 0 "eye_milk_2RN.placeHolderList[53]" 4 0 "eye_milk_2RN.placeHolderList[55]" 
+		4 0 "eye_milk_2RN.placeHolderList[57]" 4 0 "eye_milk_2RN.placeHolderList[59]" 
+		4 0 "eye_milk_2RN.placeHolderList[61]" 4 0 "eye_milk_2RN.placeHolderList[63]" 
+		4 0 "eye_milk_2RN.placeHolderList[65]" 4 0 "eye_milk_2RN.placeHolderList[67]" 
+		4 0 "eye_milk_2RN.placeHolderList[69]" 4 0 "eye_milk_2RN.placeHolderList[71]" 
+		4 0 "eye_milk_2RN.placeHolderList[73]" 4 0 "eye_milk_2RN.placeHolderList[75]" 
+		4 0 "eye_milk_2RN.placeHolderList[77]" 4 0 "eye_milk_2RN.placeHolderList[79]" 
+		4 0 "blob_3RN.placeHolderList[13]" 4 0 "blob_3RN.placeHolderList[15]" 
+		4 0 "blob_3RN.placeHolderList[17]" 4 0 "blob_3RN.placeHolderList[1]" 
+		4 0 "blob_3RN.placeHolderList[3]" 4 0 "blob_3RN.placeHolderList[5]" 
+		4 0 "blob_3RN.placeHolderList[7]" 4 0 "blob_3RN.placeHolderList[9]" 
+		4 0 "blob_3RN.placeHolderList[11]" 4 0 "blob_3RN.placeHolderList[32]" 
+		4 0 "blob_3RN.placeHolderList[34]" 4 0 "blob_3RN.placeHolderList[36]" 
+		4 0 "blob_3RN.placeHolderList[20]" 4 0 "blob_3RN.placeHolderList[22]" 
+		4 0 "blob_3RN.placeHolderList[24]" 4 0 "blob_3RN.placeHolderList[26]" 
+		4 0 "blob_3RN.placeHolderList[28]" 4 0 "blob_3RN.placeHolderList[30]" 
+		4 0 "blob_3RN.placeHolderList[51]" 4 0 "blob_3RN.placeHolderList[53]" 
+		4 0 "blob_3RN.placeHolderList[55]" 4 0 "blob_3RN.placeHolderList[39]" 
+		4 0 "blob_3RN.placeHolderList[41]" 4 0 "blob_3RN.placeHolderList[43]" 
+		4 0 "blob_3RN.placeHolderList[45]" 4 0 "blob_3RN.placeHolderList[47]" 
+		4 0 "blob_3RN.placeHolderList[49]" 4 0 "blob_3RN.placeHolderList[70]" 
+		4 0 "blob_3RN.placeHolderList[72]" 4 0 "blob_3RN.placeHolderList[74]" 
+		4 0 "blob_3RN.placeHolderList[58]" 4 0 "blob_3RN.placeHolderList[60]" 
+		4 0 "blob_3RN.placeHolderList[62]" 4 0 "blob_3RN.placeHolderList[64]" 
+		4 0 "blob_3RN.placeHolderList[66]" 4 0 "blob_3RN.placeHolderList[68]" 
+		4 0 "blob_1RN.placeHolderList[13]" 4 0 "blob_1RN.placeHolderList[15]" 
+		4 0 "blob_1RN.placeHolderList[17]" 4 0 "blob_1RN.placeHolderList[1]" 
+		4 0 "blob_1RN.placeHolderList[3]" 4 0 "blob_1RN.placeHolderList[5]" 
+		4 0 "blob_1RN.placeHolderList[7]" 4 0 "blob_1RN.placeHolderList[9]" 
+		4 0 "blob_1RN.placeHolderList[11]" 4 0 "blob_1RN.placeHolderList[33]" 
+		4 0 "blob_1RN.placeHolderList[35]" 4 0 "blob_1RN.placeHolderList[37]" 
+		4 0 "blob_1RN.placeHolderList[21]" 4 0 "blob_1RN.placeHolderList[23]" 
+		4 0 "blob_1RN.placeHolderList[25]" 4 0 "blob_1RN.placeHolderList[27]" 
+		4 0 "blob_1RN.placeHolderList[29]" 4 0 "blob_1RN.placeHolderList[31]" 
+		4 0 "blob_1RN.placeHolderList[52]" 4 0 "blob_1RN.placeHolderList[54]" 
+		4 0 "blob_1RN.placeHolderList[56]" 4 0 "blob_1RN.placeHolderList[40]" 
+		4 0 "blob_1RN.placeHolderList[42]" 4 0 "blob_1RN.placeHolderList[44]" 
+		4 0 "blob_1RN.placeHolderList[46]" 4 0 "blob_1RN.placeHolderList[48]" 
+		4 0 "blob_1RN.placeHolderList[50]" 4 0 "blob_1RN.placeHolderList[71]" 
+		4 0 "blob_1RN.placeHolderList[73]" 4 0 "blob_1RN.placeHolderList[75]" 
+		4 0 "blob_1RN.placeHolderList[59]" 4 0 "blob_1RN.placeHolderList[61]" 
+		4 0 "blob_1RN.placeHolderList[63]" 4 0 "blob_1RN.placeHolderList[65]" 
+		4 0 "blob_1RN.placeHolderList[67]" 4 0 "blob_1RN.placeHolderList[69]" 
+		4 0 "blob_1RN.placeHolderList[90]" 4 0 "blob_1RN.placeHolderList[92]" 
+		4 0 "blob_1RN.placeHolderList[94]" 4 0 "blob_1RN.placeHolderList[78]" 
+		4 0 "blob_1RN.placeHolderList[80]" 4 0 "blob_1RN.placeHolderList[82]" 
+		4 0 "blob_1RN.placeHolderList[84]" 4 0 "blob_1RN.placeHolderList[86]" 
+		4 0 "blob_1RN.placeHolderList[88]" 4 0 "blob_1RN.placeHolderList[109]" 
+		4 0 "blob_1RN.placeHolderList[111]" 4 0 "blob_1RN.placeHolderList[113]" 
+		4 0 "blob_1RN.placeHolderList[97]" 4 0 "blob_1RN.placeHolderList[99]" 
+		4 0 "blob_1RN.placeHolderList[101]" 4 0 "blob_1RN.placeHolderList[103]" 
+		4 0 "blob_1RN.placeHolderList[105]" 4 0 "blob_1RN.placeHolderList[107]" 
+		4 0 "eye_milk_2RN.placeHolderList[81]" 4 0 "eye_milk_2RN.placeHolderList[83]" 
+		4 0 "eye_milk_2RN.placeHolderList[85]" 4 0 "eye_milk_2RN.placeHolderList[87]" 
+		4 0 "eye_milk_2RN.placeHolderList[89]" 4 0 "eye_milk_2RN.placeHolderList[91]" 
+		4 0 "eye_milk_2RN.placeHolderList[93]" 4 0 "eye_milk_2RN.placeHolderList[95]" 
+		4 0 "eye_milk_2RN.placeHolderList[97]" 4 0 "eye_milk_1RN.placeHolderList[117]" 
+		4 0 "eye_milk_1RN.placeHolderList[119]" 4 0 "eye_milk_1RN.placeHolderList[121]" 
+		4 0 "eye_milk_1RN.placeHolderList[123]" 4 0 "eye_milk_1RN.placeHolderList[125]" 
+		4 0 "eye_milk_1RN.placeHolderList[127]" 4 0 "eye_milk_1RN.placeHolderList[129]" 
+		4 0 "eye_milk_1RN.placeHolderList[131]" 4 0 "eye_milk_1RN.placeHolderList[133]" 
+		4 0 "eye_milk_1RN.placeHolderList[135]" 4 0 "eye_milk_1RN.placeHolderList[137]" 
+		4 0 "eye_milk_1RN.placeHolderList[139]" 4 0 "eye_milk_1RN.placeHolderList[141]" 
+		4 0 "eye_milk_1RN.placeHolderList[143]" 4 0 "eye_milk_1RN.placeHolderList[145]" 
+		4 0 "eye_milk_2RN.placeHolderList[117]" 4 0 "eye_milk_2RN.placeHolderList[119]" 
+		4 0 "eye_milk_2RN.placeHolderList[121]" 4 0 "eye_milk_2RN.placeHolderList[123]" 
+		4 0 "eye_milk_2RN.placeHolderList[125]" 4 0 "eye_milk_2RN.placeHolderList[127]" 
+		4 0 "eye_milk_2RN.placeHolderList[129]" 4 0 "eye_milk_2RN.placeHolderList[131]" 
+		4 0 "eye_milk_2RN.placeHolderList[133]" 4 0 "eye_milk_2RN.placeHolderList[135]" 
+		4 0 "eye_milk_2RN.placeHolderList[137]" 4 0 "eye_milk_2RN.placeHolderList[139]" 
+		4 0 "eye_milk_2RN.placeHolderList[141]" 4 0 "eye_milk_2RN.placeHolderList[143]" 
+		4 0 "eye_milk_2RN.placeHolderList[145]" 4 0 "eye_milk_1RN.placeHolderList[99]" 
+		4 0 "eye_milk_1RN.placeHolderList[101]" 4 0 "eye_milk_1RN.placeHolderList[103]" 
+		4 0 "eye_milk_1RN.placeHolderList[105]" 4 0 "eye_milk_1RN.placeHolderList[107]" 
+		4 0 "eye_milk_1RN.placeHolderList[109]" 4 0 "eye_milk_1RN.placeHolderList[111]" 
+		4 0 "eye_milk_1RN.placeHolderList[113]" 4 0 "eye_milk_1RN.placeHolderList[115]" 
+		4 0 "eye_milk_2RN.placeHolderList[99]" 4 0 "eye_milk_2RN.placeHolderList[101]" 
+		4 0 "eye_milk_2RN.placeHolderList[103]" 4 0 "eye_milk_2RN.placeHolderList[105]" 
+		4 0 "eye_milk_2RN.placeHolderList[107]" 4 0 "eye_milk_2RN.placeHolderList[109]" 
+		4 0 "eye_milk_2RN.placeHolderList[111]" 4 0 "eye_milk_2RN.placeHolderList[113]" 
+		4 0 "eye_milk_2RN.placeHolderList[115]" 4 0 "eye_milk_1RN.placeHolderList[43]" 
+		4 0 "eye_milk_1RN.placeHolderList[41]" 4 0 "eye_milk_1RN.placeHolderList[39]" 
+		4 0 "eye_milk_2RN.placeHolderList[33]" 4 0 "eye_milk_2RN.placeHolderList[31]" 
+		4 0 "eye_milk_2RN.placeHolderList[29]" 4 0 "eye_milk_2RN.placeHolderList[43]" 
+		4 0 "eye_milk_2RN.placeHolderList[41]" 4 0 "eye_milk_2RN.placeHolderList[39]" 
+		4 0 "eye_milk_1RN.placeHolderList[33]" 4 0 "eye_milk_1RN.placeHolderList[31]" 
+		4 0 "eye_milk_1RN.placeHolderList[29]" 4 0  ;
+	setAttr ".tce" 10;
 	setAttr ".aal" -type "attributeAlias" {"blob_1:ctrl_1_ctl_rotateZ3","angularValues[100]"
 		,"blob_1:ctrl_1_ctl_rotateY3","angularValues[101]","blob_1:ctrl_1_ctl_rotateX3","angularValues[102]"
 		,"blob_1:ctrl_1_ctl_rotateZ4","angularValues[103]","blob_1:ctrl_1_ctl_rotateY4","angularValues[104]"
@@ -51268,13 +50485,13 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -s 18 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 9 ".r";
+	setAttr -s 8 ".r";
 select -ne :lightList1;
 	setAttr -s 2 ".l";
 select -ne :lambert1;
 	setAttr ".it" -type "float3" 0.30722892 0.30722892 0.30722892 ;
 select -ne :initialShadingGroup;
-	setAttr -s 5 ".dsm";
+	setAttr -s 4 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -51620,57 +50837,57 @@ connectAttr "MouthRN.phl[26]" "character1.dnsm[174]";
 connectAttr "character1.lv[56]" "MouthRN.phl[27]";
 connectAttr "MouthRN.phl[28]" "character1.dnsm[173]";
 connectAttr "character1.lv[55]" "MouthRN.phl[29]";
-connectAttr "MouthRN.phl[30]" "character1.dnsm[169]";
-connectAttr "character1.uv[57]" "MouthRN.phl[31]";
-connectAttr "MouthRN.phl[32]" "character1.dnsm[168]";
-connectAttr "character1.uv[56]" "MouthRN.phl[33]";
-connectAttr "MouthRN.phl[34]" "character1.dnsm[167]";
-connectAttr "character1.uv[55]" "MouthRN.phl[35]";
-connectAttr "mouthA_0_ctl_visibility.o" "MouthRN.phl[36]";
-connectAttr "MouthRN.phl[37]" "character1.dnsm[172]";
-connectAttr "character1.av[57]" "MouthRN.phl[38]";
-connectAttr "MouthRN.phl[39]" "character1.dnsm[171]";
-connectAttr "character1.av[56]" "MouthRN.phl[40]";
-connectAttr "MouthRN.phl[41]" "character1.dnsm[170]";
-connectAttr "character1.av[55]" "MouthRN.phl[42]";
+connectAttr "MouthRN.phl[30]" "character1.dnsm[172]";
+connectAttr "character1.av[57]" "MouthRN.phl[31]";
+connectAttr "MouthRN.phl[32]" "character1.dnsm[171]";
+connectAttr "character1.av[56]" "MouthRN.phl[33]";
+connectAttr "MouthRN.phl[34]" "character1.dnsm[170]";
+connectAttr "character1.av[55]" "MouthRN.phl[35]";
+connectAttr "MouthRN.phl[36]" "character1.dnsm[169]";
+connectAttr "character1.uv[57]" "MouthRN.phl[37]";
+connectAttr "MouthRN.phl[38]" "character1.dnsm[168]";
+connectAttr "character1.uv[56]" "MouthRN.phl[39]";
+connectAttr "MouthRN.phl[40]" "character1.dnsm[167]";
+connectAttr "character1.uv[55]" "MouthRN.phl[41]";
+connectAttr "mouthA_0_ctl_visibility.o" "MouthRN.phl[42]";
 connectAttr "MouthRN.phl[43]" "character1.dnsm[166]";
 connectAttr "character1.lv[54]" "MouthRN.phl[44]";
 connectAttr "MouthRN.phl[45]" "character1.dnsm[165]";
 connectAttr "character1.lv[53]" "MouthRN.phl[46]";
 connectAttr "MouthRN.phl[47]" "character1.dnsm[164]";
 connectAttr "character1.lv[52]" "MouthRN.phl[48]";
-connectAttr "MouthRN.phl[49]" "character1.dnsm[160]";
-connectAttr "character1.uv[54]" "MouthRN.phl[50]";
-connectAttr "MouthRN.phl[51]" "character1.dnsm[159]";
-connectAttr "character1.uv[53]" "MouthRN.phl[52]";
-connectAttr "MouthRN.phl[53]" "character1.dnsm[158]";
-connectAttr "character1.uv[52]" "MouthRN.phl[54]";
-connectAttr "mouthA_1_ctl_visibility.o" "MouthRN.phl[55]";
-connectAttr "MouthRN.phl[56]" "character1.dnsm[163]";
-connectAttr "character1.av[54]" "MouthRN.phl[57]";
-connectAttr "MouthRN.phl[58]" "character1.dnsm[162]";
-connectAttr "character1.av[53]" "MouthRN.phl[59]";
-connectAttr "MouthRN.phl[60]" "character1.dnsm[161]";
-connectAttr "character1.av[52]" "MouthRN.phl[61]";
+connectAttr "MouthRN.phl[49]" "character1.dnsm[163]";
+connectAttr "character1.av[54]" "MouthRN.phl[50]";
+connectAttr "MouthRN.phl[51]" "character1.dnsm[162]";
+connectAttr "character1.av[53]" "MouthRN.phl[52]";
+connectAttr "MouthRN.phl[53]" "character1.dnsm[161]";
+connectAttr "character1.av[52]" "MouthRN.phl[54]";
+connectAttr "MouthRN.phl[55]" "character1.dnsm[160]";
+connectAttr "character1.uv[54]" "MouthRN.phl[56]";
+connectAttr "MouthRN.phl[57]" "character1.dnsm[159]";
+connectAttr "character1.uv[53]" "MouthRN.phl[58]";
+connectAttr "MouthRN.phl[59]" "character1.dnsm[158]";
+connectAttr "character1.uv[52]" "MouthRN.phl[60]";
+connectAttr "mouthA_1_ctl_visibility.o" "MouthRN.phl[61]";
 connectAttr "MouthRN.phl[62]" "character1.dnsm[157]";
 connectAttr "character1.lv[51]" "MouthRN.phl[63]";
 connectAttr "MouthRN.phl[64]" "character1.dnsm[156]";
 connectAttr "character1.lv[50]" "MouthRN.phl[65]";
 connectAttr "MouthRN.phl[66]" "character1.dnsm[155]";
 connectAttr "character1.lv[49]" "MouthRN.phl[67]";
-connectAttr "MouthRN.phl[68]" "character1.dnsm[151]";
-connectAttr "character1.uv[51]" "MouthRN.phl[69]";
-connectAttr "MouthRN.phl[70]" "character1.dnsm[150]";
-connectAttr "character1.uv[50]" "MouthRN.phl[71]";
-connectAttr "MouthRN.phl[72]" "character1.dnsm[149]";
-connectAttr "character1.uv[49]" "MouthRN.phl[73]";
-connectAttr "mouthA_2_ctl_visibility.o" "MouthRN.phl[74]";
-connectAttr "MouthRN.phl[75]" "character1.dnsm[154]";
-connectAttr "character1.av[51]" "MouthRN.phl[76]";
-connectAttr "MouthRN.phl[77]" "character1.dnsm[153]";
-connectAttr "character1.av[50]" "MouthRN.phl[78]";
-connectAttr "MouthRN.phl[79]" "character1.dnsm[152]";
-connectAttr "character1.av[49]" "MouthRN.phl[80]";
+connectAttr "MouthRN.phl[68]" "character1.dnsm[154]";
+connectAttr "character1.av[51]" "MouthRN.phl[69]";
+connectAttr "MouthRN.phl[70]" "character1.dnsm[153]";
+connectAttr "character1.av[50]" "MouthRN.phl[71]";
+connectAttr "MouthRN.phl[72]" "character1.dnsm[152]";
+connectAttr "character1.av[49]" "MouthRN.phl[73]";
+connectAttr "MouthRN.phl[74]" "character1.dnsm[151]";
+connectAttr "character1.uv[51]" "MouthRN.phl[75]";
+connectAttr "MouthRN.phl[76]" "character1.dnsm[150]";
+connectAttr "character1.uv[50]" "MouthRN.phl[77]";
+connectAttr "MouthRN.phl[78]" "character1.dnsm[149]";
+connectAttr "character1.uv[49]" "MouthRN.phl[79]";
+connectAttr "mouthA_2_ctl_visibility.o" "MouthRN.phl[80]";
 connectAttr "MouthRN.phl[81]" "character1.dnsm[148]";
 connectAttr "character1.lv[48]" "MouthRN.phl[82]";
 connectAttr "MouthRN.phl[83]" "character1.dnsm[147]";
@@ -51731,63 +50948,63 @@ connectAttr "MouthRN.phl[137]" "character1.dnsm[122]";
 connectAttr "character1.uv[40]" "MouthRN.phl[138]";
 connectAttr "layer1.di" "MouthRN.phl[139]";
 connectAttr "mouthB_2_ctl_visibility.o" "MouthRN.phl[140]";
-connectAttr "MouthRN.phl[141]" "character1.dnsm[118]";
-connectAttr "character1.av[39]" "MouthRN.phl[142]";
-connectAttr "MouthRN.phl[143]" "character1.dnsm[117]";
-connectAttr "character1.av[38]" "MouthRN.phl[144]";
-connectAttr "MouthRN.phl[145]" "character1.dnsm[116]";
-connectAttr "character1.av[37]" "MouthRN.phl[146]";
-connectAttr "mouthC_0_ctl_visibility.o" "MouthRN.phl[147]";
-connectAttr "MouthRN.phl[148]" "character1.dnsm[121]";
-connectAttr "character1.lv[39]" "MouthRN.phl[149]";
-connectAttr "MouthRN.phl[150]" "character1.dnsm[120]";
-connectAttr "character1.lv[38]" "MouthRN.phl[151]";
-connectAttr "MouthRN.phl[152]" "character1.dnsm[119]";
-connectAttr "character1.lv[37]" "MouthRN.phl[153]";
-connectAttr "MouthRN.phl[154]" "character1.dnsm[115]";
-connectAttr "character1.uv[39]" "MouthRN.phl[155]";
-connectAttr "MouthRN.phl[156]" "character1.dnsm[114]";
-connectAttr "character1.uv[38]" "MouthRN.phl[157]";
-connectAttr "MouthRN.phl[158]" "character1.dnsm[113]";
-connectAttr "character1.uv[37]" "MouthRN.phl[159]";
-connectAttr "MouthRN.phl[160]" "character1.dnsm[109]";
-connectAttr "character1.av[36]" "MouthRN.phl[161]";
-connectAttr "MouthRN.phl[162]" "character1.dnsm[108]";
-connectAttr "character1.av[35]" "MouthRN.phl[163]";
-connectAttr "MouthRN.phl[164]" "character1.dnsm[107]";
-connectAttr "character1.av[34]" "MouthRN.phl[165]";
-connectAttr "mouthC_1_ctl_visibility.o" "MouthRN.phl[166]";
-connectAttr "MouthRN.phl[167]" "character1.dnsm[112]";
-connectAttr "character1.lv[36]" "MouthRN.phl[168]";
-connectAttr "MouthRN.phl[169]" "character1.dnsm[111]";
-connectAttr "character1.lv[35]" "MouthRN.phl[170]";
-connectAttr "MouthRN.phl[171]" "character1.dnsm[110]";
-connectAttr "character1.lv[34]" "MouthRN.phl[172]";
-connectAttr "MouthRN.phl[173]" "character1.dnsm[106]";
-connectAttr "character1.uv[36]" "MouthRN.phl[174]";
-connectAttr "MouthRN.phl[175]" "character1.dnsm[105]";
-connectAttr "character1.uv[35]" "MouthRN.phl[176]";
-connectAttr "MouthRN.phl[177]" "character1.dnsm[104]";
-connectAttr "character1.uv[34]" "MouthRN.phl[178]";
-connectAttr "MouthRN.phl[179]" "character1.dnsm[100]";
-connectAttr "character1.av[33]" "MouthRN.phl[180]";
-connectAttr "MouthRN.phl[181]" "character1.dnsm[99]";
-connectAttr "character1.av[32]" "MouthRN.phl[182]";
-connectAttr "MouthRN.phl[183]" "character1.dnsm[98]";
-connectAttr "character1.av[31]" "MouthRN.phl[184]";
-connectAttr "mouthC_2_ctl_visibility.o" "MouthRN.phl[185]";
-connectAttr "MouthRN.phl[186]" "character1.dnsm[103]";
-connectAttr "character1.lv[33]" "MouthRN.phl[187]";
-connectAttr "MouthRN.phl[188]" "character1.dnsm[102]";
-connectAttr "character1.lv[32]" "MouthRN.phl[189]";
-connectAttr "MouthRN.phl[190]" "character1.dnsm[101]";
-connectAttr "character1.lv[31]" "MouthRN.phl[191]";
-connectAttr "MouthRN.phl[192]" "character1.dnsm[97]";
-connectAttr "character1.uv[33]" "MouthRN.phl[193]";
-connectAttr "MouthRN.phl[194]" "character1.dnsm[96]";
-connectAttr "character1.uv[32]" "MouthRN.phl[195]";
-connectAttr "MouthRN.phl[196]" "character1.dnsm[95]";
-connectAttr "character1.uv[31]" "MouthRN.phl[197]";
+connectAttr "MouthRN.phl[141]" "character1.dnsm[121]";
+connectAttr "character1.lv[39]" "MouthRN.phl[142]";
+connectAttr "MouthRN.phl[143]" "character1.dnsm[120]";
+connectAttr "character1.lv[38]" "MouthRN.phl[144]";
+connectAttr "MouthRN.phl[145]" "character1.dnsm[119]";
+connectAttr "character1.lv[37]" "MouthRN.phl[146]";
+connectAttr "MouthRN.phl[147]" "character1.dnsm[118]";
+connectAttr "character1.av[39]" "MouthRN.phl[148]";
+connectAttr "MouthRN.phl[149]" "character1.dnsm[117]";
+connectAttr "character1.av[38]" "MouthRN.phl[150]";
+connectAttr "MouthRN.phl[151]" "character1.dnsm[116]";
+connectAttr "character1.av[37]" "MouthRN.phl[152]";
+connectAttr "MouthRN.phl[153]" "character1.dnsm[115]";
+connectAttr "character1.uv[39]" "MouthRN.phl[154]";
+connectAttr "MouthRN.phl[155]" "character1.dnsm[114]";
+connectAttr "character1.uv[38]" "MouthRN.phl[156]";
+connectAttr "MouthRN.phl[157]" "character1.dnsm[113]";
+connectAttr "character1.uv[37]" "MouthRN.phl[158]";
+connectAttr "mouthC_0_ctl_visibility.o" "MouthRN.phl[159]";
+connectAttr "MouthRN.phl[160]" "character1.dnsm[112]";
+connectAttr "character1.lv[36]" "MouthRN.phl[161]";
+connectAttr "MouthRN.phl[162]" "character1.dnsm[111]";
+connectAttr "character1.lv[35]" "MouthRN.phl[163]";
+connectAttr "MouthRN.phl[164]" "character1.dnsm[110]";
+connectAttr "character1.lv[34]" "MouthRN.phl[165]";
+connectAttr "MouthRN.phl[166]" "character1.dnsm[109]";
+connectAttr "character1.av[36]" "MouthRN.phl[167]";
+connectAttr "MouthRN.phl[168]" "character1.dnsm[108]";
+connectAttr "character1.av[35]" "MouthRN.phl[169]";
+connectAttr "MouthRN.phl[170]" "character1.dnsm[107]";
+connectAttr "character1.av[34]" "MouthRN.phl[171]";
+connectAttr "MouthRN.phl[172]" "character1.dnsm[106]";
+connectAttr "character1.uv[36]" "MouthRN.phl[173]";
+connectAttr "MouthRN.phl[174]" "character1.dnsm[105]";
+connectAttr "character1.uv[35]" "MouthRN.phl[175]";
+connectAttr "MouthRN.phl[176]" "character1.dnsm[104]";
+connectAttr "character1.uv[34]" "MouthRN.phl[177]";
+connectAttr "mouthC_1_ctl_visibility.o" "MouthRN.phl[178]";
+connectAttr "MouthRN.phl[179]" "character1.dnsm[103]";
+connectAttr "character1.lv[33]" "MouthRN.phl[180]";
+connectAttr "MouthRN.phl[181]" "character1.dnsm[102]";
+connectAttr "character1.lv[32]" "MouthRN.phl[182]";
+connectAttr "MouthRN.phl[183]" "character1.dnsm[101]";
+connectAttr "character1.lv[31]" "MouthRN.phl[184]";
+connectAttr "MouthRN.phl[185]" "character1.dnsm[100]";
+connectAttr "character1.av[33]" "MouthRN.phl[186]";
+connectAttr "MouthRN.phl[187]" "character1.dnsm[99]";
+connectAttr "character1.av[32]" "MouthRN.phl[188]";
+connectAttr "MouthRN.phl[189]" "character1.dnsm[98]";
+connectAttr "character1.av[31]" "MouthRN.phl[190]";
+connectAttr "MouthRN.phl[191]" "character1.dnsm[97]";
+connectAttr "character1.uv[33]" "MouthRN.phl[192]";
+connectAttr "MouthRN.phl[193]" "character1.dnsm[96]";
+connectAttr "character1.uv[32]" "MouthRN.phl[194]";
+connectAttr "MouthRN.phl[195]" "character1.dnsm[95]";
+connectAttr "character1.uv[31]" "MouthRN.phl[196]";
+connectAttr "mouthC_2_ctl_visibility.o" "MouthRN.phl[197]";
 connectAttr "MouthRN.phl[198]" "character1.dnsm[94]";
 connectAttr "character1.lv[30]" "MouthRN.phl[199]";
 connectAttr "MouthRN.phl[200]" "character1.dnsm[93]";
@@ -51864,114 +51081,114 @@ connectAttr "character1.uv[20]" "MouthRN.phl[270]";
 connectAttr "MouthRN.phl[271]" "character1.dnsm[59]";
 connectAttr "character1.uv[19]" "MouthRN.phl[272]";
 connectAttr "mouthD_3_ctl_visibility.o" "MouthRN.phl[273]";
-connectAttr "MouthRN.phl[274]" "character1.dnsm[50]";
-connectAttr "character1.uv[16]" "MouthRN.phl[275]";
-connectAttr "MouthRN.phl[276]" "character1.dnsm[51]";
-connectAttr "character1.uv[17]" "MouthRN.phl[277]";
-connectAttr "MouthRN.phl[278]" "character1.dnsm[52]";
-connectAttr "character1.uv[18]" "MouthRN.phl[279]";
-connectAttr "MouthRN.phl[280]" "character1.dnsm[53]";
-connectAttr "character1.av[16]" "MouthRN.phl[281]";
+connectAttr "MouthRN.phl[274]" "character1.dnsm[58]";
+connectAttr "character1.lv[18]" "MouthRN.phl[275]";
+connectAttr "MouthRN.phl[276]" "character1.dnsm[57]";
+connectAttr "character1.lv[17]" "MouthRN.phl[277]";
+connectAttr "MouthRN.phl[278]" "character1.dnsm[56]";
+connectAttr "character1.lv[16]" "MouthRN.phl[279]";
+connectAttr "MouthRN.phl[280]" "character1.dnsm[55]";
+connectAttr "character1.av[18]" "MouthRN.phl[281]";
 connectAttr "MouthRN.phl[282]" "character1.dnsm[54]";
 connectAttr "character1.av[17]" "MouthRN.phl[283]";
-connectAttr "MouthRN.phl[284]" "character1.dnsm[55]";
-connectAttr "character1.av[18]" "MouthRN.phl[285]";
-connectAttr "MouthRN.phl[286]" "character1.dnsm[56]";
-connectAttr "character1.lv[16]" "MouthRN.phl[287]";
-connectAttr "MouthRN.phl[288]" "character1.dnsm[57]";
-connectAttr "character1.lv[17]" "MouthRN.phl[289]";
-connectAttr "MouthRN.phl[290]" "character1.dnsm[58]";
-connectAttr "character1.lv[18]" "MouthRN.phl[291]";
-connectAttr "MouthRN.phl[292]" "character1.dnsm[41]";
-connectAttr "character1.uv[13]" "MouthRN.phl[293]";
-connectAttr "MouthRN.phl[294]" "character1.dnsm[42]";
-connectAttr "character1.uv[14]" "MouthRN.phl[295]";
-connectAttr "MouthRN.phl[296]" "character1.dnsm[43]";
-connectAttr "character1.uv[15]" "MouthRN.phl[297]";
-connectAttr "MouthRN.phl[298]" "character1.dnsm[44]";
-connectAttr "character1.av[13]" "MouthRN.phl[299]";
+connectAttr "MouthRN.phl[284]" "character1.dnsm[53]";
+connectAttr "character1.av[16]" "MouthRN.phl[285]";
+connectAttr "MouthRN.phl[286]" "character1.dnsm[52]";
+connectAttr "character1.uv[18]" "MouthRN.phl[287]";
+connectAttr "MouthRN.phl[288]" "character1.dnsm[51]";
+connectAttr "character1.uv[17]" "MouthRN.phl[289]";
+connectAttr "MouthRN.phl[290]" "character1.dnsm[50]";
+connectAttr "character1.uv[16]" "MouthRN.phl[291]";
+connectAttr "MouthRN.phl[292]" "character1.dnsm[49]";
+connectAttr "character1.lv[15]" "MouthRN.phl[293]";
+connectAttr "MouthRN.phl[294]" "character1.dnsm[48]";
+connectAttr "character1.lv[14]" "MouthRN.phl[295]";
+connectAttr "MouthRN.phl[296]" "character1.dnsm[47]";
+connectAttr "character1.lv[13]" "MouthRN.phl[297]";
+connectAttr "MouthRN.phl[298]" "character1.dnsm[46]";
+connectAttr "character1.av[15]" "MouthRN.phl[299]";
 connectAttr "MouthRN.phl[300]" "character1.dnsm[45]";
 connectAttr "character1.av[14]" "MouthRN.phl[301]";
-connectAttr "MouthRN.phl[302]" "character1.dnsm[46]";
-connectAttr "character1.av[15]" "MouthRN.phl[303]";
-connectAttr "MouthRN.phl[304]" "character1.dnsm[47]";
-connectAttr "character1.lv[13]" "MouthRN.phl[305]";
-connectAttr "MouthRN.phl[306]" "character1.dnsm[48]";
-connectAttr "character1.lv[14]" "MouthRN.phl[307]";
-connectAttr "MouthRN.phl[308]" "character1.dnsm[49]";
-connectAttr "character1.lv[15]" "MouthRN.phl[309]";
-connectAttr "MouthRN.phl[310]" "character1.dnsm[32]";
-connectAttr "character1.uv[10]" "MouthRN.phl[311]";
-connectAttr "MouthRN.phl[312]" "character1.dnsm[33]";
-connectAttr "character1.uv[11]" "MouthRN.phl[313]";
-connectAttr "MouthRN.phl[314]" "character1.dnsm[34]";
-connectAttr "character1.uv[12]" "MouthRN.phl[315]";
-connectAttr "MouthRN.phl[316]" "character1.dnsm[35]";
-connectAttr "character1.av[10]" "MouthRN.phl[317]";
+connectAttr "MouthRN.phl[302]" "character1.dnsm[44]";
+connectAttr "character1.av[13]" "MouthRN.phl[303]";
+connectAttr "MouthRN.phl[304]" "character1.dnsm[43]";
+connectAttr "character1.uv[15]" "MouthRN.phl[305]";
+connectAttr "MouthRN.phl[306]" "character1.dnsm[42]";
+connectAttr "character1.uv[14]" "MouthRN.phl[307]";
+connectAttr "MouthRN.phl[308]" "character1.dnsm[41]";
+connectAttr "character1.uv[13]" "MouthRN.phl[309]";
+connectAttr "MouthRN.phl[310]" "character1.dnsm[40]";
+connectAttr "character1.lv[12]" "MouthRN.phl[311]";
+connectAttr "MouthRN.phl[312]" "character1.dnsm[39]";
+connectAttr "character1.lv[11]" "MouthRN.phl[313]";
+connectAttr "MouthRN.phl[314]" "character1.dnsm[38]";
+connectAttr "character1.lv[10]" "MouthRN.phl[315]";
+connectAttr "MouthRN.phl[316]" "character1.dnsm[37]";
+connectAttr "character1.av[12]" "MouthRN.phl[317]";
 connectAttr "MouthRN.phl[318]" "character1.dnsm[36]";
 connectAttr "character1.av[11]" "MouthRN.phl[319]";
-connectAttr "MouthRN.phl[320]" "character1.dnsm[37]";
-connectAttr "character1.av[12]" "MouthRN.phl[321]";
-connectAttr "MouthRN.phl[322]" "character1.dnsm[38]";
-connectAttr "character1.lv[10]" "MouthRN.phl[323]";
-connectAttr "MouthRN.phl[324]" "character1.dnsm[39]";
-connectAttr "character1.lv[11]" "MouthRN.phl[325]";
-connectAttr "MouthRN.phl[326]" "character1.dnsm[40]";
-connectAttr "character1.lv[12]" "MouthRN.phl[327]";
-connectAttr "MouthRN.phl[328]" "character1.dnsm[14]";
-connectAttr "character1.uv[4]" "MouthRN.phl[329]";
-connectAttr "MouthRN.phl[330]" "character1.dnsm[15]";
-connectAttr "character1.uv[5]" "MouthRN.phl[331]";
-connectAttr "MouthRN.phl[332]" "character1.dnsm[16]";
-connectAttr "character1.uv[6]" "MouthRN.phl[333]";
-connectAttr "MouthRN.phl[334]" "character1.dnsm[17]";
-connectAttr "character1.av[4]" "MouthRN.phl[335]";
+connectAttr "MouthRN.phl[320]" "character1.dnsm[35]";
+connectAttr "character1.av[10]" "MouthRN.phl[321]";
+connectAttr "MouthRN.phl[322]" "character1.dnsm[34]";
+connectAttr "character1.uv[12]" "MouthRN.phl[323]";
+connectAttr "MouthRN.phl[324]" "character1.dnsm[33]";
+connectAttr "character1.uv[11]" "MouthRN.phl[325]";
+connectAttr "MouthRN.phl[326]" "character1.dnsm[32]";
+connectAttr "character1.uv[10]" "MouthRN.phl[327]";
+connectAttr "MouthRN.phl[328]" "character1.dnsm[22]";
+connectAttr "character1.lv[6]" "MouthRN.phl[329]";
+connectAttr "MouthRN.phl[330]" "character1.dnsm[21]";
+connectAttr "character1.lv[5]" "MouthRN.phl[331]";
+connectAttr "MouthRN.phl[332]" "character1.dnsm[20]";
+connectAttr "character1.lv[4]" "MouthRN.phl[333]";
+connectAttr "MouthRN.phl[334]" "character1.dnsm[19]";
+connectAttr "character1.av[6]" "MouthRN.phl[335]";
 connectAttr "MouthRN.phl[336]" "character1.dnsm[18]";
 connectAttr "character1.av[5]" "MouthRN.phl[337]";
-connectAttr "MouthRN.phl[338]" "character1.dnsm[19]";
-connectAttr "character1.av[6]" "MouthRN.phl[339]";
-connectAttr "MouthRN.phl[340]" "character1.dnsm[20]";
-connectAttr "character1.lv[4]" "MouthRN.phl[341]";
-connectAttr "MouthRN.phl[342]" "character1.dnsm[21]";
-connectAttr "character1.lv[5]" "MouthRN.phl[343]";
-connectAttr "MouthRN.phl[344]" "character1.dnsm[22]";
-connectAttr "character1.lv[6]" "MouthRN.phl[345]";
-connectAttr "MouthRN.phl[346]" "character1.dnsm[5]";
-connectAttr "character1.uv[1]" "MouthRN.phl[347]";
-connectAttr "MouthRN.phl[348]" "character1.dnsm[6]";
-connectAttr "character1.uv[2]" "MouthRN.phl[349]";
-connectAttr "MouthRN.phl[350]" "character1.dnsm[7]";
-connectAttr "character1.uv[3]" "MouthRN.phl[351]";
-connectAttr "MouthRN.phl[352]" "character1.dnsm[8]";
-connectAttr "character1.av[1]" "MouthRN.phl[353]";
+connectAttr "MouthRN.phl[338]" "character1.dnsm[17]";
+connectAttr "character1.av[4]" "MouthRN.phl[339]";
+connectAttr "MouthRN.phl[340]" "character1.dnsm[16]";
+connectAttr "character1.uv[6]" "MouthRN.phl[341]";
+connectAttr "MouthRN.phl[342]" "character1.dnsm[15]";
+connectAttr "character1.uv[5]" "MouthRN.phl[343]";
+connectAttr "MouthRN.phl[344]" "character1.dnsm[14]";
+connectAttr "character1.uv[4]" "MouthRN.phl[345]";
+connectAttr "MouthRN.phl[346]" "character1.dnsm[13]";
+connectAttr "character1.lv[3]" "MouthRN.phl[347]";
+connectAttr "MouthRN.phl[348]" "character1.dnsm[12]";
+connectAttr "character1.lv[2]" "MouthRN.phl[349]";
+connectAttr "MouthRN.phl[350]" "character1.dnsm[11]";
+connectAttr "character1.lv[1]" "MouthRN.phl[351]";
+connectAttr "MouthRN.phl[352]" "character1.dnsm[10]";
+connectAttr "character1.av[3]" "MouthRN.phl[353]";
 connectAttr "MouthRN.phl[354]" "character1.dnsm[9]";
 connectAttr "character1.av[2]" "MouthRN.phl[355]";
-connectAttr "MouthRN.phl[356]" "character1.dnsm[10]";
-connectAttr "character1.av[3]" "MouthRN.phl[357]";
-connectAttr "MouthRN.phl[358]" "character1.dnsm[11]";
-connectAttr "character1.lv[1]" "MouthRN.phl[359]";
-connectAttr "MouthRN.phl[360]" "character1.dnsm[12]";
-connectAttr "character1.lv[2]" "MouthRN.phl[361]";
-connectAttr "MouthRN.phl[362]" "character1.dnsm[13]";
-connectAttr "character1.lv[3]" "MouthRN.phl[363]";
-connectAttr "MouthRN.phl[364]" "character1.dnsm[176]";
-connectAttr "character1.uv[58]" "MouthRN.phl[365]";
-connectAttr "MouthRN.phl[366]" "character1.dnsm[177]";
-connectAttr "character1.uv[59]" "MouthRN.phl[367]";
-connectAttr "MouthRN.phl[368]" "character1.dnsm[178]";
-connectAttr "character1.uv[60]" "MouthRN.phl[369]";
-connectAttr "MouthRN.phl[370]" "character1.dnsm[179]";
-connectAttr "character1.av[58]" "MouthRN.phl[371]";
+connectAttr "MouthRN.phl[356]" "character1.dnsm[8]";
+connectAttr "character1.av[1]" "MouthRN.phl[357]";
+connectAttr "MouthRN.phl[358]" "character1.dnsm[7]";
+connectAttr "character1.uv[3]" "MouthRN.phl[359]";
+connectAttr "MouthRN.phl[360]" "character1.dnsm[6]";
+connectAttr "character1.uv[2]" "MouthRN.phl[361]";
+connectAttr "MouthRN.phl[362]" "character1.dnsm[5]";
+connectAttr "character1.uv[1]" "MouthRN.phl[363]";
+connectAttr "MouthRN.phl[364]" "character1.dnsm[184]";
+connectAttr "character1.lv[60]" "MouthRN.phl[365]";
+connectAttr "MouthRN.phl[366]" "character1.dnsm[183]";
+connectAttr "character1.lv[59]" "MouthRN.phl[367]";
+connectAttr "MouthRN.phl[368]" "character1.dnsm[182]";
+connectAttr "character1.lv[58]" "MouthRN.phl[369]";
+connectAttr "MouthRN.phl[370]" "character1.dnsm[181]";
+connectAttr "character1.av[60]" "MouthRN.phl[371]";
 connectAttr "MouthRN.phl[372]" "character1.dnsm[180]";
 connectAttr "character1.av[59]" "MouthRN.phl[373]";
-connectAttr "MouthRN.phl[374]" "character1.dnsm[181]";
-connectAttr "character1.av[60]" "MouthRN.phl[375]";
-connectAttr "MouthRN.phl[376]" "character1.dnsm[182]";
-connectAttr "character1.lv[58]" "MouthRN.phl[377]";
-connectAttr "MouthRN.phl[378]" "character1.dnsm[183]";
-connectAttr "character1.lv[59]" "MouthRN.phl[379]";
-connectAttr "MouthRN.phl[380]" "character1.dnsm[184]";
-connectAttr "character1.lv[60]" "MouthRN.phl[381]";
+connectAttr "MouthRN.phl[374]" "character1.dnsm[179]";
+connectAttr "character1.av[58]" "MouthRN.phl[375]";
+connectAttr "MouthRN.phl[376]" "character1.dnsm[178]";
+connectAttr "character1.uv[60]" "MouthRN.phl[377]";
+connectAttr "MouthRN.phl[378]" "character1.dnsm[177]";
+connectAttr "character1.uv[59]" "MouthRN.phl[379]";
+connectAttr "MouthRN.phl[380]" "character1.dnsm[176]";
+connectAttr "character1.uv[58]" "MouthRN.phl[381]";
 connectAttr "blob_1RN.phl[1]" "character1.dnsm[326]";
 connectAttr "character1.av[88]" "blob_1RN.phl[2]";
 connectAttr "blob_1RN.phl[3]" "character1.dnsm[327]";
@@ -52097,9 +51314,9 @@ connectAttr "blob_1RN.phl[128]" "blob_1RN.phl[129]";
 connectAttr "blob_1RN.phl[130]" "blob_1RN.phl[131]";
 connectAttr "blob_1RN.phl[132]" "blob_1RN.phl[133]";
 connectAttr "ctrl_1_ctl_visibility15.o" "blob_1RN.phl[134]";
-connectAttr "character1_ctrl_1_ctl_rotateZ17.o" "blob_1RN.phl[135]";
-connectAttr "character1_ctrl_1_ctl_rotateY17.o" "blob_1RN.phl[136]";
-connectAttr "character1_ctrl_1_ctl_rotateX17.o" "blob_1RN.phl[137]";
+connectAttr "character1_ctrl_1_ctl_rotateZ15.o" "blob_1RN.phl[135]";
+connectAttr "character1_ctrl_1_ctl_rotateY15.o" "blob_1RN.phl[136]";
+connectAttr "character1_ctrl_1_ctl_rotateX15.o" "blob_1RN.phl[137]";
 connectAttr "blob_1RN.phl[138]" "character1.av[100]";
 connectAttr "character1_ctrl_1_ctl_rotateZ18.o" "blob_1RN.phl[139]";
 connectAttr "blob_1RN.phl[140]" "character1.av[101]";
@@ -52136,345 +51353,85 @@ connectAttr "blob_1RN.phl[170]" "character1.av[89]";
 connectAttr "character1_root_ctrl_rotateY3.o" "blob_1RN.phl[171]";
 connectAttr "blob_1RN.phl[172]" "character1.av[90]";
 connectAttr "character1_root_ctrl_rotateX3.o" "blob_1RN.phl[173]";
-connectAttr "character1_ctrl_1_ctl_rotateX15.o" "blob_1RN.phl[174]";
-connectAttr "character1_ctrl_1_ctl_rotateY15.o" "blob_1RN.phl[175]";
-connectAttr "character1_ctrl_1_ctl_rotateZ15.o" "blob_1RN.phl[176]";
-connectAttr "character1_ctrl_1_ctl_rotateX16.o" "blob_1RN.phl[177]";
-connectAttr "character1_ctrl_1_ctl_rotateY16.o" "blob_1RN.phl[178]";
-connectAttr "character1_ctrl_1_ctl_rotateZ16.o" "blob_1RN.phl[179]";
-connectAttr "character1_angularValues_15_2.o" "blob_1RN.phl[180]";
-connectAttr "character1_angularValues_14_2.o" "blob_1RN.phl[181]";
-connectAttr "character1_angularValues_13_2.o" "blob_1RN.phl[182]";
-connectAttr "character1_angularValues_18_2.o" "blob_1RN.phl[183]";
-connectAttr "character1_angularValues_17_2.o" "blob_1RN.phl[184]";
-connectAttr "character1_angularValues_16_2.o" "blob_1RN.phl[185]";
-connectAttr "character1_angularValues_12_1.o" "blob_1RN.phl[186]";
-connectAttr "character1_angularValues_11_1.o" "blob_1RN.phl[187]";
-connectAttr "character1_angularValues_10_1.o" "blob_1RN.phl[188]";
-connectAttr "character1_root_ctrl_rotateX1.o" "blob_1RN.phl[189]";
-connectAttr "character1_root_ctrl_rotateY1.o" "blob_1RN.phl[190]";
-connectAttr "character1_root_ctrl_rotateZ1.o" "blob_1RN.phl[191]";
-connectAttr "character1_angularValues_9_1.o" "blob_1RN.phl[192]";
-connectAttr "character1_angularValues_8_1.o" "blob_1RN.phl[193]";
-connectAttr "character1_angularValues_7_1.o" "blob_1RN.phl[194]";
-connectAttr "character1_ctrl_1_ctl_translateZ17.o" "blob_1RN.phl[195]";
-connectAttr "character1_ctrl_1_ctl_translateY17.o" "blob_1RN.phl[196]";
-connectAttr "character1_ctrl_1_ctl_translateX17.o" "blob_1RN.phl[197]";
-connectAttr "blob_1RN.phl[198]" "character1.lv[151]";
-connectAttr "character1_ctrl_1_ctl_translateZ18.o" "blob_1RN.phl[199]";
-connectAttr "blob_1RN.phl[200]" "character1.lv[152]";
-connectAttr "character1_ctrl_1_ctl_translateY18.o" "blob_1RN.phl[201]";
-connectAttr "blob_1RN.phl[202]" "character1.lv[153]";
-connectAttr "character1_ctrl_1_ctl_translateX18.o" "blob_1RN.phl[203]";
-connectAttr "blob_1RN.phl[204]" "character1.lv[142]";
-connectAttr "character1_linearValues_7_3.o" "blob_1RN.phl[205]";
-connectAttr "blob_1RN.phl[206]" "character1.lv[143]";
-connectAttr "character1_linearValues_8_3.o" "blob_1RN.phl[207]";
-connectAttr "blob_1RN.phl[208]" "character1.lv[144]";
-connectAttr "character1_linearValues_9_3.o" "blob_1RN.phl[209]";
-connectAttr "blob_1RN.phl[210]" "character1.lv[145]";
-connectAttr "character1_linearValues_10_3.o" "blob_1RN.phl[211]";
-connectAttr "blob_1RN.phl[212]" "character1.lv[146]";
-connectAttr "character1_linearValues_11_3.o" "blob_1RN.phl[213]";
-connectAttr "blob_1RN.phl[214]" "character1.lv[147]";
-connectAttr "character1_linearValues_12_3.o" "blob_1RN.phl[215]";
-connectAttr "blob_1RN.phl[216]" "character1.lv[148]";
-connectAttr "character1_linearValues_13_3.o" "blob_1RN.phl[217]";
-connectAttr "blob_1RN.phl[218]" "character1.lv[149]";
-connectAttr "character1_linearValues_14_3.o" "blob_1RN.phl[219]";
-connectAttr "blob_1RN.phl[220]" "character1.lv[150]";
-connectAttr "character1_linearValues_15_3.o" "blob_1RN.phl[221]";
-connectAttr "blob_1RN.phl[222]" "character1.lv[154]";
-connectAttr "character1_linearValues_16_3.o" "blob_1RN.phl[223]";
-connectAttr "blob_1RN.phl[224]" "character1.lv[155]";
-connectAttr "character1_linearValues_17_3.o" "blob_1RN.phl[225]";
-connectAttr "blob_1RN.phl[226]" "character1.lv[156]";
-connectAttr "character1_linearValues_18_3.o" "blob_1RN.phl[227]";
-connectAttr "blob_1RN.phl[228]" "character1.lv[139]";
-connectAttr "character1_root_ctrl_translateZ3.o" "blob_1RN.phl[229]";
-connectAttr "blob_1RN.phl[230]" "character1.lv[140]";
-connectAttr "character1_root_ctrl_translateY3.o" "blob_1RN.phl[231]";
-connectAttr "blob_1RN.phl[232]" "character1.lv[141]";
-connectAttr "character1_root_ctrl_translateX3.o" "blob_1RN.phl[233]";
-connectAttr "character1_ctrl_1_ctl_translateX.o" "blob_1RN.phl[234]";
-connectAttr "character1_ctrl_1_ctl_translateY.o" "blob_1RN.phl[235]";
-connectAttr "character1_ctrl_1_ctl_translateZ.o" "blob_1RN.phl[236]";
-connectAttr "character1_ctrl_1_ctl_translateX12.o" "blob_1RN.phl[237]";
-connectAttr "character1_ctrl_1_ctl_translateY12.o" "blob_1RN.phl[238]";
-connectAttr "character1_ctrl_1_ctl_translateZ12.o" "blob_1RN.phl[239]";
-connectAttr "character1_linearValues_15_.o" "blob_1RN.phl[240]";
-connectAttr "character1_linearValues_14_.o" "blob_1RN.phl[241]";
-connectAttr "character1_linearValues_13_.o" "blob_1RN.phl[242]";
-connectAttr "character1_linearValues_18_.o" "blob_1RN.phl[243]";
-connectAttr "character1_linearValues_17_.o" "blob_1RN.phl[244]";
-connectAttr "character1_linearValues_16_.o" "blob_1RN.phl[245]";
-connectAttr "character1_linearValues_12_.o" "blob_1RN.phl[246]";
-connectAttr "character1_linearValues_11_.o" "blob_1RN.phl[247]";
-connectAttr "character1_linearValues_10_.o" "blob_1RN.phl[248]";
-connectAttr "character1_root_ctrl_translateX.o" "blob_1RN.phl[249]";
-connectAttr "character1_root_ctrl_translateY.o" "blob_1RN.phl[250]";
-connectAttr "character1_root_ctrl_translateZ.o" "blob_1RN.phl[251]";
-connectAttr "character1_linearValues_9_.o" "blob_1RN.phl[252]";
-connectAttr "character1_linearValues_8_.o" "blob_1RN.phl[253]";
-connectAttr "character1_linearValues_7_.o" "blob_1RN.phl[254]";
-connectAttr "character1_ctrl_1_ctl_scaleZ17.o" "blob_1RN.phl[255]";
-connectAttr "character1_ctrl_1_ctl_scaleY17.o" "blob_1RN.phl[256]";
-connectAttr "character1_ctrl_1_ctl_scaleX17.o" "blob_1RN.phl[257]";
-connectAttr "blob_1RN.phl[258]" "character1.uv[106]";
-connectAttr "character1_ctrl_1_ctl_scaleZ18.o" "blob_1RN.phl[259]";
-connectAttr "blob_1RN.phl[260]" "character1.uv[107]";
-connectAttr "character1_ctrl_1_ctl_scaleY18.o" "blob_1RN.phl[261]";
-connectAttr "blob_1RN.phl[262]" "character1.uv[108]";
-connectAttr "character1_ctrl_1_ctl_scaleX18.o" "blob_1RN.phl[263]";
-connectAttr "blob_1RN.phl[264]" "character1.uv[97]";
-connectAttr "character1_unitlessValues_7_3.o" "blob_1RN.phl[265]";
-connectAttr "blob_1RN.phl[266]" "character1.uv[98]";
-connectAttr "character1_unitlessValues_8_3.o" "blob_1RN.phl[267]";
-connectAttr "blob_1RN.phl[268]" "character1.uv[99]";
-connectAttr "character1_unitlessValues_9_3.o" "blob_1RN.phl[269]";
-connectAttr "blob_1RN.phl[270]" "character1.uv[100]";
-connectAttr "character1_unitlessValues_10_3.o" "blob_1RN.phl[271]";
-connectAttr "blob_1RN.phl[272]" "character1.uv[101]";
-connectAttr "character1_unitlessValues_11_3.o" "blob_1RN.phl[273]";
-connectAttr "blob_1RN.phl[274]" "character1.uv[102]";
-connectAttr "character1_unitlessValues_12_3.o" "blob_1RN.phl[275]";
-connectAttr "blob_1RN.phl[276]" "character1.uv[103]";
-connectAttr "character1_unitlessValues_13_3.o" "blob_1RN.phl[277]";
-connectAttr "blob_1RN.phl[278]" "character1.uv[104]";
-connectAttr "character1_unitlessValues_14_3.o" "blob_1RN.phl[279]";
-connectAttr "blob_1RN.phl[280]" "character1.uv[105]";
-connectAttr "character1_unitlessValues_15_3.o" "blob_1RN.phl[281]";
-connectAttr "blob_1RN.phl[282]" "character1.uv[109]";
-connectAttr "character1_unitlessValues_16_3.o" "blob_1RN.phl[283]";
-connectAttr "blob_1RN.phl[284]" "character1.uv[110]";
-connectAttr "character1_unitlessValues_17_3.o" "blob_1RN.phl[285]";
-connectAttr "blob_1RN.phl[286]" "character1.uv[111]";
-connectAttr "character1_unitlessValues_18_3.o" "blob_1RN.phl[287]";
-connectAttr "blob_1RN.phl[288]" "character1.uv[94]";
-connectAttr "character1_root_ctrl_scaleZ3.o" "blob_1RN.phl[289]";
-connectAttr "blob_1RN.phl[290]" "character1.uv[95]";
-connectAttr "character1_root_ctrl_scaleY3.o" "blob_1RN.phl[291]";
-connectAttr "blob_1RN.phl[292]" "character1.uv[96]";
-connectAttr "character1_root_ctrl_scaleX3.o" "blob_1RN.phl[293]";
-connectAttr "character1_ctrl_1_ctl_scaleX15.o" "blob_1RN.phl[294]";
-connectAttr "character1_ctrl_1_ctl_scaleY15.o" "blob_1RN.phl[295]";
-connectAttr "character1_ctrl_1_ctl_scaleZ15.o" "blob_1RN.phl[296]";
-connectAttr "character1_ctrl_1_ctl_scaleX16.o" "blob_1RN.phl[297]";
-connectAttr "character1_ctrl_1_ctl_scaleY16.o" "blob_1RN.phl[298]";
-connectAttr "character1_ctrl_1_ctl_scaleZ16.o" "blob_1RN.phl[299]";
-connectAttr "character1_unitlessValues_15_2.o" "blob_1RN.phl[300]";
-connectAttr "character1_unitlessValues_14_2.o" "blob_1RN.phl[301]";
-connectAttr "character1_unitlessValues_13_2.o" "blob_1RN.phl[302]";
-connectAttr "character1_unitlessValues_18_2.o" "blob_1RN.phl[303]";
-connectAttr "character1_unitlessValues_17_2.o" "blob_1RN.phl[304]";
-connectAttr "character1_unitlessValues_16_2.o" "blob_1RN.phl[305]";
-connectAttr "character1_unitlessValues_12_1.o" "blob_1RN.phl[306]";
-connectAttr "character1_unitlessValues_11_1.o" "blob_1RN.phl[307]";
-connectAttr "character1_unitlessValues_10_1.o" "blob_1RN.phl[308]";
-connectAttr "character1_root_ctrl_scaleX1.o" "blob_1RN.phl[309]";
-connectAttr "character1_root_ctrl_scaleY1.o" "blob_1RN.phl[310]";
-connectAttr "character1_unitlessValues_9_1.o" "blob_1RN.phl[311]";
-connectAttr "character1_unitlessValues_8_1.o" "blob_1RN.phl[312]";
-connectAttr "character1_unitlessValues_7_1.o" "blob_1RN.phl[313]";
-connectAttr "blob_1RN.phl[314]" "character1.dnsm[0]";
-connectAttr "blob_2RN.phl[1]" "blob_2RN.phl[2]";
-connectAttr "blob_2RN.phl[3]" "blob_2RN.phl[4]";
-connectAttr "blob_2RN.phl[5]" "blob_2RN.phl[6]";
-connectAttr "blob_2RN.phl[7]" "blob_2RN.phl[8]";
-connectAttr "blob_2RN.phl[9]" "blob_2RN.phl[10]";
-connectAttr "blob_2RN.phl[11]" "blob_2RN.phl[12]";
-connectAttr "blob_2RN.phl[13]" "blob_2RN.phl[14]";
-connectAttr "blob_2RN.phl[15]" "blob_2RN.phl[16]";
-connectAttr "blob_2RN.phl[17]" "blob_2RN.phl[18]";
-connectAttr "root_ctrl_visibility.o" "blob_2RN.phl[19]";
-connectAttr "layer1.di" "blob_2RN.phl[20]";
-connectAttr "blob_2RN.phl[21]" "blob_2RN.phl[22]";
-connectAttr "blob_2RN.phl[23]" "blob_2RN.phl[24]";
-connectAttr "blob_2RN.phl[25]" "blob_2RN.phl[26]";
-connectAttr "blob_2RN.phl[27]" "blob_2RN.phl[28]";
-connectAttr "blob_2RN.phl[29]" "blob_2RN.phl[30]";
-connectAttr "blob_2RN.phl[31]" "blob_2RN.phl[32]";
-connectAttr "blob_2RN.phl[33]" "blob_2RN.phl[34]";
-connectAttr "blob_2RN.phl[35]" "blob_2RN.phl[36]";
-connectAttr "blob_2RN.phl[37]" "blob_2RN.phl[38]";
-connectAttr "ctrl_1_ctl_visibility3.o" "blob_2RN.phl[39]";
-connectAttr "blob_2RN.phl[40]" "blob_2RN.phl[41]";
-connectAttr "blob_2RN.phl[42]" "blob_2RN.phl[43]";
-connectAttr "blob_2RN.phl[44]" "blob_2RN.phl[45]";
-connectAttr "blob_2RN.phl[46]" "blob_2RN.phl[47]";
-connectAttr "blob_2RN.phl[48]" "blob_2RN.phl[49]";
-connectAttr "blob_2RN.phl[50]" "blob_2RN.phl[51]";
-connectAttr "blob_2RN.phl[52]" "blob_2RN.phl[53]";
-connectAttr "blob_2RN.phl[54]" "blob_2RN.phl[55]";
-connectAttr "blob_2RN.phl[56]" "blob_2RN.phl[57]";
-connectAttr "ctrl_1_ctl_visibility2.o" "blob_2RN.phl[58]";
-connectAttr "blob_2RN.phl[59]" "blob_2RN.phl[60]";
-connectAttr "blob_2RN.phl[61]" "blob_2RN.phl[62]";
-connectAttr "blob_2RN.phl[63]" "blob_2RN.phl[64]";
-connectAttr "blob_2RN.phl[65]" "blob_2RN.phl[66]";
-connectAttr "blob_2RN.phl[67]" "blob_2RN.phl[68]";
-connectAttr "blob_2RN.phl[69]" "blob_2RN.phl[70]";
-connectAttr "blob_2RN.phl[71]" "blob_2RN.phl[72]";
-connectAttr "blob_2RN.phl[73]" "blob_2RN.phl[74]";
-connectAttr "blob_2RN.phl[75]" "blob_2RN.phl[76]";
-connectAttr "ctrl_1_ctl_visibility1.o" "blob_2RN.phl[77]";
-connectAttr "blob_2RN.phl[78]" "blob_2RN.phl[79]";
-connectAttr "blob_2RN.phl[80]" "blob_2RN.phl[81]";
-connectAttr "blob_2RN.phl[82]" "blob_2RN.phl[83]";
-connectAttr "blob_2RN.phl[84]" "blob_2RN.phl[85]";
-connectAttr "blob_2RN.phl[86]" "blob_2RN.phl[87]";
-connectAttr "blob_2RN.phl[88]" "blob_2RN.phl[89]";
-connectAttr "blob_2RN.phl[90]" "blob_2RN.phl[91]";
-connectAttr "blob_2RN.phl[92]" "blob_2RN.phl[93]";
-connectAttr "blob_2RN.phl[94]" "blob_2RN.phl[95]";
-connectAttr "ctrl_1_ctl_visibility.o" "blob_2RN.phl[96]";
-connectAttr "blob_2RN.phl[97]" "blob_2RN.phl[98]";
-connectAttr "blob_2RN.phl[99]" "blob_2RN.phl[100]";
-connectAttr "blob_2RN.phl[101]" "blob_2RN.phl[102]";
-connectAttr "blob_2RN.phl[103]" "blob_2RN.phl[104]";
-connectAttr "blob_2RN.phl[105]" "blob_2RN.phl[106]";
-connectAttr "blob_2RN.phl[107]" "blob_2RN.phl[108]";
-connectAttr "blob_2RN.phl[109]" "blob_2RN.phl[110]";
-connectAttr "blob_2RN.phl[111]" "blob_2RN.phl[112]";
-connectAttr "blob_2RN.phl[113]" "blob_2RN.phl[114]";
-connectAttr "ctrl_1_ctl_visibility14.o" "blob_2RN.phl[115]";
-connectAttr "blob_2RN.phl[116]" "blob_2RN.phl[117]";
-connectAttr "blob_2RN.phl[118]" "blob_2RN.phl[119]";
-connectAttr "blob_2RN.phl[120]" "blob_2RN.phl[121]";
-connectAttr "blob_2RN.phl[122]" "blob_2RN.phl[123]";
-connectAttr "blob_2RN.phl[124]" "blob_2RN.phl[125]";
-connectAttr "blob_2RN.phl[126]" "blob_2RN.phl[127]";
-connectAttr "blob_2RN.phl[128]" "blob_2RN.phl[129]";
-connectAttr "blob_2RN.phl[130]" "blob_2RN.phl[131]";
-connectAttr "blob_2RN.phl[132]" "blob_2RN.phl[133]";
-connectAttr "ctrl_1_ctl_visibility13.o" "blob_2RN.phl[134]";
-connectAttr "character1_ctrl_1_ctl_rotateZ19.o" "blob_2RN.phl[135]";
-connectAttr "character1_ctrl_1_ctl_rotateY19.o" "blob_2RN.phl[136]";
-connectAttr "character1_ctrl_1_ctl_rotateX19.o" "blob_2RN.phl[137]";
-connectAttr "character1_ctrl_1_ctl_rotateZ6.o" "blob_2RN.phl[138]";
-connectAttr "character1_ctrl_1_ctl_rotateY6.o" "blob_2RN.phl[139]";
-connectAttr "character1_ctrl_1_ctl_rotateX6.o" "blob_2RN.phl[140]";
-connectAttr "character1_angularValues_7_4.o" "blob_2RN.phl[141]";
-connectAttr "character1_angularValues_8_4.o" "blob_2RN.phl[142]";
-connectAttr "character1_angularValues_9_4.o" "blob_2RN.phl[143]";
-connectAttr "character1_angularValues_10_4.o" "blob_2RN.phl[144]";
-connectAttr "character1_angularValues_11_4.o" "blob_2RN.phl[145]";
-connectAttr "character1_angularValues_12_4.o" "blob_2RN.phl[146]";
-connectAttr "character1_angularValues_13_4.o" "blob_2RN.phl[147]";
-connectAttr "character1_angularValues_14_4.o" "blob_2RN.phl[148]";
-connectAttr "character1_angularValues_15_4.o" "blob_2RN.phl[149]";
-connectAttr "character1_angularValues_16_4.o" "blob_2RN.phl[150]";
-connectAttr "character1_angularValues_17_4.o" "blob_2RN.phl[151]";
-connectAttr "character1_angularValues_18_4.o" "blob_2RN.phl[152]";
-connectAttr "character1_root_ctrl_rotateZ4.o" "blob_2RN.phl[153]";
-connectAttr "character1_root_ctrl_rotateY4.o" "blob_2RN.phl[154]";
-connectAttr "character1_root_ctrl_rotateX4.o" "blob_2RN.phl[155]";
-connectAttr "character1_angularValues_18_1.o" "blob_2RN.phl[156]";
-connectAttr "character1_angularValues_17_1.o" "blob_2RN.phl[157]";
-connectAttr "character1_angularValues_16_1.o" "blob_2RN.phl[158]";
-connectAttr "character1_ctrl_1_ctl_rotateX12.o" "blob_2RN.phl[159]";
-connectAttr "character1_ctrl_1_ctl_rotateY12.o" "blob_2RN.phl[160]";
-connectAttr "character1_ctrl_1_ctl_rotateZ12.o" "blob_2RN.phl[161]";
-connectAttr "character1_angularValues_15_.o" "blob_2RN.phl[162]";
-connectAttr "character1_angularValues_14_.o" "blob_2RN.phl[163]";
-connectAttr "character1_angularValues_13_.o" "blob_2RN.phl[164]";
-connectAttr "character1_angularValues_9_.o" "blob_2RN.phl[165]";
-connectAttr "character1_angularValues_8_.o" "blob_2RN.phl[166]";
-connectAttr "character1_angularValues_7_.o" "blob_2RN.phl[167]";
-connectAttr "character1_angularValues_12_.o" "blob_2RN.phl[168]";
-connectAttr "character1_angularValues_11_.o" "blob_2RN.phl[169]";
-connectAttr "character1_angularValues_10_.o" "blob_2RN.phl[170]";
-connectAttr "character1_root_ctrl_rotateX.o" "blob_2RN.phl[171]";
-connectAttr "character1_root_ctrl_rotateY.o" "blob_2RN.phl[172]";
-connectAttr "character1_root_ctrl_rotateZ.o" "blob_2RN.phl[173]";
-connectAttr "character1_ctrl_1_ctl_rotateX14.o" "blob_2RN.phl[174]";
-connectAttr "character1_ctrl_1_ctl_rotateY14.o" "blob_2RN.phl[175]";
-connectAttr "character1_ctrl_1_ctl_rotateZ14.o" "blob_2RN.phl[176]";
-connectAttr "character1_ctrl_1_ctl_translateZ19.o" "blob_2RN.phl[177]";
-connectAttr "character1_ctrl_1_ctl_translateY19.o" "blob_2RN.phl[178]";
-connectAttr "character1_ctrl_1_ctl_translateX19.o" "blob_2RN.phl[179]";
-connectAttr "character1_ctrl_1_ctl_translateZ6.o" "blob_2RN.phl[180]";
-connectAttr "character1_ctrl_1_ctl_translateY6.o" "blob_2RN.phl[181]";
-connectAttr "character1_ctrl_1_ctl_translateX6.o" "blob_2RN.phl[182]";
-connectAttr "character1_linearValues_7_4.o" "blob_2RN.phl[183]";
-connectAttr "character1_linearValues_8_4.o" "blob_2RN.phl[184]";
-connectAttr "character1_linearValues_9_4.o" "blob_2RN.phl[185]";
-connectAttr "character1_linearValues_10_4.o" "blob_2RN.phl[186]";
-connectAttr "character1_linearValues_11_4.o" "blob_2RN.phl[187]";
-connectAttr "character1_linearValues_12_4.o" "blob_2RN.phl[188]";
-connectAttr "character1_linearValues_13_4.o" "blob_2RN.phl[189]";
-connectAttr "character1_linearValues_14_4.o" "blob_2RN.phl[190]";
-connectAttr "character1_linearValues_15_4.o" "blob_2RN.phl[191]";
-connectAttr "character1_linearValues_16_4.o" "blob_2RN.phl[192]";
-connectAttr "character1_linearValues_17_4.o" "blob_2RN.phl[193]";
-connectAttr "character1_linearValues_18_4.o" "blob_2RN.phl[194]";
-connectAttr "character1_root_ctrl_translateZ4.o" "blob_2RN.phl[195]";
-connectAttr "character1_root_ctrl_translateY4.o" "blob_2RN.phl[196]";
-connectAttr "character1_root_ctrl_translateX4.o" "blob_2RN.phl[197]";
-connectAttr "character1_linearValues_18_1.o" "blob_2RN.phl[198]";
-connectAttr "character1_linearValues_17_1.o" "blob_2RN.phl[199]";
-connectAttr "character1_linearValues_16_1.o" "blob_2RN.phl[200]";
-connectAttr "character1_ctrl_1_ctl_translateX13.o" "blob_2RN.phl[201]";
-connectAttr "character1_ctrl_1_ctl_translateY13.o" "blob_2RN.phl[202]";
-connectAttr "character1_ctrl_1_ctl_translateZ13.o" "blob_2RN.phl[203]";
-connectAttr "character1_linearValues_15_1.o" "blob_2RN.phl[204]";
-connectAttr "character1_linearValues_14_1.o" "blob_2RN.phl[205]";
-connectAttr "character1_linearValues_13_1.o" "blob_2RN.phl[206]";
-connectAttr "character1_linearValues_9_1.o" "blob_2RN.phl[207]";
-connectAttr "character1_linearValues_8_1.o" "blob_2RN.phl[208]";
-connectAttr "character1_linearValues_7_1.o" "blob_2RN.phl[209]";
-connectAttr "character1_linearValues_12_1.o" "blob_2RN.phl[210]";
-connectAttr "character1_linearValues_11_1.o" "blob_2RN.phl[211]";
-connectAttr "character1_linearValues_10_1.o" "blob_2RN.phl[212]";
-connectAttr "character1_root_ctrl_translateX1.o" "blob_2RN.phl[213]";
-connectAttr "character1_root_ctrl_translateY1.o" "blob_2RN.phl[214]";
-connectAttr "character1_root_ctrl_translateZ1.o" "blob_2RN.phl[215]";
-connectAttr "character1_ctrl_1_ctl_translateX14.o" "blob_2RN.phl[216]";
-connectAttr "character1_ctrl_1_ctl_translateY14.o" "blob_2RN.phl[217]";
-connectAttr "character1_ctrl_1_ctl_translateZ14.o" "blob_2RN.phl[218]";
-connectAttr "character1_ctrl_1_ctl_scaleZ19.o" "blob_2RN.phl[219]";
-connectAttr "character1_ctrl_1_ctl_scaleY19.o" "blob_2RN.phl[220]";
-connectAttr "character1_ctrl_1_ctl_scaleX19.o" "blob_2RN.phl[221]";
-connectAttr "character1_ctrl_1_ctl_scaleZ6.o" "blob_2RN.phl[222]";
-connectAttr "character1_ctrl_1_ctl_scaleY6.o" "blob_2RN.phl[223]";
-connectAttr "character1_ctrl_1_ctl_scaleX6.o" "blob_2RN.phl[224]";
-connectAttr "character1_unitlessValues_7_4.o" "blob_2RN.phl[225]";
-connectAttr "character1_unitlessValues_8_4.o" "blob_2RN.phl[226]";
-connectAttr "character1_unitlessValues_9_4.o" "blob_2RN.phl[227]";
-connectAttr "character1_unitlessValues_10_4.o" "blob_2RN.phl[228]";
-connectAttr "character1_unitlessValues_11_4.o" "blob_2RN.phl[229]";
-connectAttr "character1_unitlessValues_12_4.o" "blob_2RN.phl[230]";
-connectAttr "character1_unitlessValues_13_4.o" "blob_2RN.phl[231]";
-connectAttr "character1_unitlessValues_14_4.o" "blob_2RN.phl[232]";
-connectAttr "character1_unitlessValues_15_4.o" "blob_2RN.phl[233]";
-connectAttr "character1_unitlessValues_16_4.o" "blob_2RN.phl[234]";
-connectAttr "character1_unitlessValues_17_4.o" "blob_2RN.phl[235]";
-connectAttr "character1_unitlessValues_18_4.o" "blob_2RN.phl[236]";
-connectAttr "character1_root_ctrl_scaleZ4.o" "blob_2RN.phl[237]";
-connectAttr "character1_root_ctrl_scaleY4.o" "blob_2RN.phl[238]";
-connectAttr "character1_root_ctrl_scaleX4.o" "blob_2RN.phl[239]";
-connectAttr "character1_unitlessValues_18_1.o" "blob_2RN.phl[240]";
-connectAttr "character1_unitlessValues_17_1.o" "blob_2RN.phl[241]";
-connectAttr "character1_unitlessValues_16_1.o" "blob_2RN.phl[242]";
-connectAttr "character1_ctrl_1_ctl_scaleX12.o" "blob_2RN.phl[243]";
-connectAttr "character1_ctrl_1_ctl_scaleY12.o" "blob_2RN.phl[244]";
-connectAttr "character1_ctrl_1_ctl_scaleZ12.o" "blob_2RN.phl[245]";
-connectAttr "character1_unitlessValues_15_.o" "blob_2RN.phl[246]";
-connectAttr "character1_unitlessValues_14_.o" "blob_2RN.phl[247]";
-connectAttr "character1_unitlessValues_13_.o" "blob_2RN.phl[248]";
-connectAttr "character1_unitlessValues_9_.o" "blob_2RN.phl[249]";
-connectAttr "character1_unitlessValues_8_.o" "blob_2RN.phl[250]";
-connectAttr "character1_unitlessValues_7_.o" "blob_2RN.phl[251]";
-connectAttr "character1_unitlessValues_12_.o" "blob_2RN.phl[252]";
-connectAttr "character1_unitlessValues_11_.o" "blob_2RN.phl[253]";
-connectAttr "character1_unitlessValues_10_.o" "blob_2RN.phl[254]";
-connectAttr "character1_root_ctrl_scaleX.o" "blob_2RN.phl[255]";
-connectAttr "character1_root_ctrl_scaleY.o" "blob_2RN.phl[256]";
-connectAttr "character1_root_ctrl_scaleZ.o" "blob_2RN.phl[257]";
-connectAttr "character1_ctrl_1_ctl_scaleX14.o" "blob_2RN.phl[258]";
-connectAttr "character1_ctrl_1_ctl_scaleY14.o" "blob_2RN.phl[259]";
-connectAttr "character1_ctrl_1_ctl_scaleZ14.o" "blob_2RN.phl[260]";
-connectAttr "blob_2RN.phl[261]" "character1.dnsm[1]";
+connectAttr "character1_ctrl_1_ctl_translateZ.o" "blob_1RN.phl[174]";
+connectAttr "character1_ctrl_1_ctl_translateY.o" "blob_1RN.phl[175]";
+connectAttr "character1_ctrl_1_ctl_translateX.o" "blob_1RN.phl[176]";
+connectAttr "blob_1RN.phl[177]" "character1.lv[151]";
+connectAttr "character1_ctrl_1_ctl_translateZ18.o" "blob_1RN.phl[178]";
+connectAttr "blob_1RN.phl[179]" "character1.lv[152]";
+connectAttr "character1_ctrl_1_ctl_translateY18.o" "blob_1RN.phl[180]";
+connectAttr "blob_1RN.phl[181]" "character1.lv[153]";
+connectAttr "character1_ctrl_1_ctl_translateX18.o" "blob_1RN.phl[182]";
+connectAttr "blob_1RN.phl[183]" "character1.lv[142]";
+connectAttr "character1_linearValues_7_3.o" "blob_1RN.phl[184]";
+connectAttr "blob_1RN.phl[185]" "character1.lv[143]";
+connectAttr "character1_linearValues_8_3.o" "blob_1RN.phl[186]";
+connectAttr "blob_1RN.phl[187]" "character1.lv[144]";
+connectAttr "character1_linearValues_9_3.o" "blob_1RN.phl[188]";
+connectAttr "blob_1RN.phl[189]" "character1.lv[145]";
+connectAttr "character1_linearValues_10_3.o" "blob_1RN.phl[190]";
+connectAttr "blob_1RN.phl[191]" "character1.lv[146]";
+connectAttr "character1_linearValues_11_3.o" "blob_1RN.phl[192]";
+connectAttr "blob_1RN.phl[193]" "character1.lv[147]";
+connectAttr "character1_linearValues_12_3.o" "blob_1RN.phl[194]";
+connectAttr "blob_1RN.phl[195]" "character1.lv[148]";
+connectAttr "character1_linearValues_13_3.o" "blob_1RN.phl[196]";
+connectAttr "blob_1RN.phl[197]" "character1.lv[149]";
+connectAttr "character1_linearValues_14_3.o" "blob_1RN.phl[198]";
+connectAttr "blob_1RN.phl[199]" "character1.lv[150]";
+connectAttr "character1_linearValues_15_3.o" "blob_1RN.phl[200]";
+connectAttr "blob_1RN.phl[201]" "character1.lv[154]";
+connectAttr "character1_linearValues_16_3.o" "blob_1RN.phl[202]";
+connectAttr "blob_1RN.phl[203]" "character1.lv[155]";
+connectAttr "character1_linearValues_17_3.o" "blob_1RN.phl[204]";
+connectAttr "blob_1RN.phl[205]" "character1.lv[156]";
+connectAttr "character1_linearValues_18_3.o" "blob_1RN.phl[206]";
+connectAttr "blob_1RN.phl[207]" "character1.lv[139]";
+connectAttr "character1_root_ctrl_translateZ3.o" "blob_1RN.phl[208]";
+connectAttr "blob_1RN.phl[209]" "character1.lv[140]";
+connectAttr "character1_root_ctrl_translateY3.o" "blob_1RN.phl[210]";
+connectAttr "blob_1RN.phl[211]" "character1.lv[141]";
+connectAttr "character1_root_ctrl_translateX3.o" "blob_1RN.phl[212]";
+connectAttr "character1_ctrl_1_ctl_scaleZ15.o" "blob_1RN.phl[213]";
+connectAttr "character1_ctrl_1_ctl_scaleY15.o" "blob_1RN.phl[214]";
+connectAttr "character1_ctrl_1_ctl_scaleX15.o" "blob_1RN.phl[215]";
+connectAttr "blob_1RN.phl[216]" "character1.uv[106]";
+connectAttr "character1_ctrl_1_ctl_scaleZ18.o" "blob_1RN.phl[217]";
+connectAttr "blob_1RN.phl[218]" "character1.uv[107]";
+connectAttr "character1_ctrl_1_ctl_scaleY18.o" "blob_1RN.phl[219]";
+connectAttr "blob_1RN.phl[220]" "character1.uv[108]";
+connectAttr "character1_ctrl_1_ctl_scaleX18.o" "blob_1RN.phl[221]";
+connectAttr "blob_1RN.phl[222]" "character1.uv[97]";
+connectAttr "character1_unitlessValues_7_3.o" "blob_1RN.phl[223]";
+connectAttr "blob_1RN.phl[224]" "character1.uv[98]";
+connectAttr "character1_unitlessValues_8_3.o" "blob_1RN.phl[225]";
+connectAttr "blob_1RN.phl[226]" "character1.uv[99]";
+connectAttr "character1_unitlessValues_9_3.o" "blob_1RN.phl[227]";
+connectAttr "blob_1RN.phl[228]" "character1.uv[100]";
+connectAttr "character1_unitlessValues_10_3.o" "blob_1RN.phl[229]";
+connectAttr "blob_1RN.phl[230]" "character1.uv[101]";
+connectAttr "character1_unitlessValues_11_3.o" "blob_1RN.phl[231]";
+connectAttr "blob_1RN.phl[232]" "character1.uv[102]";
+connectAttr "character1_unitlessValues_12_3.o" "blob_1RN.phl[233]";
+connectAttr "blob_1RN.phl[234]" "character1.uv[103]";
+connectAttr "character1_unitlessValues_13_3.o" "blob_1RN.phl[235]";
+connectAttr "blob_1RN.phl[236]" "character1.uv[104]";
+connectAttr "character1_unitlessValues_14_3.o" "blob_1RN.phl[237]";
+connectAttr "blob_1RN.phl[238]" "character1.uv[105]";
+connectAttr "character1_unitlessValues_15_3.o" "blob_1RN.phl[239]";
+connectAttr "blob_1RN.phl[240]" "character1.uv[109]";
+connectAttr "character1_unitlessValues_16_3.o" "blob_1RN.phl[241]";
+connectAttr "blob_1RN.phl[242]" "character1.uv[110]";
+connectAttr "character1_unitlessValues_17_3.o" "blob_1RN.phl[243]";
+connectAttr "blob_1RN.phl[244]" "character1.uv[111]";
+connectAttr "character1_unitlessValues_18_3.o" "blob_1RN.phl[245]";
+connectAttr "blob_1RN.phl[246]" "character1.uv[94]";
+connectAttr "character1_root_ctrl_scaleZ3.o" "blob_1RN.phl[247]";
+connectAttr "blob_1RN.phl[248]" "character1.uv[95]";
+connectAttr "character1_root_ctrl_scaleY3.o" "blob_1RN.phl[249]";
+connectAttr "blob_1RN.phl[250]" "character1.uv[96]";
+connectAttr "character1_root_ctrl_scaleX3.o" "blob_1RN.phl[251]";
+connectAttr "blob_1RN.phl[252]" "character1.dnsm[0]";
 connectAttr "blob_3RN.phl[1]" "character1.dnsm[290]";
 connectAttr "character1.av[76]" "blob_3RN.phl[2]";
 connectAttr "blob_3RN.phl[3]" "character1.dnsm[291]";
@@ -52650,153 +51607,91 @@ connectAttr "blob_3RN.phl[172]" "character1.av[77]";
 connectAttr "character1_root_ctrl_rotateY5.o" "blob_3RN.phl[173]";
 connectAttr "blob_3RN.phl[174]" "character1.av[78]";
 connectAttr "character1_root_ctrl_rotateX5.o" "blob_3RN.phl[175]";
-connectAttr "character1_ctrl_1_ctl_rotateX13.o" "blob_3RN.phl[176]";
-connectAttr "character1_ctrl_1_ctl_rotateY13.o" "blob_3RN.phl[177]";
-connectAttr "character1_ctrl_1_ctl_rotateZ13.o" "blob_3RN.phl[178]";
-connectAttr "character1_ctrl_1_ctl_rotateX.o" "blob_3RN.phl[179]";
-connectAttr "character1_ctrl_1_ctl_rotateY.o" "blob_3RN.phl[180]";
-connectAttr "character1_ctrl_1_ctl_rotateZ.o" "blob_3RN.phl[181]";
-connectAttr "character1_angularValues_12_2.o" "blob_3RN.phl[182]";
-connectAttr "character1_angularValues_11_2.o" "blob_3RN.phl[183]";
-connectAttr "character1_angularValues_10_2.o" "blob_3RN.phl[184]";
-connectAttr "character1_angularValues_18_.o" "blob_3RN.phl[185]";
-connectAttr "character1_angularValues_17_.o" "blob_3RN.phl[186]";
-connectAttr "character1_angularValues_16_.o" "blob_3RN.phl[187]";
-connectAttr "character1_angularValues_15_1.o" "blob_3RN.phl[188]";
-connectAttr "character1_angularValues_14_1.o" "blob_3RN.phl[189]";
-connectAttr "character1_angularValues_13_1.o" "blob_3RN.phl[190]";
-connectAttr "character1_root_ctrl_rotateX2.o" "blob_3RN.phl[191]";
-connectAttr "character1_root_ctrl_rotateY2.o" "blob_3RN.phl[192]";
-connectAttr "character1_root_ctrl_rotateZ2.o" "blob_3RN.phl[193]";
-connectAttr "character1_angularValues_9_2.o" "blob_3RN.phl[194]";
-connectAttr "character1_angularValues_8_2.o" "blob_3RN.phl[195]";
-connectAttr "character1_angularValues_7_2.o" "blob_3RN.phl[196]";
-connectAttr "blob_3RN.phl[197]" "character1.lv[96]";
-connectAttr "character1_ctrl_1_ctl_translateZ21.o" "blob_3RN.phl[198]";
-connectAttr "blob_3RN.phl[199]" "character1.lv[97]";
-connectAttr "character1_ctrl_1_ctl_translateY21.o" "blob_3RN.phl[200]";
-connectAttr "blob_3RN.phl[201]" "character1.lv[98]";
-connectAttr "character1_ctrl_1_ctl_translateX21.o" "blob_3RN.phl[202]";
-connectAttr "blob_3RN.phl[203]" "character1.lv[90]";
-connectAttr "character1_ctrl_1_ctl_translateZ20.o" "blob_3RN.phl[204]";
-connectAttr "blob_3RN.phl[205]" "character1.lv[91]";
-connectAttr "character1_ctrl_1_ctl_translateY20.o" "blob_3RN.phl[206]";
-connectAttr "blob_3RN.phl[207]" "character1.lv[92]";
-connectAttr "character1_ctrl_1_ctl_translateX20.o" "blob_3RN.phl[208]";
-connectAttr "blob_3RN.phl[209]" "character1.lv[130]";
-connectAttr "character1_linearValues_7_5.o" "blob_3RN.phl[210]";
-connectAttr "blob_3RN.phl[211]" "character1.lv[131]";
-connectAttr "character1_linearValues_8_5.o" "blob_3RN.phl[212]";
-connectAttr "blob_3RN.phl[213]" "character1.lv[132]";
-connectAttr "character1_linearValues_9_5.o" "blob_3RN.phl[214]";
-connectAttr "blob_3RN.phl[215]" "character1.lv[133]";
-connectAttr "character1_linearValues_10_5.o" "blob_3RN.phl[216]";
-connectAttr "blob_3RN.phl[217]" "character1.lv[134]";
-connectAttr "character1_linearValues_11_5.o" "blob_3RN.phl[218]";
-connectAttr "blob_3RN.phl[219]" "character1.lv[135]";
-connectAttr "character1_linearValues_12_5.o" "blob_3RN.phl[220]";
-connectAttr "blob_3RN.phl[221]" "character1.lv[136]";
-connectAttr "character1_linearValues_13_5.o" "blob_3RN.phl[222]";
-connectAttr "blob_3RN.phl[223]" "character1.lv[137]";
-connectAttr "character1_linearValues_14_5.o" "blob_3RN.phl[224]";
-connectAttr "blob_3RN.phl[225]" "character1.lv[138]";
-connectAttr "character1_linearValues_15_5.o" "blob_3RN.phl[226]";
-connectAttr "blob_3RN.phl[227]" "character1.lv[93]";
-connectAttr "character1_linearValues_16_5.o" "blob_3RN.phl[228]";
-connectAttr "blob_3RN.phl[229]" "character1.lv[94]";
-connectAttr "character1_linearValues_17_5.o" "blob_3RN.phl[230]";
-connectAttr "blob_3RN.phl[231]" "character1.lv[95]";
-connectAttr "character1_linearValues_18_5.o" "blob_3RN.phl[232]";
-connectAttr "blob_3RN.phl[233]" "character1.lv[127]";
-connectAttr "character1_root_ctrl_translateZ5.o" "blob_3RN.phl[234]";
-connectAttr "blob_3RN.phl[235]" "character1.lv[128]";
-connectAttr "character1_root_ctrl_translateY5.o" "blob_3RN.phl[236]";
-connectAttr "blob_3RN.phl[237]" "character1.lv[129]";
-connectAttr "character1_root_ctrl_translateX5.o" "blob_3RN.phl[238]";
-connectAttr "character1_ctrl_1_ctl_translateX15.o" "blob_3RN.phl[239]";
-connectAttr "character1_ctrl_1_ctl_translateY15.o" "blob_3RN.phl[240]";
-connectAttr "character1_ctrl_1_ctl_translateZ15.o" "blob_3RN.phl[241]";
-connectAttr "character1_ctrl_1_ctl_translateX16.o" "blob_3RN.phl[242]";
-connectAttr "character1_ctrl_1_ctl_translateY16.o" "blob_3RN.phl[243]";
-connectAttr "character1_ctrl_1_ctl_translateZ16.o" "blob_3RN.phl[244]";
-connectAttr "character1_linearValues_12_2.o" "blob_3RN.phl[245]";
-connectAttr "character1_linearValues_11_2.o" "blob_3RN.phl[246]";
-connectAttr "character1_linearValues_10_2.o" "blob_3RN.phl[247]";
-connectAttr "character1_linearValues_18_2.o" "blob_3RN.phl[248]";
-connectAttr "character1_linearValues_17_2.o" "blob_3RN.phl[249]";
-connectAttr "character1_linearValues_16_2.o" "blob_3RN.phl[250]";
-connectAttr "character1_linearValues_15_2.o" "blob_3RN.phl[251]";
-connectAttr "character1_linearValues_14_2.o" "blob_3RN.phl[252]";
-connectAttr "character1_linearValues_13_2.o" "blob_3RN.phl[253]";
-connectAttr "character1_root_ctrl_translateX2.o" "blob_3RN.phl[254]";
-connectAttr "character1_root_ctrl_translateY2.o" "blob_3RN.phl[255]";
-connectAttr "character1_root_ctrl_translateZ2.o" "blob_3RN.phl[256]";
-connectAttr "character1_linearValues_9_2.o" "blob_3RN.phl[257]";
-connectAttr "character1_linearValues_8_2.o" "blob_3RN.phl[258]";
-connectAttr "character1_linearValues_7_2.o" "blob_3RN.phl[259]";
-connectAttr "blob_3RN.phl[260]" "character1.uv[79]";
-connectAttr "character1_ctrl_1_ctl_scaleZ21.o" "blob_3RN.phl[261]";
-connectAttr "blob_3RN.phl[262]" "character1.uv[80]";
-connectAttr "character1_ctrl_1_ctl_scaleY21.o" "blob_3RN.phl[263]";
-connectAttr "blob_3RN.phl[264]" "character1.uv[81]";
-connectAttr "character1_ctrl_1_ctl_scaleX21.o" "blob_3RN.phl[265]";
-connectAttr "blob_3RN.phl[266]" "character1.uv[73]";
-connectAttr "character1_ctrl_1_ctl_scaleZ20.o" "blob_3RN.phl[267]";
-connectAttr "blob_3RN.phl[268]" "character1.uv[74]";
-connectAttr "character1_ctrl_1_ctl_scaleY20.o" "blob_3RN.phl[269]";
-connectAttr "blob_3RN.phl[270]" "character1.uv[75]";
-connectAttr "character1_ctrl_1_ctl_scaleX20.o" "blob_3RN.phl[271]";
-connectAttr "blob_3RN.phl[272]" "character1.uv[85]";
-connectAttr "character1_unitlessValues_7_5.o" "blob_3RN.phl[273]";
-connectAttr "blob_3RN.phl[274]" "character1.uv[86]";
-connectAttr "character1_unitlessValues_8_5.o" "blob_3RN.phl[275]";
-connectAttr "blob_3RN.phl[276]" "character1.uv[87]";
-connectAttr "character1_unitlessValues_9_5.o" "blob_3RN.phl[277]";
-connectAttr "blob_3RN.phl[278]" "character1.uv[88]";
-connectAttr "character1_unitlessValues_10_5.o" "blob_3RN.phl[279]";
-connectAttr "blob_3RN.phl[280]" "character1.uv[89]";
-connectAttr "character1_unitlessValues_11_5.o" "blob_3RN.phl[281]";
-connectAttr "blob_3RN.phl[282]" "character1.uv[90]";
-connectAttr "character1_unitlessValues_12_5.o" "blob_3RN.phl[283]";
-connectAttr "blob_3RN.phl[284]" "character1.uv[91]";
-connectAttr "character1_unitlessValues_13_5.o" "blob_3RN.phl[285]";
-connectAttr "blob_3RN.phl[286]" "character1.uv[92]";
-connectAttr "character1_unitlessValues_14_5.o" "blob_3RN.phl[287]";
-connectAttr "blob_3RN.phl[288]" "character1.uv[93]";
-connectAttr "character1_unitlessValues_15_5.o" "blob_3RN.phl[289]";
-connectAttr "blob_3RN.phl[290]" "character1.uv[76]";
-connectAttr "character1_unitlessValues_16_5.o" "blob_3RN.phl[291]";
-connectAttr "blob_3RN.phl[292]" "character1.uv[77]";
-connectAttr "character1_unitlessValues_17_5.o" "blob_3RN.phl[293]";
-connectAttr "blob_3RN.phl[294]" "character1.uv[78]";
-connectAttr "character1_unitlessValues_18_5.o" "blob_3RN.phl[295]";
-connectAttr "blob_3RN.phl[296]" "character1.uv[82]";
-connectAttr "character1_root_ctrl_scaleZ5.o" "blob_3RN.phl[297]";
-connectAttr "blob_3RN.phl[298]" "character1.uv[83]";
-connectAttr "character1_root_ctrl_scaleY5.o" "blob_3RN.phl[299]";
-connectAttr "blob_3RN.phl[300]" "character1.uv[84]";
-connectAttr "character1_root_ctrl_scaleX5.o" "blob_3RN.phl[301]";
-connectAttr "character1_ctrl_1_ctl_scaleX13.o" "blob_3RN.phl[302]";
-connectAttr "character1_ctrl_1_ctl_scaleY13.o" "blob_3RN.phl[303]";
-connectAttr "character1_ctrl_1_ctl_scaleX.o" "blob_3RN.phl[304]";
-connectAttr "character1_ctrl_1_ctl_scaleY.o" "blob_3RN.phl[305]";
-connectAttr "character1_ctrl_1_ctl_scaleZ.o" "blob_3RN.phl[306]";
-connectAttr "character1_unitlessValues_12_2.o" "blob_3RN.phl[307]";
-connectAttr "character1_unitlessValues_11_2.o" "blob_3RN.phl[308]";
-connectAttr "character1_unitlessValues_10_2.o" "blob_3RN.phl[309]";
-connectAttr "character1_unitlessValues_18_.o" "blob_3RN.phl[310]";
-connectAttr "character1_unitlessValues_17_.o" "blob_3RN.phl[311]";
-connectAttr "character1_unitlessValues_16_.o" "blob_3RN.phl[312]";
-connectAttr "character1_unitlessValues_15_1.o" "blob_3RN.phl[313]";
-connectAttr "character1_unitlessValues_14_1.o" "blob_3RN.phl[314]";
-connectAttr "character1_unitlessValues_13_1.o" "blob_3RN.phl[315]";
-connectAttr "character1_root_ctrl_scaleX2.o" "blob_3RN.phl[316]";
-connectAttr "character1_root_ctrl_scaleY2.o" "blob_3RN.phl[317]";
-connectAttr "character1_root_ctrl_scaleZ2.o" "blob_3RN.phl[318]";
-connectAttr "character1_unitlessValues_9_2.o" "blob_3RN.phl[319]";
-connectAttr "character1_unitlessValues_8_2.o" "blob_3RN.phl[320]";
-connectAttr "character1_unitlessValues_7_2.o" "blob_3RN.phl[321]";
-connectAttr "blob_3RN.phl[322]" "character1.dnsm[2]";
+connectAttr "blob_3RN.phl[176]" "character1.lv[96]";
+connectAttr "character1_ctrl_1_ctl_translateZ21.o" "blob_3RN.phl[177]";
+connectAttr "blob_3RN.phl[178]" "character1.lv[97]";
+connectAttr "character1_ctrl_1_ctl_translateY21.o" "blob_3RN.phl[179]";
+connectAttr "blob_3RN.phl[180]" "character1.lv[98]";
+connectAttr "character1_ctrl_1_ctl_translateX21.o" "blob_3RN.phl[181]";
+connectAttr "blob_3RN.phl[182]" "character1.lv[90]";
+connectAttr "character1_ctrl_1_ctl_translateZ20.o" "blob_3RN.phl[183]";
+connectAttr "blob_3RN.phl[184]" "character1.lv[91]";
+connectAttr "character1_ctrl_1_ctl_translateY20.o" "blob_3RN.phl[185]";
+connectAttr "blob_3RN.phl[186]" "character1.lv[92]";
+connectAttr "character1_ctrl_1_ctl_translateX20.o" "blob_3RN.phl[187]";
+connectAttr "blob_3RN.phl[188]" "character1.lv[130]";
+connectAttr "character1_linearValues_7_5.o" "blob_3RN.phl[189]";
+connectAttr "blob_3RN.phl[190]" "character1.lv[131]";
+connectAttr "character1_linearValues_8_5.o" "blob_3RN.phl[191]";
+connectAttr "blob_3RN.phl[192]" "character1.lv[132]";
+connectAttr "character1_linearValues_9_5.o" "blob_3RN.phl[193]";
+connectAttr "blob_3RN.phl[194]" "character1.lv[133]";
+connectAttr "character1_linearValues_10_5.o" "blob_3RN.phl[195]";
+connectAttr "blob_3RN.phl[196]" "character1.lv[134]";
+connectAttr "character1_linearValues_11_5.o" "blob_3RN.phl[197]";
+connectAttr "blob_3RN.phl[198]" "character1.lv[135]";
+connectAttr "character1_linearValues_12_5.o" "blob_3RN.phl[199]";
+connectAttr "blob_3RN.phl[200]" "character1.lv[136]";
+connectAttr "character1_linearValues_13_5.o" "blob_3RN.phl[201]";
+connectAttr "blob_3RN.phl[202]" "character1.lv[137]";
+connectAttr "character1_linearValues_14_5.o" "blob_3RN.phl[203]";
+connectAttr "blob_3RN.phl[204]" "character1.lv[138]";
+connectAttr "character1_linearValues_15_5.o" "blob_3RN.phl[205]";
+connectAttr "blob_3RN.phl[206]" "character1.lv[93]";
+connectAttr "character1_linearValues_16_5.o" "blob_3RN.phl[207]";
+connectAttr "blob_3RN.phl[208]" "character1.lv[94]";
+connectAttr "character1_linearValues_17_5.o" "blob_3RN.phl[209]";
+connectAttr "blob_3RN.phl[210]" "character1.lv[95]";
+connectAttr "character1_linearValues_18_5.o" "blob_3RN.phl[211]";
+connectAttr "blob_3RN.phl[212]" "character1.lv[127]";
+connectAttr "character1_root_ctrl_translateZ5.o" "blob_3RN.phl[213]";
+connectAttr "blob_3RN.phl[214]" "character1.lv[128]";
+connectAttr "character1_root_ctrl_translateY5.o" "blob_3RN.phl[215]";
+connectAttr "blob_3RN.phl[216]" "character1.lv[129]";
+connectAttr "character1_root_ctrl_translateX5.o" "blob_3RN.phl[217]";
+connectAttr "blob_3RN.phl[218]" "character1.uv[79]";
+connectAttr "character1_ctrl_1_ctl_scaleZ21.o" "blob_3RN.phl[219]";
+connectAttr "blob_3RN.phl[220]" "character1.uv[80]";
+connectAttr "character1_ctrl_1_ctl_scaleY21.o" "blob_3RN.phl[221]";
+connectAttr "blob_3RN.phl[222]" "character1.uv[81]";
+connectAttr "character1_ctrl_1_ctl_scaleX21.o" "blob_3RN.phl[223]";
+connectAttr "blob_3RN.phl[224]" "character1.uv[73]";
+connectAttr "character1_ctrl_1_ctl_scaleZ20.o" "blob_3RN.phl[225]";
+connectAttr "blob_3RN.phl[226]" "character1.uv[74]";
+connectAttr "character1_ctrl_1_ctl_scaleY20.o" "blob_3RN.phl[227]";
+connectAttr "blob_3RN.phl[228]" "character1.uv[75]";
+connectAttr "character1_ctrl_1_ctl_scaleX20.o" "blob_3RN.phl[229]";
+connectAttr "blob_3RN.phl[230]" "character1.uv[85]";
+connectAttr "character1_unitlessValues_7_5.o" "blob_3RN.phl[231]";
+connectAttr "blob_3RN.phl[232]" "character1.uv[86]";
+connectAttr "character1_unitlessValues_8_5.o" "blob_3RN.phl[233]";
+connectAttr "blob_3RN.phl[234]" "character1.uv[87]";
+connectAttr "character1_unitlessValues_9_5.o" "blob_3RN.phl[235]";
+connectAttr "blob_3RN.phl[236]" "character1.uv[88]";
+connectAttr "character1_unitlessValues_10_5.o" "blob_3RN.phl[237]";
+connectAttr "blob_3RN.phl[238]" "character1.uv[89]";
+connectAttr "character1_unitlessValues_11_5.o" "blob_3RN.phl[239]";
+connectAttr "blob_3RN.phl[240]" "character1.uv[90]";
+connectAttr "character1_unitlessValues_12_5.o" "blob_3RN.phl[241]";
+connectAttr "blob_3RN.phl[242]" "character1.uv[91]";
+connectAttr "character1_unitlessValues_13_5.o" "blob_3RN.phl[243]";
+connectAttr "blob_3RN.phl[244]" "character1.uv[92]";
+connectAttr "character1_unitlessValues_14_5.o" "blob_3RN.phl[245]";
+connectAttr "blob_3RN.phl[246]" "character1.uv[93]";
+connectAttr "character1_unitlessValues_15_5.o" "blob_3RN.phl[247]";
+connectAttr "blob_3RN.phl[248]" "character1.uv[76]";
+connectAttr "character1_unitlessValues_16_5.o" "blob_3RN.phl[249]";
+connectAttr "blob_3RN.phl[250]" "character1.uv[77]";
+connectAttr "character1_unitlessValues_17_5.o" "blob_3RN.phl[251]";
+connectAttr "blob_3RN.phl[252]" "character1.uv[78]";
+connectAttr "character1_unitlessValues_18_5.o" "blob_3RN.phl[253]";
+connectAttr "blob_3RN.phl[254]" "character1.uv[82]";
+connectAttr "character1_root_ctrl_scaleZ5.o" "blob_3RN.phl[255]";
+connectAttr "blob_3RN.phl[256]" "character1.uv[83]";
+connectAttr "character1_root_ctrl_scaleY5.o" "blob_3RN.phl[257]";
+connectAttr "blob_3RN.phl[258]" "character1.uv[84]";
+connectAttr "character1_root_ctrl_scaleX5.o" "blob_3RN.phl[259]";
+connectAttr "blob_3RN.phl[260]" "character1.dnsm[2]";
 connectAttr "ambientLight1_visibility.o" "ambientLight1.v";
 connectAttr "ambientLight1_translateX.o" "ambientLight1.tx";
 connectAttr "ambientLight1_translateY.o" "ambientLight1.ty";
@@ -53217,6 +52112,142 @@ connectAttr "lambert2.oc" "lambert2SG.ss";
 connectAttr "milkShape.iog" "lambert2SG.dsm" -na;
 connectAttr "lambert2SG.msg" "materialInfo2.sg";
 connectAttr "lambert2.msg" "materialInfo2.m";
+connectAttr "blob_2RN.phl[1]" "blob_2RN.phl[2]";
+connectAttr "blob_2RN.phl[3]" "blob_2RN.phl[4]";
+connectAttr "blob_2RN.phl[5]" "blob_2RN.phl[6]";
+connectAttr "blob_2RN.phl[7]" "blob_2RN.phl[8]";
+connectAttr "blob_2RN.phl[9]" "blob_2RN.phl[10]";
+connectAttr "blob_2RN.phl[11]" "blob_2RN.phl[12]";
+connectAttr "blob_2RN.phl[13]" "blob_2RN.phl[14]";
+connectAttr "blob_2RN.phl[15]" "blob_2RN.phl[16]";
+connectAttr "blob_2RN.phl[17]" "blob_2RN.phl[18]";
+connectAttr "root_ctrl_visibility.o" "blob_2RN.phl[19]";
+connectAttr "layer1.di" "blob_2RN.phl[20]";
+connectAttr "blob_2RN.phl[21]" "blob_2RN.phl[22]";
+connectAttr "blob_2RN.phl[23]" "blob_2RN.phl[24]";
+connectAttr "blob_2RN.phl[25]" "blob_2RN.phl[26]";
+connectAttr "blob_2RN.phl[27]" "blob_2RN.phl[28]";
+connectAttr "blob_2RN.phl[29]" "blob_2RN.phl[30]";
+connectAttr "blob_2RN.phl[31]" "blob_2RN.phl[32]";
+connectAttr "blob_2RN.phl[33]" "blob_2RN.phl[34]";
+connectAttr "blob_2RN.phl[35]" "blob_2RN.phl[36]";
+connectAttr "blob_2RN.phl[37]" "blob_2RN.phl[38]";
+connectAttr "ctrl_1_ctl_visibility3.o" "blob_2RN.phl[39]";
+connectAttr "blob_2RN.phl[40]" "blob_2RN.phl[41]";
+connectAttr "blob_2RN.phl[42]" "blob_2RN.phl[43]";
+connectAttr "blob_2RN.phl[44]" "blob_2RN.phl[45]";
+connectAttr "blob_2RN.phl[46]" "blob_2RN.phl[47]";
+connectAttr "blob_2RN.phl[48]" "blob_2RN.phl[49]";
+connectAttr "blob_2RN.phl[50]" "blob_2RN.phl[51]";
+connectAttr "blob_2RN.phl[52]" "blob_2RN.phl[53]";
+connectAttr "blob_2RN.phl[54]" "blob_2RN.phl[55]";
+connectAttr "blob_2RN.phl[56]" "blob_2RN.phl[57]";
+connectAttr "ctrl_1_ctl_visibility2.o" "blob_2RN.phl[58]";
+connectAttr "blob_2RN.phl[59]" "blob_2RN.phl[60]";
+connectAttr "blob_2RN.phl[61]" "blob_2RN.phl[62]";
+connectAttr "blob_2RN.phl[63]" "blob_2RN.phl[64]";
+connectAttr "blob_2RN.phl[65]" "blob_2RN.phl[66]";
+connectAttr "blob_2RN.phl[67]" "blob_2RN.phl[68]";
+connectAttr "blob_2RN.phl[69]" "blob_2RN.phl[70]";
+connectAttr "blob_2RN.phl[71]" "blob_2RN.phl[72]";
+connectAttr "blob_2RN.phl[73]" "blob_2RN.phl[74]";
+connectAttr "blob_2RN.phl[75]" "blob_2RN.phl[76]";
+connectAttr "ctrl_1_ctl_visibility1.o" "blob_2RN.phl[77]";
+connectAttr "blob_2RN.phl[78]" "blob_2RN.phl[79]";
+connectAttr "blob_2RN.phl[80]" "blob_2RN.phl[81]";
+connectAttr "blob_2RN.phl[82]" "blob_2RN.phl[83]";
+connectAttr "blob_2RN.phl[84]" "blob_2RN.phl[85]";
+connectAttr "blob_2RN.phl[86]" "blob_2RN.phl[87]";
+connectAttr "blob_2RN.phl[88]" "blob_2RN.phl[89]";
+connectAttr "blob_2RN.phl[90]" "blob_2RN.phl[91]";
+connectAttr "blob_2RN.phl[92]" "blob_2RN.phl[93]";
+connectAttr "blob_2RN.phl[94]" "blob_2RN.phl[95]";
+connectAttr "ctrl_1_ctl_visibility.o" "blob_2RN.phl[96]";
+connectAttr "blob_2RN.phl[97]" "blob_2RN.phl[98]";
+connectAttr "blob_2RN.phl[99]" "blob_2RN.phl[100]";
+connectAttr "blob_2RN.phl[101]" "blob_2RN.phl[102]";
+connectAttr "blob_2RN.phl[103]" "blob_2RN.phl[104]";
+connectAttr "blob_2RN.phl[105]" "blob_2RN.phl[106]";
+connectAttr "blob_2RN.phl[107]" "blob_2RN.phl[108]";
+connectAttr "blob_2RN.phl[109]" "blob_2RN.phl[110]";
+connectAttr "blob_2RN.phl[111]" "blob_2RN.phl[112]";
+connectAttr "blob_2RN.phl[113]" "blob_2RN.phl[114]";
+connectAttr "ctrl_1_ctl_visibility14.o" "blob_2RN.phl[115]";
+connectAttr "blob_2RN.phl[116]" "blob_2RN.phl[117]";
+connectAttr "blob_2RN.phl[118]" "blob_2RN.phl[119]";
+connectAttr "blob_2RN.phl[120]" "blob_2RN.phl[121]";
+connectAttr "blob_2RN.phl[122]" "blob_2RN.phl[123]";
+connectAttr "blob_2RN.phl[124]" "blob_2RN.phl[125]";
+connectAttr "blob_2RN.phl[126]" "blob_2RN.phl[127]";
+connectAttr "blob_2RN.phl[128]" "blob_2RN.phl[129]";
+connectAttr "blob_2RN.phl[130]" "blob_2RN.phl[131]";
+connectAttr "blob_2RN.phl[132]" "blob_2RN.phl[133]";
+connectAttr "ctrl_1_ctl_visibility13.o" "blob_2RN.phl[134]";
+connectAttr "character1_ctrl_1_ctl_rotateZ14.o" "blob_2RN.phl[135]";
+connectAttr "character1_ctrl_1_ctl_rotateY14.o" "blob_2RN.phl[136]";
+connectAttr "character1_ctrl_1_ctl_rotateX14.o" "blob_2RN.phl[137]";
+connectAttr "character1_ctrl_1_ctl_rotateZ12.o" "blob_2RN.phl[138]";
+connectAttr "character1_ctrl_1_ctl_rotateY12.o" "blob_2RN.phl[139]";
+connectAttr "character1_ctrl_1_ctl_rotateX12.o" "blob_2RN.phl[140]";
+connectAttr "character1_angularValues_7_.o" "blob_2RN.phl[141]";
+connectAttr "character1_angularValues_8_.o" "blob_2RN.phl[142]";
+connectAttr "character1_angularValues_9_.o" "blob_2RN.phl[143]";
+connectAttr "character1_angularValues_10_.o" "blob_2RN.phl[144]";
+connectAttr "character1_angularValues_11_.o" "blob_2RN.phl[145]";
+connectAttr "character1_angularValues_12_.o" "blob_2RN.phl[146]";
+connectAttr "character1_angularValues_13_.o" "blob_2RN.phl[147]";
+connectAttr "character1_angularValues_14_.o" "blob_2RN.phl[148]";
+connectAttr "character1_angularValues_15_.o" "blob_2RN.phl[149]";
+connectAttr "character1_angularValues_16_1.o" "blob_2RN.phl[150]";
+connectAttr "character1_angularValues_17_1.o" "blob_2RN.phl[151]";
+connectAttr "character1_angularValues_18_1.o" "blob_2RN.phl[152]";
+connectAttr "character1_root_ctrl_rotateZ.o" "blob_2RN.phl[153]";
+connectAttr "character1_root_ctrl_rotateY.o" "blob_2RN.phl[154]";
+connectAttr "character1_root_ctrl_rotateX.o" "blob_2RN.phl[155]";
+connectAttr "character1_ctrl_1_ctl_translateZ14.o" "blob_2RN.phl[156]";
+connectAttr "character1_ctrl_1_ctl_translateY14.o" "blob_2RN.phl[157]";
+connectAttr "character1_ctrl_1_ctl_translateX14.o" "blob_2RN.phl[158]";
+connectAttr "character1_ctrl_1_ctl_translateZ13.o" "blob_2RN.phl[159]";
+connectAttr "character1_ctrl_1_ctl_translateY13.o" "blob_2RN.phl[160]";
+connectAttr "character1_ctrl_1_ctl_translateX13.o" "blob_2RN.phl[161]";
+connectAttr "character1_linearValues_7_1.o" "blob_2RN.phl[162]";
+connectAttr "character1_linearValues_8_1.o" "blob_2RN.phl[163]";
+connectAttr "character1_linearValues_9_1.o" "blob_2RN.phl[164]";
+connectAttr "character1_linearValues_10_1.o" "blob_2RN.phl[165]";
+connectAttr "character1_linearValues_11_1.o" "blob_2RN.phl[166]";
+connectAttr "character1_linearValues_12_1.o" "blob_2RN.phl[167]";
+connectAttr "character1_linearValues_13_1.o" "blob_2RN.phl[168]";
+connectAttr "character1_linearValues_14_1.o" "blob_2RN.phl[169]";
+connectAttr "character1_linearValues_15_1.o" "blob_2RN.phl[170]";
+connectAttr "character1_linearValues_16_1.o" "blob_2RN.phl[171]";
+connectAttr "character1_linearValues_17_1.o" "blob_2RN.phl[172]";
+connectAttr "character1_linearValues_18_1.o" "blob_2RN.phl[173]";
+connectAttr "character1_root_ctrl_translateZ1.o" "blob_2RN.phl[174]";
+connectAttr "character1_root_ctrl_translateY1.o" "blob_2RN.phl[175]";
+connectAttr "character1_root_ctrl_translateX1.o" "blob_2RN.phl[176]";
+connectAttr "character1_ctrl_1_ctl_scaleZ14.o" "blob_2RN.phl[177]";
+connectAttr "character1_ctrl_1_ctl_scaleY14.o" "blob_2RN.phl[178]";
+connectAttr "character1_ctrl_1_ctl_scaleX14.o" "blob_2RN.phl[179]";
+connectAttr "character1_ctrl_1_ctl_scaleZ12.o" "blob_2RN.phl[180]";
+connectAttr "character1_ctrl_1_ctl_scaleY12.o" "blob_2RN.phl[181]";
+connectAttr "character1_ctrl_1_ctl_scaleX12.o" "blob_2RN.phl[182]";
+connectAttr "character1_unitlessValues_7_.o" "blob_2RN.phl[183]";
+connectAttr "character1_unitlessValues_8_.o" "blob_2RN.phl[184]";
+connectAttr "character1_unitlessValues_9_.o" "blob_2RN.phl[185]";
+connectAttr "character1_unitlessValues_10_.o" "blob_2RN.phl[186]";
+connectAttr "character1_unitlessValues_11_.o" "blob_2RN.phl[187]";
+connectAttr "character1_unitlessValues_12_.o" "blob_2RN.phl[188]";
+connectAttr "character1_unitlessValues_13_.o" "blob_2RN.phl[189]";
+connectAttr "character1_unitlessValues_14_.o" "blob_2RN.phl[190]";
+connectAttr "character1_unitlessValues_15_.o" "blob_2RN.phl[191]";
+connectAttr "character1_unitlessValues_16_1.o" "blob_2RN.phl[192]";
+connectAttr "character1_unitlessValues_17_1.o" "blob_2RN.phl[193]";
+connectAttr "character1_unitlessValues_18_1.o" "blob_2RN.phl[194]";
+connectAttr "character1_root_ctrl_scaleZ.o" "blob_2RN.phl[195]";
+connectAttr "character1_root_ctrl_scaleY.o" "blob_2RN.phl[196]";
+connectAttr "character1_root_ctrl_scaleX.o" "blob_2RN.phl[197]";
+connectAttr "sharedReferenceNode.sr" "blob_2RN.sr";
+connectAttr "sharedReferenceNode.sr" "blob_3RN.sr";
 connectAttr "heart_ctl_translateX.o" "heartRN.phl[1]";
 connectAttr "heart_ctl_translateY.o" "heartRN.phl[2]";
 connectAttr "heart_ctl_translateZ.o" "heartRN.phl[3]";
@@ -53228,6 +52259,7 @@ connectAttr "heart_ctl_scaleY.o" "heartRN.phl[8]";
 connectAttr "heart_ctl_scaleZ.o" "heartRN.phl[9]";
 connectAttr "heart_ctl_visibility.o" "heartRN.phl[10]";
 connectAttr "sharedReferenceNode.sr" "heartRN.sr";
+connectAttr "blob_2RN.phl[198]" "character1.dnsm[1]";
 connectAttr "tongue_1_ctl_scaleZ.o" "character1.uv[1]";
 connectAttr "tongue_1_ctl_scaleY.o" "character1.uv[2]";
 connectAttr "tongue_1_ctl_scaleX.o" "character1.uv[3]";
